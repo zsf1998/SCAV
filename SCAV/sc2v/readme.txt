@@ -1,0 +1,3 @@
+sc2v使用要先安装clang，具体安装步骤见Clang-check的安装何使用.md
+SC_ast_filter.py是Clang AST滤除器程序
+SystemC2Verilog.py是verilog代码生成主程序

@@ -1,0 +1,274 @@
+sensitive: clk,rst;
+Dumping SM3_Controller:
+CXXRecordDecl   line:9:11 struct SM3_Controller definition
+|-DefinitionData polymorphic has_user_declared_ctor has_mutable_fields can_const_default_init
+| |-DefaultConstructor
+| |-CopyConstructor non_trivial has_const_param needs_overload_resolution implicit_has_const_param
+| |-MoveConstructor exists non_trivial needs_overload_resolution
+| |-CopyAssignment non_trivial has_const_param needs_overload_resolution implicit_has_const_param
+| |-MoveAssignment exists non_trivial needs_overload_resolution
+| `-Destructor simple non_trivial needs_overload_resolution
+|-public '::sc_core::sc_module':'sc_core::sc_module'
+|-CXXRecordDecl   col:11 implicit  struct SM3_Controller
+|-FieldDecl  <line:11:2, col:12> col:12  clk 'sc_core::sc_in_clk':'sc_core::sc_in<bool>'
+|-FieldDecl  <line:12:2, col:14> col:14  rst 'sc_in<bool>':'sc_core::sc_in<bool>'
+|-FieldDecl  <col:2, col:19> col:19 W 'sc_in<bool>':'sc_core::sc_in<bool>'
+|-FieldDecl  <col:2, col:22> col:22 R 'sc_in<bool>':'sc_core::sc_in<bool>'
+|-FieldDecl  <line:13:2, col:15> col:15 finish 'sc_out<bool>':'sc_core::sc_out<bool>'
+|-FieldDecl  <line:15:2, col:22> col:22 count_out 'sc_out<sc_uint<7>>':'sc_core::sc_out<sc_dt::sc_uint<7>>'
+|-FieldDecl  <line:16:2, col:22> col:22  ctrl 'sc_out<sc_uint<2>>':'sc_core::sc_out<sc_dt::sc_uint<2>>'
+|-FieldDecl  <line:18:2, col:25> col:25  count 'sc_signal<sc_uint<7>>':'sc_core::sc_signal<sc_dt::sc_uint<7>, sc_core::SC_ONE_WRITER>'
+|-FieldDecl  <line:19:2, col:25> col:25 next_state 'sc_signal<sc_uint<2>>':'sc_core::sc_signal<sc_dt::sc_uint<2>, sc_core::SC_ONE_WRITER>'
+|-FieldDecl  <col:2, col:37> col:37 current_state 'sc_signal<sc_uint<2>>':'sc_core::sc_signal<sc_dt::sc_uint<2>, sc_core::SC_ONE_WRITER>'
+|-FieldDecl  <line:20:2, col:25> col:25 count_plus 'sc_signal<sc_uint<7>>':'sc_core::sc_signal<sc_dt::sc_uint<7>, sc_core::SC_ONE_WRITER>'
+|-FieldDecl  <line:21:2, col:26> col:26  neg_out 'sc_signal<sc_uint<1>>':'sc_core::sc_signal<sc_dt::sc_uint<1>, sc_core::SC_ONE_WRITER>'
+|-FieldDecl  <col:2, col:35> col:35  neg_cnt 'sc_signal<sc_uint<1>>':'sc_core::sc_signal<sc_dt::sc_uint<1>, sc_core::SC_ONE_WRITER>'
+|-FieldDecl  <line:22:2, col:25> col:25  pwm_rising_edge 'sc_signal<sc_uint<1>>':'sc_core::sc_signal<sc_dt::sc_uint<1>, sc_core::SC_ONE_WRITER>'
+|-FieldDecl  <line:23:2, col:19> col:19  pwm_rising_edge1 'sc_signal<bool>':'sc_core::sc_signal<bool, sc_core::SC_ONE_WRITER>'
+|-FieldDecl  <line:24:2, col:26> col:26 FF 'sc_signal<sc_uint<32>>':'sc_core::sc_signal<sc_dt::sc_uint<32>, sc_core::SC_ONE_WRITER>'
+|-FieldDecl  <col:2, col:29> col:29  FF_0 'sc_signal<sc_uint<32>>':'sc_core::sc_signal<sc_dt::sc_uint<32>, sc_core::SC_ONE_WRITER>'
+|-FieldDecl  <col:2, col:34> col:34  FF_1 'sc_signal<sc_uint<32>>':'sc_core::sc_signal<sc_dt::sc_uint<32>, sc_core::SC_ONE_WRITER>'
+Dumping SM3_Controller::assign_count_plus:
+CXXMethodDecl   assign_count_plus 'void ()'
+`-CompoundStmt  
+  `-ExprWithCleanups  <line:5:5, col:50> 'sc_core::sc_signal<sc_dt::sc_uint<1>, sc_core::SC_ONE_WRITER>::this_type':'sc_core::sc_signal<sc_dt::sc_uint<1>, sc_core::SC_ONE_WRITER>' lvalue
+    `-CXXOperatorCallExpr  ' lvalue '='
+      |-ImplicitCastExpr  
+      |-MemberExpr  neg_out 
+      `-MaterializeTemporaryExpr  ' lvalue
+        `-ImplicitCastExpr  
+          `-ConditionalOperator  '
+            |-ImplicitCastExpr  
+            | `-ImplicitCastExpr  
+            |     `-MemberExpr  ' .operator const bool & 
+            |       `-ImplicitCastExpr  
+            |         `-MemberExpr  pwm_rising_edge1 
+            |   `-MaterializeTemporaryExpr  ' lvalue
+            |     `-ImplicitCastExpr  
+            |       `-CStyleCastExpr  
+            |             `-IntegerLiteral   'int' 1
+                `-MaterializeTemporaryExpr  ' lvalue
+                  `-ImplicitCastExpr  
+                        `-ImplicitCastExpr  
+                            `-MemberExpr   & 
+                              `-ImplicitCastExpr  
+                                `-MemberExpr  neg_cnt 
+
+Dumping SM3_Controller::assign_ctrl:
+CXXMethodDecl   assign_ctrl 'void ()'
+`-CompoundStmt  
+  `-CXXOperatorCallExpr  <line:11:5, col:72> 'sc_core::sc_signal<sc_dt::sc_uint<1>, sc_core::SC_ONE_WRITER>::this_type':'sc_core::sc_signal<sc_dt::sc_uint<1>, sc_core::SC_ONE_WRITER>' lvalue '='
+    |-ImplicitCastExpr  
+    |-MemberExpr  neg_out 
+    `-ConditionalOperator  ' lvalue
+      |-ImplicitCastExpr  
+      | `-ImplicitCastExpr  
+      |     `-MemberExpr  ' .operator unsigned long long 
+      |       `-ImplicitCastExpr  
+      |         `-ParenExpr  ' lvalue
+      |             `-MemberExpr  ' .read 
+      |               `-ImplicitCastExpr  
+      |                 `-MemberExpr  pwm_rising_edge 
+      | `-MemberExpr  ' .read 
+      |   `-ImplicitCastExpr  
+      |     `-MemberExpr  neg_cnt 
+        `-MemberExpr  ' .read 
+          `-ImplicitCastExpr  
+            `-MemberExpr  neg_out 
+
+Dumping SM3_Controller::assign_ctr:
+CXXMethodDecl   assign_ctr 'void ()'
+`-CompoundStmt  
+  `-ExprWithCleanups  <line:17:5, col:64> 'sc_core::sc_signal<sc_dt::sc_uint<1>, sc_core::SC_ONE_WRITER>::this_type':'sc_core::sc_signal<sc_dt::sc_uint<1>, sc_core::SC_ONE_WRITER>' lvalue
+    `-CXXOperatorCallExpr  ' lvalue '='
+      |-ImplicitCastExpr  
+      |-MemberExpr  neg_out 
+      `-MaterializeTemporaryExpr  ' lvalue
+        `-ImplicitCastExpr  
+          `-ConditionalOperator  '
+            |-ImplicitCastExpr  
+            | `-ImplicitCastExpr  
+            |     `-MemberExpr  ' .operator unsigned long long 
+            |       `-ParenExpr   'const sc_dt::sc_uint_subref_r' lvalue
+            |           |-MemberExpr  ' .range 
+            |           | `-ImplicitCastExpr  
+            |           |     `-MemberExpr  ' .read 
+            |           |       `-ImplicitCastExpr  
+            |           |         `-MemberExpr  ctrl 
+            |           |-IntegerLiteral   'int' 1
+            |           `-IntegerLiteral   'int' 0
+            |   `-MaterializeTemporaryExpr  ' lvalue
+            |     `-ImplicitCastExpr  
+            |           `-ImplicitCastExpr  
+            |               `-MemberExpr   & 
+            |                 `-ImplicitCastExpr  
+            |                   `-MemberExpr  neg_cnt 
+                `-MaterializeTemporaryExpr  ' lvalue
+                  `-ImplicitCastExpr  
+                    `-CStyleCastExpr  
+                          `-IntegerLiteral   'int' 1
+
+Dumping SM3_Controller::assign_ct:
+CXXMethodDecl   assign_ct 'void ()'
+`-CompoundStmt  
+  `-ExprWithCleanups  <line:22:5, col:88> 'sc_core::sc_signal<sc_dt::sc_uint<1>, sc_core::SC_ONE_WRITER>::this_type':'sc_core::sc_signal<sc_dt::sc_uint<1>, sc_core::SC_ONE_WRITER>' lvalue
+    `-CXXOperatorCallExpr  ' lvalue '='
+      |-ImplicitCastExpr  
+      |-MemberExpr  neg_out 
+      `-MaterializeTemporaryExpr  ' lvalue
+        `-ImplicitCastExpr  
+          `-ConditionalOperator  '
+            |-ParenExpr   'bool'
+            | `-BinaryOperator   'bool' '||'
+            |   |-ImplicitCastExpr  
+            |   |   `-MemberExpr  ' .read 
+            |   |     `-ImplicitCastExpr  
+            |   |       `-MemberExpr  rst 
+            |   `-ImplicitCastExpr  
+            |       `-MemberExpr  ' .read 
+            |         `-ImplicitCastExpr  
+            |           `-MemberExpr  clk 
+            |   `-MaterializeTemporaryExpr  ' lvalue
+            |     `-ImplicitCastExpr  
+            |       `-CStyleCastExpr  
+            |             `-ParenExpr   'unsigned long long'
+            |               `-BinaryOperator   'unsigned long long' '+'
+            |                 |-ImplicitCastExpr  
+            |                 |   `-MemberExpr  ' .operator unsigned long long 
+            |                 |     `-ImplicitCastExpr  
+            |                 |         `-MemberExpr  ' .read 
+            |                 |           `-ImplicitCastExpr  
+            |                 |             `-MemberExpr  neg_cnt 
+            |                 `-ImplicitCastExpr  
+            |                     `-MemberExpr  ' .operator unsigned long long 
+            |                       `-ImplicitCastExpr  
+            |                           `-MemberExpr  ' .read 
+            |                             `-ImplicitCastExpr  
+            |                               `-MemberExpr  neg_out 
+                `-MaterializeTemporaryExpr  ' lvalue
+                  `-ImplicitCastExpr  
+                        `-ImplicitCastExpr  
+                            `-MemberExpr   & 
+                              `-ImplicitCastExpr  
+                                `-MemberExpr  neg_out 
+
+Dumping SM3_Controller::always_block1:
+CXXMethodDecl   always_block1 'void ()'
+`-CompoundStmt  
+  |-CXXOperatorCallExpr  <line:27:5, col:44> 'sc_core::sc_signal<sc_dt::sc_uint<1>, sc_core::SC_ONE_WRITER>::this_type':'sc_core::sc_signal<sc_dt::sc_uint<1>, sc_core::SC_ONE_WRITER>' lvalue '='
+  | |-ImplicitCastExpr  
+  | |-MemberExpr  neg_out 
+  | `-ImplicitCastExpr  
+  |   `-ConditionalOperator  ' lvalue
+  |     |-ImplicitCastExpr  
+  |     | `-ImplicitCastExpr  
+  |     |     `-MemberExpr  ' .operator const bool & 
+  |     |       `-ImplicitCastExpr  
+  |     |         `-MemberExpr  pwm_rising_edge1 
+  |     |-MemberExpr  neg_cnt 
+  |     `-MemberExpr  neg_out 
+  |-ExprWithCleanups  <line:28:5, col:51> 'sc_core::sc_signal<sc_dt::sc_uint<1>, sc_core::SC_ONE_WRITER>::this_type':'sc_core::sc_signal<sc_dt::sc_uint<1>, sc_core::SC_ONE_WRITER>' lvalue
+  | `-CXXOperatorCallExpr  ' lvalue '='
+  |   |-ImplicitCastExpr  
+  |   |-MemberExpr  neg_out 
+  |   `-MaterializeTemporaryExpr  ' lvalue
+  |     `-ImplicitCastExpr  
+  |       `-ConditionalOperator  '
+  |         |-ImplicitCastExpr  
+  |         | `-ImplicitCastExpr  
+  |         |     `-MemberExpr  ' .operator const bool & 
+  |         |       `-ImplicitCastExpr  
+  |         |         `-MemberExpr  pwm_rising_edge1 
+  |         |   `-MaterializeTemporaryExpr  ' lvalue
+  |         |     `-ImplicitCastExpr  
+  |         |       `-CStyleCastExpr  
+  |         |             `-IntegerLiteral   'int' 1
+  |             `-MaterializeTemporaryExpr  ' lvalue
+  |               `-ImplicitCastExpr  
+  |                     `-ImplicitCastExpr  
+  |                         `-MemberExpr   & 
+  |                           `-ImplicitCastExpr  
+  |                             `-MemberExpr  neg_cnt 
+  |-ExprWithCleanups  <line:29:5, col:66> 'sc_core::sc_signal<sc_dt::sc_uint<1>, sc_core::SC_ONE_WRITER>::this_type':'sc_core::sc_signal<sc_dt::sc_uint<1>, sc_core::SC_ONE_WRITER>' lvalue
+  | `-CXXOperatorCallExpr  ' lvalue '='
+  |   |-ImplicitCastExpr  
+  |   |-MemberExpr  neg_out 
+  |   `-MaterializeTemporaryExpr  ' lvalue
+  |     `-ImplicitCastExpr  
+  |       `-ConditionalOperator  '
+  |         |-ParenExpr   'bool'
+  |         | `-BinaryOperator  <col:16, col:39> 'bool' '>'
+  |         |   |-ImplicitCastExpr  
+  |         |   |   `-MemberExpr  ' .operator unsigned long long 
+  |         |   |     `-ImplicitCastExpr  
+  |         |   |         `-MemberExpr  ' .read 
+  |         |   |           `-ImplicitCastExpr  
+  |         |   |             `-MemberExpr  pwm_rising_edge 
+  |         |   `-ImplicitCastExpr  
+  |         |     `-IntegerLiteral   'int' 1
+  |         |   `-MaterializeTemporaryExpr  ' lvalue
+  |         |     `-ImplicitCastExpr  
+  |         |           `-ImplicitCastExpr  
+  |         |               `-MemberExpr   & 
+  |         |                 `-ImplicitCastExpr  
+  |         |                   `-MemberExpr  neg_cnt 
+  |             `-MaterializeTemporaryExpr  ' lvalue
+  |               `-ImplicitCastExpr  
+  |                 `-CStyleCastExpr  
+  |                       `-IntegerLiteral   'int' 1
+  |-ExprWithCleanups  <line:30:5, col:68> 'sc_core::sc_signal<sc_dt::sc_uint<1>, sc_core::SC_ONE_WRITER>::this_type':'sc_core::sc_signal<sc_dt::sc_uint<1>, sc_core::SC_ONE_WRITER>' lvalue
+  | `-CXXOperatorCallExpr  ' lvalue '='
+  |   |-ImplicitCastExpr  
+  |   |-MemberExpr  neg_out 
+  |   `-MaterializeTemporaryExpr  ' lvalue
+  |     `-ImplicitCastExpr  
+  |       `-ConditionalOperator  '
+  |         |-ParenExpr   'bool'
+  |         | `-BinaryOperator   'bool' '!='
+  |         |   |-ImplicitCastExpr  
+  |         |   |   `-MemberExpr  ' .operator unsigned long long 
+  |         |   |     `-ImplicitCastExpr  
+  |         |   |         `-MemberExpr  ' .read 
+  |         |   |           `-ImplicitCastExpr  
+  |         |   |             `-MemberExpr  pwm_rising_edge 
+  |         |   `-ImplicitCastExpr  
+  |         |     `-IntegerLiteral   'int' 10
+  |         |   `-MaterializeTemporaryExpr  ' lvalue
+  |         |     `-ImplicitCastExpr  
+  |         |           `-ImplicitCastExpr  
+  |         |               `-MemberExpr   & 
+  |         |                 `-ImplicitCastExpr  
+  |         |                   `-MemberExpr  neg_cnt 
+  |             `-MaterializeTemporaryExpr  ' lvalue
+  |               `-ImplicitCastExpr  
+  |                 `-CStyleCastExpr  
+  |                       `-IntegerLiteral   'int' 1
+  `-ExprWithCleanups  <line:31:5, col:64> 'sc_core::sc_signal<sc_dt::sc_uint<1>, sc_core::SC_ONE_WRITER>::this_type':'sc_core::sc_signal<sc_dt::sc_uint<1>, sc_core::SC_ONE_WRITER>' lvalue
+    `-CXXOperatorCallExpr  ' lvalue '='
+      |-ImplicitCastExpr  
+      |-MemberExpr  neg_out 
+      `-MaterializeTemporaryExpr  ' lvalue
+        `-ImplicitCastExpr  
+          `-ConditionalOperator  '
+            |-ParenExpr   'bool'
+            | `-BinaryOperator   'bool' '<='
+            |   |-ImplicitCastExpr  
+            |   |   `-MemberExpr  ' .operator unsigned long long 
+            |   |     `-ImplicitCastExpr  
+            |   |         `-MemberExpr  ' .read 
+            |   |           `-ImplicitCastExpr  
+            |   |             `-MemberExpr  pwm_rising_edge 
+            |   `-ImplicitCastExpr  
+            |     `-IntegerLiteral   'int' 10
+            |   `-MaterializeTemporaryExpr  ' lvalue
+            |     `-ImplicitCastExpr  
+            |       `-CStyleCastExpr  
+            |             `-IntegerLiteral   'int' 1
+                `-MaterializeTemporaryExpr  ' lvalue
+                  `-ImplicitCastExpr  
+                        `-ImplicitCastExpr  
+                            `-MemberExpr   & 
+                              `-ImplicitCastExpr  
+                                `-MemberExpr  neg_out 
+
+

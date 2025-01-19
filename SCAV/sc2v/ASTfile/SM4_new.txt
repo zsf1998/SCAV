@@ -1,0 +1,1050 @@
+sensitive: ;
+Dumping SM4:
+CXXRecordDecl   line:3:11 struct SM4 definition
+|-DefinitionData polymorphic has_user_declared_ctor has_mutable_fields can_const_default_init
+| |-DefaultConstructor
+| |-CopyConstructor non_trivial has_const_param needs_overload_resolution implicit_has_const_param
+| |-MoveConstructor exists non_trivial needs_overload_resolution
+| |-CopyAssignment non_trivial has_const_param needs_overload_resolution implicit_has_const_param
+| |-MoveAssignment exists non_trivial needs_overload_resolution
+| `-Destructor simple non_trivial needs_overload_resolution
+|-public '::sc_core::sc_module':'sc_core::sc_module'
+|-CXXRecordDecl   col:11 implicit  struct SM4
+|-FieldDecl  <line:4:5, col:29> col:29  key_in 'sc_in<sc_biguint<128>>':'sc_core::sc_in<sc_dt::sc_biguint<128>>'
+|-FieldDecl  <line:5:5, col:29> col:29  data_in 'sc_in<sc_biguint<128>>':'sc_core::sc_in<sc_dt::sc_biguint<128>>'
+|-FieldDecl  <line:7:5, col:30> col:30  data_out 'sc_out<sc_biguint<128>>':'sc_core::sc_out<sc_dt::sc_biguint<128>>'
+Dumping SM4::prc_SM4:
+CXXMethodDecl   prc_SM4 'void ()'
+`-CompoundStmt  
+  |-DeclStmt  <line:67:5, col:24>
+  | `-VarDecl  ' callinit destroyed
+  |-DeclStmt  <line:68:5, col:25>
+  | `-VarDecl  ' callinit destroyed
+  |-DeclStmt  <line:69:5, col:32>
+  | `-VarDecl  ' callinit destroyed
+  |-CXXOperatorCallExpr  <line:71:5, col:11> 'sc_biguint<128>':'sc_dt::sc_biguint<128>' lvalue '='
+  | |-ImplicitCastExpr  
+  | `-IntegerLiteral   'int' 0
+  |-CXXOperatorCallExpr  <line:72:5, col:12> 'sc_biguint<128>':'sc_dt::sc_biguint<128>' lvalue '='
+  | |-ImplicitCastExpr  
+  | `-IntegerLiteral   'int' 0
+  |-CXXOperatorCallExpr  <line:73:5, col:19> 'sc_biguint<128>':'sc_dt::sc_biguint<128>' lvalue '='
+  | |-ImplicitCastExpr  
+  | `-IntegerLiteral   'int' 0
+  |-ForStmt  
+  | |-DeclStmt  <line:75:9, col:18>
+  | | `-VarDecl   col:13 used i 'int' cinit
+  | |   `-IntegerLiteral   'int' 0
+  | |-
+  | |-BinaryOperator   'bool' '<'
+  | | |-ImplicitCastExpr  
+  | | `-IntegerLiteral   'int' 36
+  | |-UnaryOperator   'int' postfix '++'
+  | `-CXXOperatorCallExpr  <line:76:9, col:17> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue '='
+  |   |-ImplicitCastExpr  
+  |   |-ArraySubscriptExpr  ' lvalue
+  |   | |-ImplicitCastExpr  
+  |   | `-ImplicitCastExpr  
+  |   `-IntegerLiteral   'int' 0
+  |-ForStmt  
+  | |-DeclStmt  <line:77:9, col:18>
+  | | `-VarDecl   col:13 used i 'int' cinit
+  | |   `-IntegerLiteral   'int' 0
+  | |-
+  | |-BinaryOperator   'bool' '<'
+  | | |-ImplicitCastExpr  
+  | | `-IntegerLiteral   'int' 36
+  | |-UnaryOperator   'int' postfix '++'
+  | `-CXXOperatorCallExpr  <line:78:9, col:16> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue '='
+  |   |-ImplicitCastExpr  
+  |   |-ArraySubscriptExpr  ' lvalue
+  |   | |-ImplicitCastExpr  
+  |   | `-ImplicitCastExpr  
+  |   `-IntegerLiteral   'int' 0
+  |-CXXOperatorCallExpr  <line:80:5, col:23> 'sc_biguint<128>':'sc_dt::sc_biguint<128>' lvalue '='
+  | |-ImplicitCastExpr  
+  |   `-MemberExpr  ' .read 
+  |     `-ImplicitCastExpr  
+  |       `-MemberExpr  key_in 
+  |-ExprWithCleanups  <line:81:5, col:37> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  | `-CXXOperatorCallExpr  ' lvalue '='
+  |   |-ImplicitCastExpr  
+  |   |-ArraySubscriptExpr  ' lvalue
+  |   | |-ImplicitCastExpr  
+  |   | `-IntegerLiteral   'int' 0
+  |   `-MaterializeTemporaryExpr   'const sc_dt::sc_unsigned' lvalue
+  |     `-ImplicitCastExpr  
+  |         `-CXXOperatorCallExpr   'sc_dt::sc_unsigned' '^' adl
+  |           |-ImplicitCastExpr  
+  |           |-MaterializeTemporaryExpr   'const sc_dt::sc_unsigned' lvalue
+  |           | `-ImplicitCastExpr  
+  |           |     `-ImplicitCastExpr  
+  |           |         `-MemberExpr  ' .operator sc_unsigned 
+  |           |           `-ImplicitCastExpr  
+  |           |               |-MemberExpr  ' .range 
+  |           |               | `-ImplicitCastExpr  
+  |           |               |-IntegerLiteral   'int' 127
+  |           |               `-IntegerLiteral   'int' 96
+  |           `-ImplicitCastExpr  
+  |             `-ImplicitCastExpr  
+  |               `-ArraySubscriptExpr  ' lvalue
+  |                 |-ImplicitCastExpr  
+  |                 `-IntegerLiteral   'int' 0
+  |-ExprWithCleanups  <line:82:5, col:37> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  | `-CXXOperatorCallExpr  ' lvalue '='
+  |   |-ImplicitCastExpr  
+  |   |-ArraySubscriptExpr  ' lvalue
+  |   | |-ImplicitCastExpr  
+  |   | `-IntegerLiteral   'int' 1
+  |   `-MaterializeTemporaryExpr   'const sc_dt::sc_unsigned' lvalue
+  |     `-ImplicitCastExpr  
+  |         `-CXXOperatorCallExpr   'sc_dt::sc_unsigned' '^' adl
+  |           |-ImplicitCastExpr  
+  |           |-MaterializeTemporaryExpr   'const sc_dt::sc_unsigned' lvalue
+  |           | `-ImplicitCastExpr  
+  |           |     `-ImplicitCastExpr  
+  |           |         `-MemberExpr  ' .operator sc_unsigned 
+  |           |           `-ImplicitCastExpr  
+  |           |               |-MemberExpr  ' .range 
+  |           |               | `-ImplicitCastExpr  
+  |           |               |-IntegerLiteral   'int' 95
+  |           |               `-IntegerLiteral   'int' 64
+  |           `-ImplicitCastExpr  
+  |             `-ImplicitCastExpr  
+  |               `-ArraySubscriptExpr  ' lvalue
+  |                 |-ImplicitCastExpr  
+  |                 `-IntegerLiteral   'int' 1
+  |-ExprWithCleanups  <line:83:5, col:37> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  | `-CXXOperatorCallExpr  ' lvalue '='
+  |   |-ImplicitCastExpr  
+  |   |-ArraySubscriptExpr  ' lvalue
+  |   | |-ImplicitCastExpr  
+  |   | `-IntegerLiteral   'int' 2
+  |   `-MaterializeTemporaryExpr   'const sc_dt::sc_unsigned' lvalue
+  |     `-ImplicitCastExpr  
+  |         `-CXXOperatorCallExpr   'sc_dt::sc_unsigned' '^' adl
+  |           |-ImplicitCastExpr  
+  |           |-MaterializeTemporaryExpr   'const sc_dt::sc_unsigned' lvalue
+  |           | `-ImplicitCastExpr  
+  |           |     `-ImplicitCastExpr  
+  |           |         `-MemberExpr  ' .operator sc_unsigned 
+  |           |           `-ImplicitCastExpr  
+  |           |               |-MemberExpr  ' .range 
+  |           |               | `-ImplicitCastExpr  
+  |           |               |-IntegerLiteral   'int' 63
+  |           |               `-IntegerLiteral   'int' 32
+  |           `-ImplicitCastExpr  
+  |             `-ImplicitCastExpr  
+  |               `-ArraySubscriptExpr  ' lvalue
+  |                 |-ImplicitCastExpr  
+  |                 `-IntegerLiteral   'int' 2
+  |-ExprWithCleanups  <line:84:5, col:37> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  | `-CXXOperatorCallExpr  ' lvalue '='
+  |   |-ImplicitCastExpr  
+  |   |-ArraySubscriptExpr  ' lvalue
+  |   | |-ImplicitCastExpr  
+  |   | `-IntegerLiteral   'int' 3
+  |   `-MaterializeTemporaryExpr   'const sc_dt::sc_unsigned' lvalue
+  |     `-ImplicitCastExpr  
+  |         `-CXXOperatorCallExpr   'sc_dt::sc_unsigned' '^' adl
+  |           |-ImplicitCastExpr  
+  |           |-MaterializeTemporaryExpr   'const sc_dt::sc_unsigned' lvalue
+  |           | `-ImplicitCastExpr  
+  |           |     `-ImplicitCastExpr  
+  |           |         `-MemberExpr  ' .operator sc_unsigned 
+  |           |           `-ImplicitCastExpr  
+  |           |               |-MemberExpr  ' .range 
+  |           |               | `-ImplicitCastExpr  
+  |           |               |-IntegerLiteral   'int' 31
+  |           |               `-IntegerLiteral   'int' 0
+  |           `-ImplicitCastExpr  
+  |             `-ImplicitCastExpr  
+  |               `-ArraySubscriptExpr  ' lvalue
+  |                 |-ImplicitCastExpr  
+  |                 `-IntegerLiteral   'int' 3
+  |-ForStmt  
+  | |-DeclStmt  <line:85:9, col:18>
+  | | `-VarDecl   col:13 used i 'int' cinit
+  | |   `-IntegerLiteral   'int' 0
+  | |-
+  | |-BinaryOperator   'bool' '<'
+  | | |-ImplicitCastExpr  
+  | | `-IntegerLiteral   'int' 32
+  | |-UnaryOperator   'int' postfix '++'
+  | `-ExprWithCleanups  <line:86:9, col:75> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  |   `-CXXOperatorCallExpr  ' lvalue '='
+  |     |-ImplicitCastExpr  
+  |     |-ArraySubscriptExpr  ' lvalue
+  |     | |-ImplicitCastExpr  
+  |     | `-BinaryOperator   'int' '+'
+  |     |   |-ImplicitCastExpr  
+  |     |   `-IntegerLiteral   'int' 4
+  |     `-BinaryOperator   'unsigned long long' '^'
+  |       |-ImplicitCastExpr  
+  |       |   `-MemberExpr  ' .operator unsigned long long 
+  |       |     `-ImplicitCastExpr  
+  |       |       `-ArraySubscriptExpr  ' lvalue
+  |       |         |-ImplicitCastExpr  
+  |       |         `-ImplicitCastExpr  
+  |       `-ImplicitCastExpr  
+  |           `-MemberExpr  ' .operator unsigned long long 
+  |             `-ImplicitCastExpr  
+  |               `-MaterializeTemporaryExpr  ' lvalue
+  |                   `-CallExpr  '
+  |                     |-ImplicitCastExpr  
+  |                     |   `-MaterializeTemporaryExpr  ' lvalue
+  |                     |     `-ImplicitCastExpr  
+  |                     |         `-ImplicitCastExpr  
+  |                     |             `-BinaryOperator   'unsigned long long' '^'
+  |                     |               |-BinaryOperator   'unsigned long long' '^'
+  |                     |               | |-BinaryOperator   'unsigned long long' '^'
+  |                     |               | | |-ImplicitCastExpr  
+  |                     |               | | |   `-MemberExpr  ' .operator unsigned long long 
+  |                     |               | | |     `-ImplicitCastExpr  
+  |                     |               | | |       `-ArraySubscriptExpr  ' lvalue
+  |                     |               | | |         |-ImplicitCastExpr  
+  |                     |               | | |         `-BinaryOperator   'int' '+'
+  |                     |               | | |           |-ImplicitCastExpr  
+  |                     |               | | |           `-IntegerLiteral   'int' 1
+  |                     |               | | `-ImplicitCastExpr  
+  |                     |               | |     `-MemberExpr  ' .operator unsigned long long 
+  |                     |               | |       `-ImplicitCastExpr  
+  |                     |               | |         `-ArraySubscriptExpr  ' lvalue
+  |                     |               | |           |-ImplicitCastExpr  
+  |                     |               | |           `-BinaryOperator   'int' '+'
+  |                     |               | |             |-ImplicitCastExpr  
+  |                     |               | |             `-IntegerLiteral   'int' 2
+  |                     |               | `-ImplicitCastExpr  
+  |                     |               |     `-MemberExpr  ' .operator unsigned long long 
+  |                     |               |       `-ImplicitCastExpr  
+  |                     |               |         `-ArraySubscriptExpr  ' lvalue
+  |                     |               |           |-ImplicitCastExpr  
+  |                     |               |           `-BinaryOperator   'int' '+'
+  |                     |               |             |-ImplicitCastExpr  
+  |                     |               |             `-IntegerLiteral   'int' 3
+  |                     |               `-ImplicitCastExpr  
+  |                     |                   `-MemberExpr  ' .operator unsigned long long 
+  |                     |                     `-ImplicitCastExpr  
+  |                     |                       `-ArraySubscriptExpr  ' lvalue
+  |                     |                         |-ImplicitCastExpr  
+  |                     |                         `-ImplicitCastExpr  
+  |                     `-CXXBoolLiteralExpr   'bool' true
+  |-ExprWithCleanups  <line:88:5, col:237> 'std::basic_ostream<char>::__ostream_type':'std::basic_ostream<char>' lvalue
+  | `-CXXOperatorCallExpr  ' lvalue '<<'
+  |   |-ImplicitCastExpr  
+  |   |-CXXOperatorCallExpr  ' lvalue '<<' adl
+  |   | |-ImplicitCastExpr  
+  |   | |-CXXOperatorCallExpr  ' lvalue '<<'
+  |   | | |-ImplicitCastExpr  
+  |   | | |-CXXOperatorCallExpr  ' lvalue '<<'
+  |   | | | |-ImplicitCastExpr  
+  |   | | | |-CXXOperatorCallExpr  ' lvalue '<<'
+  |   | | | | |-ImplicitCastExpr  
+  |   | | | | |-CXXOperatorCallExpr  ' lvalue '<<'
+  |   | | | | | |-ImplicitCastExpr  
+  |   | | | | | |-CXXOperatorCallExpr  ' lvalue '<<' adl
+  |   | | | | | | |-ImplicitCastExpr  
+  |   | | | | | | |-CXXOperatorCallExpr  ' lvalue '<<' adl
+  |   | | | | | | | |-ImplicitCastExpr  
+  |   | | | | | | | |-CXXOperatorCallExpr  ' lvalue '<<'
+  |   | | | | | | | | |-ImplicitCastExpr  
+  |   | | | | | | | | |-CXXOperatorCallExpr  ' lvalue '<<' adl
+  |   | | | | | | | | | |-ImplicitCastExpr  
+  |   | | | | | | | | | |-CXXOperatorCallExpr  ' lvalue '<<'
+  |   | | | | | | | | | | |-ImplicitCastExpr  
+  |   | | | | | | | | | | `-ImplicitCastExpr  
+  |   | | | | | | | | | `-ImplicitCastExpr  
+  |   | | | | | | | | |   `-StringLiteral   'const char [9]' lvalue "AT time "
+  |   | | | | | | | | `-CallExpr   'const sc_core::sc_time' lvalue
+  |   | | | | | | | |   `-ImplicitCastExpr  
+  |   | | | | | | | `-ImplicitCastExpr  
+  |   | | | | | | |   `-StringLiteral   'const char [3]' lvalue "::"
+  |   | | | | | | `-ImplicitCastExpr  
+  |   | | | | | |   `-StringLiteral   'const char [11]' lvalue "key_in: 0x"
+  |   | | | | | `-CStyleCastExpr  
+  |   | | | | |   `-ImplicitCastExpr   part_of_explicit_cast
+  |   | | | | |     `-ImplicitCastExpr   part_of_explicit_cast
+  |   | | | | |         `-MemberExpr  ' .operator unsigned long long 
+  |   | | | | |           `-ImplicitCastExpr  
+  |   | | | | |             `-MaterializeTemporaryExpr  ' lvalue
+  |   | | | | |               `-CStyleCastExpr  
+  |   | | | | |                     `-MaterializeTemporaryExpr   'const sc_dt::sc_unsigned' lvalue
+  |   | | | | |                       `-ImplicitCastExpr  
+  |   | | | | |                           `-ImplicitCastExpr  
+  |   | | | | |                               `-MemberExpr  ' .operator sc_unsigned 
+  |   | | | | |                                 `-ImplicitCastExpr  
+  |   | | | | |                                     |-MemberExpr  ' .range 
+  |   | | | | |                                     | `-ImplicitCastExpr  
+  |   | | | | |                                     |-IntegerLiteral   'int' 127
+  |   | | | | |                                     `-IntegerLiteral   'int' 96
+  |   | | | | `-CStyleCastExpr  
+  |   | | | |   `-ImplicitCastExpr   part_of_explicit_cast
+  |   | | | |     `-ImplicitCastExpr   part_of_explicit_cast
+  |   | | | |         `-MemberExpr  ' .operator unsigned long long 
+  |   | | | |           `-ImplicitCastExpr  
+  |   | | | |             `-MaterializeTemporaryExpr  ' lvalue
+  |   | | | |               `-CStyleCastExpr  
+  |   | | | |                     `-MaterializeTemporaryExpr   'const sc_dt::sc_unsigned' lvalue
+  |   | | | |                       `-ImplicitCastExpr  
+  |   | | | |                           `-ImplicitCastExpr  
+  |   | | | |                               `-MemberExpr  ' .operator sc_unsigned 
+  |   | | | |                                 `-ImplicitCastExpr  
+  |   | | | |                                     |-MemberExpr  ' .range 
+  |   | | | |                                     | `-ImplicitCastExpr  
+  |   | | | |                                     |-IntegerLiteral   'int' 95
+  |   | | | |                                     `-IntegerLiteral   'int' 64
+  |   | | | `-CStyleCastExpr  
+  |   | | |   `-ImplicitCastExpr   part_of_explicit_cast
+  |   | | |     `-ImplicitCastExpr   part_of_explicit_cast
+  |   | | |         `-MemberExpr  ' .operator unsigned long long 
+  |   | | |           `-ImplicitCastExpr  
+  |   | | |             `-MaterializeTemporaryExpr  ' lvalue
+  |   | | |               `-CStyleCastExpr  
+  |   | | |                     `-MaterializeTemporaryExpr   'const sc_dt::sc_unsigned' lvalue
+  |   | | |                       `-ImplicitCastExpr  
+  |   | | |                           `-ImplicitCastExpr  
+  |   | | |                               `-MemberExpr  ' .operator sc_unsigned 
+  |   | | |                                 `-ImplicitCastExpr  
+  |   | | |                                     |-MemberExpr  ' .range 
+  |   | | |                                     | `-ImplicitCastExpr  
+  |   | | |                                     |-IntegerLiteral   'int' 63
+  |   | | |                                     `-IntegerLiteral   'int' 32
+  |   | | `-CStyleCastExpr  
+  |   | |   `-ImplicitCastExpr   part_of_explicit_cast
+  |   | |     `-ImplicitCastExpr   part_of_explicit_cast
+  |   | |         `-MemberExpr  ' .operator unsigned long long 
+  |   | |           `-ImplicitCastExpr  
+  |   | |             `-MaterializeTemporaryExpr  ' lvalue
+  |   | |               `-CStyleCastExpr  
+  |   | |                     `-MaterializeTemporaryExpr   'const sc_dt::sc_unsigned' lvalue
+  |   | |                       `-ImplicitCastExpr  
+  |   | |                           `-ImplicitCastExpr  
+  |   | |                               `-MemberExpr  ' .operator sc_unsigned 
+  |   | |                                 `-ImplicitCastExpr  
+  |   | |                                     |-MemberExpr  ' .range 
+  |   | |                                     | `-ImplicitCastExpr  
+  |   | |                                     |-IntegerLiteral   'int' 31
+  |   | |                                     `-IntegerLiteral   'int' 0
+  |   | `-CharacterLiteral   'char' 10
+  |   `-ImplicitCastExpr  
+  |-CXXOperatorCallExpr  <line:90:5, col:25> 'sc_biguint<128>':'sc_dt::sc_biguint<128>' lvalue '='
+  | |-ImplicitCastExpr  
+  |   `-MemberExpr  ' .read 
+  |     `-ImplicitCastExpr  
+  |       `-MemberExpr  data_in 
+  |-ExprWithCleanups  <line:91:5, col:29> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  | `-CXXOperatorCallExpr  ' lvalue '='
+  |   |-ImplicitCastExpr  
+  |   |-ArraySubscriptExpr  ' lvalue
+  |   | |-ImplicitCastExpr  
+  |   | `-IntegerLiteral   'int' 0
+  |   `-MaterializeTemporaryExpr   'const sc_dt::sc_unsigned' lvalue
+  |     `-ImplicitCastExpr  
+  |         `-ImplicitCastExpr  
+  |             `-MemberExpr  ' .operator sc_unsigned 
+  |               `-ImplicitCastExpr  
+  |                   |-MemberExpr  ' .range 
+  |                   | `-ImplicitCastExpr  
+  |                   |-IntegerLiteral   'int' 127
+  |                   `-IntegerLiteral   'int' 96
+  |-ExprWithCleanups  <line:92:5, col:29> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  | `-CXXOperatorCallExpr  ' lvalue '='
+  |   |-ImplicitCastExpr  
+  |   |-ArraySubscriptExpr  ' lvalue
+  |   | |-ImplicitCastExpr  
+  |   | `-IntegerLiteral   'int' 1
+  |   `-MaterializeTemporaryExpr   'const sc_dt::sc_unsigned' lvalue
+  |     `-ImplicitCastExpr  
+  |         `-ImplicitCastExpr  
+  |             `-MemberExpr  ' .operator sc_unsigned 
+  |               `-ImplicitCastExpr  
+  |                   |-MemberExpr  ' .range 
+  |                   | `-ImplicitCastExpr  
+  |                   |-IntegerLiteral   'int' 95
+  |                   `-IntegerLiteral   'int' 64
+  |-ExprWithCleanups  <line:93:5, col:29> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  | `-CXXOperatorCallExpr  ' lvalue '='
+  |   |-ImplicitCastExpr  
+  |   |-ArraySubscriptExpr  ' lvalue
+  |   | |-ImplicitCastExpr  
+  |   | `-IntegerLiteral   'int' 2
+  |   `-MaterializeTemporaryExpr   'const sc_dt::sc_unsigned' lvalue
+  |     `-ImplicitCastExpr  
+  |         `-ImplicitCastExpr  
+  |             `-MemberExpr  ' .operator sc_unsigned 
+  |               `-ImplicitCastExpr  
+  |                   |-MemberExpr  ' .range 
+  |                   | `-ImplicitCastExpr  
+  |                   |-IntegerLiteral   'int' 63
+  |                   `-IntegerLiteral   'int' 32
+  |-ExprWithCleanups  <line:94:5, col:29> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  | `-CXXOperatorCallExpr  ' lvalue '='
+  |   |-ImplicitCastExpr  
+  |   |-ArraySubscriptExpr  ' lvalue
+  |   | |-ImplicitCastExpr  
+  |   | `-IntegerLiteral   'int' 3
+  |   `-MaterializeTemporaryExpr   'const sc_dt::sc_unsigned' lvalue
+  |     `-ImplicitCastExpr  
+  |         `-ImplicitCastExpr  
+  |             `-MemberExpr  ' .operator sc_unsigned 
+  |               `-ImplicitCastExpr  
+  |                   |-MemberExpr  ' .range 
+  |                   | `-ImplicitCastExpr  
+  |                   |-IntegerLiteral   'int' 31
+  |                   `-IntegerLiteral   'int' 0
+  |-ForStmt  
+  | |-DeclStmt  <line:95:9, col:18>
+  | | `-VarDecl   col:13 used i 'int' cinit
+  | |   `-IntegerLiteral   'int' 0
+  | |-
+  | |-BinaryOperator   'bool' '<'
+  | | |-ImplicitCastExpr  
+  | | `-IntegerLiteral   'int' 32
+  | |-UnaryOperator   'int' postfix '++'
+  | `-ExprWithCleanups  <line:96:9, col:73> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  |   `-CXXOperatorCallExpr  ' lvalue '='
+  |     |-ImplicitCastExpr  
+  |     |-ArraySubscriptExpr  ' lvalue
+  |     | |-ImplicitCastExpr  
+  |     | `-BinaryOperator   'int' '+'
+  |     |   |-ImplicitCastExpr  
+  |     |   `-IntegerLiteral   'int' 4
+  |     `-BinaryOperator   'unsigned long long' '^'
+  |       |-ImplicitCastExpr  
+  |       |   `-MemberExpr  ' .operator unsigned long long 
+  |       |     `-ImplicitCastExpr  
+  |       |       `-ArraySubscriptExpr  ' lvalue
+  |       |         |-ImplicitCastExpr  
+  |       |         `-ImplicitCastExpr  
+  |       `-ImplicitCastExpr  
+  |           `-MemberExpr  ' .operator unsigned long long 
+  |             `-ImplicitCastExpr  
+  |               `-MaterializeTemporaryExpr  ' lvalue
+  |                   `-CallExpr  '
+  |                     |-ImplicitCastExpr  
+  |                     |   `-MaterializeTemporaryExpr  ' lvalue
+  |                     |     `-ImplicitCastExpr  
+  |                     |         `-ImplicitCastExpr  
+  |                     |             `-BinaryOperator   'unsigned long long' '^'
+  |                     |               |-BinaryOperator   'unsigned long long' '^'
+  |                     |               | |-BinaryOperator   'unsigned long long' '^'
+  |                     |               | | |-ImplicitCastExpr  
+  |                     |               | | |   `-MemberExpr  ' .operator unsigned long long 
+  |                     |               | | |     `-ImplicitCastExpr  
+  |                     |               | | |       `-ArraySubscriptExpr  ' lvalue
+  |                     |               | | |         |-ImplicitCastExpr  
+  |                     |               | | |         `-BinaryOperator   'int' '+'
+  |                     |               | | |           |-ImplicitCastExpr  
+  |                     |               | | |           `-IntegerLiteral   'int' 1
+  |                     |               | | `-ImplicitCastExpr  
+  |                     |               | |     `-MemberExpr  ' .operator unsigned long long 
+  |                     |               | |       `-ImplicitCastExpr  
+  |                     |               | |         `-ArraySubscriptExpr  ' lvalue
+  |                     |               | |           |-ImplicitCastExpr  
+  |                     |               | |           `-BinaryOperator   'int' '+'
+  |                     |               | |             |-ImplicitCastExpr  
+  |                     |               | |             `-IntegerLiteral   'int' 2
+  |                     |               | `-ImplicitCastExpr  
+  |                     |               |     `-MemberExpr  ' .operator unsigned long long 
+  |                     |               |       `-ImplicitCastExpr  
+  |                     |               |         `-ArraySubscriptExpr  ' lvalue
+  |                     |               |           |-ImplicitCastExpr  
+  |                     |               |           `-BinaryOperator   'int' '+'
+  |                     |               |             |-ImplicitCastExpr  
+  |                     |               |             `-IntegerLiteral   'int' 3
+  |                     |               `-ImplicitCastExpr  
+  |                     |                   `-MemberExpr  ' .operator unsigned long long 
+  |                     |                     `-ImplicitCastExpr  
+  |                     |                       `-ArraySubscriptExpr  ' lvalue
+  |                     |                         |-ImplicitCastExpr  
+  |                     |                         `-BinaryOperator   'int' '+'
+  |                     |                           |-ImplicitCastExpr  
+  |                     |                           `-IntegerLiteral   'int' 4
+  |                     `-CXXBoolLiteralExpr   'bool' false
+  |-CXXOperatorCallExpr  <line:97:5, col:43> 'sc_biguint<128>':'sc_dt::sc_biguint<128>' lvalue '='
+  | |-ImplicitCastExpr  
+  | `-ImplicitCastExpr  
+  |   `-ImplicitCastExpr  
+  |     `-ParenExpr   'sc_dt::sc_concatref':'sc_dt::sc_concatref' lvalue
+  |       `-CXXOperatorCallExpr   'sc_dt::sc_concatref':'sc_dt::sc_concatref' lvalue ',' adl
+  |         |-ImplicitCastExpr  
+  |         |-ImplicitCastExpr  
+  |         | `-CXXOperatorCallExpr   'sc_dt::sc_concatref':'sc_dt::sc_concatref' lvalue ',' adl
+  |         |   |-ImplicitCastExpr  
+  |         |   |-ImplicitCastExpr  
+  |         |   | `-CXXOperatorCallExpr   'sc_dt::sc_concatref':'sc_dt::sc_concatref' lvalue ',' adl
+  |         |   |   |-ImplicitCastExpr  
+  |         |   |   |-ImplicitCastExpr  
+  |         |   |   | `-ArraySubscriptExpr  ' lvalue
+  |         |   |   |   |-ImplicitCastExpr  
+  |         |   |   |   `-IntegerLiteral   'int' 35
+  |         |   |   `-ImplicitCastExpr  
+  |         |   |     `-ArraySubscriptExpr  ' lvalue
+  |         |   |       |-ImplicitCastExpr  
+  |         |   |       `-IntegerLiteral   'int' 34
+  |         |   `-ImplicitCastExpr  
+  |         |     `-ArraySubscriptExpr  ' lvalue
+  |         |       |-ImplicitCastExpr  
+  |         |       `-IntegerLiteral   'int' 33
+  |         `-ImplicitCastExpr  
+  |           `-ArraySubscriptExpr  ' lvalue
+  |             |-ImplicitCastExpr  
+  |             `-IntegerLiteral   'int' 32
+  | |-MemberExpr  ' .write 
+  | | `-ImplicitCastExpr  
+  | |   `-MemberExpr  data_out 
+  | `-ImplicitCastExpr  
+  |-ExprWithCleanups  <line:100:5, col:238> 'std::basic_ostream<char>::__ostream_type':'std::basic_ostream<char>' lvalue
+  | `-CXXOperatorCallExpr  ' lvalue '<<'
+  |   |-ImplicitCastExpr  
+  |   |-CXXOperatorCallExpr  ' lvalue '<<'
+  |   | |-ImplicitCastExpr  
+  |   | |-CXXOperatorCallExpr  ' lvalue '<<'
+  |   | | |-ImplicitCastExpr  
+  |   | | |-CXXOperatorCallExpr  ' lvalue '<<'
+  |   | | | |-ImplicitCastExpr  
+  |   | | | |-CXXOperatorCallExpr  ' lvalue '<<'
+  |   | | | | |-ImplicitCastExpr  
+  |   | | | | |-CXXOperatorCallExpr  ' lvalue '<<' adl
+  |   | | | | | |-ImplicitCastExpr  
+  |   | | | | | |-CXXOperatorCallExpr  ' lvalue '<<' adl
+  |   | | | | | | |-ImplicitCastExpr  
+  |   | | | | | | |-CXXOperatorCallExpr  ' lvalue '<<'
+  |   | | | | | | | |-ImplicitCastExpr  
+  |   | | | | | | | |-CXXOperatorCallExpr  ' lvalue '<<' adl
+  |   | | | | | | | | |-ImplicitCastExpr  
+  |   | | | | | | | | |-CXXOperatorCallExpr  ' lvalue '<<'
+  |   | | | | | | | | | |-ImplicitCastExpr  
+  |   | | | | | | | | | `-ImplicitCastExpr  
+  |   | | | | | | | | `-ImplicitCastExpr  
+  |   | | | | | | | |   `-StringLiteral   'const char [9]' lvalue "AT time "
+  |   | | | | | | | `-CallExpr   'const sc_core::sc_time' lvalue
+  |   | | | | | | |   `-ImplicitCastExpr  
+  |   | | | | | | `-ImplicitCastExpr  
+  |   | | | | | |   `-StringLiteral   'const char [3]' lvalue "::"
+  |   | | | | | `-ImplicitCastExpr  
+  |   | | | | |   `-StringLiteral   'const char [16]' lvalue "data_enc_in: 0x"
+  |   | | | | `-CStyleCastExpr  
+  |   | | | |   `-ImplicitCastExpr   part_of_explicit_cast
+  |   | | | |     `-ImplicitCastExpr   part_of_explicit_cast
+  |   | | | |         `-MemberExpr  ' .operator unsigned long long 
+  |   | | | |           `-ImplicitCastExpr  
+  |   | | | |             `-MaterializeTemporaryExpr  ' lvalue
+  |   | | | |               `-CStyleCastExpr  
+  |   | | | |                     `-MaterializeTemporaryExpr   'const sc_dt::sc_unsigned' lvalue
+  |   | | | |                       `-ImplicitCastExpr  
+  |   | | | |                           `-ImplicitCastExpr  
+  |   | | | |                               `-MemberExpr  ' .operator sc_unsigned 
+  |   | | | |                                 `-ImplicitCastExpr  
+  |   | | | |                                     |-MemberExpr  ' .range 
+  |   | | | |                                     | `-ImplicitCastExpr  
+  |   | | | |                                     |-IntegerLiteral   'int' 127
+  |   | | | |                                     `-IntegerLiteral   'int' 96
+  |   | | | `-CStyleCastExpr  
+  |   | | |   `-ImplicitCastExpr   part_of_explicit_cast
+  |   | | |     `-ImplicitCastExpr   part_of_explicit_cast
+  |   | | |         `-MemberExpr  ' .operator unsigned long long 
+  |   | | |           `-ImplicitCastExpr  
+  |   | | |             `-MaterializeTemporaryExpr  ' lvalue
+  |   | | |               `-CStyleCastExpr  
+  |   | | |                     `-MaterializeTemporaryExpr   'const sc_dt::sc_unsigned' lvalue
+  |   | | |                       `-ImplicitCastExpr  
+  |   | | |                           `-ImplicitCastExpr  
+  |   | | |                               `-MemberExpr  ' .operator sc_unsigned 
+  |   | | |                                 `-ImplicitCastExpr  
+  |   | | |                                     |-MemberExpr  ' .range 
+  |   | | |                                     | `-ImplicitCastExpr  
+  |   | | |                                     |-IntegerLiteral   'int' 95
+  |   | | |                                     `-IntegerLiteral   'int' 64
+  |   | | `-CStyleCastExpr  
+  |   | |   `-ImplicitCastExpr   part_of_explicit_cast
+  |   | |     `-ImplicitCastExpr   part_of_explicit_cast
+  |   | |         `-MemberExpr  ' .operator unsigned long long 
+  |   | |           `-ImplicitCastExpr  
+  |   | |             `-MaterializeTemporaryExpr  ' lvalue
+  |   | |               `-CStyleCastExpr  
+  |   | |                     `-MaterializeTemporaryExpr   'const sc_dt::sc_unsigned' lvalue
+  |   | |                       `-ImplicitCastExpr  
+  |   | |                           `-ImplicitCastExpr  
+  |   | |                               `-MemberExpr  ' .operator sc_unsigned 
+  |   | |                                 `-ImplicitCastExpr  
+  |   | |                                     |-MemberExpr  ' .range 
+  |   | |                                     | `-ImplicitCastExpr  
+  |   | |                                     |-IntegerLiteral   'int' 63
+  |   | |                                     `-IntegerLiteral   'int' 32
+  |   | `-CStyleCastExpr  
+  |   |   `-ImplicitCastExpr   part_of_explicit_cast
+  |   |     `-ImplicitCastExpr   part_of_explicit_cast
+  |   |         `-MemberExpr  ' .operator unsigned long long 
+  |   |           `-ImplicitCastExpr  
+  |   |             `-MaterializeTemporaryExpr  ' lvalue
+  |   |               `-CStyleCastExpr  
+  |   |                     `-MaterializeTemporaryExpr   'const sc_dt::sc_unsigned' lvalue
+  |   |                       `-ImplicitCastExpr  
+  |   |                           `-ImplicitCastExpr  
+  |   |                               `-MemberExpr  ' .operator sc_unsigned 
+  |   |                                 `-ImplicitCastExpr  
+  |   |                                     |-MemberExpr  ' .range 
+  |   |                                     | `-ImplicitCastExpr  
+  |   |                                     |-IntegerLiteral   'int' 31
+  |   |                                     `-IntegerLiteral   'int' 0
+  |   `-ImplicitCastExpr  
+  |-ExprWithCleanups  <line:101:5, col:278> 'std::basic_ostream<char>::__ostream_type':'std::basic_ostream<char>' lvalue
+  | `-CXXOperatorCallExpr  ' lvalue '<<'
+  |   |-ImplicitCastExpr  
+  |   |-CXXOperatorCallExpr  ' lvalue '<<' adl
+  |   | |-ImplicitCastExpr  
+  |   | |-CXXOperatorCallExpr  ' lvalue '<<'
+  |   | | |-ImplicitCastExpr  
+  |   | | |-CXXOperatorCallExpr  ' lvalue '<<'
+  |   | | | |-ImplicitCastExpr  
+  |   | | | |-CXXOperatorCallExpr  ' lvalue '<<'
+  |   | | | | |-ImplicitCastExpr  
+  |   | | | | |-CXXOperatorCallExpr  ' lvalue '<<'
+  |   | | | | | |-ImplicitCastExpr  
+  |   | | | | | |-CXXOperatorCallExpr  ' lvalue '<<' adl
+  |   | | | | | | |-ImplicitCastExpr  
+  |   | | | | | | |-CXXOperatorCallExpr  ' lvalue '<<' adl
+  |   | | | | | | | |-ImplicitCastExpr  
+  |   | | | | | | | |-CXXOperatorCallExpr  ' lvalue '<<'
+  |   | | | | | | | | |-ImplicitCastExpr  
+  |   | | | | | | | | |-CXXOperatorCallExpr  ' lvalue '<<' adl
+  |   | | | | | | | | | |-ImplicitCastExpr  
+  |   | | | | | | | | | |-CXXOperatorCallExpr  ' lvalue '<<'
+  |   | | | | | | | | | | |-ImplicitCastExpr  
+  |   | | | | | | | | | | `-ImplicitCastExpr  
+  |   | | | | | | | | | `-ImplicitCastExpr  
+  |   | | | | | | | | |   `-StringLiteral   'const char [9]' lvalue "AT time "
+  |   | | | | | | | | `-CallExpr   'const sc_core::sc_time' lvalue
+  |   | | | | | | | |   `-ImplicitCastExpr  
+  |   | | | | | | | `-ImplicitCastExpr  
+  |   | | | | | | |   `-StringLiteral   'const char [3]' lvalue "::"
+  |   | | | | | | `-ImplicitCastExpr  
+  |   | | | | | |   `-StringLiteral   'const char [20]' lvalue "data_enc_finish: 0x"
+  |   | | | | | `-CStyleCastExpr  
+  |   | | | | |   `-ImplicitCastExpr   part_of_explicit_cast
+  |   | | | | |     `-ImplicitCastExpr   part_of_explicit_cast
+  |   | | | | |         `-MemberExpr  ' .operator unsigned long long 
+  |   | | | | |           `-ImplicitCastExpr  
+  |   | | | | |             `-MaterializeTemporaryExpr  ' lvalue
+  |   | | | | |               `-CStyleCastExpr  
+  |   | | | | |                     `-MaterializeTemporaryExpr   'const sc_dt::sc_unsigned' lvalue
+  |   | | | | |                       `-ImplicitCastExpr  
+  |   | | | | |                           `-ImplicitCastExpr  
+  |   | | | | |                               `-MemberExpr  ' .operator sc_unsigned 
+  |   | | | | |                                 `-ImplicitCastExpr  
+  |   | | | | |                                     |-MemberExpr  ' .range 
+  |   | | | | |                                     | `-ImplicitCastExpr  
+  |   | | | | |                                     |-IntegerLiteral   'int' 127
+  |   | | | | |                                     `-IntegerLiteral   'int' 96
+  |   | | | | `-CStyleCastExpr  
+  |   | | | |   `-ImplicitCastExpr   part_of_explicit_cast
+  |   | | | |     `-ImplicitCastExpr   part_of_explicit_cast
+  |   | | | |         `-MemberExpr  ' .operator unsigned long long 
+  |   | | | |           `-ImplicitCastExpr  
+  |   | | | |             `-MaterializeTemporaryExpr  ' lvalue
+  |   | | | |               `-CStyleCastExpr  
+  |   | | | |                     `-MaterializeTemporaryExpr   'const sc_dt::sc_unsigned' lvalue
+  |   | | | |                       `-ImplicitCastExpr  
+  |   | | | |                           `-ImplicitCastExpr  
+  |   | | | |                               `-MemberExpr  ' .operator sc_unsigned 
+  |   | | | |                                 `-ImplicitCastExpr  
+  |   | | | |                                     |-MemberExpr  ' .range 
+  |   | | | |                                     | `-ImplicitCastExpr  
+  |   | | | |                                     |-IntegerLiteral   'int' 95
+  |   | | | |                                     `-IntegerLiteral   'int' 64
+  |   | | | `-CStyleCastExpr  
+  |   | | |   `-ImplicitCastExpr   part_of_explicit_cast
+  |   | | |     `-ImplicitCastExpr   part_of_explicit_cast
+  |   | | |         `-MemberExpr  ' .operator unsigned long long 
+  |   | | |           `-ImplicitCastExpr  
+  |   | | |             `-MaterializeTemporaryExpr  ' lvalue
+  |   | | |               `-CStyleCastExpr  
+  |   | | |                     `-MaterializeTemporaryExpr   'const sc_dt::sc_unsigned' lvalue
+  |   | | |                       `-ImplicitCastExpr  
+  |   | | |                           `-ImplicitCastExpr  
+  |   | | |                               `-MemberExpr  ' .operator sc_unsigned 
+  |   | | |                                 `-ImplicitCastExpr  
+  |   | | |                                     |-MemberExpr  ' .range 
+  |   | | |                                     | `-ImplicitCastExpr  
+  |   | | |                                     |-IntegerLiteral   'int' 63
+  |   | | |                                     `-IntegerLiteral   'int' 32
+  |   | | `-CStyleCastExpr  
+  |   | |   `-ImplicitCastExpr   part_of_explicit_cast
+  |   | |     `-ImplicitCastExpr   part_of_explicit_cast
+  |   | |         `-MemberExpr  ' .operator unsigned long long 
+  |   | |           `-ImplicitCastExpr  
+  |   | |             `-MaterializeTemporaryExpr  ' lvalue
+  |   | |               `-CStyleCastExpr  
+  |   | |                     `-MaterializeTemporaryExpr   'const sc_dt::sc_unsigned' lvalue
+  |   | |                       `-ImplicitCastExpr  
+  |   | |                           `-ImplicitCastExpr  
+  |   | |                               `-MemberExpr  ' .operator sc_unsigned 
+  |   | |                                 `-ImplicitCastExpr  
+  |   | |                                     |-MemberExpr  ' .range 
+  |   | |                                     | `-ImplicitCastExpr  
+  |   | |                                     |-IntegerLiteral   'int' 31
+  |   | |                                     `-IntegerLiteral   'int' 0
+  |   | `-CharacterLiteral   'char' 10
+  |   `-ImplicitCastExpr  
+  |-CXXOperatorCallExpr  <line:103:5, col:12> 'sc_biguint<128>':'sc_dt::sc_biguint<128>' lvalue '='
+  | |-ImplicitCastExpr  
+  | `-ImplicitCastExpr  
+  |-ExprWithCleanups  <line:104:5, col:29> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  | `-CXXOperatorCallExpr  ' lvalue '='
+  |   |-ImplicitCastExpr  
+  |   |-ArraySubscriptExpr  ' lvalue
+  |   | |-ImplicitCastExpr  
+  |   | `-IntegerLiteral   'int' 0
+  |   `-MaterializeTemporaryExpr   'const sc_dt::sc_unsigned' lvalue
+  |     `-ImplicitCastExpr  
+  |         `-ImplicitCastExpr  
+  |             `-MemberExpr  ' .operator sc_unsigned 
+  |               `-ImplicitCastExpr  
+  |                   |-MemberExpr  ' .range 
+  |                   | `-ImplicitCastExpr  
+  |                   |-IntegerLiteral   'int' 127
+  |                   `-IntegerLiteral   'int' 96
+  |-ExprWithCleanups  <line:105:5, col:29> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  | `-CXXOperatorCallExpr  ' lvalue '='
+  |   |-ImplicitCastExpr  
+  |   |-ArraySubscriptExpr  ' lvalue
+  |   | |-ImplicitCastExpr  
+  |   | `-IntegerLiteral   'int' 1
+  |   `-MaterializeTemporaryExpr   'const sc_dt::sc_unsigned' lvalue
+  |     `-ImplicitCastExpr  
+  |         `-ImplicitCastExpr  
+  |             `-MemberExpr  ' .operator sc_unsigned 
+  |               `-ImplicitCastExpr  
+  |                   |-MemberExpr  ' .range 
+  |                   | `-ImplicitCastExpr  
+  |                   |-IntegerLiteral   'int' 95
+  |                   `-IntegerLiteral   'int' 64
+  |-ExprWithCleanups  <line:106:5, col:29> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  | `-CXXOperatorCallExpr  ' lvalue '='
+  |   |-ImplicitCastExpr  
+  |   |-ArraySubscriptExpr  ' lvalue
+  |   | |-ImplicitCastExpr  
+  |   | `-IntegerLiteral   'int' 2
+  |   `-MaterializeTemporaryExpr   'const sc_dt::sc_unsigned' lvalue
+  |     `-ImplicitCastExpr  
+  |         `-ImplicitCastExpr  
+  |             `-MemberExpr  ' .operator sc_unsigned 
+  |               `-ImplicitCastExpr  
+  |                   |-MemberExpr  ' .range 
+  |                   | `-ImplicitCastExpr  
+  |                   |-IntegerLiteral   'int' 63
+  |                   `-IntegerLiteral   'int' 32
+  |-ExprWithCleanups  <line:107:5, col:29> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  | `-CXXOperatorCallExpr  ' lvalue '='
+  |   |-ImplicitCastExpr  
+  |   |-ArraySubscriptExpr  ' lvalue
+  |   | |-ImplicitCastExpr  
+  |   | `-IntegerLiteral   'int' 3
+  |   `-MaterializeTemporaryExpr   'const sc_dt::sc_unsigned' lvalue
+  |     `-ImplicitCastExpr  
+  |         `-ImplicitCastExpr  
+  |             `-MemberExpr  ' .operator sc_unsigned 
+  |               `-ImplicitCastExpr  
+  |                   |-MemberExpr  ' .range 
+  |                   | `-ImplicitCastExpr  
+  |                   |-IntegerLiteral   'int' 31
+  |                   `-IntegerLiteral   'int' 0
+  |-ForStmt  
+  | |-DeclStmt  <line:108:9, col:18>
+  | | `-VarDecl   col:13 used i 'int' cinit
+  | |   `-IntegerLiteral   'int' 0
+  | |-
+  | |-BinaryOperator   'bool' '<'
+  | | |-ImplicitCastExpr  
+  | | `-IntegerLiteral   'int' 32
+  | |-UnaryOperator   'int' postfix '++'
+  | `-ExprWithCleanups  <line:109:9, col:74> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  |   `-CXXOperatorCallExpr  ' lvalue '='
+  |     |-ImplicitCastExpr  
+  |     |-ArraySubscriptExpr  ' lvalue
+  |     | |-ImplicitCastExpr  
+  |     | `-BinaryOperator   'int' '+'
+  |     |   |-ImplicitCastExpr  
+  |     |   `-IntegerLiteral   'int' 4
+  |     `-BinaryOperator   'unsigned long long' '^'
+  |       |-ImplicitCastExpr  
+  |       |   `-MemberExpr  ' .operator unsigned long long 
+  |       |     `-ImplicitCastExpr  
+  |       |       `-ArraySubscriptExpr  ' lvalue
+  |       |         |-ImplicitCastExpr  
+  |       |         `-ImplicitCastExpr  
+  |       `-ImplicitCastExpr  
+  |           `-MemberExpr  ' .operator unsigned long long 
+  |             `-ImplicitCastExpr  
+  |               `-MaterializeTemporaryExpr  ' lvalue
+  |                   `-CallExpr  '
+  |                     |-ImplicitCastExpr  
+  |                     |   `-MaterializeTemporaryExpr  ' lvalue
+  |                     |     `-ImplicitCastExpr  
+  |                     |         `-ImplicitCastExpr  
+  |                     |             `-BinaryOperator   'unsigned long long' '^'
+  |                     |               |-BinaryOperator   'unsigned long long' '^'
+  |                     |               | |-BinaryOperator   'unsigned long long' '^'
+  |                     |               | | |-ImplicitCastExpr  
+  |                     |               | | |   `-MemberExpr  ' .operator unsigned long long 
+  |                     |               | | |     `-ImplicitCastExpr  
+  |                     |               | | |       `-ArraySubscriptExpr  ' lvalue
+  |                     |               | | |         |-ImplicitCastExpr  
+  |                     |               | | |         `-BinaryOperator   'int' '+'
+  |                     |               | | |           |-ImplicitCastExpr  
+  |                     |               | | |           `-IntegerLiteral   'int' 1
+  |                     |               | | `-ImplicitCastExpr  
+  |                     |               | |     `-MemberExpr  ' .operator unsigned long long 
+  |                     |               | |       `-ImplicitCastExpr  
+  |                     |               | |         `-ArraySubscriptExpr  ' lvalue
+  |                     |               | |           |-ImplicitCastExpr  
+  |                     |               | |           `-BinaryOperator   'int' '+'
+  |                     |               | |             |-ImplicitCastExpr  
+  |                     |               | |             `-IntegerLiteral   'int' 2
+  |                     |               | `-ImplicitCastExpr  
+  |                     |               |     `-MemberExpr  ' .operator unsigned long long 
+  |                     |               |       `-ImplicitCastExpr  
+  |                     |               |         `-ArraySubscriptExpr  ' lvalue
+  |                     |               |           |-ImplicitCastExpr  
+  |                     |               |           `-BinaryOperator   'int' '+'
+  |                     |               |             |-ImplicitCastExpr  
+  |                     |               |             `-IntegerLiteral   'int' 3
+  |                     |               `-ImplicitCastExpr  
+  |                     |                   `-MemberExpr  ' .operator unsigned long long 
+  |                     |                     `-ImplicitCastExpr  
+  |                     |                       `-ArraySubscriptExpr  ' lvalue
+  |                     |                         |-ImplicitCastExpr  
+  |                     |                         `-BinaryOperator   'int' '-'
+  |                     |                           |-IntegerLiteral   'int' 35
+  |                     |                           `-ImplicitCastExpr  
+  |                     `-CXXBoolLiteralExpr   'bool' false
+  |-CXXOperatorCallExpr  <line:110:5, col:43> 'sc_biguint<128>':'sc_dt::sc_biguint<128>' lvalue '='
+  | |-ImplicitCastExpr  
+  | `-ImplicitCastExpr  
+  |   `-ImplicitCastExpr  
+  |     `-ParenExpr   'sc_dt::sc_concatref':'sc_dt::sc_concatref' lvalue
+  |       `-CXXOperatorCallExpr   'sc_dt::sc_concatref':'sc_dt::sc_concatref' lvalue ',' adl
+  |         |-ImplicitCastExpr  
+  |         |-ImplicitCastExpr  
+  |         | `-CXXOperatorCallExpr   'sc_dt::sc_concatref':'sc_dt::sc_concatref' lvalue ',' adl
+  |         |   |-ImplicitCastExpr  
+  |         |   |-ImplicitCastExpr  
+  |         |   | `-CXXOperatorCallExpr   'sc_dt::sc_concatref':'sc_dt::sc_concatref' lvalue ',' adl
+  |         |   |   |-ImplicitCastExpr  
+  |         |   |   |-ImplicitCastExpr  
+  |         |   |   | `-ArraySubscriptExpr  ' lvalue
+  |         |   |   |   |-ImplicitCastExpr  
+  |         |   |   |   `-IntegerLiteral   'int' 35
+  |         |   |   `-ImplicitCastExpr  
+  |         |   |     `-ArraySubscriptExpr  ' lvalue
+  |         |   |       |-ImplicitCastExpr  
+  |         |   |       `-IntegerLiteral   'int' 34
+  |         |   `-ImplicitCastExpr  
+  |         |     `-ArraySubscriptExpr  ' lvalue
+  |         |       |-ImplicitCastExpr  
+  |         |       `-IntegerLiteral   'int' 33
+  |         `-ImplicitCastExpr  
+  |           `-ArraySubscriptExpr  ' lvalue
+  |             |-ImplicitCastExpr  
+  |             `-IntegerLiteral   'int' 32
+  | |-MemberExpr  ' .write 
+  | | `-ImplicitCastExpr  
+  | |   `-MemberExpr  data_out 
+  | `-ImplicitCastExpr  
+  |-ExprWithCleanups  <line:113:5, col:238> 'std::basic_ostream<char>::__ostream_type':'std::basic_ostream<char>' lvalue
+  | `-CXXOperatorCallExpr  ' lvalue '<<'
+  |   |-ImplicitCastExpr  
+  |   |-CXXOperatorCallExpr  ' lvalue '<<'
+  |   | |-ImplicitCastExpr  
+  |   | |-CXXOperatorCallExpr  ' lvalue '<<'
+  |   | | |-ImplicitCastExpr  
+  |   | | |-CXXOperatorCallExpr  ' lvalue '<<'
+  |   | | | |-ImplicitCastExpr  
+  |   | | | |-CXXOperatorCallExpr  ' lvalue '<<'
+  |   | | | | |-ImplicitCastExpr  
+  |   | | | | |-CXXOperatorCallExpr  ' lvalue '<<' adl
+  |   | | | | | |-ImplicitCastExpr  
+  |   | | | | | |-CXXOperatorCallExpr  ' lvalue '<<' adl
+  |   | | | | | | |-ImplicitCastExpr  
+  |   | | | | | | |-CXXOperatorCallExpr  ' lvalue '<<'
+  |   | | | | | | | |-ImplicitCastExpr  
+  |   | | | | | | | |-CXXOperatorCallExpr  ' lvalue '<<' adl
+  |   | | | | | | | | |-ImplicitCastExpr  
+  |   | | | | | | | | |-CXXOperatorCallExpr  ' lvalue '<<'
+  |   | | | | | | | | | |-ImplicitCastExpr  
+  |   | | | | | | | | | `-ImplicitCastExpr  
+  |   | | | | | | | | `-ImplicitCastExpr  
+  |   | | | | | | | |   `-StringLiteral   'const char [9]' lvalue "AT time "
+  |   | | | | | | | `-CallExpr   'const sc_core::sc_time' lvalue
+  |   | | | | | | |   `-ImplicitCastExpr  
+  |   | | | | | | `-ImplicitCastExpr  
+  |   | | | | | |   `-StringLiteral   'const char [3]' lvalue "::"
+  |   | | | | | `-ImplicitCastExpr  
+  |   | | | | |   `-StringLiteral   'const char [16]' lvalue "data_dec_in: 0x"
+  |   | | | | `-CStyleCastExpr  
+  |   | | | |   `-ImplicitCastExpr   part_of_explicit_cast
+  |   | | | |     `-ImplicitCastExpr   part_of_explicit_cast
+  |   | | | |         `-MemberExpr  ' .operator unsigned long long 
+  |   | | | |           `-ImplicitCastExpr  
+  |   | | | |             `-MaterializeTemporaryExpr  ' lvalue
+  |   | | | |               `-CStyleCastExpr  
+  |   | | | |                     `-MaterializeTemporaryExpr   'const sc_dt::sc_unsigned' lvalue
+  |   | | | |                       `-ImplicitCastExpr  
+  |   | | | |                           `-ImplicitCastExpr  
+  |   | | | |                               `-MemberExpr  ' .operator sc_unsigned 
+  |   | | | |                                 `-ImplicitCastExpr  
+  |   | | | |                                     |-MemberExpr  ' .range 
+  |   | | | |                                     | `-ImplicitCastExpr  
+  |   | | | |                                     |-IntegerLiteral   'int' 127
+  |   | | | |                                     `-IntegerLiteral   'int' 96
+  |   | | | `-CStyleCastExpr  
+  |   | | |   `-ImplicitCastExpr   part_of_explicit_cast
+  |   | | |     `-ImplicitCastExpr   part_of_explicit_cast
+  |   | | |         `-MemberExpr  ' .operator unsigned long long 
+  |   | | |           `-ImplicitCastExpr  
+  |   | | |             `-MaterializeTemporaryExpr  ' lvalue
+  |   | | |               `-CStyleCastExpr  
+  |   | | |                     `-MaterializeTemporaryExpr   'const sc_dt::sc_unsigned' lvalue
+  |   | | |                       `-ImplicitCastExpr  
+  |   | | |                           `-ImplicitCastExpr  
+  |   | | |                               `-MemberExpr  ' .operator sc_unsigned 
+  |   | | |                                 `-ImplicitCastExpr  
+  |   | | |                                     |-MemberExpr  ' .range 
+  |   | | |                                     | `-ImplicitCastExpr  
+  |   | | |                                     |-IntegerLiteral   'int' 95
+  |   | | |                                     `-IntegerLiteral   'int' 64
+  |   | | `-CStyleCastExpr  
+  |   | |   `-ImplicitCastExpr   part_of_explicit_cast
+  |   | |     `-ImplicitCastExpr   part_of_explicit_cast
+  |   | |         `-MemberExpr  ' .operator unsigned long long 
+  |   | |           `-ImplicitCastExpr  
+  |   | |             `-MaterializeTemporaryExpr  ' lvalue
+  |   | |               `-CStyleCastExpr  
+  |   | |                     `-MaterializeTemporaryExpr   'const sc_dt::sc_unsigned' lvalue
+  |   | |                       `-ImplicitCastExpr  
+  |   | |                           `-ImplicitCastExpr  
+  |   | |                               `-MemberExpr  ' .operator sc_unsigned 
+  |   | |                                 `-ImplicitCastExpr  
+  |   | |                                     |-MemberExpr  ' .range 
+  |   | |                                     | `-ImplicitCastExpr  
+  |   | |                                     |-IntegerLiteral   'int' 63
+  |   | |                                     `-IntegerLiteral   'int' 32
+  |   | `-CStyleCastExpr  
+  |   |   `-ImplicitCastExpr   part_of_explicit_cast
+  |   |     `-ImplicitCastExpr   part_of_explicit_cast
+  |   |         `-MemberExpr  ' .operator unsigned long long 
+  |   |           `-ImplicitCastExpr  
+  |   |             `-MaterializeTemporaryExpr  ' lvalue
+  |   |               `-CStyleCastExpr  
+  |   |                     `-MaterializeTemporaryExpr   'const sc_dt::sc_unsigned' lvalue
+  |   |                       `-ImplicitCastExpr  
+  |   |                           `-ImplicitCastExpr  
+  |   |                               `-MemberExpr  ' .operator sc_unsigned 
+  |   |                                 `-ImplicitCastExpr  
+  |   |                                     |-MemberExpr  ' .range 
+  |   |                                     | `-ImplicitCastExpr  
+  |   |                                     |-IntegerLiteral   'int' 31
+  |   |                                     `-IntegerLiteral   'int' 0
+  |   `-ImplicitCastExpr  
+  |-ExprWithCleanups  <line:114:5, col:278> 'std::basic_ostream<char>::__ostream_type':'std::basic_ostream<char>' lvalue
+  | `-CXXOperatorCallExpr  ' lvalue '<<'
+  |   |-ImplicitCastExpr  
+  |   |-CXXOperatorCallExpr  ' lvalue '<<' adl
+  |   | |-ImplicitCastExpr  
+  |   | |-CXXOperatorCallExpr  ' lvalue '<<'
+  |   | | |-ImplicitCastExpr  
+  |   | | |-CXXOperatorCallExpr  ' lvalue '<<'
+  |   | | | |-ImplicitCastExpr  
+  |   | | | |-CXXOperatorCallExpr  ' lvalue '<<'
+  |   | | | | |-ImplicitCastExpr  
+  |   | | | | |-CXXOperatorCallExpr  ' lvalue '<<'
+  |   | | | | | |-ImplicitCastExpr  
+  |   | | | | | |-CXXOperatorCallExpr  ' lvalue '<<' adl
+  |   | | | | | | |-ImplicitCastExpr  
+  |   | | | | | | |-CXXOperatorCallExpr  ' lvalue '<<' adl
+  |   | | | | | | | |-ImplicitCastExpr  
+  |   | | | | | | | |-CXXOperatorCallExpr  ' lvalue '<<'
+  |   | | | | | | | | |-ImplicitCastExpr  
+  |   | | | | | | | | |-CXXOperatorCallExpr  ' lvalue '<<' adl
+  |   | | | | | | | | | |-ImplicitCastExpr  
+  |   | | | | | | | | | |-CXXOperatorCallExpr  ' lvalue '<<'
+  |   | | | | | | | | | | |-ImplicitCastExpr  
+  |   | | | | | | | | | | `-ImplicitCastExpr  
+  |   | | | | | | | | | `-ImplicitCastExpr  
+  |   | | | | | | | | |   `-StringLiteral   'const char [9]' lvalue "AT time "
+  |   | | | | | | | | `-CallExpr   'const sc_core::sc_time' lvalue
+  |   | | | | | | | |   `-ImplicitCastExpr  
+  |   | | | | | | | `-ImplicitCastExpr  
+  |   | | | | | | |   `-StringLiteral   'const char [3]' lvalue "::"
+  |   | | | | | | `-ImplicitCastExpr  
+  |   | | | | | |   `-StringLiteral   'const char [20]' lvalue "data_dec_finish: 0x"
+  |   | | | | | `-CStyleCastExpr  
+  |   | | | | |   `-ImplicitCastExpr   part_of_explicit_cast
+  |   | | | | |     `-ImplicitCastExpr   part_of_explicit_cast
+  |   | | | | |         `-MemberExpr  ' .operator unsigned long long 
+  |   | | | | |           `-ImplicitCastExpr  
+  |   | | | | |             `-MaterializeTemporaryExpr  ' lvalue
+  |   | | | | |               `-CStyleCastExpr  
+  |   | | | | |                     `-MaterializeTemporaryExpr   'const sc_dt::sc_unsigned' lvalue
+  |   | | | | |                       `-ImplicitCastExpr  
+  |   | | | | |                           `-ImplicitCastExpr  
+  |   | | | | |                               `-MemberExpr  ' .operator sc_unsigned 
+  |   | | | | |                                 `-ImplicitCastExpr  
+  |   | | | | |                                     |-MemberExpr  ' .range 
+  |   | | | | |                                     | `-ImplicitCastExpr  
+  |   | | | | |                                     |-IntegerLiteral   'int' 127
+  |   | | | | |                                     `-IntegerLiteral   'int' 96
+  |   | | | | `-CStyleCastExpr  
+  |   | | | |   `-ImplicitCastExpr   part_of_explicit_cast
+  |   | | | |     `-ImplicitCastExpr   part_of_explicit_cast
+  |   | | | |         `-MemberExpr  ' .operator unsigned long long 
+  |   | | | |           `-ImplicitCastExpr  
+  |   | | | |             `-MaterializeTemporaryExpr  ' lvalue
+  |   | | | |               `-CStyleCastExpr  
+  |   | | | |                     `-MaterializeTemporaryExpr   'const sc_dt::sc_unsigned' lvalue
+  |   | | | |                       `-ImplicitCastExpr  
+  |   | | | |                           `-ImplicitCastExpr  
+  |   | | | |                               `-MemberExpr  ' .operator sc_unsigned 
+  |   | | | |                                 `-ImplicitCastExpr  
+  |   | | | |                                     |-MemberExpr  ' .range 
+  |   | | | |                                     | `-ImplicitCastExpr  
+  |   | | | |                                     |-IntegerLiteral   'int' 95
+  |   | | | |                                     `-IntegerLiteral   'int' 64
+  |   | | | `-CStyleCastExpr  
+  |   | | |   `-ImplicitCastExpr   part_of_explicit_cast
+  |   | | |     `-ImplicitCastExpr   part_of_explicit_cast
+  |   | | |         `-MemberExpr  ' .operator unsigned long long 
+  |   | | |           `-ImplicitCastExpr  
+  |   | | |             `-MaterializeTemporaryExpr  ' lvalue
+  |   | | |               `-CStyleCastExpr  
+  |   | | |                     `-MaterializeTemporaryExpr   'const sc_dt::sc_unsigned' lvalue
+  |   | | |                       `-ImplicitCastExpr  
+  |   | | |                           `-ImplicitCastExpr  
+  |   | | |                               `-MemberExpr  ' .operator sc_unsigned 
+  |   | | |                                 `-ImplicitCastExpr  
+  |   | | |                                     |-MemberExpr  ' .range 
+  |   | | |                                     | `-ImplicitCastExpr  
+  |   | | |                                     |-IntegerLiteral   'int' 63
+  |   | | |                                     `-IntegerLiteral   'int' 32
+  |   | | `-CStyleCastExpr  
+  |   | |   `-ImplicitCastExpr   part_of_explicit_cast
+  |   | |     `-ImplicitCastExpr   part_of_explicit_cast
+  |   | |         `-MemberExpr  ' .operator unsigned long long 
+  |   | |           `-ImplicitCastExpr  
+  |   | |             `-MaterializeTemporaryExpr  ' lvalue
+  |   | |               `-CStyleCastExpr  
+  |   | |                     `-MaterializeTemporaryExpr   'const sc_dt::sc_unsigned' lvalue
+  |   | |                       `-ImplicitCastExpr  
+  |   | |                           `-ImplicitCastExpr  
+  |   | |                               `-MemberExpr  ' .operator sc_unsigned 
+  |   | |                                 `-ImplicitCastExpr  
+  |   | |                                     |-MemberExpr  ' .range 
+  |   | |                                     | `-ImplicitCastExpr  
+  |   | |                                     |-IntegerLiteral   'int' 31
+  |   | |                                     `-IntegerLiteral   'int' 0
+  |   | `-CharacterLiteral   'char' 10
+  |   `-ImplicitCastExpr  
+  `-ReturnStmt  
+
+

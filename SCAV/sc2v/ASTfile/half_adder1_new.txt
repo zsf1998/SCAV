@@ -1,0 +1,59 @@
+sensitive: ;
+Dumping half_adder1:
+CXXRecordDecl   line:3:11 struct half_adder1 definition
+|-DefinitionData polymorphic has_user_declared_ctor has_mutable_fields can_const_default_init
+| |-DefaultConstructor
+| |-CopyConstructor non_trivial has_const_param needs_overload_resolution implicit_has_const_param
+| |-MoveConstructor exists non_trivial needs_overload_resolution
+| |-CopyAssignment non_trivial has_const_param needs_overload_resolution implicit_has_const_param
+| |-MoveAssignment exists non_trivial needs_overload_resolution
+| `-Destructor simple non_trivial needs_overload_resolution
+|-public '::sc_core::sc_module':'sc_core::sc_module'
+|-CXXRecordDecl   col:11 implicit  struct half_adder1
+|-FieldDecl  <line:5:2, col:14> col:14  a 'sc_in<bool>':'sc_core::sc_in<bool>'
+|-FieldDecl  <col:2, col:17> col:17  b 'sc_in<bool>':'sc_core::sc_in<bool>'
+|-FieldDecl  <line:6:2, col:14> col:14  sum 'sc_out<bool>':'sc_core::sc_out<bool>'
+|-FieldDecl  <col:2, col:19> col:19  carry 'sc_out<bool>':'sc_core::sc_out<bool>'
+Dumping half_adder1::assign_sum:
+CXXMethodDecl   assign_sum 'void ()'
+`-CompoundStmt  
+  `-ExprWithCleanups  <line:4:2, col:26> 'sc_core::sc_out<bool>::this_type':'sc_core::sc_out<bool>' lvalue
+    `-CXXOperatorCallExpr  ' lvalue '='
+      |-ImplicitCastExpr  
+      |-MemberExpr  sum 
+      `-MaterializeTemporaryExpr  ::data_type':'const bool' lvalue
+        `-ImplicitCastExpr  
+          `-BinaryOperator   'int' '^'
+            |-ImplicitCastExpr  
+            | `-ImplicitCastExpr  
+            |     `-MemberExpr  ' .read 
+            |       `-ImplicitCastExpr  
+            |         `-MemberExpr  a 
+            `-ImplicitCastExpr  
+              `-ImplicitCastExpr  
+                  `-MemberExpr  ' .read 
+                    `-ImplicitCastExpr  
+                      `-MemberExpr  b 
+
+Dumping half_adder1::assign_carry:
+CXXMethodDecl   assign_carry 'void ()'
+`-CompoundStmt  
+  `-ExprWithCleanups  <line:10:2, col:28> 'sc_core::sc_out<bool>::this_type':'sc_core::sc_out<bool>' lvalue
+    `-CXXOperatorCallExpr  ' lvalue '='
+      |-ImplicitCastExpr  
+      |-MemberExpr  carry 
+      `-MaterializeTemporaryExpr  ::data_type':'const bool' lvalue
+        `-ImplicitCastExpr  
+          `-BinaryOperator   'int' '&'
+            |-ImplicitCastExpr  
+            | `-ImplicitCastExpr  
+            |     `-MemberExpr  ' .read 
+            |       `-ImplicitCastExpr  
+            |         `-MemberExpr  a 
+            `-ImplicitCastExpr  
+              `-ImplicitCastExpr  
+                  `-MemberExpr  ' .read 
+                    `-ImplicitCastExpr  
+                      `-MemberExpr  b 
+
+

@@ -1,0 +1,108 @@
+sensitive: ;
+Dumping full_adder:
+CXXRecordDecl   line:3:11 struct full_adder definition
+|-DefinitionData polymorphic has_user_declared_ctor has_mutable_fields can_const_default_init
+| |-DefaultConstructor
+| |-CopyConstructor non_trivial has_const_param needs_overload_resolution implicit_has_const_param
+| |-MoveConstructor exists non_trivial needs_overload_resolution
+| |-CopyAssignment non_trivial has_const_param needs_overload_resolution implicit_has_const_param
+| |-MoveAssignment exists non_trivial needs_overload_resolution
+| `-Destructor simple non_trivial needs_overload_resolution
+|-public '::sc_core::sc_module':'sc_core::sc_module'
+|-CXXRecordDecl   col:11 implicit  struct full_adder
+|-FieldDecl  <line:5:2, col:13> col:13  a 'sc_in<bool>':'sc_core::sc_in<bool>'
+|-FieldDecl  <col:2, col:16> col:16  b 'sc_in<bool>':'sc_core::sc_in<bool>'
+|-FieldDecl  <col:2, col:19> col:19  carry_in 'sc_in<bool>':'sc_core::sc_in<bool>'
+|-FieldDecl  <line:6:2, col:14> col:14  sum 'sc_out<bool>':'sc_core::sc_out<bool>'
+|-FieldDecl  <col:2, col:19> col:19  carry_out 'sc_out<bool>':'sc_core::sc_out<bool>'
+|-FieldDecl  <line:7:2, col:17> col:17  c1 'sc_signal<bool>':'sc_core::sc_signal<bool, sc_core::SC_ONE_WRITER>'
+|-FieldDecl  <col:2, col:21> col:21  c2 'sc_signal<bool>':'sc_core::sc_signal<bool, sc_core::SC_ONE_WRITER>'
+|-FieldDecl  <col:2, col:25> col:25  s1 'sc_signal<bool>':'sc_core::sc_signal<bool, sc_core::SC_ONE_WRITER>'
+|-FieldDecl  <line:8:2, col:24> col:24 count 'sc_signal<sc_int<7>>':'sc_core::sc_signal<sc_dt::sc_int<7>, sc_core::SC_ONE_WRITER>'
+|-FieldDecl  <line:9:2, col:12> col:12 v 'sc_int<7>':'sc_dt::sc_int<7>'
+| `-CompoundStmt  
+|   |-DeclStmt  <line:16:3, col:25>
+|   | `-VarDecl   col:14 used ha1 'half_adder' callinit destroyed
+|   |   `-ExprWithCleanups   'half_adder'
+|   |           `-MaterializeTemporaryExpr   'const ::sc_core::sc_module_name':'const sc_core::sc_module_name' lvalue
+|   |             `-ImplicitCastExpr  
+|   |                 `-ImplicitCastExpr  
+|   |                     `-ImplicitCastExpr  
+|   |                       `-StringLiteral   'const char [5]' lvalue "ha11"
+|   |-CXXOperatorCallExpr  <line:17:3, col:10> 'void' '()'
+|   | |-ImplicitCastExpr  
+|   | |-MemberExpr  ' lvalue .a 
+|   | `-ImplicitCastExpr  
+|   |   `-MemberExpr  a 
+|   |-CXXOperatorCallExpr  <line:18:3, col:10> 'void' '()'
+|   | |-ImplicitCastExpr  
+|   | |-MemberExpr  ' lvalue .b 
+|   | `-ImplicitCastExpr  
+|   |   `-MemberExpr  b 
+|   |-CXXOperatorCallExpr  <line:19:3, col:13> 'void' '()'
+|   | |-ImplicitCastExpr  
+|   | |-ImplicitCastExpr  
+|   | | `-MemberExpr  ' lvalue .sum 
+|   | `-ImplicitCastExpr  
+|   |   `-MemberExpr  s1 
+|   |-CXXOperatorCallExpr  <line:20:3, col:15> 'void' '()'
+|   | |-ImplicitCastExpr  
+|   | |-ImplicitCastExpr  
+|   | | `-MemberExpr  ' lvalue .carry 
+|   | `-ImplicitCastExpr  
+|   |   `-MemberExpr  c1 
+|   |-DeclStmt  <line:22:3, col:25>
+|   | `-VarDecl   col:14 used ha2 'half_adder' callinit destroyed
+|   |   `-ExprWithCleanups   'half_adder'
+|   |           `-MaterializeTemporaryExpr   'const ::sc_core::sc_module_name':'const sc_core::sc_module_name' lvalue
+|   |             `-ImplicitCastExpr  
+|   |                 `-ImplicitCastExpr  
+|   |                     `-ImplicitCastExpr  
+|   |                       `-StringLiteral   'const char [5]' lvalue "ha22"
+|   |-CXXOperatorCallExpr  <line:23:3, col:11> 'void' '()'
+|   | |-ImplicitCastExpr  
+|   | |-MemberExpr  ' lvalue .a 
+|   | `-ImplicitCastExpr  
+|   |   `-ImplicitCastExpr  
+|   |     `-MemberExpr  s1 
+|   |-CXXOperatorCallExpr  <line:24:3, col:17> 'void' '()'
+|   | |-ImplicitCastExpr  
+|   | |-MemberExpr  ' lvalue .b 
+|   | `-ImplicitCastExpr  
+|   |   `-MemberExpr  carry_in 
+|   |-CXXOperatorCallExpr  <line:25:3, col:14> 'void' '()'
+|   | |-ImplicitCastExpr  
+|   | |-ImplicitCastExpr  
+|   | | `-MemberExpr  ' lvalue .sum 
+|   | `-ImplicitCastExpr  
+|   |   `-MemberExpr  sum 
+|   |-CXXOperatorCallExpr  <line:26:3, col:15> 'void' '()'
+|   | |-ImplicitCastExpr  
+|   | |-ImplicitCastExpr  
+|   | | `-MemberExpr  ' lvalue .carry 
+|   | `-ImplicitCastExpr  
+|   |   `-MemberExpr  c2 
+Dumping full_adder::assign_carry_out:
+CXXMethodDecl   assign_carry_out 'void ()'
+`-CompoundStmt  
+  `-ExprWithCleanups  <line:4:2, col:19> 'sc_core::sc_out<bool>::this_type':'sc_core::sc_out<bool>' lvalue
+    `-CXXOperatorCallExpr  ' lvalue '='
+      |-ImplicitCastExpr  
+      |-MemberExpr  carry_out 
+      `-MaterializeTemporaryExpr  ::data_type':'const bool' lvalue
+        `-ImplicitCastExpr  
+          `-BinaryOperator   'int' '|'
+            |-ImplicitCastExpr  
+            | `-ImplicitCastExpr  
+            |   `-ImplicitCastExpr  
+            |       `-MemberExpr  ' .operator const bool & 
+            |         `-ImplicitCastExpr  
+            |           `-MemberExpr  c1 
+            `-ImplicitCastExpr  
+              `-ImplicitCastExpr  
+                `-ImplicitCastExpr  
+                    `-MemberExpr  ' .operator const bool & 
+                      `-ImplicitCastExpr  
+                        `-MemberExpr  c2 
+
+

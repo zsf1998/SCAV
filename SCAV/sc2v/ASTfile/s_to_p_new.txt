@@ -1,0 +1,216 @@
+sensitive: clk;rst_n
+sensitive: clk;rst_n
+sensitive: clk;rst_n
+Dumping s_to_p:
+CXXRecordDecl   line:3:11 struct s_to_p definition
+|-DefinitionData polymorphic has_user_declared_ctor has_mutable_fields can_const_default_init
+| |-DefaultConstructor
+| |-CopyConstructor non_trivial has_const_param needs_overload_resolution implicit_has_const_param
+| |-MoveConstructor exists non_trivial needs_overload_resolution
+| |-CopyAssignment non_trivial has_const_param needs_overload_resolution implicit_has_const_param
+| |-MoveAssignment exists non_trivial needs_overload_resolution
+| `-Destructor simple non_trivial needs_overload_resolution
+|-public '::sc_core::sc_module':'sc_core::sc_module'
+|-CXXRecordDecl   col:11 implicit  struct s_to_p
+|-FieldDecl  <line:7:2, col:15> col:15  clk 'sc_in<bool>':'sc_core::sc_in<bool>'
+|-FieldDecl  <line:8:2, col:15> col:15  rst_n 'sc_in<bool>':'sc_core::sc_in<bool>'
+|-FieldDecl  <line:9:2, col:15> col:15  data_a 'sc_in<bool>':'sc_core::sc_in<bool>'
+|-FieldDecl  <col:2, col:23> col:23  valid_a 'sc_in<bool>':'sc_core::sc_in<bool>'
+|-FieldDecl  <line:10:2, col:23> col:23  data_b 'sc_out<sc_uint<6>>':'sc_core::sc_out<sc_dt::sc_uint<6>>'
+|-FieldDecl  <line:11:2, col:16> col:16  valid_b 'sc_out<bool>':'sc_core::sc_out<bool>'
+|-FieldDecl  <line:12:2, col:16> col:16  ready_a 'sc_out<bool>':'sc_core::sc_out<bool>'
+|-FieldDecl  <line:13:2, col:26> col:26  data_b1 'sc_signal<sc_uint<6>>':'sc_core::sc_signal<sc_dt::sc_uint<6>, sc_core::SC_ONE_WRITER>'
+|-FieldDecl  <line:14:2, col:26> col:26  cnt 'sc_signal<sc_uint<4>>':'sc_core::sc_signal<sc_dt::sc_uint<4>, sc_core::SC_ONE_WRITER>'
+Dumping s_to_p::assign_ready_a:
+CXXMethodDecl   assign_ready_a 'void ()'
+`-CompoundStmt  
+  `-ExprWithCleanups  <line:5:5, col:15> 'sc_core::sc_out<bool>::this_type':'sc_core::sc_out<bool>' lvalue
+    `-CXXOperatorCallExpr  ' lvalue '='
+      |-ImplicitCastExpr  
+      |-MemberExpr  ready_a 
+      `-MaterializeTemporaryExpr  ::data_type':'const bool' lvalue
+        `-ImplicitCastExpr  
+          `-IntegerLiteral   'int' 1
+
+Dumping s_to_p::always_block1:
+CXXMethodDecl   always_block1 'void ()'
+`-CompoundStmt  
+  `-IfStmt   has_else
+    |-UnaryOperator  <line:10:16, col:28> 'bool' prefix '!' cannot overflow
+    | `-ImplicitCastExpr  
+    |     `-MemberExpr  ' .read 
+    |       `-ImplicitCastExpr  
+    |         `-MemberExpr  rst_n 
+    |-CompoundStmt  
+    | |-ExprWithCleanups  <line:12:17, col:26> 'sc_core::sc_out<sc_dt::sc_uint<6>>::this_type':'sc_core::sc_out<sc_dt::sc_uint<6>>' lvalue
+    | | `-CXXOperatorCallExpr  ' lvalue '='
+    | |   |-ImplicitCastExpr  
+    | |   |-MemberExpr  data_b 
+    | |   `-MaterializeTemporaryExpr  ' lvalue
+    | |         `-IntegerLiteral   'int' 0
+    | `-ExprWithCleanups  <line:13:17, col:27> 'sc_core::sc_signal<sc_dt::sc_uint<6>, sc_core::SC_ONE_WRITER>::this_type':'sc_core::sc_signal<sc_dt::sc_uint<6>, sc_core::SC_ONE_WRITER>' lvalue
+    |   `-CXXOperatorCallExpr  ' lvalue '='
+    |     |-ImplicitCastExpr  
+    |     |-MemberExpr  data_b1 
+    |     `-MaterializeTemporaryExpr  ' lvalue
+    |           `-IntegerLiteral   'int' 0
+    `-IfStmt   has_else
+      |-BinaryOperator  <line:15:21, col:58> 'bool' '&&'
+      | |-BinaryOperator   'bool' '=='
+      | | |-ImplicitCastExpr  
+      | | |   `-MemberExpr  ' .operator unsigned long long 
+      | | |     `-ImplicitCastExpr  
+      | | |         `-MemberExpr  ' .read 
+      | | |           `-ImplicitCastExpr  
+      | | |             `-MemberExpr  cnt 
+      | | `-ImplicitCastExpr  
+      | |   `-IntegerLiteral   'int' 5
+      | `-BinaryOperator   'bool' '=='
+      |   |-ImplicitCastExpr  
+      |   | `-ImplicitCastExpr  
+      |   |     `-MemberExpr  ' .read 
+      |   |       `-ImplicitCastExpr  
+      |   |         `-MemberExpr  valid_a 
+      |   `-IntegerLiteral   'int' 1
+      |-CompoundStmt  
+      | `-CXXOperatorCallExpr  <line:17:17, col:39> 'sc_core::sc_out<sc_dt::sc_uint<6>>::this_type':'sc_core::sc_out<sc_dt::sc_uint<6>>' lvalue '='
+      |   |-ImplicitCastExpr  
+      |   |-MemberExpr  data_b 
+      |     `-MemberExpr  ' .read 
+      |       `-ImplicitCastExpr  
+      |         `-MemberExpr  data_b1 
+      `-IfStmt  
+        |-BinaryOperator  <line:19:21, col:39> 'bool' '=='
+        | |-ImplicitCastExpr  
+        | | `-ImplicitCastExpr  
+        | |     `-MemberExpr  ' .read 
+        | |       `-ImplicitCastExpr  
+        | |         `-MemberExpr  valid_a 
+        | `-IntegerLiteral   'int' 1
+        `-CompoundStmt  
+          `-ExprWithCleanups  <line:21:18, col:68> 'sc_core::sc_signal<sc_dt::sc_uint<6>, sc_core::SC_ONE_WRITER>::this_type':'sc_core::sc_signal<sc_dt::sc_uint<6>, sc_core::SC_ONE_WRITER>' lvalue
+            `-CXXOperatorCallExpr  ' lvalue '='
+              |-ImplicitCastExpr  
+              |-MemberExpr  data_b1 
+              `-MaterializeTemporaryExpr  ' lvalue
+                `-ImplicitCastExpr  
+                    `-ImplicitCastExpr  
+                        `-ImplicitCastExpr  
+                          `-ParenExpr   'const sc_dt::sc_concatref':'const sc_dt::sc_concatref' lvalue
+                            `-CXXOperatorCallExpr   'const sc_dt::sc_concatref':'const sc_dt::sc_concatref' lvalue ',' adl
+                              |-ImplicitCastExpr  
+                              |-ImplicitCastExpr  
+                              |   `-MemberExpr  ' .read 
+                              |     `-ImplicitCastExpr  
+                              |       `-MemberExpr  data_a 
+                              `-ImplicitCastExpr  
+                                  |-MemberExpr  ' .range 
+                                  | `-ImplicitCastExpr  
+                                  |     `-MemberExpr  ' .read 
+                                  |       `-ImplicitCastExpr  
+                                  |         `-MemberExpr  data_b1 
+                                  |-IntegerLiteral   'int' 5
+                                  `-IntegerLiteral   'int' 1
+
+Dumping s_to_p::always_block2:
+CXXMethodDecl   always_block2 'void ()'
+`-CompoundStmt  
+  `-IfStmt   has_else
+    |-UnaryOperator  <line:27:16, col:28> 'bool' prefix '!' cannot overflow
+    | `-ImplicitCastExpr  
+    |     `-MemberExpr  ' .read 
+    |       `-ImplicitCastExpr  
+    |         `-MemberExpr  rst_n 
+    |-CompoundStmt  
+    | `-ExprWithCleanups  <line:29:17, col:23> 'sc_core::sc_signal<sc_dt::sc_uint<4>, sc_core::SC_ONE_WRITER>::this_type':'sc_core::sc_signal<sc_dt::sc_uint<4>, sc_core::SC_ONE_WRITER>' lvalue
+    |   `-CXXOperatorCallExpr  ' lvalue '='
+    |     |-ImplicitCastExpr  
+    |     |-MemberExpr  cnt 
+    |     `-MaterializeTemporaryExpr  ' lvalue
+    |           `-IntegerLiteral   'int' 0
+    `-IfStmt   has_else
+      |-BinaryOperator  <line:31:21, col:35> 'bool' '=='
+      | |-ImplicitCastExpr  
+      | |   `-MemberExpr  ' .operator unsigned long long 
+      | |     `-ImplicitCastExpr  
+      | |         `-MemberExpr  ' .read 
+      | |           `-ImplicitCastExpr  
+      | |             `-MemberExpr  cnt 
+      | `-ImplicitCastExpr  
+      |   `-IntegerLiteral   'int' 5
+      |-CompoundStmt  
+      | `-ExprWithCleanups  <line:33:17, col:23> 'sc_core::sc_signal<sc_dt::sc_uint<4>, sc_core::SC_ONE_WRITER>::this_type':'sc_core::sc_signal<sc_dt::sc_uint<4>, sc_core::SC_ONE_WRITER>' lvalue
+      |   `-CXXOperatorCallExpr  ' lvalue '='
+      |     |-ImplicitCastExpr  
+      |     |-MemberExpr  cnt 
+      |     `-MaterializeTemporaryExpr  ' lvalue
+      |           `-IntegerLiteral   'int' 0
+      `-IfStmt  
+        |-BinaryOperator  <line:35:21, col:39> 'bool' '=='
+        | |-ImplicitCastExpr  
+        | | `-ImplicitCastExpr  
+        | |     `-MemberExpr  ' .read 
+        | |       `-ImplicitCastExpr  
+        | |         `-MemberExpr  valid_a 
+        | `-IntegerLiteral   'int' 1
+        `-CompoundStmt  
+          `-ExprWithCleanups  <line:37:17, col:36> 'sc_core::sc_signal<sc_dt::sc_uint<4>, sc_core::SC_ONE_WRITER>::this_type':'sc_core::sc_signal<sc_dt::sc_uint<4>, sc_core::SC_ONE_WRITER>' lvalue
+            `-CXXOperatorCallExpr  ' lvalue '='
+              |-ImplicitCastExpr  
+              |-MemberExpr  cnt 
+              `-MaterializeTemporaryExpr  ' lvalue
+                    `-BinaryOperator   'unsigned long long' '+'
+                      |-ImplicitCastExpr  
+                      |   `-MemberExpr  ' .operator unsigned long long 
+                      |     `-ImplicitCastExpr  
+                      |         `-MemberExpr  ' .read 
+                      |           `-ImplicitCastExpr  
+                      |             `-MemberExpr  cnt 
+                      `-ImplicitCastExpr  
+                        `-IntegerLiteral   'int' 1
+
+Dumping s_to_p::always_block3:
+CXXMethodDecl   always_block3 'void ()'
+`-CompoundStmt  
+  `-IfStmt   has_else
+    |-UnaryOperator  <line:43:16, col:28> 'bool' prefix '!' cannot overflow
+    | `-ImplicitCastExpr  
+    |     `-MemberExpr  ' .read 
+    |       `-ImplicitCastExpr  
+    |         `-MemberExpr  rst_n 
+    |-CompoundStmt  
+    | `-ExprWithCleanups  <line:45:17, col:27> 'sc_core::sc_out<bool>::this_type':'sc_core::sc_out<bool>' lvalue
+    |   `-CXXOperatorCallExpr  ' lvalue '='
+    |     |-ImplicitCastExpr  
+    |     |-MemberExpr  valid_b 
+    |     `-MaterializeTemporaryExpr  ::data_type':'const bool' lvalue
+    |       `-ImplicitCastExpr  
+    |         `-IntegerLiteral   'int' 0
+    `-IfStmt   has_else
+      |-BinaryOperator  <line:47:21, col:35> 'bool' '=='
+      | |-ImplicitCastExpr  
+      | |   `-MemberExpr  ' .operator unsigned long long 
+      | |     `-ImplicitCastExpr  
+      | |         `-MemberExpr  ' .read 
+      | |           `-ImplicitCastExpr  
+      | |             `-MemberExpr  cnt 
+      | `-ImplicitCastExpr  
+      |   `-IntegerLiteral   'int' 5
+      |-CompoundStmt  
+      | `-ExprWithCleanups  <line:49:17, col:27> 'sc_core::sc_out<bool>::this_type':'sc_core::sc_out<bool>' lvalue
+      |   `-CXXOperatorCallExpr  ' lvalue '='
+      |     |-ImplicitCastExpr  
+      |     |-MemberExpr  valid_b 
+      |     `-MaterializeTemporaryExpr  ::data_type':'const bool' lvalue
+      |       `-ImplicitCastExpr  
+      |         `-IntegerLiteral   'int' 1
+      `-CompoundStmt  
+        `-ExprWithCleanups  <line:53:17, col:27> 'sc_core::sc_out<bool>::this_type':'sc_core::sc_out<bool>' lvalue
+          `-CXXOperatorCallExpr  ' lvalue '='
+            |-ImplicitCastExpr  
+            |-MemberExpr  valid_b 
+            `-MaterializeTemporaryExpr  ::data_type':'const bool' lvalue
+              `-ImplicitCastExpr  
+                `-IntegerLiteral   'int' 0
+
+

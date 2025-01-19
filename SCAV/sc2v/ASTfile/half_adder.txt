@@ -1,0 +1,247 @@
+Dumping half_adder:
+CXXRecordDecl 0x3ffd378 </usr/local/systemc-2.3.3/include/sysc/kernel/sc_module.h:397:5, /home/hcy/桌面/clang ast test/SystemCfile/half_adder.h:17:1> line:3:11 struct half_adder definition
+|-DefinitionData polymorphic has_user_declared_ctor has_mutable_fields can_const_default_init
+| |-DefaultConstructor
+| |-CopyConstructor non_trivial has_const_param needs_overload_resolution implicit_has_const_param
+| |-MoveConstructor exists non_trivial needs_overload_resolution
+| |-CopyAssignment non_trivial has_const_param needs_overload_resolution implicit_has_const_param
+| |-MoveAssignment exists non_trivial needs_overload_resolution
+| `-Destructor simple non_trivial needs_overload_resolution
+|-public '::sc_core::sc_module':'sc_core::sc_module'
+|-CXXRecordDecl 0x3ffd550 </usr/local/systemc-2.3.3/include/sysc/kernel/sc_module.h:397:5, /home/hcy/桌面/clang ast test/SystemCfile/half_adder.h:3:11> col:11 implicit referenced struct half_adder
+|-FieldDecl 0x3ffd670 <line:5:2, col:14> col:14 referenced a 'sc_in<bool>':'sc_core::sc_in<bool>'
+|-FieldDecl 0x3ffd6e0 <col:2, col:17> col:17 referenced b 'sc_in<bool>':'sc_core::sc_in<bool>'
+|-FieldDecl 0x3fffca8 <line:6:2, col:14> col:14 referenced sum 'sc_out<bool>':'sc_core::sc_out<bool>'
+|-FieldDecl 0x3fffd18 <col:2, col:19> col:19 referenced carry 'sc_out<bool>':'sc_core::sc_out<bool>'
+|-CXXMethodDecl 0x3fffdc8 <line:8:2, col:18> col:7 used assign_sum 'void ()'
+|-CXXMethodDecl 0x3fffe88 <line:9:2, col:20> col:7 used assign_carry 'void ()'
+|-TypedefDecl 0x3ffff38 </usr/local/systemc-2.3.3/include/sysc/kernel/sc_module.h:400:5, col:30> col:30 referenced SC_CURRENT_USER_MODULE 'half_adder'
+| `-RecordType 0x3ffd410 'half_adder'
+|   `-CXXRecord 0x3ffd378 'half_adder'
+|-CXXConstructorDecl 0x40000e8 </home/hcy/桌面/clang ast test/SystemCfile/half_adder.h:10:10, line:16:2> line:10:10 half_adder 'void (::sc_core::sc_module_name)'
+| |-ParmVarDecl 0x4000010 </usr/local/systemc-2.3.3/include/sysc/kernel/sc_module.h:401:23, col:34> col:49 '::sc_core::sc_module_name':'sc_core::sc_module_name' destroyed
+| |-CXXCtorInitializer '::sc_core::sc_module':'sc_core::sc_module'
+| | `-CXXConstructExpr 0x4000920 </home/hcy/桌面/clang ast test/SystemCfile/half_adder.h:10:10> '::sc_core::sc_module':'sc_core::sc_module' 'void ()'
+| |-CXXCtorInitializer Field 0x3ffd670 'a' 'sc_in<bool>':'sc_core::sc_in<bool>'
+| | `-CXXConstructExpr 0x40009a0 <col:10> 'sc_in<bool>':'sc_core::sc_in<bool>' 'void ()'
+| |-CXXCtorInitializer Field 0x3ffd6e0 'b' 'sc_in<bool>':'sc_core::sc_in<bool>'
+| | `-CXXConstructExpr 0x40009f0 <col:10> 'sc_in<bool>':'sc_core::sc_in<bool>' 'void ()'
+| |-CXXCtorInitializer Field 0x3fffca8 'sum' 'sc_out<bool>':'sc_core::sc_out<bool>'
+| | `-CXXConstructExpr 0x4000a40 <col:10> 'sc_out<bool>':'sc_core::sc_out<bool>' 'void ()'
+| |-CXXCtorInitializer Field 0x3fffd18 'carry' 'sc_out<bool>':'sc_core::sc_out<bool>'
+| | `-CXXConstructExpr 0x4000a90 <col:10> 'sc_out<bool>':'sc_core::sc_out<bool>' 'void ()'
+| `-CompoundStmt 0x40028a8 <line:11:2, line:16:2>
+|   |-CompoundStmt 0x40016c0 </usr/local/systemc-2.3.3/include/sysc/kernel/sc_module.h:417:5, line:425:5>
+|   | |-DeclStmt 0x4001018 <line:418:9, line:421:12>
+|   | | `-VarDecl 0x4000b90 <line:418:9, line:421:11> <scratch space>:29:1 used assign_sum_handle '::sc_core::sc_process_handle':'sc_core::sc_process_handle' cinit destroyed
+|   | |   `-ExprWithCleanups 0x4001000 </usr/local/systemc-2.3.3/include/sysc/kernel/sc_module.h:419:6, line:421:11> '::sc_core::sc_process_handle':'sc_core::sc_process_handle'
+|   | |     `-CXXConstructExpr 0x4000fd0 <line:419:6, line:421:11> '::sc_core::sc_process_handle':'sc_core::sc_process_handle' 'void (const sc_core::sc_process_handle &)' elidable
+|   | |       `-MaterializeTemporaryExpr 0x4000fb8 <line:419:6, line:421:11> 'const sc_core::sc_process_handle' lvalue
+|   | |         `-ImplicitCastExpr 0x4000fa0 <line:419:6, line:421:11> 'const sc_core::sc_process_handle' <NoOp>
+|   | |           `-CXXBindTemporaryExpr 0x4000f80 <line:419:6, line:421:11> 'sc_core::sc_process_handle' (CXXTemporary 0x4000f80)
+|   | |             `-CXXMemberCallExpr 0x4000ed8 <line:419:6, line:421:11> 'sc_core::sc_process_handle'
+|   | |               |-MemberExpr 0x4000c98 <line:419:6, col:41> '<bound member function type>' ->create_method_process 0x33acb38
+|   | |               | `-CallExpr 0x4000c78 <col:6, col:38> 'sc_core::sc_simcontext *'
+|   | |               |   `-ImplicitCastExpr 0x4000c60 <col:6, col:15> 'sc_core::sc_simcontext *(*)()' <FunctionToPointerDecay>
+|   | |               |     `-DeclRefExpr 0x4000c30 <col:6, col:15> 'sc_core::sc_simcontext *()' lvalue Function 0x3414cd0 'sc_get_curr_simcontext' 'sc_core::sc_simcontext *()'
+|   | |               |-ImplicitCastExpr 0x4000f20 <<scratch space>:28:1> 'const char *' <ArrayToPointerDecay>
+|   | |               | `-StringLiteral 0x4000cc8 <col:1> 'const char [11]' lvalue "assign_sum"
+|   | |               |-CXXBoolLiteralExpr 0x4000cf0 </usr/local/systemc-2.3.3/include/sysc/kernel/sc_module.h:420:10> 'bool' false
+|   | |               |-CXXStaticCastExpr 0x4000e68 </usr/local/systemc-2.3.3/include/sysc/kernel/sc_process.h:151:9, col:64> 'sc_core::SC_ENTRY_FUNC':'void (sc_core::sc_process_host::*)()' static_cast<sc_core::SC_ENTRY_FUNC> <DerivedToBaseMemberPointer (sc_module -> sc_process_host)>
+|   | |               | `-UnaryOperator 0x4000e30 <col:45, /home/hcy/桌面/clang ast test/SystemCfile/half_adder.h:12:13> 'void (half_adder::*)()' prefix '&' cannot overflow
+|   | |               |   `-DeclRefExpr 0x4000dd0 </usr/local/systemc-2.3.3/include/sysc/kernel/sc_module.h:457:29, /home/hcy/桌面/clang ast test/SystemCfile/half_adder.h:12:13> 'void ()' CXXMethod 0x3fffdc8 'assign_sum' 'void ()'
+|   | |               |-ImplicitCastExpr 0x4000f38 </usr/local/systemc-2.3.3/include/sysc/kernel/sc_module.h:421:3> 'sc_core::sc_process_host *' <DerivedToBase (sc_module -> sc_process_host)>
+|   | |               | `-CXXThisExpr 0x4000ea8 <col:3> 'half_adder *' this
+|   | |               `-ImplicitCastExpr 0x4000f60 <col:9> 'const sc_core::sc_spawn_options *' <NullToPointer>
+|   | |                 `-IntegerLiteral 0x4000eb8 <col:9> 'int' 0
+|   | |-ExprWithCleanups 0x4001248 <line:422:9, <scratch space>:29:1> 'sc_core::sc_sensitive' lvalue
+|   | | `-CXXOperatorCallExpr 0x4001210 </usr/local/systemc-2.3.3/include/sysc/kernel/sc_module.h:422:9, <scratch space>:29:1> 'sc_core::sc_sensitive' lvalue '<<'
+|   | |   |-ImplicitCastExpr 0x40011f8 </usr/local/systemc-2.3.3/include/sysc/kernel/sc_module.h:422:25> 'sc_core::sc_sensitive &(*)(sc_core::sc_process_handle)' <FunctionToPointerDecay>
+|   | |   | `-DeclRefExpr 0x40011b0 <col:25> 'sc_core::sc_sensitive &(sc_core::sc_process_handle)' lvalue CXXMethod 0x3259908 'operator<<' 'sc_core::sc_sensitive &(sc_core::sc_process_handle)'
+|   | |   |-MemberExpr 0x4001060 <col:9, col:15> 'sc_core::sc_sensitive' lvalue ->sensitive 0x34c0228
+|   | |   | `-ImplicitCastExpr 0x4001040 <col:9> 'sc_core::sc_module *' <UncheckedDerivedToBase (sc_module)>
+|   | |   |   `-CXXThisExpr 0x4001030 <col:9> 'half_adder *' this
+|   | |   `-CXXBindTemporaryExpr 0x4001190 <<scratch space>:29:1> 'sc_core::sc_process_handle' (CXXTemporary 0x4001190)
+|   | |     `-CXXConstructExpr 0x4001158 <col:1> 'sc_core::sc_process_handle' 'void (const sc_core::sc_process_handle &)'
+|   | |       `-ImplicitCastExpr 0x4001140 <col:1> 'const sc_core::sc_process_handle' lvalue <NoOp>
+|   | |         `-DeclRefExpr 0x4001090 <col:1> '::sc_core::sc_process_handle':'sc_core::sc_process_handle' lvalue Var 0x4000b90 'assign_sum_handle' '::sc_core::sc_process_handle':'sc_core::sc_process_handle'
+|   | |-ExprWithCleanups 0x4001478 </usr/local/systemc-2.3.3/include/sysc/kernel/sc_module.h:423:9, <scratch space>:29:1> 'sc_core::sc_sensitive_pos' lvalue
+|   | | `-CXXOperatorCallExpr 0x4001440 </usr/local/systemc-2.3.3/include/sysc/kernel/sc_module.h:423:9, <scratch space>:29:1> 'sc_core::sc_sensitive_pos' lvalue '<<'
+|   | |   |-ImplicitCastExpr 0x4001428 </usr/local/systemc-2.3.3/include/sysc/kernel/sc_module.h:423:29> 'sc_core::sc_sensitive_pos &(*)(sc_core::sc_process_handle)' <FunctionToPointerDecay>
+|   | |   | `-DeclRefExpr 0x40013e0 <col:29> 'sc_core::sc_sensitive_pos &(sc_core::sc_process_handle)' lvalue CXXMethod 0x3267038 'operator<<' 'sc_core::sc_sensitive_pos &(sc_core::sc_process_handle)'
+|   | |   |-MemberExpr 0x4001290 <col:9, col:15> 'sc_core::sc_sensitive_pos' lvalue ->sensitive_pos 0x34c0288
+|   | |   | `-ImplicitCastExpr 0x4001270 <col:9> 'sc_core::sc_module *' <UncheckedDerivedToBase (sc_module)>
+|   | |   |   `-CXXThisExpr 0x4001260 <col:9> 'half_adder *' this
+|   | |   `-CXXBindTemporaryExpr 0x40013c0 <<scratch space>:29:1> 'sc_core::sc_process_handle' (CXXTemporary 0x40013c0)
+|   | |     `-CXXConstructExpr 0x4001388 <col:1> 'sc_core::sc_process_handle' 'void (const sc_core::sc_process_handle &)'
+|   | |       `-ImplicitCastExpr 0x4001370 <col:1> 'const sc_core::sc_process_handle' lvalue <NoOp>
+|   | |         `-DeclRefExpr 0x40012c0 <col:1> '::sc_core::sc_process_handle':'sc_core::sc_process_handle' lvalue Var 0x4000b90 'assign_sum_handle' '::sc_core::sc_process_handle':'sc_core::sc_process_handle'
+|   | `-ExprWithCleanups 0x40016a8 </usr/local/systemc-2.3.3/include/sysc/kernel/sc_module.h:424:9, <scratch space>:29:1> 'sc_core::sc_sensitive_neg' lvalue
+|   |   `-CXXOperatorCallExpr 0x4001670 </usr/local/systemc-2.3.3/include/sysc/kernel/sc_module.h:424:9, <scratch space>:29:1> 'sc_core::sc_sensitive_neg' lvalue '<<'
+|   |     |-ImplicitCastExpr 0x4001658 </usr/local/systemc-2.3.3/include/sysc/kernel/sc_module.h:424:29> 'sc_core::sc_sensitive_neg &(*)(sc_core::sc_process_handle)' <FunctionToPointerDecay>
+|   |     | `-DeclRefExpr 0x4001610 <col:29> 'sc_core::sc_sensitive_neg &(sc_core::sc_process_handle)' lvalue CXXMethod 0x3269c28 'operator<<' 'sc_core::sc_sensitive_neg &(sc_core::sc_process_handle)'
+|   |     |-MemberExpr 0x40014c0 <col:9, col:15> 'sc_core::sc_sensitive_neg' lvalue ->sensitive_neg 0x34c02e8
+|   |     | `-ImplicitCastExpr 0x40014a0 <col:9> 'sc_core::sc_module *' <UncheckedDerivedToBase (sc_module)>
+|   |     |   `-CXXThisExpr 0x4001490 <col:9> 'half_adder *' this
+|   |     `-CXXBindTemporaryExpr 0x40015f0 <<scratch space>:29:1> 'sc_core::sc_process_handle' (CXXTemporary 0x40015f0)
+|   |       `-CXXConstructExpr 0x40015b8 <col:1> 'sc_core::sc_process_handle' 'void (const sc_core::sc_process_handle &)'
+|   |         `-ImplicitCastExpr 0x40015a0 <col:1> 'const sc_core::sc_process_handle' lvalue <NoOp>
+|   |           `-DeclRefExpr 0x40014f0 <col:1> '::sc_core::sc_process_handle':'sc_core::sc_process_handle' lvalue Var 0x4000b90 'assign_sum_handle' '::sc_core::sc_process_handle':'sc_core::sc_process_handle'
+|   |-NullStmt 0x40016f0 </home/hcy/桌面/clang ast test/SystemCfile/half_adder.h:12:24>
+|   |-CXXOperatorCallExpr 0x4001a68 <line:13:3, col:21> 'sc_core::sc_sensitive' lvalue '<<'
+|   | |-ImplicitCastExpr 0x4001a50 <col:18> 'sc_core::sc_sensitive &(*)(const sc_core::sc_port_base &)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x4001a30 <col:18> 'sc_core::sc_sensitive &(const sc_core::sc_port_base &)' lvalue CXXMethod 0x325a320 'operator<<' 'sc_core::sc_sensitive &(const sc_core::sc_port_base &)'
+|   | |-CXXOperatorCallExpr 0x4001900 <col:3, col:16> 'sc_core::sc_sensitive' lvalue '<<'
+|   | | |-ImplicitCastExpr 0x40018e8 <col:13> 'sc_core::sc_sensitive &(*)(const sc_core::sc_port_base &)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x4001898 <col:13> 'sc_core::sc_sensitive &(const sc_core::sc_port_base &)' lvalue CXXMethod 0x325a320 'operator<<' 'sc_core::sc_sensitive &(const sc_core::sc_port_base &)'
+|   | | |-MemberExpr 0x4001770 <col:3> 'sc_core::sc_sensitive' lvalue ->sensitive 0x34c0228
+|   | | | `-ImplicitCastExpr 0x4001750 <col:3> 'sc_core::sc_module *' <UncheckedDerivedToBase (sc_module)>
+|   | | |   `-CXXThisExpr 0x4001740 <col:3> 'half_adder *' implicit this
+|   | | `-ImplicitCastExpr 0x4001868 <col:16> 'const sc_core::sc_port_base' lvalue <DerivedToBase (sc_port -> sc_port_b -> sc_port_base)>
+|   | |   `-ImplicitCastExpr 0x4001850 <col:16> 'const sc_in<bool>':'const sc_core::sc_in<bool>' lvalue <NoOp>
+|   | |     `-MemberExpr 0x40017b0 <col:16> 'sc_in<bool>':'sc_core::sc_in<bool>' lvalue ->a 0x3ffd670
+|   | |       `-CXXThisExpr 0x40017a0 <col:16> 'half_adder *' implicit this
+|   | `-ImplicitCastExpr 0x4001a00 <col:21> 'const sc_core::sc_port_base' lvalue <DerivedToBase (sc_port -> sc_port_b -> sc_port_base)>
+|   |   `-ImplicitCastExpr 0x40019e8 <col:21> 'const sc_in<bool>':'const sc_core::sc_in<bool>' lvalue <NoOp>
+|   |     `-MemberExpr 0x4001948 <col:21> 'sc_in<bool>':'sc_core::sc_in<bool>' lvalue ->b 0x3ffd6e0
+|   |       `-CXXThisExpr 0x4001938 <col:21> 'half_adder *' implicit this
+|   |-CompoundStmt 0x40024f8 </usr/local/systemc-2.3.3/include/sysc/kernel/sc_module.h:417:5, line:425:5>
+|   | |-DeclStmt 0x4001ec8 <line:418:9, line:421:12>
+|   | | `-VarDecl 0x4001af0 <line:418:9, line:421:11> <scratch space>:31:1 used assign_carry_handle '::sc_core::sc_process_handle':'sc_core::sc_process_handle' cinit destroyed
+|   | |   `-ExprWithCleanups 0x4001eb0 </usr/local/systemc-2.3.3/include/sysc/kernel/sc_module.h:419:6, line:421:11> '::sc_core::sc_process_handle':'sc_core::sc_process_handle'
+|   | |     `-CXXConstructExpr 0x4001e80 <line:419:6, line:421:11> '::sc_core::sc_process_handle':'sc_core::sc_process_handle' 'void (const sc_core::sc_process_handle &)' elidable
+|   | |       `-MaterializeTemporaryExpr 0x4001e68 <line:419:6, line:421:11> 'const sc_core::sc_process_handle' lvalue
+|   | |         `-ImplicitCastExpr 0x4001e50 <line:419:6, line:421:11> 'const sc_core::sc_process_handle' <NoOp>
+|   | |           `-CXXBindTemporaryExpr 0x4001e30 <line:419:6, line:421:11> 'sc_core::sc_process_handle' (CXXTemporary 0x4001e30)
+|   | |             `-CXXMemberCallExpr 0x4001d88 <line:419:6, line:421:11> 'sc_core::sc_process_handle'
+|   | |               |-MemberExpr 0x4001be0 <line:419:6, col:41> '<bound member function type>' ->create_method_process 0x33acb38
+|   | |               | `-CallExpr 0x4001bc0 <col:6, col:38> 'sc_core::sc_simcontext *'
+|   | |               |   `-ImplicitCastExpr 0x4001ba8 <col:6, col:15> 'sc_core::sc_simcontext *(*)()' <FunctionToPointerDecay>
+|   | |               |     `-DeclRefExpr 0x4001b78 <col:6, col:15> 'sc_core::sc_simcontext *()' lvalue Function 0x3414cd0 'sc_get_curr_simcontext' 'sc_core::sc_simcontext *()'
+|   | |               |-ImplicitCastExpr 0x4001dd0 <<scratch space>:30:1> 'const char *' <ArrayToPointerDecay>
+|   | |               | `-StringLiteral 0x4001c10 <col:1> 'const char [13]' lvalue "assign_carry"
+|   | |               |-CXXBoolLiteralExpr 0x4001c38 </usr/local/systemc-2.3.3/include/sysc/kernel/sc_module.h:420:10> 'bool' false
+|   | |               |-CXXStaticCastExpr 0x4001d18 </usr/local/systemc-2.3.3/include/sysc/kernel/sc_process.h:151:9, col:64> 'sc_core::SC_ENTRY_FUNC':'void (sc_core::sc_process_host::*)()' static_cast<sc_core::SC_ENTRY_FUNC> <DerivedToBaseMemberPointer (sc_module -> sc_process_host)>
+|   | |               | `-UnaryOperator 0x4001ce0 <col:45, /home/hcy/桌面/clang ast test/SystemCfile/half_adder.h:14:13> 'void (half_adder::*)()' prefix '&' cannot overflow
+|   | |               |   `-DeclRefExpr 0x4001cb0 </usr/local/systemc-2.3.3/include/sysc/kernel/sc_module.h:457:29, /home/hcy/桌面/clang ast test/SystemCfile/half_adder.h:14:13> 'void ()' CXXMethod 0x3fffe88 'assign_carry' 'void ()'
+|   | |               |-ImplicitCastExpr 0x4001de8 </usr/local/systemc-2.3.3/include/sysc/kernel/sc_module.h:421:3> 'sc_core::sc_process_host *' <DerivedToBase (sc_module -> sc_process_host)>
+|   | |               | `-CXXThisExpr 0x4001d58 <col:3> 'half_adder *' this
+|   | |               `-ImplicitCastExpr 0x4001e10 <col:9> 'const sc_core::sc_spawn_options *' <NullToPointer>
+|   | |                 `-IntegerLiteral 0x4001d68 <col:9> 'int' 0
+|   | |-ExprWithCleanups 0x40020d0 <line:422:9, <scratch space>:31:1> 'sc_core::sc_sensitive' lvalue
+|   | | `-CXXOperatorCallExpr 0x4002098 </usr/local/systemc-2.3.3/include/sysc/kernel/sc_module.h:422:9, <scratch space>:31:1> 'sc_core::sc_sensitive' lvalue '<<'
+|   | |   |-ImplicitCastExpr 0x4002080 </usr/local/systemc-2.3.3/include/sysc/kernel/sc_module.h:422:25> 'sc_core::sc_sensitive &(*)(sc_core::sc_process_handle)' <FunctionToPointerDecay>
+|   | |   | `-DeclRefExpr 0x4002060 <col:25> 'sc_core::sc_sensitive &(sc_core::sc_process_handle)' lvalue CXXMethod 0x3259908 'operator<<' 'sc_core::sc_sensitive &(sc_core::sc_process_handle)'
+|   | |   |-MemberExpr 0x4001f10 <col:9, col:15> 'sc_core::sc_sensitive' lvalue ->sensitive 0x34c0228
+|   | |   | `-ImplicitCastExpr 0x4001ef0 <col:9> 'sc_core::sc_module *' <UncheckedDerivedToBase (sc_module)>
+|   | |   |   `-CXXThisExpr 0x4001ee0 <col:9> 'half_adder *' this
+|   | |   `-CXXBindTemporaryExpr 0x4002040 <<scratch space>:31:1> 'sc_core::sc_process_handle' (CXXTemporary 0x4002040)
+|   | |     `-CXXConstructExpr 0x4002008 <col:1> 'sc_core::sc_process_handle' 'void (const sc_core::sc_process_handle &)'
+|   | |       `-ImplicitCastExpr 0x4001ff0 <col:1> 'const sc_core::sc_process_handle' lvalue <NoOp>
+|   | |         `-DeclRefExpr 0x4001f40 <col:1> '::sc_core::sc_process_handle':'sc_core::sc_process_handle' lvalue Var 0x4001af0 'assign_carry_handle' '::sc_core::sc_process_handle':'sc_core::sc_process_handle'
+|   | |-ExprWithCleanups 0x40022d8 </usr/local/systemc-2.3.3/include/sysc/kernel/sc_module.h:423:9, <scratch space>:31:1> 'sc_core::sc_sensitive_pos' lvalue
+|   | | `-CXXOperatorCallExpr 0x40022a0 </usr/local/systemc-2.3.3/include/sysc/kernel/sc_module.h:423:9, <scratch space>:31:1> 'sc_core::sc_sensitive_pos' lvalue '<<'
+|   | |   |-ImplicitCastExpr 0x4002288 </usr/local/systemc-2.3.3/include/sysc/kernel/sc_module.h:423:29> 'sc_core::sc_sensitive_pos &(*)(sc_core::sc_process_handle)' <FunctionToPointerDecay>
+|   | |   | `-DeclRefExpr 0x4002268 <col:29> 'sc_core::sc_sensitive_pos &(sc_core::sc_process_handle)' lvalue CXXMethod 0x3267038 'operator<<' 'sc_core::sc_sensitive_pos &(sc_core::sc_process_handle)'
+|   | |   |-MemberExpr 0x4002118 <col:9, col:15> 'sc_core::sc_sensitive_pos' lvalue ->sensitive_pos 0x34c0288
+|   | |   | `-ImplicitCastExpr 0x40020f8 <col:9> 'sc_core::sc_module *' <UncheckedDerivedToBase (sc_module)>
+|   | |   |   `-CXXThisExpr 0x40020e8 <col:9> 'half_adder *' this
+|   | |   `-CXXBindTemporaryExpr 0x4002248 <<scratch space>:31:1> 'sc_core::sc_process_handle' (CXXTemporary 0x4002248)
+|   | |     `-CXXConstructExpr 0x4002210 <col:1> 'sc_core::sc_process_handle' 'void (const sc_core::sc_process_handle &)'
+|   | |       `-ImplicitCastExpr 0x40021f8 <col:1> 'const sc_core::sc_process_handle' lvalue <NoOp>
+|   | |         `-DeclRefExpr 0x4002148 <col:1> '::sc_core::sc_process_handle':'sc_core::sc_process_handle' lvalue Var 0x4001af0 'assign_carry_handle' '::sc_core::sc_process_handle':'sc_core::sc_process_handle'
+|   | `-ExprWithCleanups 0x40024e0 </usr/local/systemc-2.3.3/include/sysc/kernel/sc_module.h:424:9, <scratch space>:31:1> 'sc_core::sc_sensitive_neg' lvalue
+|   |   `-CXXOperatorCallExpr 0x40024a8 </usr/local/systemc-2.3.3/include/sysc/kernel/sc_module.h:424:9, <scratch space>:31:1> 'sc_core::sc_sensitive_neg' lvalue '<<'
+|   |     |-ImplicitCastExpr 0x4002490 </usr/local/systemc-2.3.3/include/sysc/kernel/sc_module.h:424:29> 'sc_core::sc_sensitive_neg &(*)(sc_core::sc_process_handle)' <FunctionToPointerDecay>
+|   |     | `-DeclRefExpr 0x4002470 <col:29> 'sc_core::sc_sensitive_neg &(sc_core::sc_process_handle)' lvalue CXXMethod 0x3269c28 'operator<<' 'sc_core::sc_sensitive_neg &(sc_core::sc_process_handle)'
+|   |     |-MemberExpr 0x4002320 <col:9, col:15> 'sc_core::sc_sensitive_neg' lvalue ->sensitive_neg 0x34c02e8
+|   |     | `-ImplicitCastExpr 0x4002300 <col:9> 'sc_core::sc_module *' <UncheckedDerivedToBase (sc_module)>
+|   |     |   `-CXXThisExpr 0x40022f0 <col:9> 'half_adder *' this
+|   |     `-CXXBindTemporaryExpr 0x4002450 <<scratch space>:31:1> 'sc_core::sc_process_handle' (CXXTemporary 0x4002450)
+|   |       `-CXXConstructExpr 0x4002418 <col:1> 'sc_core::sc_process_handle' 'void (const sc_core::sc_process_handle &)'
+|   |         `-ImplicitCastExpr 0x4002400 <col:1> 'const sc_core::sc_process_handle' lvalue <NoOp>
+|   |           `-DeclRefExpr 0x4002350 <col:1> '::sc_core::sc_process_handle':'sc_core::sc_process_handle' lvalue Var 0x4001af0 'assign_carry_handle' '::sc_core::sc_process_handle':'sc_core::sc_process_handle'
+|   |-NullStmt 0x4002528 </home/hcy/桌面/clang ast test/SystemCfile/half_adder.h:14:26>
+|   `-CXXOperatorCallExpr 0x4002870 <line:15:3, col:21> 'sc_core::sc_sensitive' lvalue '<<'
+|     |-ImplicitCastExpr 0x4002858 <col:18> 'sc_core::sc_sensitive &(*)(const sc_core::sc_port_base &)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x4002838 <col:18> 'sc_core::sc_sensitive &(const sc_core::sc_port_base &)' lvalue CXXMethod 0x325a320 'operator<<' 'sc_core::sc_sensitive &(const sc_core::sc_port_base &)'
+|     |-CXXOperatorCallExpr 0x4002708 <col:3, col:16> 'sc_core::sc_sensitive' lvalue '<<'
+|     | |-ImplicitCastExpr 0x40026f0 <col:13> 'sc_core::sc_sensitive &(*)(const sc_core::sc_port_base &)' <FunctionToPointerDecay>
+|     | | `-DeclRefExpr 0x40026d0 <col:13> 'sc_core::sc_sensitive &(const sc_core::sc_port_base &)' lvalue CXXMethod 0x325a320 'operator<<' 'sc_core::sc_sensitive &(const sc_core::sc_port_base &)'
+|     | |-MemberExpr 0x40025a8 <col:3> 'sc_core::sc_sensitive' lvalue ->sensitive 0x34c0228
+|     | | `-ImplicitCastExpr 0x4002588 <col:3> 'sc_core::sc_module *' <UncheckedDerivedToBase (sc_module)>
+|     | |   `-CXXThisExpr 0x4002578 <col:3> 'half_adder *' implicit this
+|     | `-ImplicitCastExpr 0x40026a0 <col:16> 'const sc_core::sc_port_base' lvalue <DerivedToBase (sc_port -> sc_port_b -> sc_port_base)>
+|     |   `-ImplicitCastExpr 0x4002688 <col:16> 'const sc_in<bool>':'const sc_core::sc_in<bool>' lvalue <NoOp>
+|     |     `-MemberExpr 0x40025e8 <col:16> 'sc_in<bool>':'sc_core::sc_in<bool>' lvalue ->a 0x3ffd670
+|     |       `-CXXThisExpr 0x40025d8 <col:16> 'half_adder *' implicit this
+|     `-ImplicitCastExpr 0x4002808 <col:21> 'const sc_core::sc_port_base' lvalue <DerivedToBase (sc_port -> sc_port_b -> sc_port_base)>
+|       `-ImplicitCastExpr 0x40027f0 <col:21> 'const sc_in<bool>':'const sc_core::sc_in<bool>' lvalue <NoOp>
+|         `-MemberExpr 0x4002750 <col:21> 'sc_in<bool>':'sc_core::sc_in<bool>' lvalue ->b 0x3ffd6e0
+|           `-CXXThisExpr 0x4002740 <col:21> 'half_adder *' implicit this
+|-CXXConstructorDecl 0x40001c8 <line:3:11> col:11 implicit half_adder 'void (const half_adder &)' inline default_delete noexcept-unevaluated 0x40001c8
+| `-ParmVarDecl 0x40002d8 <col:11> col:11 'const half_adder &'
+|-CXXConstructorDecl 0x4000378 <col:11> col:11 implicit half_adder 'void (half_adder &&)' inline default_delete noexcept-unevaluated 0x4000378
+| `-ParmVarDecl 0x4000488 <col:11> col:11 'half_adder &&'
+|-CXXMethodDecl 0x4000528 <col:11> col:11 implicit operator= 'half_adder &(const half_adder &)' inline default_delete noexcept-unevaluated 0x4000528
+| `-ParmVarDecl 0x4000638 <col:11> col:11 'const half_adder &'
+|-CXXMethodDecl 0x40006a8 <col:11> col:11 implicit operator= 'half_adder &(half_adder &&)' inline default_delete noexcept-unevaluated 0x40006a8
+| `-ParmVarDecl 0x40007b8 <col:11> col:11 'half_adder &&'
+`-CXXDestructorDecl 0x4000840 <col:11> col:11 implicit used ~half_adder 'void () noexcept' inline default
+  |-Overrides: [ 0x34ba408 sc_module::~sc_module 'void () noexcept' ]
+  `-CompoundStmt 0x4003258 <col:11>
+
+Dumping half_adder::assign_sum:
+CXXMethodDecl 0x4002928 parent 0x3ffd378 prev 0x3fffdc8 </home/hcy/桌面/clang ast test/SystemCfile/half_adder.cpp:2:1, line:6:1> line:2:18 used assign_sum 'void ()'
+`-CompoundStmt 0x4002dc0 <line:3:1, line:6:1>
+  `-ExprWithCleanups 0x4002da8 <line:4:2, col:26> 'sc_core::sc_out<bool>::this_type':'sc_core::sc_out<bool>' lvalue
+    `-CXXOperatorCallExpr 0x4002d70 <col:2, col:26> 'sc_core::sc_out<bool>::this_type':'sc_core::sc_out<bool>' lvalue '='
+      |-ImplicitCastExpr 0x4002d58 <col:6> 'sc_core::sc_out<bool>::this_type &(*)(const sc_core::sc_out<bool>::data_type &)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x4002cd8 <col:6> 'sc_core::sc_out<bool>::this_type &(const sc_core::sc_out<bool>::data_type &)' lvalue CXXMethod 0x3fff178 'operator=' 'sc_core::sc_out<bool>::this_type &(const sc_core::sc_out<bool>::data_type &)'
+      |-MemberExpr 0x4002a70 <col:2> 'sc_out<bool>':'sc_core::sc_out<bool>' lvalue ->sum 0x3fffca8
+      | `-CXXThisExpr 0x4002a60 <col:2> 'half_adder *' implicit this
+      `-MaterializeTemporaryExpr 0x4002c90 <col:8, col:26> 'const sc_core::sc_out<bool>::data_type':'const bool' lvalue
+        `-ImplicitCastExpr 0x4002c78 <col:8, col:26> 'bool' <IntegralToBoolean>
+          `-BinaryOperator 0x4002c50 <col:8, col:26> 'int' '^'
+            |-ImplicitCastExpr 0x4002c08 <col:8, col:15> 'int' <IntegralCast>
+            | `-ImplicitCastExpr 0x4002bf0 <col:8, col:15> 'sc_core::sc_in<bool>::data_type':'bool' <LValueToRValue>
+            |   `-CXXMemberCallExpr 0x4002b10 <col:8, col:15> 'const sc_core::sc_in<bool>::data_type':'const bool' lvalue
+            |     `-MemberExpr 0x4002ae0 <col:8, col:10> '<bound member function type>' .read 0x369b6f8
+            |       `-ImplicitCastExpr 0x4002b30 <col:8> 'const sc_core::sc_in<bool>' lvalue <NoOp>
+            |         `-MemberExpr 0x4002ab0 <col:8> 'sc_in<bool>':'sc_core::sc_in<bool>' lvalue ->a 0x3ffd670
+            |           `-CXXThisExpr 0x4002aa0 <col:8> 'half_adder *' implicit this
+            `-ImplicitCastExpr 0x4002c38 <col:19, col:26> 'int' <IntegralCast>
+              `-ImplicitCastExpr 0x4002c20 <col:19, col:26> 'sc_core::sc_in<bool>::data_type':'bool' <LValueToRValue>
+                `-CXXMemberCallExpr 0x4002bb8 <col:19, col:26> 'const sc_core::sc_in<bool>::data_type':'const bool' lvalue
+                  `-MemberExpr 0x4002b88 <col:19, col:21> '<bound member function type>' .read 0x369b6f8
+                    `-ImplicitCastExpr 0x4002bd8 <col:19> 'const sc_core::sc_in<bool>' lvalue <NoOp>
+                      `-MemberExpr 0x4002b58 <col:19> 'sc_in<bool>':'sc_core::sc_in<bool>' lvalue ->b 0x3ffd6e0
+                        `-CXXThisExpr 0x4002b48 <col:19> 'half_adder *' implicit this
+
+Dumping half_adder::assign_carry:
+CXXMethodDecl 0x4002e00 parent 0x3ffd378 prev 0x3fffe88 </home/hcy/桌面/clang ast test/SystemCfile/half_adder.cpp:8:1, line:11:1> line:8:18 used assign_carry 'void ()'
+`-CompoundStmt 0x4003200 <line:9:1, line:11:1>
+  `-ExprWithCleanups 0x40031e8 <line:10:2, col:28> 'sc_core::sc_out<bool>::this_type':'sc_core::sc_out<bool>' lvalue
+    `-CXXOperatorCallExpr 0x40031b0 <col:2, col:28> 'sc_core::sc_out<bool>::this_type':'sc_core::sc_out<bool>' lvalue '='
+      |-ImplicitCastExpr 0x4003198 <col:8> 'sc_core::sc_out<bool>::this_type &(*)(const sc_core::sc_out<bool>::data_type &)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x4003178 <col:8> 'sc_core::sc_out<bool>::this_type &(const sc_core::sc_out<bool>::data_type &)' lvalue CXXMethod 0x3fff178 'operator=' 'sc_core::sc_out<bool>::this_type &(const sc_core::sc_out<bool>::data_type &)'
+      |-MemberExpr 0x4002f48 <col:2> 'sc_out<bool>':'sc_core::sc_out<bool>' lvalue ->carry 0x3fffd18
+      | `-CXXThisExpr 0x4002f38 <col:2> 'half_adder *' implicit this
+      `-MaterializeTemporaryExpr 0x4003160 <col:10, col:28> 'const sc_core::sc_out<bool>::data_type':'const bool' lvalue
+        `-ImplicitCastExpr 0x4003148 <col:10, col:28> 'bool' <IntegralToBoolean>
+          `-BinaryOperator 0x4003128 <col:10, col:28> 'int' '&'
+            |-ImplicitCastExpr 0x40030e0 <col:10, col:17> 'int' <IntegralCast>
+            | `-ImplicitCastExpr 0x40030c8 <col:10, col:17> 'sc_core::sc_in<bool>::data_type':'bool' <LValueToRValue>
+            |   `-CXXMemberCallExpr 0x4002fe8 <col:10, col:17> 'const sc_core::sc_in<bool>::data_type':'const bool' lvalue
+            |     `-MemberExpr 0x4002fb8 <col:10, col:12> '<bound member function type>' .read 0x369b6f8
+            |       `-ImplicitCastExpr 0x4003008 <col:10> 'const sc_core::sc_in<bool>' lvalue <NoOp>
+            |         `-MemberExpr 0x4002f88 <col:10> 'sc_in<bool>':'sc_core::sc_in<bool>' lvalue ->a 0x3ffd670
+            |           `-CXXThisExpr 0x4002f78 <col:10> 'half_adder *' implicit this
+            `-ImplicitCastExpr 0x4003110 <col:21, col:28> 'int' <IntegralCast>
+              `-ImplicitCastExpr 0x40030f8 <col:21, col:28> 'sc_core::sc_in<bool>::data_type':'bool' <LValueToRValue>
+                `-CXXMemberCallExpr 0x4003090 <col:21, col:28> 'const sc_core::sc_in<bool>::data_type':'const bool' lvalue
+                  `-MemberExpr 0x4003060 <col:21, col:23> '<bound member function type>' .read 0x369b6f8
+                    `-ImplicitCastExpr 0x40030b0 <col:21> 'const sc_core::sc_in<bool>' lvalue <NoOp>
+                      `-MemberExpr 0x4003030 <col:21> 'sc_in<bool>':'sc_core::sc_in<bool>' lvalue ->b 0x3ffd6e0
+                        `-CXXThisExpr 0x4003020 <col:21> 'half_adder *' implicit this
+

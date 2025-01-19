@@ -1,0 +1,100 @@
+sensitive: ;
+Dumping full_adder1:
+CXXRecordDecl   line:4:11 struct full_adder1 definition
+|-DefinitionData polymorphic has_user_declared_ctor has_mutable_fields can_const_default_init
+| |-DefaultConstructor
+| |-CopyConstructor non_trivial has_const_param needs_overload_resolution implicit_has_const_param
+| |-MoveConstructor exists non_trivial needs_overload_resolution
+| |-CopyAssignment non_trivial has_const_param needs_overload_resolution implicit_has_const_param
+| |-MoveAssignment exists non_trivial needs_overload_resolution
+| `-Destructor simple non_trivial needs_overload_resolution
+|-public '::sc_core::sc_module':'sc_core::sc_module'
+|-CXXRecordDecl   col:11 implicit  struct full_adder1
+|-FieldDecl  <line:6:2, col:13> col:13  a 'sc_in<bool>':'sc_core::sc_in<bool>'
+|-FieldDecl  <col:2, col:16> col:16  b 'sc_in<bool>':'sc_core::sc_in<bool>'
+|-FieldDecl  <col:2, col:19> col:19  carry_in 'sc_in<bool>':'sc_core::sc_in<bool>'
+|-FieldDecl  <line:7:2, col:14> col:14  sum 'sc_out<bool>':'sc_core::sc_out<bool>'
+|-FieldDecl  <col:2, col:19> col:19  carry_out 'sc_out<bool>':'sc_core::sc_out<bool>'
+|-FieldDecl  <line:8:2, col:17> col:17  c1 'sc_signal<bool>':'sc_core::sc_signal<bool, sc_core::SC_ONE_WRITER>'
+|-FieldDecl  <col:2, col:21> col:21  c2 'sc_signal<bool>':'sc_core::sc_signal<bool, sc_core::SC_ONE_WRITER>'
+|-FieldDecl  <col:2, col:25> col:25  s1 'sc_signal<bool>':'sc_core::sc_signal<bool, sc_core::SC_ONE_WRITER>'
+|-FieldDecl  <line:12:2, col:13> col:13  ha1 'half_adder'
+|-FieldDecl  <line:13:2, col:14> col:14  ha2 'half_adder1'
+| `-CompoundStmt  
+|   |-CXXOperatorCallExpr  <line:18:3, col:10> 'void' '()'
+|   | |-ImplicitCastExpr  
+|   | |-MemberExpr  ' lvalue .a 
+|   | | `-MemberExpr  ha1 
+|   | `-ImplicitCastExpr  
+|   |   `-MemberExpr  a 
+|   |-CXXOperatorCallExpr  <line:19:3, col:10> 'void' '()'
+|   | |-ImplicitCastExpr  
+|   | |-MemberExpr  ' lvalue .b 
+|   | | `-MemberExpr  ha1 
+|   | `-ImplicitCastExpr  
+|   |   `-MemberExpr  b 
+|   |-CXXOperatorCallExpr  <line:20:3, col:13> 'void' '()'
+|   | |-ImplicitCastExpr  
+|   | |-ImplicitCastExpr  
+|   | | `-MemberExpr  ' lvalue .sum 
+|   | |   `-MemberExpr  ha1 
+|   | `-ImplicitCastExpr  
+|   |   `-MemberExpr  s1 
+|   |-CXXOperatorCallExpr  <line:21:3, col:15> 'void' '()'
+|   | |-ImplicitCastExpr  
+|   | |-ImplicitCastExpr  
+|   | | `-MemberExpr  ' lvalue .carry 
+|   | |   `-MemberExpr  ha1 
+|   | `-ImplicitCastExpr  
+|   |   `-MemberExpr  c1 
+|   |-CXXOperatorCallExpr  <line:24:3, col:11> 'void' '()'
+|   | |-ImplicitCastExpr  
+|   | |-MemberExpr  ' lvalue .a 
+|   | | `-MemberExpr  ha2 
+|   | `-ImplicitCastExpr  
+|   |   `-ImplicitCastExpr  
+|   |     `-MemberExpr  s1 
+|   |-CXXOperatorCallExpr  <line:25:3, col:17> 'void' '()'
+|   | |-ImplicitCastExpr  
+|   | |-MemberExpr  ' lvalue .b 
+|   | | `-MemberExpr  ha2 
+|   | `-ImplicitCastExpr  
+|   |   `-MemberExpr  carry_in 
+|   |-CXXOperatorCallExpr  <line:26:3, col:14> 'void' '()'
+|   | |-ImplicitCastExpr  
+|   | |-ImplicitCastExpr  
+|   | | `-MemberExpr  ' lvalue .sum 
+|   | |   `-MemberExpr  ha2 
+|   | `-ImplicitCastExpr  
+|   |   `-MemberExpr  sum 
+|   |-CXXOperatorCallExpr  <line:27:3, col:15> 'void' '()'
+|   | |-ImplicitCastExpr  
+|   | |-ImplicitCastExpr  
+|   | | `-MemberExpr  ' lvalue .carry 
+|   | |   `-MemberExpr  ha2 
+|   | `-ImplicitCastExpr  
+|   |   `-MemberExpr  c2 
+Dumping full_adder1::assign_carry_out:
+CXXMethodDecl   assign_carry_out 'void ()'
+`-CompoundStmt  
+  `-ExprWithCleanups  <line:4:2, col:19> 'sc_core::sc_out<bool>::this_type':'sc_core::sc_out<bool>' lvalue
+    `-CXXOperatorCallExpr  ' lvalue '='
+      |-ImplicitCastExpr  
+      |-MemberExpr  carry_out 
+      `-MaterializeTemporaryExpr  ::data_type':'const bool' lvalue
+        `-ImplicitCastExpr  
+          `-BinaryOperator   'int' '|'
+            |-ImplicitCastExpr  
+            | `-ImplicitCastExpr  
+            |   `-ImplicitCastExpr  
+            |       `-MemberExpr  ' .operator const bool & 
+            |         `-ImplicitCastExpr  
+            |           `-MemberExpr  c1 
+            `-ImplicitCastExpr  
+              `-ImplicitCastExpr  
+                `-ImplicitCastExpr  
+                    `-MemberExpr  ' .operator const bool & 
+                      `-ImplicitCastExpr  
+                        `-MemberExpr  c2 
+
+

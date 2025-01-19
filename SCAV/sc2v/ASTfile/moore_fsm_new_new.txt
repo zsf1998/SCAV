@@ -1,0 +1,259 @@
+sensitive: clk;rst
+sensitive: clk;rst
+Dumping moore_fsm:
+CXXRecordDecl   line:9:11 struct moore_fsm definition
+|-DefinitionData polymorphic has_user_declared_ctor has_mutable_fields can_const_default_init
+| |-DefaultConstructor
+| |-CopyConstructor non_trivial has_const_param needs_overload_resolution implicit_has_const_param
+| |-MoveConstructor exists non_trivial needs_overload_resolution
+| |-CopyAssignment non_trivial has_const_param needs_overload_resolution implicit_has_const_param
+| |-MoveAssignment exists non_trivial needs_overload_resolution
+| `-Destructor simple non_trivial needs_overload_resolution
+|-public '::sc_core::sc_module':'sc_core::sc_module'
+|-CXXRecordDecl   col:11 implicit  struct moore_fsm
+|-FieldDecl  <line:12:2, col:15> col:15  in 'sc_in<bool>':'sc_core::sc_in<bool>'
+|-FieldDecl  <line:13:2, col:15> col:15  clk 'sc_in<bool>':'sc_core::sc_in<bool>'
+|-FieldDecl  <line:14:2, col:15> col:15  rst 'sc_in<bool>':'sc_core::sc_in<bool>'
+|-FieldDecl  <line:15:2, col:16> col:16  out 'sc_out<bool>':'sc_core::sc_out<bool>'
+|-FieldDecl  <line:17:2, col:26> col:26  current_state 'sc_signal<sc_uint<3>>':'sc_core::sc_signal<sc_dt::sc_uint<3>, sc_core::SC_ONE_WRITER>'
+|-FieldDecl  <line:18:2, col:26> col:26  next_state 'sc_signal<sc_uint<3>>':'sc_core::sc_signal<sc_dt::sc_uint<3>, sc_core::SC_ONE_WRITER>'
+Dumping moore_fsm::always_combilogic_block1:
+CXXMethodDecl   always_combilogic_block1 'void ()'
+`-CompoundStmt  
+  `-SwitchStmt  
+    |-ImplicitCastExpr  <line:5:9, col:28> 'sc_dt::uint_type':'unsigned long long' <UserDefinedConversion>
+    |   `-MemberExpr  ' .operator unsigned long long 
+    |     `-ImplicitCastExpr  
+    |         `-MemberExpr  ' .read 
+    |           `-ImplicitCastExpr  
+    |             `-MemberExpr  current_state 
+    `-CompoundStmt  
+      |-CaseStmt  
+      | |-ConstantExpr   'sc_dt::uint_type':'unsigned long long'
+      | | |-value: Int 0
+      | | `-ImplicitCastExpr  
+      | |   `-IntegerLiteral   'int' 0
+      | `-CompoundStmt  
+      |   |-ExprWithCleanups  ' lvalue
+      |   | `-CXXOperatorCallExpr  ' lvalue '='
+      |   |   |-ImplicitCastExpr  
+      |   |   |-MemberExpr  next_state 
+      |   |   `-MaterializeTemporaryExpr  ' lvalue
+      |   |         `-ConditionalOperator   'int'
+      |   |           |-ImplicitCastExpr  
+      |   |           |   `-MemberExpr  ' .read 
+      |   |           |     `-ImplicitCastExpr  
+      |   |           |       `-MemberExpr  in 
+      |   |           |-IntegerLiteral   'int' 1
+      |   |           `-IntegerLiteral   'int' 0
+      |   `-BreakStmt  
+      |-CaseStmt  
+      | |-ConstantExpr   'sc_dt::uint_type':'unsigned long long'
+      | | |-value: Int 1
+      | | `-ImplicitCastExpr  
+      | |   `-IntegerLiteral   'int' 1
+      | `-CompoundStmt  
+      |   |-ExprWithCleanups  ' lvalue
+      |   | `-CXXOperatorCallExpr  ' lvalue '='
+      |   |   |-ImplicitCastExpr  
+      |   |   |-MemberExpr  next_state 
+      |   |   `-MaterializeTemporaryExpr  ' lvalue
+      |   |         `-ConditionalOperator   'int'
+      |   |           |-ImplicitCastExpr  
+      |   |           |   `-MemberExpr  ' .read 
+      |   |           |     `-ImplicitCastExpr  
+      |   |           |       `-MemberExpr  in 
+      |   |           |-IntegerLiteral   'int' 1
+      |   |           `-IntegerLiteral   'int' 2
+      |   `-BreakStmt  
+      |-CaseStmt  
+      | |-ConstantExpr   'sc_dt::uint_type':'unsigned long long'
+      | | |-value: Int 2
+      | | `-ImplicitCastExpr  
+      | |   `-IntegerLiteral   'int' 2
+      | `-CompoundStmt  
+      |   |-ExprWithCleanups  ' lvalue
+      |   | `-CXXOperatorCallExpr  ' lvalue '='
+      |   |   |-ImplicitCastExpr  
+      |   |   |-MemberExpr  next_state 
+      |   |   `-MaterializeTemporaryExpr  ' lvalue
+      |   |         `-ConditionalOperator   'int'
+      |   |           |-ImplicitCastExpr  
+      |   |           |   `-MemberExpr  ' .read 
+      |   |           |     `-ImplicitCastExpr  
+      |   |           |       `-MemberExpr  in 
+      |   |           |-IntegerLiteral   'int' 3
+      |   |           `-IntegerLiteral   'int' 0
+      |   `-BreakStmt  
+      |-CaseStmt  
+      | |-ConstantExpr   'sc_dt::uint_type':'unsigned long long'
+      | | |-value: Int 3
+      | | `-ImplicitCastExpr  
+      | |   `-IntegerLiteral   'int' 3
+      | `-CompoundStmt  
+      |   |-ExprWithCleanups  ' lvalue
+      |   | `-CXXOperatorCallExpr  ' lvalue '='
+      |   |   |-ImplicitCastExpr  
+      |   |   |-MemberExpr  next_state 
+      |   |   `-MaterializeTemporaryExpr  ' lvalue
+      |   |         `-ConditionalOperator   'int'
+      |   |           |-ImplicitCastExpr  
+      |   |           |   `-MemberExpr  ' .read 
+      |   |           |     `-ImplicitCastExpr  
+      |   |           |       `-MemberExpr  in 
+      |   |           |-IntegerLiteral   'int' 4
+      |   |           `-IntegerLiteral   'int' 2
+      |   `-BreakStmt  
+      |-CaseStmt  
+      | |-ConstantExpr   'sc_dt::uint_type':'unsigned long long'
+      | | |-value: Int 4
+      | | `-ImplicitCastExpr  
+      | |   `-IntegerLiteral   'int' 4
+      | `-CompoundStmt  
+      |   |-ExprWithCleanups  ' lvalue
+      |   | `-CXXOperatorCallExpr  ' lvalue '='
+      |   |   |-ImplicitCastExpr  
+      |   |   |-MemberExpr  next_state 
+      |   |   `-MaterializeTemporaryExpr  ' lvalue
+      |   |         `-ConditionalOperator   'int'
+      |   |           |-ImplicitCastExpr  
+      |   |           |   `-MemberExpr  ' .read 
+      |   |           |     `-ImplicitCastExpr  
+      |   |           |       `-MemberExpr  in 
+      |   |           |-IntegerLiteral   'int' 1
+      |   |           `-IntegerLiteral   'int' 0
+      |   `-BreakStmt  
+      `-DefaultStmt  
+        `-CompoundStmt  
+          |-ExprWithCleanups  ' lvalue
+          | `-CXXOperatorCallExpr  ' lvalue '='
+          |   |-ImplicitCastExpr  
+          |   |-MemberExpr  next_state 
+          |   `-MaterializeTemporaryExpr  ' lvalue
+          |         `-IntegerLiteral   'int' 0
+          `-BreakStmt  
+
+Dumping moore_fsm::always_block1:
+CXXMethodDecl   always_block1 'void ()'
+`-CompoundStmt  
+  `-IfStmt   has_else
+    |-UnaryOperator  <line:42:8, col:18> 'bool' prefix '!' cannot overflow
+    | `-ImplicitCastExpr  
+    |     `-MemberExpr  ' .read 
+    |       `-ImplicitCastExpr  
+    |         `-MemberExpr  rst 
+    |-CompoundStmt  
+    | `-ExprWithCleanups  ' lvalue
+    |   `-CXXOperatorCallExpr  ' lvalue '='
+    |     |-ImplicitCastExpr  
+    |     |-MemberExpr  current_state 
+    |     `-MaterializeTemporaryExpr  ' lvalue
+    |           `-IntegerLiteral   'int' 0
+    `-CompoundStmt  
+      `-CXXOperatorCallExpr  <line:48:9, col:41> 'sc_core::sc_signal<sc_dt::sc_uint<3>, sc_core::SC_ONE_WRITER>::this_type':'sc_core::sc_signal<sc_dt::sc_uint<3>, sc_core::SC_ONE_WRITER>' lvalue '='
+        |-ImplicitCastExpr  
+        |-MemberExpr  current_state 
+          `-MemberExpr  ' .read 
+            `-ImplicitCastExpr  
+              `-MemberExpr  next_state 
+
+Dumping moore_fsm::always_block2:
+CXXMethodDecl   always_block2 'void ()'
+`-CompoundStmt  
+  `-IfStmt   has_else
+    |-UnaryOperator  <line:56:4, col:14> 'bool' prefix '!' cannot overflow
+    | `-ImplicitCastExpr  
+    |     `-MemberExpr  ' .read 
+    |       `-ImplicitCastExpr  
+    |         `-MemberExpr  rst 
+    |-CompoundStmt  
+    | `-ExprWithCleanups  <line:58:5, col:11> 'sc_core::sc_out<bool>::this_type':'sc_core::sc_out<bool>' lvalue
+    |   `-CXXOperatorCallExpr  ' lvalue '='
+    |     |-ImplicitCastExpr  
+    |     |-MemberExpr  out 
+    |     `-MaterializeTemporaryExpr  ::data_type':'const bool' lvalue
+    |       `-ImplicitCastExpr  
+    |         `-IntegerLiteral   'int' 0
+    `-CompoundStmt  
+      `-SwitchStmt  
+        |-ImplicitCastExpr  <line:62:8, col:24> 'sc_dt::uint_type':'unsigned long long' <UserDefinedConversion>
+        |   `-MemberExpr  ' .operator unsigned long long 
+        |     `-ImplicitCastExpr  
+        |         `-MemberExpr  ' .read 
+        |           `-ImplicitCastExpr  
+        |             `-MemberExpr  next_state 
+        `-CompoundStmt  
+          |-CaseStmt  
+          | |-ConstantExpr   'sc_dt::uint_type':'unsigned long long'
+          | | |-value: Int 0
+          | | `-ImplicitCastExpr  
+          | |   `-IntegerLiteral   'int' 0
+          | `-CompoundStmt  
+          |   |-ExprWithCleanups  <line:66:13, col:19> 'sc_core::sc_out<bool>::this_type':'sc_core::sc_out<bool>' lvalue
+          |   | `-CXXOperatorCallExpr  ' lvalue '='
+          |   |   |-ImplicitCastExpr  
+          |   |   |-MemberExpr  out 
+          |   |   `-MaterializeTemporaryExpr  ::data_type':'const bool' lvalue
+          |   |     `-ImplicitCastExpr  
+          |   |       `-IntegerLiteral   'int' 0
+          |   `-BreakStmt  
+          |-CaseStmt  
+          | |-ConstantExpr   'sc_dt::uint_type':'unsigned long long'
+          | | |-value: Int 1
+          | | `-ImplicitCastExpr  
+          | |   `-IntegerLiteral   'int' 1
+          | `-CompoundStmt  
+          |   |-ExprWithCleanups  <line:71:13, col:19> 'sc_core::sc_out<bool>::this_type':'sc_core::sc_out<bool>' lvalue
+          |   | `-CXXOperatorCallExpr  ' lvalue '='
+          |   |   |-ImplicitCastExpr  
+          |   |   |-MemberExpr  out 
+          |   |   `-MaterializeTemporaryExpr  ::data_type':'const bool' lvalue
+          |   |     `-ImplicitCastExpr  
+          |   |       `-IntegerLiteral   'int' 0
+          |   `-BreakStmt  
+          |-CaseStmt  
+          | |-ConstantExpr   'sc_dt::uint_type':'unsigned long long'
+          | | |-value: Int 2
+          | | `-ImplicitCastExpr  
+          | |   `-IntegerLiteral   'int' 2
+          | `-CompoundStmt  
+          |   |-ExprWithCleanups  <line:76:13, col:19> 'sc_core::sc_out<bool>::this_type':'sc_core::sc_out<bool>' lvalue
+          |   | `-CXXOperatorCallExpr  ' lvalue '='
+          |   |   |-ImplicitCastExpr  
+          |   |   |-MemberExpr  out 
+          |   |   `-MaterializeTemporaryExpr  ::data_type':'const bool' lvalue
+          |   |     `-ImplicitCastExpr  
+          |   |       `-IntegerLiteral   'int' 0
+          |   `-BreakStmt  
+          |-CaseStmt  
+          | |-ConstantExpr   'sc_dt::uint_type':'unsigned long long'
+          | | |-value: Int 3
+          | | `-ImplicitCastExpr  
+          | |   `-IntegerLiteral   'int' 3
+          | `-CompoundStmt  
+          |   |-ExprWithCleanups  <line:81:13, col:19> 'sc_core::sc_out<bool>::this_type':'sc_core::sc_out<bool>' lvalue
+          |   | `-CXXOperatorCallExpr  ' lvalue '='
+          |   |   |-ImplicitCastExpr  
+          |   |   |-MemberExpr  out 
+          |   |   `-MaterializeTemporaryExpr  ::data_type':'const bool' lvalue
+          |   |     `-ImplicitCastExpr  
+          |   |       `-IntegerLiteral   'int' 0
+          |   `-BreakStmt  
+          |-CaseStmt  
+          | |-ConstantExpr   'sc_dt::uint_type':'unsigned long long'
+          | | |-value: Int 4
+          | | `-ImplicitCastExpr  
+          | |   `-IntegerLiteral   'int' 4
+          | `-CompoundStmt  
+          |   |-ExprWithCleanups  <line:86:13, col:19> 'sc_core::sc_out<bool>::this_type':'sc_core::sc_out<bool>' lvalue
+          |   | `-CXXOperatorCallExpr  ' lvalue '='
+          |   |   |-ImplicitCastExpr  
+          |   |   |-MemberExpr  out 
+          |   |   `-MaterializeTemporaryExpr  ::data_type':'const bool' lvalue
+          |   |     `-ImplicitCastExpr  
+          |   |       `-IntegerLiteral   'int' 1
+          |   `-BreakStmt  
+          `-DefaultStmt  
+            `-BreakStmt  
+
+

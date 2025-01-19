@@ -1,0 +1,196 @@
+sensitive: clk;rst
+sensitive: clk;rst
+sensitive: ;clk,rst
+Dumping even_divide3:
+CXXRecordDecl   line:3:11 struct even_divide3 definition
+|-DefinitionData polymorphic has_user_declared_ctor has_mutable_fields can_const_default_init
+| |-DefaultConstructor
+| |-CopyConstructor non_trivial has_const_param needs_overload_resolution implicit_has_const_param
+| |-MoveConstructor exists non_trivial needs_overload_resolution
+| |-CopyAssignment non_trivial has_const_param needs_overload_resolution implicit_has_const_param
+| |-MoveAssignment exists non_trivial needs_overload_resolution
+| `-Destructor simple non_trivial needs_overload_resolution
+|-public '::sc_core::sc_module':'sc_core::sc_module'
+|-CXXRecordDecl   col:11 implicit  struct even_divide3
+|-FieldDecl  <line:6:2, col:15> col:15  clk 'sc_in<bool>':'sc_core::sc_in<bool>'
+|-FieldDecl  <line:7:2, col:15> col:15  rst 'sc_in<bool>':'sc_core::sc_in<bool>'
+|-FieldDecl  <line:8:2, col:16> col:16  clk3 'sc_out<bool>':'sc_core::sc_out<bool>'
+|-FieldDecl  <line:9:2, col:26> col:26  cnt 'sc_signal<sc_uint<2>>':'sc_core::sc_signal<sc_dt::sc_uint<2>, sc_core::SC_ONE_WRITER>'
+|-FieldDecl  <line:10:2, col:19> col:19  clk1 'sc_signal<bool>':'sc_core::sc_signal<bool, sc_core::SC_ONE_WRITER>'
+|-FieldDecl  <line:11:2, col:19> col:19  clk2 'sc_signal<bool>':'sc_core::sc_signal<bool, sc_core::SC_ONE_WRITER>'
+Dumping even_divide3::assign_clk3:
+CXXMethodDecl   assign_clk3 'void ()'
+`-CompoundStmt  
+  `-ExprWithCleanups  <line:5:2, col:34> 'sc_core::sc_out<bool>::this_type':'sc_core::sc_out<bool>' lvalue
+    `-CXXOperatorCallExpr  ' lvalue '='
+      |-ImplicitCastExpr  
+      |-MemberExpr  clk3 
+      `-MaterializeTemporaryExpr  ::data_type':'const bool' lvalue
+        `-BinaryOperator   'bool' '&&'
+          |-ImplicitCastExpr  
+          |   `-MemberExpr  ' .read 
+          |     `-ImplicitCastExpr  
+          |       `-MemberExpr  clk1 
+          `-ImplicitCastExpr  
+              `-MemberExpr  ' .read 
+                `-ImplicitCastExpr  
+                  `-MemberExpr  clk2 
+
+Dumping even_divide3::always_block1:
+CXXMethodDecl   always_block1 'void ()'
+`-CompoundStmt  
+  `-IfStmt   has_else
+    |-UnaryOperator  <line:10:12, col:22> 'bool' prefix '!' cannot overflow
+    | `-ImplicitCastExpr  
+    |     `-MemberExpr  ' .read 
+    |       `-ImplicitCastExpr  
+    |         `-MemberExpr  rst 
+    |-CompoundStmt  
+    | `-ExprWithCleanups  <line:12:17, col:23> 'sc_core::sc_signal<sc_dt::sc_uint<2>, sc_core::SC_ONE_WRITER>::this_type':'sc_core::sc_signal<sc_dt::sc_uint<2>, sc_core::SC_ONE_WRITER>' lvalue
+    |   `-CXXOperatorCallExpr  ' lvalue '='
+    |     |-ImplicitCastExpr  
+    |     |-MemberExpr  cnt 
+    |     `-MaterializeTemporaryExpr  ' lvalue
+    |           `-IntegerLiteral   'int' 0
+    `-IfStmt   has_else
+      |-BinaryOperator  <line:14:17, col:31> 'bool' '=='
+      | |-ImplicitCastExpr  
+      | |   `-MemberExpr  ' .operator unsigned long long 
+      | |     `-ImplicitCastExpr  
+      | |         `-MemberExpr  ' .read 
+      | |           `-ImplicitCastExpr  
+      | |             `-MemberExpr  cnt 
+      | `-ImplicitCastExpr  
+      |   `-IntegerLiteral   'int' 2
+      |-CompoundStmt  
+      | `-ExprWithCleanups  <line:16:17, col:23> 'sc_core::sc_signal<sc_dt::sc_uint<2>, sc_core::SC_ONE_WRITER>::this_type':'sc_core::sc_signal<sc_dt::sc_uint<2>, sc_core::SC_ONE_WRITER>' lvalue
+      |   `-CXXOperatorCallExpr  ' lvalue '='
+      |     |-ImplicitCastExpr  
+      |     |-MemberExpr  cnt 
+      |     `-MaterializeTemporaryExpr  ' lvalue
+      |           `-IntegerLiteral   'int' 0
+      `-CompoundStmt  
+        `-ExprWithCleanups  <line:20:21, col:40> 'sc_core::sc_signal<sc_dt::sc_uint<2>, sc_core::SC_ONE_WRITER>::this_type':'sc_core::sc_signal<sc_dt::sc_uint<2>, sc_core::SC_ONE_WRITER>' lvalue
+          `-CXXOperatorCallExpr  ' lvalue '='
+            |-ImplicitCastExpr  
+            |-MemberExpr  cnt 
+            `-MaterializeTemporaryExpr  ' lvalue
+                  `-BinaryOperator   'unsigned long long' '+'
+                    |-ImplicitCastExpr  
+                    |   `-MemberExpr  ' .operator unsigned long long 
+                    |     `-ImplicitCastExpr  
+                    |         `-MemberExpr  ' .read 
+                    |           `-ImplicitCastExpr  
+                    |             `-MemberExpr  cnt 
+                    `-ImplicitCastExpr  
+                      `-IntegerLiteral   'int' 1
+
+Dumping even_divide3::always_block2:
+CXXMethodDecl   always_block2 'void ()'
+`-CompoundStmt  
+  `-IfStmt   has_else
+    |-UnaryOperator  <line:26:12, col:22> 'bool' prefix '!' cannot overflow
+    | `-ImplicitCastExpr  
+    |     `-MemberExpr  ' .read 
+    |       `-ImplicitCastExpr  
+    |         `-MemberExpr  rst 
+    |-CompoundStmt  
+    | `-ExprWithCleanups  <line:28:17, col:24> 'sc_core::sc_signal<bool, sc_core::SC_ONE_WRITER>::this_type':'sc_core::sc_signal<bool, sc_core::SC_ONE_WRITER>' lvalue
+    |   `-CXXOperatorCallExpr  ' lvalue '='
+    |     |-ImplicitCastExpr  
+    |     |-MemberExpr  clk1 
+    |     `-MaterializeTemporaryExpr  ::value_type':'const bool' lvalue
+    |       `-ImplicitCastExpr  
+    |         `-IntegerLiteral   'int' 0
+    `-IfStmt   has_else
+      |-BinaryOperator  <line:30:17, col:31> 'bool' '=='
+      | |-ImplicitCastExpr  
+      | |   `-MemberExpr  ' .operator unsigned long long 
+      | |     `-ImplicitCastExpr  
+      | |         `-MemberExpr  ' .read 
+      | |           `-ImplicitCastExpr  
+      | |             `-MemberExpr  cnt 
+      | `-ImplicitCastExpr  
+      |   `-IntegerLiteral   'int' 1
+      |-CompoundStmt  
+      | `-ExprWithCleanups  <line:32:17, col:24> 'sc_core::sc_signal<bool, sc_core::SC_ONE_WRITER>::this_type':'sc_core::sc_signal<bool, sc_core::SC_ONE_WRITER>' lvalue
+      |   `-CXXOperatorCallExpr  ' lvalue '='
+      |     |-ImplicitCastExpr  
+      |     |-MemberExpr  clk1 
+      |     `-MaterializeTemporaryExpr  ::value_type':'const bool' lvalue
+      |       `-ImplicitCastExpr  
+      |         `-IntegerLiteral   'int' 0
+      `-IfStmt  
+        |-BinaryOperator  <line:34:17, col:31> 'bool' '=='
+        | |-ImplicitCastExpr  
+        | |   `-MemberExpr  ' .operator unsigned long long 
+        | |     `-ImplicitCastExpr  
+        | |         `-MemberExpr  ' .read 
+        | |           `-ImplicitCastExpr  
+        | |             `-MemberExpr  cnt 
+        | `-ImplicitCastExpr  
+        |   `-IntegerLiteral   'int' 2
+        `-CompoundStmt  
+          `-ExprWithCleanups  <line:36:17, col:24> 'sc_core::sc_signal<bool, sc_core::SC_ONE_WRITER>::this_type':'sc_core::sc_signal<bool, sc_core::SC_ONE_WRITER>' lvalue
+            `-CXXOperatorCallExpr  ' lvalue '='
+              |-ImplicitCastExpr  
+              |-MemberExpr  clk1 
+              `-MaterializeTemporaryExpr  ::value_type':'const bool' lvalue
+                `-ImplicitCastExpr  
+                  `-IntegerLiteral   'int' 1
+
+Dumping even_divide3::always_block3:
+CXXMethodDecl   always_block3 'void ()'
+`-CompoundStmt  
+  `-IfStmt   has_else
+    |-UnaryOperator  <line:42:12, col:22> 'bool' prefix '!' cannot overflow
+    | `-ImplicitCastExpr  
+    |     `-MemberExpr  ' .read 
+    |       `-ImplicitCastExpr  
+    |         `-MemberExpr  rst 
+    |-CompoundStmt  
+    | `-ExprWithCleanups  <line:44:17, col:24> 'sc_core::sc_signal<bool, sc_core::SC_ONE_WRITER>::this_type':'sc_core::sc_signal<bool, sc_core::SC_ONE_WRITER>' lvalue
+    |   `-CXXOperatorCallExpr  ' lvalue '='
+    |     |-ImplicitCastExpr  
+    |     |-MemberExpr  clk2 
+    |     `-MaterializeTemporaryExpr  ::value_type':'const bool' lvalue
+    |       `-ImplicitCastExpr  
+    |         `-IntegerLiteral   'int' 0
+    `-IfStmt   has_else
+      |-BinaryOperator  <line:46:17, col:31> 'bool' '=='
+      | |-ImplicitCastExpr  
+      | |   `-MemberExpr  ' .operator unsigned long long 
+      | |     `-ImplicitCastExpr  
+      | |         `-MemberExpr  ' .read 
+      | |           `-ImplicitCastExpr  
+      | |             `-MemberExpr  cnt 
+      | `-ImplicitCastExpr  
+      |   `-IntegerLiteral   'int' 0
+      |-CompoundStmt  
+      | `-ExprWithCleanups  <line:48:17, col:24> 'sc_core::sc_signal<bool, sc_core::SC_ONE_WRITER>::this_type':'sc_core::sc_signal<bool, sc_core::SC_ONE_WRITER>' lvalue
+      |   `-CXXOperatorCallExpr  ' lvalue '='
+      |     |-ImplicitCastExpr  
+      |     |-MemberExpr  clk2 
+      |     `-MaterializeTemporaryExpr  ::value_type':'const bool' lvalue
+      |       `-ImplicitCastExpr  
+      |         `-IntegerLiteral   'int' 1
+      `-IfStmt  
+        |-BinaryOperator  <line:50:17, col:31> 'bool' '=='
+        | |-ImplicitCastExpr  
+        | |   `-MemberExpr  ' .operator unsigned long long 
+        | |     `-ImplicitCastExpr  
+        | |         `-MemberExpr  ' .read 
+        | |           `-ImplicitCastExpr  
+        | |             `-MemberExpr  cnt 
+        | `-ImplicitCastExpr  
+        |   `-IntegerLiteral   'int' 2
+        `-CompoundStmt  
+          `-ExprWithCleanups  <line:52:17, col:24> 'sc_core::sc_signal<bool, sc_core::SC_ONE_WRITER>::this_type':'sc_core::sc_signal<bool, sc_core::SC_ONE_WRITER>' lvalue
+            `-CXXOperatorCallExpr  ' lvalue '='
+              |-ImplicitCastExpr  
+              |-MemberExpr  clk2 
+              `-MaterializeTemporaryExpr  ::value_type':'const bool' lvalue
+                `-ImplicitCastExpr  
+                  `-IntegerLiteral   'int' 0
+
+

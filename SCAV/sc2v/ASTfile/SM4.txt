@@ -1,0 +1,1585 @@
+Dumping SM4:
+CXXRecordDecl 0x3d2de68 </usr/local/systemc-2.3.3/include/sysc/kernel/sc_module.h:397:5, /home/hcy/桌面/clang ast test/SystemCfile/SM4.h:16:1> line:3:11 struct SM4 definition
+|-DefinitionData polymorphic has_user_declared_ctor has_mutable_fields can_const_default_init
+| |-DefaultConstructor
+| |-CopyConstructor non_trivial has_const_param needs_overload_resolution implicit_has_const_param
+| |-MoveConstructor exists non_trivial needs_overload_resolution
+| |-CopyAssignment non_trivial has_const_param needs_overload_resolution implicit_has_const_param
+| |-MoveAssignment exists non_trivial needs_overload_resolution
+| `-Destructor simple non_trivial needs_overload_resolution
+|-public '::sc_core::sc_module':'sc_core::sc_module'
+|-CXXRecordDecl 0x3d2e040 </usr/local/systemc-2.3.3/include/sysc/kernel/sc_module.h:397:5, /home/hcy/桌面/clang ast test/SystemCfile/SM4.h:3:11> col:11 implicit referenced struct SM4
+|-FieldDecl 0x3d65838 <line:4:5, col:29> col:29 referenced key_in 'sc_in<sc_biguint<128>>':'sc_core::sc_in<sc_dt::sc_biguint<128>>'
+|-FieldDecl 0x3d659d0 <line:5:5, col:29> col:29 referenced data_in 'sc_in<sc_biguint<128>>':'sc_core::sc_in<sc_dt::sc_biguint<128>>'
+|-FieldDecl 0x3d92608 <line:7:5, col:30> col:30 referenced data_out 'sc_out<sc_biguint<128>>':'sc_core::sc_out<sc_dt::sc_biguint<128>>'
+|-CXXMethodDecl 0x3d926a8 <line:9:5, col:18> col:10 used prc_SM4 'void ()'
+|-TypedefDecl 0x3d92758 </usr/local/systemc-2.3.3/include/sysc/kernel/sc_module.h:400:5, col:30> col:30 referenced SC_CURRENT_USER_MODULE 'SM4'
+| `-RecordType 0x3d2df00 'SM4'
+|   `-CXXRecord 0x3d2de68 'SM4'
+|-CXXConstructorDecl 0x3d92908 </home/hcy/桌面/clang ast test/SystemCfile/SM4.h:11:13, line:15:5> line:11:13 SM4 'void (::sc_core::sc_module_name)'
+| |-ParmVarDecl 0x3d92830 </usr/local/systemc-2.3.3/include/sysc/kernel/sc_module.h:401:23, col:34> col:49 '::sc_core::sc_module_name':'sc_core::sc_module_name' destroyed
+| |-CXXCtorInitializer '::sc_core::sc_module':'sc_core::sc_module'
+| | `-CXXConstructExpr 0x3d93140 </home/hcy/桌面/clang ast test/SystemCfile/SM4.h:11:13> '::sc_core::sc_module':'sc_core::sc_module' 'void ()'
+| |-CXXCtorInitializer Field 0x3d65838 'key_in' 'sc_in<sc_biguint<128>>':'sc_core::sc_in<sc_dt::sc_biguint<128>>'
+| | `-CXXConstructExpr 0x3d931c0 <col:13> 'sc_in<sc_biguint<128>>':'sc_core::sc_in<sc_dt::sc_biguint<128>>' 'void ()'
+| |-CXXCtorInitializer Field 0x3d659d0 'data_in' 'sc_in<sc_biguint<128>>':'sc_core::sc_in<sc_dt::sc_biguint<128>>'
+| | `-CXXConstructExpr 0x3d93210 <col:13> 'sc_in<sc_biguint<128>>':'sc_core::sc_in<sc_dt::sc_biguint<128>>' 'void ()'
+| |-CXXCtorInitializer Field 0x3d92608 'data_out' 'sc_out<sc_biguint<128>>':'sc_core::sc_out<sc_dt::sc_biguint<128>>'
+| | `-CXXConstructExpr 0x3d93260 <col:13> 'sc_out<sc_biguint<128>>':'sc_core::sc_out<sc_dt::sc_biguint<128>>' 'void ()'
+| `-CompoundStmt 0x3d992e8 <col:17, line:15:5>
+|   |-CompoundStmt 0x3d93e80 </usr/local/systemc-2.3.3/include/sysc/kernel/sc_module.h:417:5, line:425:5>
+|   | |-DeclStmt 0x3d937d8 <line:418:9, line:421:12>
+|   | | `-VarDecl 0x3d93350 <line:418:9, line:421:11> <scratch space>:29:1 used prc_SM4_handle '::sc_core::sc_process_handle':'sc_core::sc_process_handle' cinit destroyed
+|   | |   `-ExprWithCleanups 0x3d937c0 </usr/local/systemc-2.3.3/include/sysc/kernel/sc_module.h:419:6, line:421:11> '::sc_core::sc_process_handle':'sc_core::sc_process_handle'
+|   | |     `-CXXConstructExpr 0x3d93790 <line:419:6, line:421:11> '::sc_core::sc_process_handle':'sc_core::sc_process_handle' 'void (const sc_core::sc_process_handle &)' elidable
+|   | |       `-MaterializeTemporaryExpr 0x3d93778 <line:419:6, line:421:11> 'const sc_core::sc_process_handle' lvalue
+|   | |         `-ImplicitCastExpr 0x3d93760 <line:419:6, line:421:11> 'const sc_core::sc_process_handle' <NoOp>
+|   | |           `-CXXBindTemporaryExpr 0x3d93740 <line:419:6, line:421:11> 'sc_core::sc_process_handle' (CXXTemporary 0x3d93740)
+|   | |             `-CXXMemberCallExpr 0x3d93698 <line:419:6, line:421:11> 'sc_core::sc_process_handle'
+|   | |               |-MemberExpr 0x3d93458 <line:419:6, col:41> '<bound member function type>' ->create_method_process 0x30da7b8
+|   | |               | `-CallExpr 0x3d93438 <col:6, col:38> 'sc_core::sc_simcontext *'
+|   | |               |   `-ImplicitCastExpr 0x3d93420 <col:6, col:15> 'sc_core::sc_simcontext *(*)()' <FunctionToPointerDecay>
+|   | |               |     `-DeclRefExpr 0x3d933f0 <col:6, col:15> 'sc_core::sc_simcontext *()' lvalue Function 0x31428a0 'sc_get_curr_simcontext' 'sc_core::sc_simcontext *()'
+|   | |               |-ImplicitCastExpr 0x3d936e0 <<scratch space>:28:1> 'const char *' <ArrayToPointerDecay>
+|   | |               | `-StringLiteral 0x3d93488 <col:1> 'const char [8]' lvalue "prc_SM4"
+|   | |               |-CXXBoolLiteralExpr 0x3d934a8 </usr/local/systemc-2.3.3/include/sysc/kernel/sc_module.h:420:10> 'bool' false
+|   | |               |-CXXStaticCastExpr 0x3d93628 </usr/local/systemc-2.3.3/include/sysc/kernel/sc_process.h:151:9, col:64> 'sc_core::SC_ENTRY_FUNC':'void (sc_core::sc_process_host::*)()' static_cast<sc_core::SC_ENTRY_FUNC> <DerivedToBaseMemberPointer (sc_module -> sc_process_host)>
+|   | |               | `-UnaryOperator 0x3d935f0 <col:45, /home/hcy/桌面/clang ast test/SystemCfile/SM4.h:12:19> 'void (SM4::*)()' prefix '&' cannot overflow
+|   | |               |   `-DeclRefExpr 0x3d93590 </usr/local/systemc-2.3.3/include/sysc/kernel/sc_module.h:457:29, /home/hcy/桌面/clang ast test/SystemCfile/SM4.h:12:19> 'void ()' CXXMethod 0x3d926a8 'prc_SM4' 'void ()'
+|   | |               |-ImplicitCastExpr 0x3d936f8 </usr/local/systemc-2.3.3/include/sysc/kernel/sc_module.h:421:3> 'sc_core::sc_process_host *' <DerivedToBase (sc_module -> sc_process_host)>
+|   | |               | `-CXXThisExpr 0x3d93668 <col:3> 'SM4 *' this
+|   | |               `-ImplicitCastExpr 0x3d93720 <col:9> 'const sc_core::sc_spawn_options *' <NullToPointer>
+|   | |                 `-IntegerLiteral 0x3d93678 <col:9> 'int' 0
+|   | |-ExprWithCleanups 0x3d93a08 <line:422:9, <scratch space>:29:1> 'sc_core::sc_sensitive' lvalue
+|   | | `-CXXOperatorCallExpr 0x3d939d0 </usr/local/systemc-2.3.3/include/sysc/kernel/sc_module.h:422:9, <scratch space>:29:1> 'sc_core::sc_sensitive' lvalue '<<'
+|   | |   |-ImplicitCastExpr 0x3d939b8 </usr/local/systemc-2.3.3/include/sysc/kernel/sc_module.h:422:25> 'sc_core::sc_sensitive &(*)(sc_core::sc_process_handle)' <FunctionToPointerDecay>
+|   | |   | `-DeclRefExpr 0x3d93970 <col:25> 'sc_core::sc_sensitive &(sc_core::sc_process_handle)' lvalue CXXMethod 0x2f87888 'operator<<' 'sc_core::sc_sensitive &(sc_core::sc_process_handle)'
+|   | |   |-MemberExpr 0x3d93820 <col:9, col:15> 'sc_core::sc_sensitive' lvalue ->sensitive 0x31ea778
+|   | |   | `-ImplicitCastExpr 0x3d93800 <col:9> 'sc_core::sc_module *' <UncheckedDerivedToBase (sc_module)>
+|   | |   |   `-CXXThisExpr 0x3d937f0 <col:9> 'SM4 *' this
+|   | |   `-CXXBindTemporaryExpr 0x3d93950 <<scratch space>:29:1> 'sc_core::sc_process_handle' (CXXTemporary 0x3d93950)
+|   | |     `-CXXConstructExpr 0x3d93918 <col:1> 'sc_core::sc_process_handle' 'void (const sc_core::sc_process_handle &)'
+|   | |       `-ImplicitCastExpr 0x3d93900 <col:1> 'const sc_core::sc_process_handle' lvalue <NoOp>
+|   | |         `-DeclRefExpr 0x3d93850 <col:1> '::sc_core::sc_process_handle':'sc_core::sc_process_handle' lvalue Var 0x3d93350 'prc_SM4_handle' '::sc_core::sc_process_handle':'sc_core::sc_process_handle'
+|   | |-ExprWithCleanups 0x3d93c38 </usr/local/systemc-2.3.3/include/sysc/kernel/sc_module.h:423:9, <scratch space>:29:1> 'sc_core::sc_sensitive_pos' lvalue
+|   | | `-CXXOperatorCallExpr 0x3d93c00 </usr/local/systemc-2.3.3/include/sysc/kernel/sc_module.h:423:9, <scratch space>:29:1> 'sc_core::sc_sensitive_pos' lvalue '<<'
+|   | |   |-ImplicitCastExpr 0x3d93be8 </usr/local/systemc-2.3.3/include/sysc/kernel/sc_module.h:423:29> 'sc_core::sc_sensitive_pos &(*)(sc_core::sc_process_handle)' <FunctionToPointerDecay>
+|   | |   | `-DeclRefExpr 0x3d93ba0 <col:29> 'sc_core::sc_sensitive_pos &(sc_core::sc_process_handle)' lvalue CXXMethod 0x2f94fb8 'operator<<' 'sc_core::sc_sensitive_pos &(sc_core::sc_process_handle)'
+|   | |   |-MemberExpr 0x3d93a50 <col:9, col:15> 'sc_core::sc_sensitive_pos' lvalue ->sensitive_pos 0x31ea7d8
+|   | |   | `-ImplicitCastExpr 0x3d93a30 <col:9> 'sc_core::sc_module *' <UncheckedDerivedToBase (sc_module)>
+|   | |   |   `-CXXThisExpr 0x3d93a20 <col:9> 'SM4 *' this
+|   | |   `-CXXBindTemporaryExpr 0x3d93b80 <<scratch space>:29:1> 'sc_core::sc_process_handle' (CXXTemporary 0x3d93b80)
+|   | |     `-CXXConstructExpr 0x3d93b48 <col:1> 'sc_core::sc_process_handle' 'void (const sc_core::sc_process_handle &)'
+|   | |       `-ImplicitCastExpr 0x3d93b30 <col:1> 'const sc_core::sc_process_handle' lvalue <NoOp>
+|   | |         `-DeclRefExpr 0x3d93a80 <col:1> '::sc_core::sc_process_handle':'sc_core::sc_process_handle' lvalue Var 0x3d93350 'prc_SM4_handle' '::sc_core::sc_process_handle':'sc_core::sc_process_handle'
+|   | `-ExprWithCleanups 0x3d93e68 </usr/local/systemc-2.3.3/include/sysc/kernel/sc_module.h:424:9, <scratch space>:29:1> 'sc_core::sc_sensitive_neg' lvalue
+|   |   `-CXXOperatorCallExpr 0x3d93e30 </usr/local/systemc-2.3.3/include/sysc/kernel/sc_module.h:424:9, <scratch space>:29:1> 'sc_core::sc_sensitive_neg' lvalue '<<'
+|   |     |-ImplicitCastExpr 0x3d93e18 </usr/local/systemc-2.3.3/include/sysc/kernel/sc_module.h:424:29> 'sc_core::sc_sensitive_neg &(*)(sc_core::sc_process_handle)' <FunctionToPointerDecay>
+|   |     | `-DeclRefExpr 0x3d93dd0 <col:29> 'sc_core::sc_sensitive_neg &(sc_core::sc_process_handle)' lvalue CXXMethod 0x2f97ba8 'operator<<' 'sc_core::sc_sensitive_neg &(sc_core::sc_process_handle)'
+|   |     |-MemberExpr 0x3d93c80 <col:9, col:15> 'sc_core::sc_sensitive_neg' lvalue ->sensitive_neg 0x31ea838
+|   |     | `-ImplicitCastExpr 0x3d93c60 <col:9> 'sc_core::sc_module *' <UncheckedDerivedToBase (sc_module)>
+|   |     |   `-CXXThisExpr 0x3d93c50 <col:9> 'SM4 *' this
+|   |     `-CXXBindTemporaryExpr 0x3d93db0 <<scratch space>:29:1> 'sc_core::sc_process_handle' (CXXTemporary 0x3d93db0)
+|   |       `-CXXConstructExpr 0x3d93d78 <col:1> 'sc_core::sc_process_handle' 'void (const sc_core::sc_process_handle &)'
+|   |         `-ImplicitCastExpr 0x3d93d60 <col:1> 'const sc_core::sc_process_handle' lvalue <NoOp>
+|   |           `-DeclRefExpr 0x3d93cb0 <col:1> '::sc_core::sc_process_handle':'sc_core::sc_process_handle' lvalue Var 0x3d93350 'prc_SM4_handle' '::sc_core::sc_process_handle':'sc_core::sc_process_handle'
+|   |-NullStmt 0x3d93eb0 </home/hcy/桌面/clang ast test/SystemCfile/SM4.h:12:27>
+|   |-CXXOperatorCallExpr 0x3d991e8 <line:13:9, col:32> 'sc_core::sc_sensitive' lvalue '<<'
+|   | |-ImplicitCastExpr 0x3d991d0 <col:29> 'sc_core::sc_sensitive &(*)(const sc_core::sc_port_base &)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x3d991b0 <col:29> 'sc_core::sc_sensitive &(const sc_core::sc_port_base &)' lvalue CXXMethod 0x2f882a0 'operator<<' 'sc_core::sc_sensitive &(const sc_core::sc_port_base &)'
+|   | |-CXXOperatorCallExpr 0x3d99050 <col:9, col:22> 'sc_core::sc_sensitive' lvalue '<<'
+|   | | |-ImplicitCastExpr 0x3d99038 <col:19> 'sc_core::sc_sensitive &(*)(const sc_core::sc_port_base &)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x3d98ff0 <col:19> 'sc_core::sc_sensitive &(const sc_core::sc_port_base &)' lvalue CXXMethod 0x2f882a0 'operator<<' 'sc_core::sc_sensitive &(const sc_core::sc_port_base &)'
+|   | | |-MemberExpr 0x3d93f30 <col:9> 'sc_core::sc_sensitive' lvalue ->sensitive 0x31ea778
+|   | | | `-ImplicitCastExpr 0x3d93f10 <col:9> 'sc_core::sc_module *' <UncheckedDerivedToBase (sc_module)>
+|   | | |   `-CXXThisExpr 0x3d93f00 <col:9> 'SM4 *' implicit this
+|   | | `-ImplicitCastExpr 0x3d98fc0 <col:22> 'const sc_core::sc_port_base' lvalue <DerivedToBase (sc_port -> sc_port_b -> sc_port_base)>
+|   | |   `-ImplicitCastExpr 0x3d98fa8 <col:22> 'const sc_in<sc_biguint<128>>':'const sc_core::sc_in<sc_dt::sc_biguint<128>>' lvalue <NoOp>
+|   | |     `-MemberExpr 0x3d93f70 <col:22> 'sc_in<sc_biguint<128>>':'sc_core::sc_in<sc_dt::sc_biguint<128>>' lvalue ->key_in 0x3d65838
+|   | |       `-CXXThisExpr 0x3d93f60 <col:22> 'SM4 *' implicit this
+|   | `-ImplicitCastExpr 0x3d99180 <col:32> 'const sc_core::sc_port_base' lvalue <DerivedToBase (sc_port -> sc_port_b -> sc_port_base)>
+|   |   `-ImplicitCastExpr 0x3d99168 <col:32> 'const sc_in<sc_biguint<128>>':'const sc_core::sc_in<sc_dt::sc_biguint<128>>' lvalue <NoOp>
+|   |     `-MemberExpr 0x3d99098 <col:32> 'sc_in<sc_biguint<128>>':'sc_core::sc_in<sc_dt::sc_biguint<128>>' lvalue ->data_in 0x3d659d0
+|   |       `-CXXThisExpr 0x3d99088 <col:32> 'SM4 *' implicit this
+|   `-CXXMemberCallExpr 0x3d992a8 <line:14:9, col:25> 'void'
+|     `-MemberExpr 0x3d99278 <col:9> '<bound member function type>' ->dont_initialize 0x31e53c8
+|       `-ImplicitCastExpr 0x3d992c8 <col:9> 'sc_core::sc_module *' <UncheckedDerivedToBase (sc_module)>
+|         `-CXXThisExpr 0x3d99268 <col:9> 'SM4 *' implicit this
+|-CXXConstructorDecl 0x3d929e8 <line:3:11> col:11 implicit SM4 'void (const SM4 &)' inline default_delete noexcept-unevaluated 0x3d929e8
+| `-ParmVarDecl 0x3d92af8 <col:11> col:11 'const SM4 &'
+|-CXXConstructorDecl 0x3d92b98 <col:11> col:11 implicit SM4 'void (SM4 &&)' inline default_delete noexcept-unevaluated 0x3d92b98
+| `-ParmVarDecl 0x3d92ca8 <col:11> col:11 'SM4 &&'
+|-CXXMethodDecl 0x3d92d48 <col:11> col:11 implicit operator= 'SM4 &(const SM4 &)' inline default_delete noexcept-unevaluated 0x3d92d48
+| `-ParmVarDecl 0x3d92e58 <col:11> col:11 'const SM4 &'
+|-CXXMethodDecl 0x3d92ec8 <col:11> col:11 implicit operator= 'SM4 &(SM4 &&)' inline default_delete noexcept-unevaluated 0x3d92ec8
+| `-ParmVarDecl 0x3d92fd8 <col:11> col:11 'SM4 &&'
+`-CXXDestructorDecl 0x3d93060 <col:11> col:11 implicit used ~SM4 'void () noexcept' inline default
+  |-Overrides: [ 0x31e4958 sc_module::~sc_module 'void () noexcept' ]
+  `-CompoundStmt 0x3e31130 <col:11>
+
+Dumping SM4::prc_SM4:
+CXXMethodDecl 0x3dd9330 parent 0x3d2de68 prev 0x3d926a8 </home/hcy/桌面/clang ast test/SystemCfile/SM4.cpp:66:1, line:117:1> line:66:11 used prc_SM4 'void ()'
+`-CompoundStmt 0x3e30fc0 <col:20, line:117:1>
+  |-DeclStmt 0x3dd9570 <line:67:5, col:24>
+  | `-VarDecl 0x3dd94e0 <col:5, col:21> col:21 used key 'sc_biguint<128>':'sc_dt::sc_biguint<128>' callinit destroyed
+  |   `-CXXConstructExpr 0x3dd9548 <col:21> 'sc_biguint<128>':'sc_dt::sc_biguint<128>' 'void ()'
+  |-DeclStmt 0x3dd96e0 <line:68:5, col:25>
+  | `-VarDecl 0x3dd9650 <col:5, col:21> col:21 used data 'sc_biguint<128>':'sc_dt::sc_biguint<128>' callinit destroyed
+  |   `-CXXConstructExpr 0x3dd96b8 <col:21> 'sc_biguint<128>':'sc_dt::sc_biguint<128>' 'void ()'
+  |-DeclStmt 0x3dd9850 <line:69:5, col:32>
+  | `-VarDecl 0x3dd97c0 <col:5, col:21> col:21 used data_finish 'sc_biguint<128>':'sc_dt::sc_biguint<128>' callinit destroyed
+  |   `-CXXConstructExpr 0x3dd9828 <col:21> 'sc_biguint<128>':'sc_dt::sc_biguint<128>' 'void ()'
+  |-CXXOperatorCallExpr 0x3dd9a00 <line:71:5, col:11> 'sc_biguint<128>':'sc_dt::sc_biguint<128>' lvalue '='
+  | |-ImplicitCastExpr 0x3dd99e8 <col:9> 'sc_biguint<128> &(*)(int)' <FunctionToPointerDecay>
+  | | `-DeclRefExpr 0x3dd9968 <col:9> 'sc_biguint<128> &(int)' lvalue CXXMethod 0x3d97f60 'operator=' 'sc_biguint<128> &(int)'
+  | |-DeclRefExpr 0x3dd9868 <col:5> 'sc_biguint<128>':'sc_dt::sc_biguint<128>' lvalue Var 0x3dd94e0 'key' 'sc_biguint<128>':'sc_dt::sc_biguint<128>'
+  | `-IntegerLiteral 0x3dd9888 <col:11> 'int' 0
+  |-CXXOperatorCallExpr 0x3dd9b70 <line:72:5, col:12> 'sc_biguint<128>':'sc_dt::sc_biguint<128>' lvalue '='
+  | |-ImplicitCastExpr 0x3dd9b58 <col:10> 'sc_biguint<128> &(*)(int)' <FunctionToPointerDecay>
+  | | `-DeclRefExpr 0x3dd9b38 <col:10> 'sc_biguint<128> &(int)' lvalue CXXMethod 0x3d97f60 'operator=' 'sc_biguint<128> &(int)'
+  | |-DeclRefExpr 0x3dd9a38 <col:5> 'sc_biguint<128>':'sc_dt::sc_biguint<128>' lvalue Var 0x3dd9650 'data' 'sc_biguint<128>':'sc_dt::sc_biguint<128>'
+  | `-IntegerLiteral 0x3dd9a58 <col:12> 'int' 0
+  |-CXXOperatorCallExpr 0x3dd9ce0 <line:73:5, col:19> 'sc_biguint<128>':'sc_dt::sc_biguint<128>' lvalue '='
+  | |-ImplicitCastExpr 0x3dd9cc8 <col:17> 'sc_biguint<128> &(*)(int)' <FunctionToPointerDecay>
+  | | `-DeclRefExpr 0x3dd9ca8 <col:17> 'sc_biguint<128> &(int)' lvalue CXXMethod 0x3d97f60 'operator=' 'sc_biguint<128> &(int)'
+  | |-DeclRefExpr 0x3dd9ba8 <col:5> 'sc_biguint<128>':'sc_dt::sc_biguint<128>' lvalue Var 0x3dd97c0 'data_finish' 'sc_biguint<128>':'sc_dt::sc_biguint<128>'
+  | `-IntegerLiteral 0x3dd9bc8 <col:19> 'int' 0
+  |-ForStmt 0x3dda0e8 <line:75:5, line:76:17>
+  | |-DeclStmt 0x3dd9db8 <line:75:9, col:18>
+  | | `-VarDecl 0x3dd9d30 <col:9, col:17> col:13 used i 'int' cinit
+  | |   `-IntegerLiteral 0x3dd9d98 <col:17> 'int' 0
+  | |-<<<NULL>>>
+  | |-BinaryOperator 0x3dd9e28 <col:20, col:24> 'bool' '<'
+  | | |-ImplicitCastExpr 0x3dd9e10 <col:20> 'int' <LValueToRValue>
+  | | | `-DeclRefExpr 0x3dd9dd0 <col:20> 'int' lvalue Var 0x3dd9d30 'i' 'int'
+  | | `-IntegerLiteral 0x3dd9df0 <col:24> 'int' 36
+  | |-UnaryOperator 0x3dd9e68 <col:28, col:29> 'int' postfix '++'
+  | | `-DeclRefExpr 0x3dd9e48 <col:28> 'int' lvalue Var 0x3dd9d30 'i' 'int'
+  | `-CXXOperatorCallExpr 0x3dda0b0 <line:76:9, col:17> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue '='
+  |   |-ImplicitCastExpr 0x3dda098 <col:15> 'sc_uint<32> &(*)(int)' <FunctionToPointerDecay>
+  |   | `-DeclRefExpr 0x3dda018 <col:15> 'sc_uint<32> &(int)' lvalue CXXMethod 0x3d9d960 'operator=' 'sc_uint<32> &(int)'
+  |   |-ArraySubscriptExpr 0x3dd9f18 <col:9, col:13> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  |   | |-ImplicitCastExpr 0x3dd9ee8 <col:9> 'sc_uint<32> *' <ArrayToPointerDecay>
+  |   | | `-DeclRefExpr 0x3dd9e80 <col:9> 'sc_uint<32> [36]' lvalue Var 0x3d995a8 'rk' 'sc_uint<32> [36]'
+  |   | `-ImplicitCastExpr 0x3dd9f00 <col:12> 'int' <LValueToRValue>
+  |   |   `-DeclRefExpr 0x3dd9ea0 <col:12> 'int' lvalue Var 0x3dd9d30 'i' 'int'
+  |   `-IntegerLiteral 0x3dd9f38 <col:17> 'int' 0
+  |-ForStmt 0x3dda498 <line:77:5, line:78:16>
+  | |-DeclStmt 0x3dda1c0 <line:77:9, col:18>
+  | | `-VarDecl 0x3dda138 <col:9, col:17> col:13 used i 'int' cinit
+  | |   `-IntegerLiteral 0x3dda1a0 <col:17> 'int' 0
+  | |-<<<NULL>>>
+  | |-BinaryOperator 0x3dda230 <col:20, col:24> 'bool' '<'
+  | | |-ImplicitCastExpr 0x3dda218 <col:20> 'int' <LValueToRValue>
+  | | | `-DeclRefExpr 0x3dda1d8 <col:20> 'int' lvalue Var 0x3dda138 'i' 'int'
+  | | `-IntegerLiteral 0x3dda1f8 <col:24> 'int' 36
+  | |-UnaryOperator 0x3dda270 <col:28, col:29> 'int' postfix '++'
+  | | `-DeclRefExpr 0x3dda250 <col:28> 'int' lvalue Var 0x3dda138 'i' 'int'
+  | `-CXXOperatorCallExpr 0x3dda460 <line:78:9, col:16> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue '='
+  |   |-ImplicitCastExpr 0x3dda448 <col:14> 'sc_uint<32> &(*)(int)' <FunctionToPointerDecay>
+  |   | `-DeclRefExpr 0x3dda428 <col:14> 'sc_uint<32> &(int)' lvalue CXXMethod 0x3d9d960 'operator=' 'sc_uint<32> &(int)'
+  |   |-ArraySubscriptExpr 0x3dda328 <col:9, col:12> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  |   | |-ImplicitCastExpr 0x3dda2f8 <col:9> 'sc_uint<32> *' <ArrayToPointerDecay>
+  |   | | `-DeclRefExpr 0x3dda288 <col:9> 'sc_uint<32> [36]' lvalue Var 0x3da04b8 'X' 'sc_uint<32> [36]'
+  |   | `-ImplicitCastExpr 0x3dda310 <col:11> 'int' <LValueToRValue>
+  |   |   `-DeclRefExpr 0x3dda2a8 <col:11> 'int' lvalue Var 0x3dda138 'i' 'int'
+  |   `-IntegerLiteral 0x3dda348 <col:16> 'int' 0
+  |-CXXOperatorCallExpr 0x3dda6e0 <line:80:5, col:23> 'sc_biguint<128>':'sc_dt::sc_biguint<128>' lvalue '='
+  | |-ImplicitCastExpr 0x3dda6c8 <col:9> 'sc_biguint<128> &(*)(const sc_biguint<128> &)' <FunctionToPointerDecay>
+  | | `-DeclRefExpr 0x3dda650 <col:9> 'sc_biguint<128> &(const sc_biguint<128> &)' lvalue CXXMethod 0x3d96130 'operator=' 'sc_biguint<128> &(const sc_biguint<128> &)'
+  | |-DeclRefExpr 0x3dda4d0 <col:5> 'sc_biguint<128>':'sc_dt::sc_biguint<128>' lvalue Var 0x3dd94e0 'key' 'sc_biguint<128>':'sc_dt::sc_biguint<128>'
+  | `-CXXMemberCallExpr 0x3dda560 <col:11, col:23> 'const sc_core::sc_in<sc_dt::sc_biguint<128>>::data_type':'const sc_dt::sc_biguint<128>' lvalue
+  |   `-MemberExpr 0x3dda530 <col:11, col:18> '<bound member function type>' .read 0x3d64568
+  |     `-ImplicitCastExpr 0x3dda5a8 <col:11> 'const sc_core::sc_in<sc_dt::sc_biguint<128>>' lvalue <NoOp>
+  |       `-MemberExpr 0x3dda500 <col:11> 'sc_in<sc_biguint<128>>':'sc_core::sc_in<sc_dt::sc_biguint<128>>' lvalue ->key_in 0x3d65838
+  |         `-CXXThisExpr 0x3dda4f0 <col:11> 'SM4 *' implicit this
+  |-ExprWithCleanups 0x3ddafd8 <line:81:5, col:37> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  | `-CXXOperatorCallExpr 0x3ddafa0 <col:5, col:37> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue '='
+  |   |-ImplicitCastExpr 0x3ddaf88 <col:11> 'sc_uint<32> &(*)(const sc_dt::sc_unsigned &)' <FunctionToPointerDecay>
+  |   | `-DeclRefExpr 0x3ddaf08 <col:11> 'sc_uint<32> &(const sc_dt::sc_unsigned &)' lvalue CXXMethod 0x3d9c770 'operator=' 'sc_uint<32> &(const sc_dt::sc_unsigned &)'
+  |   |-ArraySubscriptExpr 0x3dda770 <col:5, col:9> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  |   | |-ImplicitCastExpr 0x3dda758 <col:5> 'sc_uint<32> *' <ArrayToPointerDecay>
+  |   | | `-DeclRefExpr 0x3dda718 <col:5> 'sc_uint<32> [36]' lvalue Var 0x3d995a8 'rk' 'sc_uint<32> [36]'
+  |   | `-IntegerLiteral 0x3dda738 <col:8> 'int' 0
+  |   `-MaterializeTemporaryExpr 0x3ddaef0 <col:13, col:37> 'const sc_dt::sc_unsigned' lvalue
+  |     `-ImplicitCastExpr 0x3ddaed8 <col:13, col:37> 'const sc_dt::sc_unsigned' <NoOp>
+  |       `-CXXBindTemporaryExpr 0x3ddadf8 <col:13, col:37> 'sc_dt::sc_unsigned' (CXXTemporary 0x3ddadf8)
+  |         `-CXXOperatorCallExpr 0x3ddadb8 <col:13, col:37> 'sc_dt::sc_unsigned' '^' adl
+  |           |-ImplicitCastExpr 0x3ddada0 <col:31> 'sc_dt::sc_unsigned (*)(const sc_dt::sc_unsigned &, const sc_dt::sc_uint_base &)' <FunctionToPointerDecay>
+  |           | `-DeclRefExpr 0x3ddad80 <col:31> 'sc_dt::sc_unsigned (const sc_dt::sc_unsigned &, const sc_dt::sc_uint_base &)' lvalue Function 0x35b3428 'operator^' 'sc_dt::sc_unsigned (const sc_dt::sc_unsigned &, const sc_dt::sc_uint_base &)'
+  |           |-MaterializeTemporaryExpr 0x3ddad30 <col:13, col:29> 'const sc_dt::sc_unsigned' lvalue
+  |           | `-ImplicitCastExpr 0x3ddad18 <col:13, col:29> 'const sc_dt::sc_unsigned' <NoOp>
+  |           |   `-CXXBindTemporaryExpr 0x3ddacf8 <col:13, col:29> 'sc_dt::sc_unsigned' (CXXTemporary 0x3ddacf8)
+  |           |     `-ImplicitCastExpr 0x3ddacd8 <col:13, col:29> 'sc_dt::sc_unsigned' <UserDefinedConversion>
+  |           |       `-CXXMemberCallExpr 0x3ddacb8 <col:13, col:29> 'sc_dt::sc_unsigned'
+  |           |         `-MemberExpr 0x3ddac88 <col:13, col:29> '<bound member function type>' .operator sc_unsigned 0x35ccea8
+  |           |           `-ImplicitCastExpr 0x3ddac68 <col:13, col:29> 'const sc_dt::sc_unsigned_subref_r' lvalue <UncheckedDerivedToBase (sc_unsigned_subref_r)>
+  |           |             `-CXXMemberCallExpr 0x3dda880 <col:13, col:29> 'sc_dt::sc_unsigned_subref' lvalue
+  |           |               |-MemberExpr 0x3dda850 <col:13, col:17> '<bound member function type>' .range 0x35d9848
+  |           |               | `-ImplicitCastExpr 0x3dda8b0 <col:13> 'sc_dt::sc_unsigned' lvalue <UncheckedDerivedToBase (sc_unsigned)>
+  |           |               |   `-DeclRefExpr 0x3dda790 <col:13> 'sc_biguint<128>':'sc_dt::sc_biguint<128>' lvalue Var 0x3dd94e0 'key' 'sc_biguint<128>':'sc_dt::sc_biguint<128>'
+  |           |               |-IntegerLiteral 0x3dda810 <col:23> 'int' 127
+  |           |               `-IntegerLiteral 0x3dda830 <col:27> 'int' 96
+  |           `-ImplicitCastExpr 0x3ddad60 <col:33, col:37> 'const sc_dt::sc_uint_base' lvalue <DerivedToBase (sc_uint_base)>
+  |             `-ImplicitCastExpr 0x3ddad48 <col:33, col:37> 'const sc_uint<32>':'const sc_dt::sc_uint<32>' lvalue <NoOp>
+  |               `-ArraySubscriptExpr 0x3dda950 <col:33, col:37> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  |                 |-ImplicitCastExpr 0x3dda938 <col:33> 'sc_uint<32> *' <ArrayToPointerDecay>
+  |                 | `-DeclRefExpr 0x3dda8d0 <col:33> 'sc_uint<32> [4]' lvalue Var 0x3da0728 'FK' 'sc_uint<32> [4]'
+  |                 `-IntegerLiteral 0x3dda8f0 <col:36> 'int' 0
+  |-ExprWithCleanups 0x3ddb800 <line:82:5, col:37> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  | `-CXXOperatorCallExpr 0x3ddb7c8 <col:5, col:37> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue '='
+  |   |-ImplicitCastExpr 0x3ddb7b0 <col:11> 'sc_uint<32> &(*)(const sc_dt::sc_unsigned &)' <FunctionToPointerDecay>
+  |   | `-DeclRefExpr 0x3ddb790 <col:11> 'sc_uint<32> &(const sc_dt::sc_unsigned &)' lvalue CXXMethod 0x3d9c770 'operator=' 'sc_uint<32> &(const sc_dt::sc_unsigned &)'
+  |   |-ArraySubscriptExpr 0x3ddb048 <col:5, col:9> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  |   | |-ImplicitCastExpr 0x3ddb030 <col:5> 'sc_uint<32> *' <ArrayToPointerDecay>
+  |   | | `-DeclRefExpr 0x3ddaff0 <col:5> 'sc_uint<32> [36]' lvalue Var 0x3d995a8 'rk' 'sc_uint<32> [36]'
+  |   | `-IntegerLiteral 0x3ddb010 <col:8> 'int' 1
+  |   `-MaterializeTemporaryExpr 0x3ddb778 <col:13, col:37> 'const sc_dt::sc_unsigned' lvalue
+  |     `-ImplicitCastExpr 0x3ddb760 <col:13, col:37> 'const sc_dt::sc_unsigned' <NoOp>
+  |       `-CXXBindTemporaryExpr 0x3ddb680 <col:13, col:37> 'sc_dt::sc_unsigned' (CXXTemporary 0x3ddb680)
+  |         `-CXXOperatorCallExpr 0x3ddb640 <col:13, col:37> 'sc_dt::sc_unsigned' '^' adl
+  |           |-ImplicitCastExpr 0x3ddb628 <col:31> 'sc_dt::sc_unsigned (*)(const sc_dt::sc_unsigned &, const sc_dt::sc_uint_base &)' <FunctionToPointerDecay>
+  |           | `-DeclRefExpr 0x3ddb608 <col:31> 'sc_dt::sc_unsigned (const sc_dt::sc_unsigned &, const sc_dt::sc_uint_base &)' lvalue Function 0x35b3428 'operator^' 'sc_dt::sc_unsigned (const sc_dt::sc_unsigned &, const sc_dt::sc_uint_base &)'
+  |           |-MaterializeTemporaryExpr 0x3ddb5b8 <col:13, col:29> 'const sc_dt::sc_unsigned' lvalue
+  |           | `-ImplicitCastExpr 0x3ddb5a0 <col:13, col:29> 'const sc_dt::sc_unsigned' <NoOp>
+  |           |   `-CXXBindTemporaryExpr 0x3ddb580 <col:13, col:29> 'sc_dt::sc_unsigned' (CXXTemporary 0x3ddb580)
+  |           |     `-ImplicitCastExpr 0x3ddb560 <col:13, col:29> 'sc_dt::sc_unsigned' <UserDefinedConversion>
+  |           |       `-CXXMemberCallExpr 0x3ddb540 <col:13, col:29> 'sc_dt::sc_unsigned'
+  |           |         `-MemberExpr 0x3ddb510 <col:13, col:29> '<bound member function type>' .operator sc_unsigned 0x35ccea8
+  |           |           `-ImplicitCastExpr 0x3ddb4f0 <col:13, col:29> 'const sc_dt::sc_unsigned_subref_r' lvalue <UncheckedDerivedToBase (sc_unsigned_subref_r)>
+  |           |             `-CXXMemberCallExpr 0x3ddb158 <col:13, col:29> 'sc_dt::sc_unsigned_subref' lvalue
+  |           |               |-MemberExpr 0x3ddb128 <col:13, col:17> '<bound member function type>' .range 0x35d9848
+  |           |               | `-ImplicitCastExpr 0x3ddb188 <col:13> 'sc_dt::sc_unsigned' lvalue <UncheckedDerivedToBase (sc_unsigned)>
+  |           |               |   `-DeclRefExpr 0x3ddb068 <col:13> 'sc_biguint<128>':'sc_dt::sc_biguint<128>' lvalue Var 0x3dd94e0 'key' 'sc_biguint<128>':'sc_dt::sc_biguint<128>'
+  |           |               |-IntegerLiteral 0x3ddb0e8 <col:24> 'int' 95
+  |           |               `-IntegerLiteral 0x3ddb108 <col:27> 'int' 64
+  |           `-ImplicitCastExpr 0x3ddb5e8 <col:33, col:37> 'const sc_dt::sc_uint_base' lvalue <DerivedToBase (sc_uint_base)>
+  |             `-ImplicitCastExpr 0x3ddb5d0 <col:33, col:37> 'const sc_uint<32>':'const sc_dt::sc_uint<32>' lvalue <NoOp>
+  |               `-ArraySubscriptExpr 0x3ddb200 <col:33, col:37> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  |                 |-ImplicitCastExpr 0x3ddb1e8 <col:33> 'sc_uint<32> *' <ArrayToPointerDecay>
+  |                 | `-DeclRefExpr 0x3ddb1a8 <col:33> 'sc_uint<32> [4]' lvalue Var 0x3da0728 'FK' 'sc_uint<32> [4]'
+  |                 `-IntegerLiteral 0x3ddb1c8 <col:36> 'int' 1
+  |-ExprWithCleanups 0x3ddc028 <line:83:5, col:37> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  | `-CXXOperatorCallExpr 0x3ddbff0 <col:5, col:37> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue '='
+  |   |-ImplicitCastExpr 0x3ddbfd8 <col:11> 'sc_uint<32> &(*)(const sc_dt::sc_unsigned &)' <FunctionToPointerDecay>
+  |   | `-DeclRefExpr 0x3ddbfb8 <col:11> 'sc_uint<32> &(const sc_dt::sc_unsigned &)' lvalue CXXMethod 0x3d9c770 'operator=' 'sc_uint<32> &(const sc_dt::sc_unsigned &)'
+  |   |-ArraySubscriptExpr 0x3ddb870 <col:5, col:9> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  |   | |-ImplicitCastExpr 0x3ddb858 <col:5> 'sc_uint<32> *' <ArrayToPointerDecay>
+  |   | | `-DeclRefExpr 0x3ddb818 <col:5> 'sc_uint<32> [36]' lvalue Var 0x3d995a8 'rk' 'sc_uint<32> [36]'
+  |   | `-IntegerLiteral 0x3ddb838 <col:8> 'int' 2
+  |   `-MaterializeTemporaryExpr 0x3ddbfa0 <col:13, col:37> 'const sc_dt::sc_unsigned' lvalue
+  |     `-ImplicitCastExpr 0x3ddbf88 <col:13, col:37> 'const sc_dt::sc_unsigned' <NoOp>
+  |       `-CXXBindTemporaryExpr 0x3ddbea8 <col:13, col:37> 'sc_dt::sc_unsigned' (CXXTemporary 0x3ddbea8)
+  |         `-CXXOperatorCallExpr 0x3ddbe68 <col:13, col:37> 'sc_dt::sc_unsigned' '^' adl
+  |           |-ImplicitCastExpr 0x3ddbe50 <col:31> 'sc_dt::sc_unsigned (*)(const sc_dt::sc_unsigned &, const sc_dt::sc_uint_base &)' <FunctionToPointerDecay>
+  |           | `-DeclRefExpr 0x3ddbe30 <col:31> 'sc_dt::sc_unsigned (const sc_dt::sc_unsigned &, const sc_dt::sc_uint_base &)' lvalue Function 0x35b3428 'operator^' 'sc_dt::sc_unsigned (const sc_dt::sc_unsigned &, const sc_dt::sc_uint_base &)'
+  |           |-MaterializeTemporaryExpr 0x3ddbde0 <col:13, col:29> 'const sc_dt::sc_unsigned' lvalue
+  |           | `-ImplicitCastExpr 0x3ddbdc8 <col:13, col:29> 'const sc_dt::sc_unsigned' <NoOp>
+  |           |   `-CXXBindTemporaryExpr 0x3ddbda8 <col:13, col:29> 'sc_dt::sc_unsigned' (CXXTemporary 0x3ddbda8)
+  |           |     `-ImplicitCastExpr 0x3ddbd88 <col:13, col:29> 'sc_dt::sc_unsigned' <UserDefinedConversion>
+  |           |       `-CXXMemberCallExpr 0x3ddbd68 <col:13, col:29> 'sc_dt::sc_unsigned'
+  |           |         `-MemberExpr 0x3ddbd38 <col:13, col:29> '<bound member function type>' .operator sc_unsigned 0x35ccea8
+  |           |           `-ImplicitCastExpr 0x3ddbd18 <col:13, col:29> 'const sc_dt::sc_unsigned_subref_r' lvalue <UncheckedDerivedToBase (sc_unsigned_subref_r)>
+  |           |             `-CXXMemberCallExpr 0x3ddb980 <col:13, col:29> 'sc_dt::sc_unsigned_subref' lvalue
+  |           |               |-MemberExpr 0x3ddb950 <col:13, col:17> '<bound member function type>' .range 0x35d9848
+  |           |               | `-ImplicitCastExpr 0x3ddb9b0 <col:13> 'sc_dt::sc_unsigned' lvalue <UncheckedDerivedToBase (sc_unsigned)>
+  |           |               |   `-DeclRefExpr 0x3ddb890 <col:13> 'sc_biguint<128>':'sc_dt::sc_biguint<128>' lvalue Var 0x3dd94e0 'key' 'sc_biguint<128>':'sc_dt::sc_biguint<128>'
+  |           |               |-IntegerLiteral 0x3ddb910 <col:24> 'int' 63
+  |           |               `-IntegerLiteral 0x3ddb930 <col:27> 'int' 32
+  |           `-ImplicitCastExpr 0x3ddbe10 <col:33, col:37> 'const sc_dt::sc_uint_base' lvalue <DerivedToBase (sc_uint_base)>
+  |             `-ImplicitCastExpr 0x3ddbdf8 <col:33, col:37> 'const sc_uint<32>':'const sc_dt::sc_uint<32>' lvalue <NoOp>
+  |               `-ArraySubscriptExpr 0x3ddba28 <col:33, col:37> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  |                 |-ImplicitCastExpr 0x3ddba10 <col:33> 'sc_uint<32> *' <ArrayToPointerDecay>
+  |                 | `-DeclRefExpr 0x3ddb9d0 <col:33> 'sc_uint<32> [4]' lvalue Var 0x3da0728 'FK' 'sc_uint<32> [4]'
+  |                 `-IntegerLiteral 0x3ddb9f0 <col:36> 'int' 2
+  |-ExprWithCleanups 0x3ddc850 <line:84:5, col:37> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  | `-CXXOperatorCallExpr 0x3ddc818 <col:5, col:37> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue '='
+  |   |-ImplicitCastExpr 0x3ddc800 <col:11> 'sc_uint<32> &(*)(const sc_dt::sc_unsigned &)' <FunctionToPointerDecay>
+  |   | `-DeclRefExpr 0x3ddc7e0 <col:11> 'sc_uint<32> &(const sc_dt::sc_unsigned &)' lvalue CXXMethod 0x3d9c770 'operator=' 'sc_uint<32> &(const sc_dt::sc_unsigned &)'
+  |   |-ArraySubscriptExpr 0x3ddc098 <col:5, col:9> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  |   | |-ImplicitCastExpr 0x3ddc080 <col:5> 'sc_uint<32> *' <ArrayToPointerDecay>
+  |   | | `-DeclRefExpr 0x3ddc040 <col:5> 'sc_uint<32> [36]' lvalue Var 0x3d995a8 'rk' 'sc_uint<32> [36]'
+  |   | `-IntegerLiteral 0x3ddc060 <col:8> 'int' 3
+  |   `-MaterializeTemporaryExpr 0x3ddc7c8 <col:13, col:37> 'const sc_dt::sc_unsigned' lvalue
+  |     `-ImplicitCastExpr 0x3ddc7b0 <col:13, col:37> 'const sc_dt::sc_unsigned' <NoOp>
+  |       `-CXXBindTemporaryExpr 0x3ddc6d0 <col:13, col:37> 'sc_dt::sc_unsigned' (CXXTemporary 0x3ddc6d0)
+  |         `-CXXOperatorCallExpr 0x3ddc690 <col:13, col:37> 'sc_dt::sc_unsigned' '^' adl
+  |           |-ImplicitCastExpr 0x3ddc678 <col:31> 'sc_dt::sc_unsigned (*)(const sc_dt::sc_unsigned &, const sc_dt::sc_uint_base &)' <FunctionToPointerDecay>
+  |           | `-DeclRefExpr 0x3ddc658 <col:31> 'sc_dt::sc_unsigned (const sc_dt::sc_unsigned &, const sc_dt::sc_uint_base &)' lvalue Function 0x35b3428 'operator^' 'sc_dt::sc_unsigned (const sc_dt::sc_unsigned &, const sc_dt::sc_uint_base &)'
+  |           |-MaterializeTemporaryExpr 0x3ddc608 <col:13, col:29> 'const sc_dt::sc_unsigned' lvalue
+  |           | `-ImplicitCastExpr 0x3ddc5f0 <col:13, col:29> 'const sc_dt::sc_unsigned' <NoOp>
+  |           |   `-CXXBindTemporaryExpr 0x3ddc5d0 <col:13, col:29> 'sc_dt::sc_unsigned' (CXXTemporary 0x3ddc5d0)
+  |           |     `-ImplicitCastExpr 0x3ddc5b0 <col:13, col:29> 'sc_dt::sc_unsigned' <UserDefinedConversion>
+  |           |       `-CXXMemberCallExpr 0x3ddc590 <col:13, col:29> 'sc_dt::sc_unsigned'
+  |           |         `-MemberExpr 0x3ddc560 <col:13, col:29> '<bound member function type>' .operator sc_unsigned 0x35ccea8
+  |           |           `-ImplicitCastExpr 0x3ddc540 <col:13, col:29> 'const sc_dt::sc_unsigned_subref_r' lvalue <UncheckedDerivedToBase (sc_unsigned_subref_r)>
+  |           |             `-CXXMemberCallExpr 0x3ddc1a8 <col:13, col:29> 'sc_dt::sc_unsigned_subref' lvalue
+  |           |               |-MemberExpr 0x3ddc178 <col:13, col:17> '<bound member function type>' .range 0x35d9848
+  |           |               | `-ImplicitCastExpr 0x3ddc1d8 <col:13> 'sc_dt::sc_unsigned' lvalue <UncheckedDerivedToBase (sc_unsigned)>
+  |           |               |   `-DeclRefExpr 0x3ddc0b8 <col:13> 'sc_biguint<128>':'sc_dt::sc_biguint<128>' lvalue Var 0x3dd94e0 'key' 'sc_biguint<128>':'sc_dt::sc_biguint<128>'
+  |           |               |-IntegerLiteral 0x3ddc138 <col:24> 'int' 31
+  |           |               `-IntegerLiteral 0x3ddc158 <col:28> 'int' 0
+  |           `-ImplicitCastExpr 0x3ddc638 <col:33, col:37> 'const sc_dt::sc_uint_base' lvalue <DerivedToBase (sc_uint_base)>
+  |             `-ImplicitCastExpr 0x3ddc620 <col:33, col:37> 'const sc_uint<32>':'const sc_dt::sc_uint<32>' lvalue <NoOp>
+  |               `-ArraySubscriptExpr 0x3ddc250 <col:33, col:37> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  |                 |-ImplicitCastExpr 0x3ddc238 <col:33> 'sc_uint<32> *' <ArrayToPointerDecay>
+  |                 | `-DeclRefExpr 0x3ddc1f8 <col:33> 'sc_uint<32> [4]' lvalue Var 0x3da0728 'FK' 'sc_uint<32> [4]'
+  |                 `-IntegerLiteral 0x3ddc218 <col:36> 'int' 3
+  |-ForStmt 0x3dde170 <line:85:5, line:86:75>
+  | |-DeclStmt 0x3ddc908 <line:85:9, col:18>
+  | | `-VarDecl 0x3ddc880 <col:9, col:17> col:13 used i 'int' cinit
+  | |   `-IntegerLiteral 0x3ddc8e8 <col:17> 'int' 0
+  | |-<<<NULL>>>
+  | |-BinaryOperator 0x3ddc978 <col:20, col:24> 'bool' '<'
+  | | |-ImplicitCastExpr 0x3ddc960 <col:20> 'int' <LValueToRValue>
+  | | | `-DeclRefExpr 0x3ddc920 <col:20> 'int' lvalue Var 0x3ddc880 'i' 'int'
+  | | `-IntegerLiteral 0x3ddc940 <col:24> 'int' 32
+  | |-UnaryOperator 0x3ddc9b8 <col:28, col:29> 'int' postfix '++'
+  | | `-DeclRefExpr 0x3ddc998 <col:28> 'int' lvalue Var 0x3ddc880 'i' 'int'
+  | `-ExprWithCleanups 0x3dde158 <line:86:9, col:75> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  |   `-CXXOperatorCallExpr 0x3dde120 <col:9, col:75> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue '='
+  |     |-ImplicitCastExpr 0x3dde108 <col:17> 'sc_uint<32> &(*)(sc_dt::uint_type)' <FunctionToPointerDecay>
+  |     | `-DeclRefExpr 0x3dde0e8 <col:17> 'sc_uint<32> &(sc_dt::uint_type)' lvalue CXXMethod 0x3d9b510 'operator=' 'sc_uint<32> &(sc_dt::uint_type)'
+  |     |-ArraySubscriptExpr 0x3ddca80 <col:9, col:15> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  |     | |-ImplicitCastExpr 0x3ddca68 <col:9> 'sc_uint<32> *' <ArrayToPointerDecay>
+  |     | | `-DeclRefExpr 0x3ddc9d0 <col:9> 'sc_uint<32> [36]' lvalue Var 0x3d995a8 'rk' 'sc_uint<32> [36]'
+  |     | `-BinaryOperator 0x3ddca48 <col:12, col:14> 'int' '+'
+  |     |   |-ImplicitCastExpr 0x3ddca30 <col:12> 'int' <LValueToRValue>
+  |     |   | `-DeclRefExpr 0x3ddc9f0 <col:12> 'int' lvalue Var 0x3ddc880 'i' 'int'
+  |     |   `-IntegerLiteral 0x3ddca10 <col:14> 'int' 4
+  |     `-BinaryOperator 0x3dde008 <col:19, col:75> 'unsigned long long' '^'
+  |       |-ImplicitCastExpr 0x3dddf50 <col:19, col:23> 'sc_dt::uint_type':'unsigned long long' <UserDefinedConversion>
+  |       | `-CXXMemberCallExpr 0x3dddf30 <col:19, col:23> 'sc_dt::uint_type':'unsigned long long'
+  |       |   `-MemberExpr 0x3dddf00 <col:19, col:23> '<bound member function type>' .operator unsigned long long 0x3704660
+  |       |     `-ImplicitCastExpr 0x3dddee0 <col:19, col:23> 'const sc_dt::sc_uint_base' lvalue <UncheckedDerivedToBase (sc_uint_base)>
+  |       |       `-ArraySubscriptExpr 0x3ddcb10 <col:19, col:23> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  |       |         |-ImplicitCastExpr 0x3ddcae0 <col:19> 'sc_uint<32> *' <ArrayToPointerDecay>
+  |       |         | `-DeclRefExpr 0x3ddcaa0 <col:19> 'sc_uint<32> [36]' lvalue Var 0x3d995a8 'rk' 'sc_uint<32> [36]'
+  |       |         `-ImplicitCastExpr 0x3ddcaf8 <col:22> 'int' <LValueToRValue>
+  |       |           `-DeclRefExpr 0x3ddcac0 <col:22> 'int' lvalue Var 0x3ddc880 'i' 'int'
+  |       `-ImplicitCastExpr 0x3dddff0 <col:27, col:75> 'sc_dt::uint_type':'unsigned long long' <UserDefinedConversion>
+  |         `-CXXMemberCallExpr 0x3dddfd0 <col:27, col:75> 'sc_dt::uint_type':'unsigned long long'
+  |           `-MemberExpr 0x3dddfa0 <col:27, col:75> '<bound member function type>' .operator unsigned long long 0x3704660
+  |             `-ImplicitCastExpr 0x3dddf80 <col:27, col:75> 'const sc_dt::sc_uint_base' lvalue <UncheckedDerivedToBase (sc_uint_base)>
+  |               `-MaterializeTemporaryExpr 0x3dddf68 <col:27, col:75> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  |                 `-CXXBindTemporaryExpr 0x3dddbf0 <col:27, col:75> 'sc_uint<32>':'sc_dt::sc_uint<32>' (CXXTemporary 0x3dddbf0)
+  |                   `-CallExpr 0x3ddda60 <col:27, col:75> 'sc_uint<32>':'sc_dt::sc_uint<32>'
+  |                     |-ImplicitCastExpr 0x3ddda48 <col:27> 'sc_uint<32> (*)(sc_uint<32>, bool)' <FunctionToPointerDecay>
+  |                     | `-DeclRefExpr 0x3ddd9d0 <col:27> 'sc_uint<32> (sc_uint<32>, bool)' lvalue Function 0x3dd0c28 'RoundF' 'sc_uint<32> (sc_uint<32>, bool)'
+  |                     |-CXXBindTemporaryExpr 0x3dddbc8 <col:34, col:68> 'sc_uint<32>':'sc_dt::sc_uint<32>' (CXXTemporary 0x3dddbc8)
+  |                     | `-CXXConstructExpr 0x3dddb90 <col:34, col:68> 'sc_uint<32>':'sc_dt::sc_uint<32>' 'void (const sc_uint<32> &)' elidable
+  |                     |   `-MaterializeTemporaryExpr 0x3dddb78 <col:34, col:68> 'const sc_uint<32>':'const sc_dt::sc_uint<32>' lvalue
+  |                     |     `-ImplicitCastExpr 0x3dddb60 <col:34, col:68> 'const sc_uint<32>':'const sc_dt::sc_uint<32>' <NoOp>
+  |                     |       `-CXXBindTemporaryExpr 0x3dddb10 <col:34, col:68> 'sc_uint<32>':'sc_dt::sc_uint<32>' (CXXTemporary 0x3dddb10)
+  |                     |         `-ImplicitCastExpr 0x3dddaf0 <col:34, col:68> 'sc_uint<32>':'sc_dt::sc_uint<32>' <ConstructorConversion>
+  |                     |           `-CXXConstructExpr 0x3dddac0 <col:34, col:68> 'sc_uint<32>':'sc_dt::sc_uint<32>' 'void (sc_dt::uint_type)'
+  |                     |             `-BinaryOperator 0x3ddd970 <col:34, col:68> 'unsigned long long' '^'
+  |                     |               |-BinaryOperator 0x3ddd540 <col:34, col:60> 'unsigned long long' '^'
+  |                     |               | |-BinaryOperator 0x3ddd0f8 <col:34, col:50> 'unsigned long long' '^'
+  |                     |               | | |-ImplicitCastExpr 0x3ddd058 <col:34, col:40> 'sc_dt::uint_type':'unsigned long long' <UserDefinedConversion>
+  |                     |               | | | `-CXXMemberCallExpr 0x3ddd038 <col:34, col:40> 'sc_dt::uint_type':'unsigned long long'
+  |                     |               | | |   `-MemberExpr 0x3ddd008 <col:34, col:40> '<bound member function type>' .operator unsigned long long 0x3704660
+  |                     |               | | |     `-ImplicitCastExpr 0x3ddcfe8 <col:34, col:40> 'const sc_dt::sc_uint_base' lvalue <UncheckedDerivedToBase (sc_uint_base)>
+  |                     |               | | |       `-ArraySubscriptExpr 0x3ddcc28 <col:34, col:40> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  |                     |               | | |         |-ImplicitCastExpr 0x3ddcc10 <col:34> 'sc_uint<32> *' <ArrayToPointerDecay>
+  |                     |               | | |         | `-DeclRefExpr 0x3ddcb78 <col:34> 'sc_uint<32> [36]' lvalue Var 0x3d995a8 'rk' 'sc_uint<32> [36]'
+  |                     |               | | |         `-BinaryOperator 0x3ddcbf0 <col:37, col:39> 'int' '+'
+  |                     |               | | |           |-ImplicitCastExpr 0x3ddcbd8 <col:37> 'int' <LValueToRValue>
+  |                     |               | | |           | `-DeclRefExpr 0x3ddcb98 <col:37> 'int' lvalue Var 0x3ddc880 'i' 'int'
+  |                     |               | | |           `-IntegerLiteral 0x3ddcbb8 <col:39> 'int' 1
+  |                     |               | | `-ImplicitCastExpr 0x3ddd0e0 <col:44, col:50> 'sc_dt::uint_type':'unsigned long long' <UserDefinedConversion>
+  |                     |               | |   `-CXXMemberCallExpr 0x3ddd0c0 <col:44, col:50> 'sc_dt::uint_type':'unsigned long long'
+  |                     |               | |     `-MemberExpr 0x3ddd090 <col:44, col:50> '<bound member function type>' .operator unsigned long long 0x3704660
+  |                     |               | |       `-ImplicitCastExpr 0x3ddd070 <col:44, col:50> 'const sc_dt::sc_uint_base' lvalue <UncheckedDerivedToBase (sc_uint_base)>
+  |                     |               | |         `-ArraySubscriptExpr 0x3ddccf8 <col:44, col:50> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  |                     |               | |           |-ImplicitCastExpr 0x3ddcce0 <col:44> 'sc_uint<32> *' <ArrayToPointerDecay>
+  |                     |               | |           | `-DeclRefExpr 0x3ddcc48 <col:44> 'sc_uint<32> [36]' lvalue Var 0x3d995a8 'rk' 'sc_uint<32> [36]'
+  |                     |               | |           `-BinaryOperator 0x3ddccc0 <col:47, col:49> 'int' '+'
+  |                     |               | |             |-ImplicitCastExpr 0x3ddcca8 <col:47> 'int' <LValueToRValue>
+  |                     |               | |             | `-DeclRefExpr 0x3ddcc68 <col:47> 'int' lvalue Var 0x3ddc880 'i' 'int'
+  |                     |               | |             `-IntegerLiteral 0x3ddcc88 <col:49> 'int' 2
+  |                     |               | `-ImplicitCastExpr 0x3ddd528 <col:54, col:60> 'sc_dt::uint_type':'unsigned long long' <UserDefinedConversion>
+  |                     |               |   `-CXXMemberCallExpr 0x3ddd508 <col:54, col:60> 'sc_dt::uint_type':'unsigned long long'
+  |                     |               |     `-MemberExpr 0x3ddd4d8 <col:54, col:60> '<bound member function type>' .operator unsigned long long 0x3704660
+  |                     |               |       `-ImplicitCastExpr 0x3ddd4b8 <col:54, col:60> 'const sc_dt::sc_uint_base' lvalue <UncheckedDerivedToBase (sc_uint_base)>
+  |                     |               |         `-ArraySubscriptExpr 0x3ddd1c8 <col:54, col:60> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  |                     |               |           |-ImplicitCastExpr 0x3ddd1b0 <col:54> 'sc_uint<32> *' <ArrayToPointerDecay>
+  |                     |               |           | `-DeclRefExpr 0x3ddd118 <col:54> 'sc_uint<32> [36]' lvalue Var 0x3d995a8 'rk' 'sc_uint<32> [36]'
+  |                     |               |           `-BinaryOperator 0x3ddd190 <col:57, col:59> 'int' '+'
+  |                     |               |             |-ImplicitCastExpr 0x3ddd178 <col:57> 'int' <LValueToRValue>
+  |                     |               |             | `-DeclRefExpr 0x3ddd138 <col:57> 'int' lvalue Var 0x3ddc880 'i' 'int'
+  |                     |               |             `-IntegerLiteral 0x3ddd158 <col:59> 'int' 3
+  |                     |               `-ImplicitCastExpr 0x3ddd958 <col:64, col:68> 'sc_dt::uint_type':'unsigned long long' <UserDefinedConversion>
+  |                     |                 `-CXXMemberCallExpr 0x3ddd938 <col:64, col:68> 'sc_dt::uint_type':'unsigned long long'
+  |                     |                   `-MemberExpr 0x3ddd908 <col:64, col:68> '<bound member function type>' .operator unsigned long long 0x3704660
+  |                     |                     `-ImplicitCastExpr 0x3ddd8e8 <col:64, col:68> 'const sc_dt::sc_uint_base' lvalue <UncheckedDerivedToBase (sc_uint_base)>
+  |                     |                       `-ArraySubscriptExpr 0x3ddd5f8 <col:64, col:68> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  |                     |                         |-ImplicitCastExpr 0x3ddd5c8 <col:64> 'sc_uint<32> *' <ArrayToPointerDecay>
+  |                     |                         | `-DeclRefExpr 0x3ddd560 <col:64> 'sc_uint<32> [32]' lvalue Var 0x3da1048 'CK' 'sc_uint<32> [32]'
+  |                     |                         `-ImplicitCastExpr 0x3ddd5e0 <col:67> 'int' <LValueToRValue>
+  |                     |                           `-DeclRefExpr 0x3ddd580 <col:67> 'int' lvalue Var 0x3ddc880 'i' 'int'
+  |                     `-CXXBoolLiteralExpr 0x3ddd990 <col:71> 'bool' true
+  |-ExprWithCleanups 0x3ded5b8 <line:88:5, col:237> 'std::basic_ostream<char>::__ostream_type':'std::basic_ostream<char>' lvalue
+  | `-CXXOperatorCallExpr 0x3ded580 <col:5, col:237> 'std::basic_ostream<char>::__ostream_type':'std::basic_ostream<char>' lvalue '<<'
+  |   |-ImplicitCastExpr 0x3ded568 <col:234> 'std::basic_ostream<char>::__ostream_type &(*)(std::basic_ostream<char>::__ostream_type &(*)(std::basic_ostream<char>::__ostream_type &))' <FunctionToPointerDecay>
+  |   | `-DeclRefExpr 0x3ded4f0 <col:234> 'std::basic_ostream<char>::__ostream_type &(std::basic_ostream<char>::__ostream_type &(*)(std::basic_ostream<char>::__ostream_type &))' lvalue CXXMethod 0x28f0518 'operator<<' 'std::basic_ostream<char>::__ostream_type &(std::basic_ostream<char>::__ostream_type &(*)(std::basic_ostream<char>::__ostream_type &))'
+  |   |-CXXOperatorCallExpr 0x3dec9a0 <col:5, col:229> 'basic_ostream<char>':'std::basic_ostream<char>' lvalue '<<' adl
+  |   | |-ImplicitCastExpr 0x3dec988 <col:226> 'basic_ostream<char> &(*)(basic_ostream<char> &, char)' <FunctionToPointerDecay>
+  |   | | `-DeclRefExpr 0x3dec968 <col:226> 'basic_ostream<char> &(basic_ostream<char> &, char)' lvalue Function 0x28f64e8 'operator<<' 'basic_ostream<char> &(basic_ostream<char> &, char)'
+  |   | |-CXXOperatorCallExpr 0x3debc00 <col:5, col:224> 'std::basic_ostream<char>::__ostream_type':'std::basic_ostream<char>' lvalue '<<'
+  |   | | |-ImplicitCastExpr 0x3debbe8 <col:189> 'std::basic_ostream<char>::__ostream_type &(*)(int)' <FunctionToPointerDecay>
+  |   | | | `-DeclRefExpr 0x3debbc8 <col:189> 'std::basic_ostream<char>::__ostream_type &(int)' lvalue CXXMethod 0x28f14a8 'operator<<' 'std::basic_ostream<char>::__ostream_type &(int)'
+  |   | | |-CXXOperatorCallExpr 0x3dea970 <col:5, col:187> 'std::basic_ostream<char>::__ostream_type':'std::basic_ostream<char>' lvalue '<<'
+  |   | | | |-ImplicitCastExpr 0x3dea958 <col:151> 'std::basic_ostream<char>::__ostream_type &(*)(int)' <FunctionToPointerDecay>
+  |   | | | | `-DeclRefExpr 0x3dea938 <col:151> 'std::basic_ostream<char>::__ostream_type &(int)' lvalue CXXMethod 0x28f14a8 'operator<<' 'std::basic_ostream<char>::__ostream_type &(int)'
+  |   | | | |-CXXOperatorCallExpr 0x3de96e0 <col:5, col:149> 'std::basic_ostream<char>::__ostream_type':'std::basic_ostream<char>' lvalue '<<'
+  |   | | | | |-ImplicitCastExpr 0x3de96c8 <col:113> 'std::basic_ostream<char>::__ostream_type &(*)(int)' <FunctionToPointerDecay>
+  |   | | | | | `-DeclRefExpr 0x3de96a8 <col:113> 'std::basic_ostream<char>::__ostream_type &(int)' lvalue CXXMethod 0x28f14a8 'operator<<' 'std::basic_ostream<char>::__ostream_type &(int)'
+  |   | | | | |-CXXOperatorCallExpr 0x3de8450 <col:5, col:111> 'std::basic_ostream<char>::__ostream_type':'std::basic_ostream<char>' lvalue '<<'
+  |   | | | | | |-ImplicitCastExpr 0x3de8438 <col:74> 'std::basic_ostream<char>::__ostream_type &(*)(int)' <FunctionToPointerDecay>
+  |   | | | | | | `-DeclRefExpr 0x3de8418 <col:74> 'std::basic_ostream<char>::__ostream_type &(int)' lvalue CXXMethod 0x28f14a8 'operator<<' 'std::basic_ostream<char>::__ostream_type &(int)'
+  |   | | | | | |-CXXOperatorCallExpr 0x3de71c8 <col:5, col:61> 'basic_ostream<char>':'std::basic_ostream<char>' lvalue '<<' adl
+  |   | | | | | | |-ImplicitCastExpr 0x3de71b0 <col:58> 'basic_ostream<char> &(*)(basic_ostream<char> &, const char *)' <FunctionToPointerDecay>
+  |   | | | | | | | `-DeclRefExpr 0x3de7190 <col:58> 'basic_ostream<char> &(basic_ostream<char> &, const char *)' lvalue Function 0x28f87c8 'operator<<' 'basic_ostream<char> &(basic_ostream<char> &, const char *)'
+  |   | | | | | | |-CXXOperatorCallExpr 0x3de55e8 <col:5, col:53> 'basic_ostream<char>':'std::basic_ostream<char>' lvalue '<<' adl
+  |   | | | | | | | |-ImplicitCastExpr 0x3de55d0 <col:50> 'basic_ostream<char> &(*)(basic_ostream<char> &, const char *)' <FunctionToPointerDecay>
+  |   | | | | | | | | `-DeclRefExpr 0x3de55b0 <col:50> 'basic_ostream<char> &(basic_ostream<char> &, const char *)' lvalue Function 0x28f87c8 'operator<<' 'basic_ostream<char> &(basic_ostream<char> &, const char *)'
+  |   | | | | | | | |-CXXOperatorCallExpr 0x3de3a10 <col:5, col:48> '::std::ostream':'std::basic_ostream<char>' lvalue '<<'
+  |   | | | | | | | | |-ImplicitCastExpr 0x3de39f8 <col:31> '::std::ostream &(*)(::std::ostream &, const sc_core::sc_time &)' <FunctionToPointerDecay>
+  |   | | | | | | | | | `-DeclRefExpr 0x3de3978 <col:31> '::std::ostream &(::std::ostream &, const sc_core::sc_time &)' lvalue Function 0x309c778 'operator<<' '::std::ostream &(::std::ostream &, const sc_core::sc_time &)'
+  |   | | | | | | | | |-CXXOperatorCallExpr 0x3de1ba8 <col:5, col:20> 'basic_ostream<char>':'std::basic_ostream<char>' lvalue '<<' adl
+  |   | | | | | | | | | |-ImplicitCastExpr 0x3de1b90 <col:17> 'basic_ostream<char> &(*)(basic_ostream<char> &, const char *)' <FunctionToPointerDecay>
+  |   | | | | | | | | | | `-DeclRefExpr 0x3de1b70 <col:17> 'basic_ostream<char> &(basic_ostream<char> &, const char *)' lvalue Function 0x28f87c8 'operator<<' 'basic_ostream<char> &(basic_ostream<char> &, const char *)'
+  |   | | | | | | | | | |-CXXOperatorCallExpr 0x3ddffd0 <col:5, col:13> 'std::basic_ostream<char>::__ostream_type':'std::basic_ostream<char>' lvalue '<<'
+  |   | | | | | | | | | | |-ImplicitCastExpr 0x3ddffb8 <col:10> 'std::basic_ostream<char>::__ostream_type &(*)(std::ios_base &(*)(std::ios_base &))' <FunctionToPointerDecay>
+  |   | | | | | | | | | | | `-DeclRefExpr 0x3ddff40 <col:10> 'std::basic_ostream<char>::__ostream_type &(std::ios_base &(*)(std::ios_base &))' lvalue CXXMethod 0x28f0a88 'operator<<' 'std::basic_ostream<char>::__ostream_type &(std::ios_base &(*)(std::ios_base &))'
+  |   | | | | | | | | | | |-DeclRefExpr 0x3dde1a8 <col:5> 'std::ostream':'std::basic_ostream<char>' lvalue Var 0x2a4d718 'cout' 'std::ostream':'std::basic_ostream<char>' (UsingShadow 0x2e1c5d8 'cout')
+  |   | | | | | | | | | | `-ImplicitCastExpr 0x3ddff28 <col:13> 'std::ios_base &(*)(std::ios_base &)' <FunctionToPointerDecay>
+  |   | | | | | | | | | |   `-DeclRefExpr 0x3dde1d0 <col:13> 'std::ios_base &(std::ios_base &)' lvalue Function 0x2784908 'hex' 'std::ios_base &(std::ios_base &)' (UsingShadow 0x2e1c948 'hex')
+  |   | | | | | | | | | `-ImplicitCastExpr 0x3de1b58 <col:20> 'const char *' <ArrayToPointerDecay>
+  |   | | | | | | | | |   `-StringLiteral 0x3de0008 <col:20> 'const char [9]' lvalue "AT time "
+  |   | | | | | | | | `-CallExpr 0x3de1c90 <col:34, col:48> 'const sc_core::sc_time' lvalue
+  |   | | | | | | | |   `-ImplicitCastExpr 0x3de1c78 <col:34> 'const sc_core::sc_time &(*)()' <FunctionToPointerDecay>
+  |   | | | | | | | |     `-DeclRefExpr 0x3de1c28 <col:34> 'const sc_core::sc_time &()' lvalue Function 0x313de08 'sc_time_stamp' 'const sc_core::sc_time &()'
+  |   | | | | | | | `-ImplicitCastExpr 0x3de5598 <col:53> 'const char *' <ArrayToPointerDecay>
+  |   | | | | | | |   `-StringLiteral 0x3de3a48 <col:53> 'const char [3]' lvalue "::"
+  |   | | | | | | `-ImplicitCastExpr 0x3de7178 <col:61> 'const char *' <ArrayToPointerDecay>
+  |   | | | | | |   `-StringLiteral 0x3de5620 <col:61> 'const char [11]' lvalue "key_in: 0x"
+  |   | | | | | `-CStyleCastExpr 0x3de76f0 <col:77, col:111> 'int' <NoOp>
+  |   | | | | |   `-ImplicitCastExpr 0x3de76d8 <col:82, col:111> 'int' <IntegralCast> part_of_explicit_cast
+  |   | | | | |     `-ImplicitCastExpr 0x3de76c0 <col:82, col:111> 'sc_dt::uint_type':'unsigned long long' <UserDefinedConversion> part_of_explicit_cast
+  |   | | | | |       `-CXXMemberCallExpr 0x3de76a0 <col:82, col:111> 'sc_dt::uint_type':'unsigned long long'
+  |   | | | | |         `-MemberExpr 0x3de7670 <col:82, col:111> '<bound member function type>' .operator unsigned long long 0x3704660
+  |   | | | | |           `-ImplicitCastExpr 0x3de7650 <col:82, col:111> 'const sc_dt::sc_uint_base' lvalue <UncheckedDerivedToBase (sc_uint_base)>
+  |   | | | | |             `-MaterializeTemporaryExpr 0x3de7638 <col:82, col:111> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  |   | | | | |               `-CStyleCastExpr 0x3de75f8 <col:82, col:111> 'sc_uint<32>':'sc_dt::sc_uint<32>' <ConstructorConversion>
+  |   | | | | |                 `-CXXBindTemporaryExpr 0x3de75d8 <col:82, col:111> 'sc_uint<32>':'sc_dt::sc_uint<32>' (CXXTemporary 0x3de75d8)
+  |   | | | | |                   `-CXXConstructExpr 0x3de75a0 <col:82, col:111> 'sc_uint<32>':'sc_dt::sc_uint<32>' 'void (const sc_dt::sc_unsigned &)'
+  |   | | | | |                     `-MaterializeTemporaryExpr 0x3de7588 <col:95, col:111> 'const sc_dt::sc_unsigned' lvalue
+  |   | | | | |                       `-ImplicitCastExpr 0x3de7570 <col:95, col:111> 'const sc_dt::sc_unsigned' <NoOp>
+  |   | | | | |                         `-CXXBindTemporaryExpr 0x3de7550 <col:95, col:111> 'sc_dt::sc_unsigned' (CXXTemporary 0x3de7550)
+  |   | | | | |                           `-ImplicitCastExpr 0x3de7530 <col:95, col:111> 'sc_dt::sc_unsigned' <UserDefinedConversion>
+  |   | | | | |                             `-CXXMemberCallExpr 0x3de7510 <col:95, col:111> 'sc_dt::sc_unsigned'
+  |   | | | | |                               `-MemberExpr 0x3de74e0 <col:95, col:111> '<bound member function type>' .operator sc_unsigned 0x35ccea8
+  |   | | | | |                                 `-ImplicitCastExpr 0x3de74c0 <col:95, col:111> 'const sc_dt::sc_unsigned_subref_r' lvalue <UncheckedDerivedToBase (sc_unsigned_subref_r)>
+  |   | | | | |                                   `-CXXMemberCallExpr 0x3de7390 <col:95, col:111> 'sc_dt::sc_unsigned_subref' lvalue
+  |   | | | | |                                     |-MemberExpr 0x3de7360 <col:95, col:99> '<bound member function type>' .range 0x35d9848
+  |   | | | | |                                     | `-ImplicitCastExpr 0x3de73c0 <col:95> 'sc_dt::sc_unsigned' lvalue <UncheckedDerivedToBase (sc_unsigned)>
+  |   | | | | |                                     |   `-DeclRefExpr 0x3de72a0 <col:95> 'sc_biguint<128>':'sc_dt::sc_biguint<128>' lvalue Var 0x3dd94e0 'key' 'sc_biguint<128>':'sc_dt::sc_biguint<128>'
+  |   | | | | |                                     |-IntegerLiteral 0x3de7320 <col:105> 'int' 127
+  |   | | | | |                                     `-IntegerLiteral 0x3de7340 <col:109> 'int' 96
+  |   | | | | `-CStyleCastExpr 0x3de8980 <col:116, col:149> 'int' <NoOp>
+  |   | | | |   `-ImplicitCastExpr 0x3de8968 <col:121, col:149> 'int' <IntegralCast> part_of_explicit_cast
+  |   | | | |     `-ImplicitCastExpr 0x3de8950 <col:121, col:149> 'sc_dt::uint_type':'unsigned long long' <UserDefinedConversion> part_of_explicit_cast
+  |   | | | |       `-CXXMemberCallExpr 0x3de8930 <col:121, col:149> 'sc_dt::uint_type':'unsigned long long'
+  |   | | | |         `-MemberExpr 0x3de8900 <col:121, col:149> '<bound member function type>' .operator unsigned long long 0x3704660
+  |   | | | |           `-ImplicitCastExpr 0x3de88e0 <col:121, col:149> 'const sc_dt::sc_uint_base' lvalue <UncheckedDerivedToBase (sc_uint_base)>
+  |   | | | |             `-MaterializeTemporaryExpr 0x3de88c8 <col:121, col:149> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  |   | | | |               `-CStyleCastExpr 0x3de8888 <col:121, col:149> 'sc_uint<32>':'sc_dt::sc_uint<32>' <ConstructorConversion>
+  |   | | | |                 `-CXXBindTemporaryExpr 0x3de8868 <col:121, col:149> 'sc_uint<32>':'sc_dt::sc_uint<32>' (CXXTemporary 0x3de8868)
+  |   | | | |                   `-CXXConstructExpr 0x3de8830 <col:121, col:149> 'sc_uint<32>':'sc_dt::sc_uint<32>' 'void (const sc_dt::sc_unsigned &)'
+  |   | | | |                     `-MaterializeTemporaryExpr 0x3de8818 <col:134, col:149> 'const sc_dt::sc_unsigned' lvalue
+  |   | | | |                       `-ImplicitCastExpr 0x3de8800 <col:134, col:149> 'const sc_dt::sc_unsigned' <NoOp>
+  |   | | | |                         `-CXXBindTemporaryExpr 0x3de87e0 <col:134, col:149> 'sc_dt::sc_unsigned' (CXXTemporary 0x3de87e0)
+  |   | | | |                           `-ImplicitCastExpr 0x3de87c0 <col:134, col:149> 'sc_dt::sc_unsigned' <UserDefinedConversion>
+  |   | | | |                             `-CXXMemberCallExpr 0x3de87a0 <col:134, col:149> 'sc_dt::sc_unsigned'
+  |   | | | |                               `-MemberExpr 0x3de8770 <col:134, col:149> '<bound member function type>' .operator sc_unsigned 0x35ccea8
+  |   | | | |                                 `-ImplicitCastExpr 0x3de8750 <col:134, col:149> 'const sc_dt::sc_unsigned_subref_r' lvalue <UncheckedDerivedToBase (sc_unsigned_subref_r)>
+  |   | | | |                                   `-CXXMemberCallExpr 0x3de8620 <col:134, col:149> 'sc_dt::sc_unsigned_subref' lvalue
+  |   | | | |                                     |-MemberExpr 0x3de85f0 <col:134, col:138> '<bound member function type>' .range 0x35d9848
+  |   | | | |                                     | `-ImplicitCastExpr 0x3de8650 <col:134> 'sc_dt::sc_unsigned' lvalue <UncheckedDerivedToBase (sc_unsigned)>
+  |   | | | |                                     |   `-DeclRefExpr 0x3de8530 <col:134> 'sc_biguint<128>':'sc_dt::sc_biguint<128>' lvalue Var 0x3dd94e0 'key' 'sc_biguint<128>':'sc_dt::sc_biguint<128>'
+  |   | | | |                                     |-IntegerLiteral 0x3de85b0 <col:144> 'int' 95
+  |   | | | |                                     `-IntegerLiteral 0x3de85d0 <col:147> 'int' 64
+  |   | | | `-CStyleCastExpr 0x3de9c10 <col:154, col:187> 'int' <NoOp>
+  |   | | |   `-ImplicitCastExpr 0x3de9bf8 <col:159, col:187> 'int' <IntegralCast> part_of_explicit_cast
+  |   | | |     `-ImplicitCastExpr 0x3de9be0 <col:159, col:187> 'sc_dt::uint_type':'unsigned long long' <UserDefinedConversion> part_of_explicit_cast
+  |   | | |       `-CXXMemberCallExpr 0x3de9bc0 <col:159, col:187> 'sc_dt::uint_type':'unsigned long long'
+  |   | | |         `-MemberExpr 0x3de9b90 <col:159, col:187> '<bound member function type>' .operator unsigned long long 0x3704660
+  |   | | |           `-ImplicitCastExpr 0x3de9b70 <col:159, col:187> 'const sc_dt::sc_uint_base' lvalue <UncheckedDerivedToBase (sc_uint_base)>
+  |   | | |             `-MaterializeTemporaryExpr 0x3de9b58 <col:159, col:187> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  |   | | |               `-CStyleCastExpr 0x3de9b18 <col:159, col:187> 'sc_uint<32>':'sc_dt::sc_uint<32>' <ConstructorConversion>
+  |   | | |                 `-CXXBindTemporaryExpr 0x3de9af8 <col:159, col:187> 'sc_uint<32>':'sc_dt::sc_uint<32>' (CXXTemporary 0x3de9af8)
+  |   | | |                   `-CXXConstructExpr 0x3de9ac0 <col:159, col:187> 'sc_uint<32>':'sc_dt::sc_uint<32>' 'void (const sc_dt::sc_unsigned &)'
+  |   | | |                     `-MaterializeTemporaryExpr 0x3de9aa8 <col:172, col:187> 'const sc_dt::sc_unsigned' lvalue
+  |   | | |                       `-ImplicitCastExpr 0x3de9a90 <col:172, col:187> 'const sc_dt::sc_unsigned' <NoOp>
+  |   | | |                         `-CXXBindTemporaryExpr 0x3de9a70 <col:172, col:187> 'sc_dt::sc_unsigned' (CXXTemporary 0x3de9a70)
+  |   | | |                           `-ImplicitCastExpr 0x3de9a50 <col:172, col:187> 'sc_dt::sc_unsigned' <UserDefinedConversion>
+  |   | | |                             `-CXXMemberCallExpr 0x3de9a30 <col:172, col:187> 'sc_dt::sc_unsigned'
+  |   | | |                               `-MemberExpr 0x3de9a00 <col:172, col:187> '<bound member function type>' .operator sc_unsigned 0x35ccea8
+  |   | | |                                 `-ImplicitCastExpr 0x3de99e0 <col:172, col:187> 'const sc_dt::sc_unsigned_subref_r' lvalue <UncheckedDerivedToBase (sc_unsigned_subref_r)>
+  |   | | |                                   `-CXXMemberCallExpr 0x3de98b0 <col:172, col:187> 'sc_dt::sc_unsigned_subref' lvalue
+  |   | | |                                     |-MemberExpr 0x3de9880 <col:172, col:176> '<bound member function type>' .range 0x35d9848
+  |   | | |                                     | `-ImplicitCastExpr 0x3de98e0 <col:172> 'sc_dt::sc_unsigned' lvalue <UncheckedDerivedToBase (sc_unsigned)>
+  |   | | |                                     |   `-DeclRefExpr 0x3de97c0 <col:172> 'sc_biguint<128>':'sc_dt::sc_biguint<128>' lvalue Var 0x3dd94e0 'key' 'sc_biguint<128>':'sc_dt::sc_biguint<128>'
+  |   | | |                                     |-IntegerLiteral 0x3de9840 <col:182> 'int' 63
+  |   | | |                                     `-IntegerLiteral 0x3de9860 <col:185> 'int' 32
+  |   | | `-CStyleCastExpr 0x3deaea0 <col:192, col:224> 'int' <NoOp>
+  |   | |   `-ImplicitCastExpr 0x3deae88 <col:197, col:224> 'int' <IntegralCast> part_of_explicit_cast
+  |   | |     `-ImplicitCastExpr 0x3deae70 <col:197, col:224> 'sc_dt::uint_type':'unsigned long long' <UserDefinedConversion> part_of_explicit_cast
+  |   | |       `-CXXMemberCallExpr 0x3deae50 <col:197, col:224> 'sc_dt::uint_type':'unsigned long long'
+  |   | |         `-MemberExpr 0x3deae20 <col:197, col:224> '<bound member function type>' .operator unsigned long long 0x3704660
+  |   | |           `-ImplicitCastExpr 0x3deae00 <col:197, col:224> 'const sc_dt::sc_uint_base' lvalue <UncheckedDerivedToBase (sc_uint_base)>
+  |   | |             `-MaterializeTemporaryExpr 0x3deade8 <col:197, col:224> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  |   | |               `-CStyleCastExpr 0x3deada8 <col:197, col:224> 'sc_uint<32>':'sc_dt::sc_uint<32>' <ConstructorConversion>
+  |   | |                 `-CXXBindTemporaryExpr 0x3dead88 <col:197, col:224> 'sc_uint<32>':'sc_dt::sc_uint<32>' (CXXTemporary 0x3dead88)
+  |   | |                   `-CXXConstructExpr 0x3dead50 <col:197, col:224> 'sc_uint<32>':'sc_dt::sc_uint<32>' 'void (const sc_dt::sc_unsigned &)'
+  |   | |                     `-MaterializeTemporaryExpr 0x3dead38 <col:210, col:224> 'const sc_dt::sc_unsigned' lvalue
+  |   | |                       `-ImplicitCastExpr 0x3dead20 <col:210, col:224> 'const sc_dt::sc_unsigned' <NoOp>
+  |   | |                         `-CXXBindTemporaryExpr 0x3dead00 <col:210, col:224> 'sc_dt::sc_unsigned' (CXXTemporary 0x3dead00)
+  |   | |                           `-ImplicitCastExpr 0x3deace0 <col:210, col:224> 'sc_dt::sc_unsigned' <UserDefinedConversion>
+  |   | |                             `-CXXMemberCallExpr 0x3deacc0 <col:210, col:224> 'sc_dt::sc_unsigned'
+  |   | |                               `-MemberExpr 0x3deac90 <col:210, col:224> '<bound member function type>' .operator sc_unsigned 0x35ccea8
+  |   | |                                 `-ImplicitCastExpr 0x3deac70 <col:210, col:224> 'const sc_dt::sc_unsigned_subref_r' lvalue <UncheckedDerivedToBase (sc_unsigned_subref_r)>
+  |   | |                                   `-CXXMemberCallExpr 0x3deab40 <col:210, col:224> 'sc_dt::sc_unsigned_subref' lvalue
+  |   | |                                     |-MemberExpr 0x3deab10 <col:210, col:214> '<bound member function type>' .range 0x35d9848
+  |   | |                                     | `-ImplicitCastExpr 0x3deab70 <col:210> 'sc_dt::sc_unsigned' lvalue <UncheckedDerivedToBase (sc_unsigned)>
+  |   | |                                     |   `-DeclRefExpr 0x3deaa50 <col:210> 'sc_biguint<128>':'sc_dt::sc_biguint<128>' lvalue Var 0x3dd94e0 'key' 'sc_biguint<128>':'sc_dt::sc_biguint<128>'
+  |   | |                                     |-IntegerLiteral 0x3deaad0 <col:220> 'int' 31
+  |   | |                                     `-IntegerLiteral 0x3deaaf0 <col:223> 'int' 0
+  |   | `-CharacterLiteral 0x3debc38 <col:229> 'char' 10
+  |   `-ImplicitCastExpr 0x3ded4d8 <col:237> 'basic_ostream<char> &(*)(basic_ostream<char> &)' <FunctionToPointerDecay>
+  |     `-DeclRefExpr 0x3ded4b0 <col:237> 'basic_ostream<char> &(basic_ostream<char> &)' lvalue Function 0x28f4b08 'endl' 'basic_ostream<char> &(basic_ostream<char> &)' (UsingShadow 0x2e1c738 'endl')
+  |-CXXOperatorCallExpr 0x3ded760 <line:90:5, col:25> 'sc_biguint<128>':'sc_dt::sc_biguint<128>' lvalue '='
+  | |-ImplicitCastExpr 0x3ded748 <col:10> 'sc_biguint<128> &(*)(const sc_biguint<128> &)' <FunctionToPointerDecay>
+  | | `-DeclRefExpr 0x3ded728 <col:10> 'sc_biguint<128> &(const sc_biguint<128> &)' lvalue CXXMethod 0x3d96130 'operator=' 'sc_biguint<128> &(const sc_biguint<128> &)'
+  | |-DeclRefExpr 0x3ded5d0 <col:5> 'sc_biguint<128>':'sc_dt::sc_biguint<128>' lvalue Var 0x3dd9650 'data' 'sc_biguint<128>':'sc_dt::sc_biguint<128>'
+  | `-CXXMemberCallExpr 0x3ded660 <col:12, col:25> 'const sc_core::sc_in<sc_dt::sc_biguint<128>>::data_type':'const sc_dt::sc_biguint<128>' lvalue
+  |   `-MemberExpr 0x3ded630 <col:12, col:20> '<bound member function type>' .read 0x3d64568
+  |     `-ImplicitCastExpr 0x3ded680 <col:12> 'const sc_core::sc_in<sc_dt::sc_biguint<128>>' lvalue <NoOp>
+  |       `-MemberExpr 0x3ded600 <col:12> 'sc_in<sc_biguint<128>>':'sc_core::sc_in<sc_dt::sc_biguint<128>>' lvalue ->data_in 0x3d659d0
+  |         `-CXXThisExpr 0x3ded5f0 <col:12> 'SM4 *' implicit this
+  |-ExprWithCleanups 0x3dedb60 <line:91:5, col:29> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  | `-CXXOperatorCallExpr 0x3dedb28 <col:5, col:29> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue '='
+  |   |-ImplicitCastExpr 0x3dedb10 <col:10> 'sc_uint<32> &(*)(const sc_dt::sc_unsigned &)' <FunctionToPointerDecay>
+  |   | `-DeclRefExpr 0x3dedaf0 <col:10> 'sc_uint<32> &(const sc_dt::sc_unsigned &)' lvalue CXXMethod 0x3d9c770 'operator=' 'sc_uint<32> &(const sc_dt::sc_unsigned &)'
+  |   |-ArraySubscriptExpr 0x3ded7f0 <col:5, col:8> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  |   | |-ImplicitCastExpr 0x3ded7d8 <col:5> 'sc_uint<32> *' <ArrayToPointerDecay>
+  |   | | `-DeclRefExpr 0x3ded798 <col:5> 'sc_uint<32> [36]' lvalue Var 0x3da04b8 'X' 'sc_uint<32> [36]'
+  |   | `-IntegerLiteral 0x3ded7b8 <col:7> 'int' 0
+  |   `-MaterializeTemporaryExpr 0x3dedad8 <col:12, col:29> 'const sc_dt::sc_unsigned' lvalue
+  |     `-ImplicitCastExpr 0x3dedac0 <col:12, col:29> 'const sc_dt::sc_unsigned' <NoOp>
+  |       `-CXXBindTemporaryExpr 0x3dedaa0 <col:12, col:29> 'sc_dt::sc_unsigned' (CXXTemporary 0x3dedaa0)
+  |         `-ImplicitCastExpr 0x3deda80 <col:12, col:29> 'sc_dt::sc_unsigned' <UserDefinedConversion>
+  |           `-CXXMemberCallExpr 0x3deda60 <col:12, col:29> 'sc_dt::sc_unsigned'
+  |             `-MemberExpr 0x3deda30 <col:12, col:29> '<bound member function type>' .operator sc_unsigned 0x35ccea8
+  |               `-ImplicitCastExpr 0x3deda10 <col:12, col:29> 'const sc_dt::sc_unsigned_subref_r' lvalue <UncheckedDerivedToBase (sc_unsigned_subref_r)>
+  |                 `-CXXMemberCallExpr 0x3ded900 <col:12, col:29> 'sc_dt::sc_unsigned_subref' lvalue
+  |                   |-MemberExpr 0x3ded8d0 <col:12, col:17> '<bound member function type>' .range 0x35d9848
+  |                   | `-ImplicitCastExpr 0x3ded930 <col:12> 'sc_dt::sc_unsigned' lvalue <UncheckedDerivedToBase (sc_unsigned)>
+  |                   |   `-DeclRefExpr 0x3ded810 <col:12> 'sc_biguint<128>':'sc_dt::sc_biguint<128>' lvalue Var 0x3dd9650 'data' 'sc_biguint<128>':'sc_dt::sc_biguint<128>'
+  |                   |-IntegerLiteral 0x3ded890 <col:23> 'int' 127
+  |                   `-IntegerLiteral 0x3ded8b0 <col:27> 'int' 96
+  |-ExprWithCleanups 0x3dedf40 <line:92:5, col:29> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  | `-CXXOperatorCallExpr 0x3dedf08 <col:5, col:29> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue '='
+  |   |-ImplicitCastExpr 0x3dedef0 <col:10> 'sc_uint<32> &(*)(const sc_dt::sc_unsigned &)' <FunctionToPointerDecay>
+  |   | `-DeclRefExpr 0x3deded0 <col:10> 'sc_uint<32> &(const sc_dt::sc_unsigned &)' lvalue CXXMethod 0x3d9c770 'operator=' 'sc_uint<32> &(const sc_dt::sc_unsigned &)'
+  |   |-ArraySubscriptExpr 0x3dedbd0 <col:5, col:8> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  |   | |-ImplicitCastExpr 0x3dedbb8 <col:5> 'sc_uint<32> *' <ArrayToPointerDecay>
+  |   | | `-DeclRefExpr 0x3dedb78 <col:5> 'sc_uint<32> [36]' lvalue Var 0x3da04b8 'X' 'sc_uint<32> [36]'
+  |   | `-IntegerLiteral 0x3dedb98 <col:7> 'int' 1
+  |   `-MaterializeTemporaryExpr 0x3dedeb8 <col:12, col:29> 'const sc_dt::sc_unsigned' lvalue
+  |     `-ImplicitCastExpr 0x3dedea0 <col:12, col:29> 'const sc_dt::sc_unsigned' <NoOp>
+  |       `-CXXBindTemporaryExpr 0x3dede80 <col:12, col:29> 'sc_dt::sc_unsigned' (CXXTemporary 0x3dede80)
+  |         `-ImplicitCastExpr 0x3dede60 <col:12, col:29> 'sc_dt::sc_unsigned' <UserDefinedConversion>
+  |           `-CXXMemberCallExpr 0x3dede40 <col:12, col:29> 'sc_dt::sc_unsigned'
+  |             `-MemberExpr 0x3dede10 <col:12, col:29> '<bound member function type>' .operator sc_unsigned 0x35ccea8
+  |               `-ImplicitCastExpr 0x3deddf0 <col:12, col:29> 'const sc_dt::sc_unsigned_subref_r' lvalue <UncheckedDerivedToBase (sc_unsigned_subref_r)>
+  |                 `-CXXMemberCallExpr 0x3dedce0 <col:12, col:29> 'sc_dt::sc_unsigned_subref' lvalue
+  |                   |-MemberExpr 0x3dedcb0 <col:12, col:17> '<bound member function type>' .range 0x35d9848
+  |                   | `-ImplicitCastExpr 0x3dedd10 <col:12> 'sc_dt::sc_unsigned' lvalue <UncheckedDerivedToBase (sc_unsigned)>
+  |                   |   `-DeclRefExpr 0x3dedbf0 <col:12> 'sc_biguint<128>':'sc_dt::sc_biguint<128>' lvalue Var 0x3dd9650 'data' 'sc_biguint<128>':'sc_dt::sc_biguint<128>'
+  |                   |-IntegerLiteral 0x3dedc70 <col:24> 'int' 95
+  |                   `-IntegerLiteral 0x3dedc90 <col:27> 'int' 64
+  |-ExprWithCleanups 0x3dee320 <line:93:5, col:29> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  | `-CXXOperatorCallExpr 0x3dee2e8 <col:5, col:29> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue '='
+  |   |-ImplicitCastExpr 0x3dee2d0 <col:10> 'sc_uint<32> &(*)(const sc_dt::sc_unsigned &)' <FunctionToPointerDecay>
+  |   | `-DeclRefExpr 0x3dee2b0 <col:10> 'sc_uint<32> &(const sc_dt::sc_unsigned &)' lvalue CXXMethod 0x3d9c770 'operator=' 'sc_uint<32> &(const sc_dt::sc_unsigned &)'
+  |   |-ArraySubscriptExpr 0x3dedfb0 <col:5, col:8> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  |   | |-ImplicitCastExpr 0x3dedf98 <col:5> 'sc_uint<32> *' <ArrayToPointerDecay>
+  |   | | `-DeclRefExpr 0x3dedf58 <col:5> 'sc_uint<32> [36]' lvalue Var 0x3da04b8 'X' 'sc_uint<32> [36]'
+  |   | `-IntegerLiteral 0x3dedf78 <col:7> 'int' 2
+  |   `-MaterializeTemporaryExpr 0x3dee298 <col:12, col:29> 'const sc_dt::sc_unsigned' lvalue
+  |     `-ImplicitCastExpr 0x3dee280 <col:12, col:29> 'const sc_dt::sc_unsigned' <NoOp>
+  |       `-CXXBindTemporaryExpr 0x3dee260 <col:12, col:29> 'sc_dt::sc_unsigned' (CXXTemporary 0x3dee260)
+  |         `-ImplicitCastExpr 0x3dee240 <col:12, col:29> 'sc_dt::sc_unsigned' <UserDefinedConversion>
+  |           `-CXXMemberCallExpr 0x3dee220 <col:12, col:29> 'sc_dt::sc_unsigned'
+  |             `-MemberExpr 0x3dee1f0 <col:12, col:29> '<bound member function type>' .operator sc_unsigned 0x35ccea8
+  |               `-ImplicitCastExpr 0x3dee1d0 <col:12, col:29> 'const sc_dt::sc_unsigned_subref_r' lvalue <UncheckedDerivedToBase (sc_unsigned_subref_r)>
+  |                 `-CXXMemberCallExpr 0x3dee0c0 <col:12, col:29> 'sc_dt::sc_unsigned_subref' lvalue
+  |                   |-MemberExpr 0x3dee090 <col:12, col:17> '<bound member function type>' .range 0x35d9848
+  |                   | `-ImplicitCastExpr 0x3dee0f0 <col:12> 'sc_dt::sc_unsigned' lvalue <UncheckedDerivedToBase (sc_unsigned)>
+  |                   |   `-DeclRefExpr 0x3dedfd0 <col:12> 'sc_biguint<128>':'sc_dt::sc_biguint<128>' lvalue Var 0x3dd9650 'data' 'sc_biguint<128>':'sc_dt::sc_biguint<128>'
+  |                   |-IntegerLiteral 0x3dee050 <col:24> 'int' 63
+  |                   `-IntegerLiteral 0x3dee070 <col:27> 'int' 32
+  |-ExprWithCleanups 0x3dee700 <line:94:5, col:29> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  | `-CXXOperatorCallExpr 0x3dee6c8 <col:5, col:29> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue '='
+  |   |-ImplicitCastExpr 0x3dee6b0 <col:10> 'sc_uint<32> &(*)(const sc_dt::sc_unsigned &)' <FunctionToPointerDecay>
+  |   | `-DeclRefExpr 0x3dee690 <col:10> 'sc_uint<32> &(const sc_dt::sc_unsigned &)' lvalue CXXMethod 0x3d9c770 'operator=' 'sc_uint<32> &(const sc_dt::sc_unsigned &)'
+  |   |-ArraySubscriptExpr 0x3dee390 <col:5, col:8> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  |   | |-ImplicitCastExpr 0x3dee378 <col:5> 'sc_uint<32> *' <ArrayToPointerDecay>
+  |   | | `-DeclRefExpr 0x3dee338 <col:5> 'sc_uint<32> [36]' lvalue Var 0x3da04b8 'X' 'sc_uint<32> [36]'
+  |   | `-IntegerLiteral 0x3dee358 <col:7> 'int' 3
+  |   `-MaterializeTemporaryExpr 0x3dee678 <col:12, col:29> 'const sc_dt::sc_unsigned' lvalue
+  |     `-ImplicitCastExpr 0x3dee660 <col:12, col:29> 'const sc_dt::sc_unsigned' <NoOp>
+  |       `-CXXBindTemporaryExpr 0x3dee640 <col:12, col:29> 'sc_dt::sc_unsigned' (CXXTemporary 0x3dee640)
+  |         `-ImplicitCastExpr 0x3dee620 <col:12, col:29> 'sc_dt::sc_unsigned' <UserDefinedConversion>
+  |           `-CXXMemberCallExpr 0x3dee600 <col:12, col:29> 'sc_dt::sc_unsigned'
+  |             `-MemberExpr 0x3dee5d0 <col:12, col:29> '<bound member function type>' .operator sc_unsigned 0x35ccea8
+  |               `-ImplicitCastExpr 0x3dee5b0 <col:12, col:29> 'const sc_dt::sc_unsigned_subref_r' lvalue <UncheckedDerivedToBase (sc_unsigned_subref_r)>
+  |                 `-CXXMemberCallExpr 0x3dee4a0 <col:12, col:29> 'sc_dt::sc_unsigned_subref' lvalue
+  |                   |-MemberExpr 0x3dee470 <col:12, col:17> '<bound member function type>' .range 0x35d9848
+  |                   | `-ImplicitCastExpr 0x3dee4d0 <col:12> 'sc_dt::sc_unsigned' lvalue <UncheckedDerivedToBase (sc_unsigned)>
+  |                   |   `-DeclRefExpr 0x3dee3b0 <col:12> 'sc_biguint<128>':'sc_dt::sc_biguint<128>' lvalue Var 0x3dd9650 'data' 'sc_biguint<128>':'sc_dt::sc_biguint<128>'
+  |                   |-IntegerLiteral 0x3dee430 <col:24> 'int' 31
+  |                   `-IntegerLiteral 0x3dee450 <col:28> 'int' 0
+  |-ForStmt 0x3deffe0 <line:95:5, line:96:73>
+  | |-DeclStmt 0x3dee7b8 <line:95:9, col:18>
+  | | `-VarDecl 0x3dee730 <col:9, col:17> col:13 used i 'int' cinit
+  | |   `-IntegerLiteral 0x3dee798 <col:17> 'int' 0
+  | |-<<<NULL>>>
+  | |-BinaryOperator 0x3dee828 <col:20, col:24> 'bool' '<'
+  | | |-ImplicitCastExpr 0x3dee810 <col:20> 'int' <LValueToRValue>
+  | | | `-DeclRefExpr 0x3dee7d0 <col:20> 'int' lvalue Var 0x3dee730 'i' 'int'
+  | | `-IntegerLiteral 0x3dee7f0 <col:24> 'int' 32
+  | |-UnaryOperator 0x3dee868 <col:28, col:29> 'int' postfix '++'
+  | | `-DeclRefExpr 0x3dee848 <col:28> 'int' lvalue Var 0x3dee730 'i' 'int'
+  | `-ExprWithCleanups 0x3deffc8 <line:96:9, col:73> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  |   `-CXXOperatorCallExpr 0x3deff90 <col:9, col:73> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue '='
+  |     |-ImplicitCastExpr 0x3deff78 <col:16> 'sc_uint<32> &(*)(sc_dt::uint_type)' <FunctionToPointerDecay>
+  |     | `-DeclRefExpr 0x3deff58 <col:16> 'sc_uint<32> &(sc_dt::uint_type)' lvalue CXXMethod 0x3d9b510 'operator=' 'sc_uint<32> &(sc_dt::uint_type)'
+  |     |-ArraySubscriptExpr 0x3dee930 <col:9, col:14> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  |     | |-ImplicitCastExpr 0x3dee918 <col:9> 'sc_uint<32> *' <ArrayToPointerDecay>
+  |     | | `-DeclRefExpr 0x3dee880 <col:9> 'sc_uint<32> [36]' lvalue Var 0x3da04b8 'X' 'sc_uint<32> [36]'
+  |     | `-BinaryOperator 0x3dee8f8 <col:11, col:13> 'int' '+'
+  |     |   |-ImplicitCastExpr 0x3dee8e0 <col:11> 'int' <LValueToRValue>
+  |     |   | `-DeclRefExpr 0x3dee8a0 <col:11> 'int' lvalue Var 0x3dee730 'i' 'int'
+  |     |   `-IntegerLiteral 0x3dee8c0 <col:13> 'int' 4
+  |     `-BinaryOperator 0x3defe78 <col:18, col:73> 'unsigned long long' '^'
+  |       |-ImplicitCastExpr 0x3defdc0 <col:18, col:21> 'sc_dt::uint_type':'unsigned long long' <UserDefinedConversion>
+  |       | `-CXXMemberCallExpr 0x3defda0 <col:18, col:21> 'sc_dt::uint_type':'unsigned long long'
+  |       |   `-MemberExpr 0x3defd70 <col:18, col:21> '<bound member function type>' .operator unsigned long long 0x3704660
+  |       |     `-ImplicitCastExpr 0x3defd50 <col:18, col:21> 'const sc_dt::sc_uint_base' lvalue <UncheckedDerivedToBase (sc_uint_base)>
+  |       |       `-ArraySubscriptExpr 0x3dee9c0 <col:18, col:21> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  |       |         |-ImplicitCastExpr 0x3dee990 <col:18> 'sc_uint<32> *' <ArrayToPointerDecay>
+  |       |         | `-DeclRefExpr 0x3dee950 <col:18> 'sc_uint<32> [36]' lvalue Var 0x3da04b8 'X' 'sc_uint<32> [36]'
+  |       |         `-ImplicitCastExpr 0x3dee9a8 <col:20> 'int' <LValueToRValue>
+  |       |           `-DeclRefExpr 0x3dee970 <col:20> 'int' lvalue Var 0x3dee730 'i' 'int'
+  |       `-ImplicitCastExpr 0x3defe60 <col:25, col:73> 'sc_dt::uint_type':'unsigned long long' <UserDefinedConversion>
+  |         `-CXXMemberCallExpr 0x3defe40 <col:25, col:73> 'sc_dt::uint_type':'unsigned long long'
+  |           `-MemberExpr 0x3defe10 <col:25, col:73> '<bound member function type>' .operator unsigned long long 0x3704660
+  |             `-ImplicitCastExpr 0x3defdf0 <col:25, col:73> 'const sc_dt::sc_uint_base' lvalue <UncheckedDerivedToBase (sc_uint_base)>
+  |               `-MaterializeTemporaryExpr 0x3defdd8 <col:25, col:73> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  |                 `-CXXBindTemporaryExpr 0x3defa60 <col:25, col:73> 'sc_uint<32>':'sc_dt::sc_uint<32>' (CXXTemporary 0x3defa60)
+  |                   `-CallExpr 0x3def8d0 <col:25, col:73> 'sc_uint<32>':'sc_dt::sc_uint<32>'
+  |                     |-ImplicitCastExpr 0x3def8b8 <col:25> 'sc_uint<32> (*)(sc_uint<32>, bool)' <FunctionToPointerDecay>
+  |                     | `-DeclRefExpr 0x3def898 <col:25> 'sc_uint<32> (sc_uint<32>, bool)' lvalue Function 0x3dd0c28 'RoundF' 'sc_uint<32> (sc_uint<32>, bool)'
+  |                     |-CXXBindTemporaryExpr 0x3defa38 <col:32, col:65> 'sc_uint<32>':'sc_dt::sc_uint<32>' (CXXTemporary 0x3defa38)
+  |                     | `-CXXConstructExpr 0x3defa00 <col:32, col:65> 'sc_uint<32>':'sc_dt::sc_uint<32>' 'void (const sc_uint<32> &)' elidable
+  |                     |   `-MaterializeTemporaryExpr 0x3def9e8 <col:32, col:65> 'const sc_uint<32>':'const sc_dt::sc_uint<32>' lvalue
+  |                     |     `-ImplicitCastExpr 0x3def9d0 <col:32, col:65> 'const sc_uint<32>':'const sc_dt::sc_uint<32>' <NoOp>
+  |                     |       `-CXXBindTemporaryExpr 0x3def980 <col:32, col:65> 'sc_uint<32>':'sc_dt::sc_uint<32>' (CXXTemporary 0x3def980)
+  |                     |         `-ImplicitCastExpr 0x3def960 <col:32, col:65> 'sc_uint<32>':'sc_dt::sc_uint<32>' <ConstructorConversion>
+  |                     |           `-CXXConstructExpr 0x3def930 <col:32, col:65> 'sc_uint<32>':'sc_dt::sc_uint<32>' 'void (sc_dt::uint_type)'
+  |                     |             `-BinaryOperator 0x3def838 <col:32, col:65> 'unsigned long long' '^'
+  |                     |               |-BinaryOperator 0x3def3f0 <col:32, col:55> 'unsigned long long' '^'
+  |                     |               | |-BinaryOperator 0x3deefa8 <col:32, col:46> 'unsigned long long' '^'
+  |                     |               | | |-ImplicitCastExpr 0x3deef08 <col:32, col:37> 'sc_dt::uint_type':'unsigned long long' <UserDefinedConversion>
+  |                     |               | | | `-CXXMemberCallExpr 0x3deeee8 <col:32, col:37> 'sc_dt::uint_type':'unsigned long long'
+  |                     |               | | |   `-MemberExpr 0x3deeeb8 <col:32, col:37> '<bound member function type>' .operator unsigned long long 0x3704660
+  |                     |               | | |     `-ImplicitCastExpr 0x3deee98 <col:32, col:37> 'const sc_dt::sc_uint_base' lvalue <UncheckedDerivedToBase (sc_uint_base)>
+  |                     |               | | |       `-ArraySubscriptExpr 0x3deead8 <col:32, col:37> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  |                     |               | | |         |-ImplicitCastExpr 0x3deeac0 <col:32> 'sc_uint<32> *' <ArrayToPointerDecay>
+  |                     |               | | |         | `-DeclRefExpr 0x3deea28 <col:32> 'sc_uint<32> [36]' lvalue Var 0x3da04b8 'X' 'sc_uint<32> [36]'
+  |                     |               | | |         `-BinaryOperator 0x3deeaa0 <col:34, col:36> 'int' '+'
+  |                     |               | | |           |-ImplicitCastExpr 0x3deea88 <col:34> 'int' <LValueToRValue>
+  |                     |               | | |           | `-DeclRefExpr 0x3deea48 <col:34> 'int' lvalue Var 0x3dee730 'i' 'int'
+  |                     |               | | |           `-IntegerLiteral 0x3deea68 <col:36> 'int' 1
+  |                     |               | | `-ImplicitCastExpr 0x3deef90 <col:41, col:46> 'sc_dt::uint_type':'unsigned long long' <UserDefinedConversion>
+  |                     |               | |   `-CXXMemberCallExpr 0x3deef70 <col:41, col:46> 'sc_dt::uint_type':'unsigned long long'
+  |                     |               | |     `-MemberExpr 0x3deef40 <col:41, col:46> '<bound member function type>' .operator unsigned long long 0x3704660
+  |                     |               | |       `-ImplicitCastExpr 0x3deef20 <col:41, col:46> 'const sc_dt::sc_uint_base' lvalue <UncheckedDerivedToBase (sc_uint_base)>
+  |                     |               | |         `-ArraySubscriptExpr 0x3deeba8 <col:41, col:46> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  |                     |               | |           |-ImplicitCastExpr 0x3deeb90 <col:41> 'sc_uint<32> *' <ArrayToPointerDecay>
+  |                     |               | |           | `-DeclRefExpr 0x3deeaf8 <col:41> 'sc_uint<32> [36]' lvalue Var 0x3da04b8 'X' 'sc_uint<32> [36]'
+  |                     |               | |           `-BinaryOperator 0x3deeb70 <col:43, col:45> 'int' '+'
+  |                     |               | |             |-ImplicitCastExpr 0x3deeb58 <col:43> 'int' <LValueToRValue>
+  |                     |               | |             | `-DeclRefExpr 0x3deeb18 <col:43> 'int' lvalue Var 0x3dee730 'i' 'int'
+  |                     |               | |             `-IntegerLiteral 0x3deeb38 <col:45> 'int' 2
+  |                     |               | `-ImplicitCastExpr 0x3def3d8 <col:50, col:55> 'sc_dt::uint_type':'unsigned long long' <UserDefinedConversion>
+  |                     |               |   `-CXXMemberCallExpr 0x3def3b8 <col:50, col:55> 'sc_dt::uint_type':'unsigned long long'
+  |                     |               |     `-MemberExpr 0x3def388 <col:50, col:55> '<bound member function type>' .operator unsigned long long 0x3704660
+  |                     |               |       `-ImplicitCastExpr 0x3def368 <col:50, col:55> 'const sc_dt::sc_uint_base' lvalue <UncheckedDerivedToBase (sc_uint_base)>
+  |                     |               |         `-ArraySubscriptExpr 0x3def078 <col:50, col:55> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  |                     |               |           |-ImplicitCastExpr 0x3def060 <col:50> 'sc_uint<32> *' <ArrayToPointerDecay>
+  |                     |               |           | `-DeclRefExpr 0x3deefc8 <col:50> 'sc_uint<32> [36]' lvalue Var 0x3da04b8 'X' 'sc_uint<32> [36]'
+  |                     |               |           `-BinaryOperator 0x3def040 <col:52, col:54> 'int' '+'
+  |                     |               |             |-ImplicitCastExpr 0x3def028 <col:52> 'int' <LValueToRValue>
+  |                     |               |             | `-DeclRefExpr 0x3deefe8 <col:52> 'int' lvalue Var 0x3dee730 'i' 'int'
+  |                     |               |             `-IntegerLiteral 0x3def008 <col:54> 'int' 3
+  |                     |               `-ImplicitCastExpr 0x3def820 <col:59, col:65> 'sc_dt::uint_type':'unsigned long long' <UserDefinedConversion>
+  |                     |                 `-CXXMemberCallExpr 0x3def800 <col:59, col:65> 'sc_dt::uint_type':'unsigned long long'
+  |                     |                   `-MemberExpr 0x3def7d0 <col:59, col:65> '<bound member function type>' .operator unsigned long long 0x3704660
+  |                     |                     `-ImplicitCastExpr 0x3def7b0 <col:59, col:65> 'const sc_dt::sc_uint_base' lvalue <UncheckedDerivedToBase (sc_uint_base)>
+  |                     |                       `-ArraySubscriptExpr 0x3def4c0 <col:59, col:65> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  |                     |                         |-ImplicitCastExpr 0x3def4a8 <col:59> 'sc_uint<32> *' <ArrayToPointerDecay>
+  |                     |                         | `-DeclRefExpr 0x3def410 <col:59> 'sc_uint<32> [36]' lvalue Var 0x3d995a8 'rk' 'sc_uint<32> [36]'
+  |                     |                         `-BinaryOperator 0x3def488 <col:62, col:64> 'int' '+'
+  |                     |                           |-ImplicitCastExpr 0x3def470 <col:62> 'int' <LValueToRValue>
+  |                     |                           | `-DeclRefExpr 0x3def430 <col:62> 'int' lvalue Var 0x3dee730 'i' 'int'
+  |                     |                           `-IntegerLiteral 0x3def450 <col:64> 'int' 4
+  |                     `-CXXBoolLiteralExpr 0x3def858 <col:68> 'bool' false
+  |-CXXOperatorCallExpr 0x3e00050 <line:97:5, col:43> 'sc_biguint<128>':'sc_dt::sc_biguint<128>' lvalue '='
+  | |-ImplicitCastExpr 0x3e00038 <col:17> 'sc_biguint<128> &(*)(const sc_generic_base<sc_dt::sc_concatref> &)' <FunctionToPointerDecay>
+  | | `-DeclRefExpr 0x3dfffb8 <col:17> 'sc_biguint<128> &(const sc_generic_base<sc_dt::sc_concatref> &)' lvalue CXXMethod 0x3dffe20 'operator=' 'sc_biguint<128> &(const sc_generic_base<sc_dt::sc_concatref> &)'
+  | |-DeclRefExpr 0x3df0018 <col:5> 'sc_biguint<128>':'sc_dt::sc_biguint<128>' lvalue Var 0x3dd97c0 'data_finish' 'sc_biguint<128>':'sc_dt::sc_biguint<128>'
+  | `-ImplicitCastExpr 0x3dfff98 <col:19, col:43> 'const sc_generic_base<sc_dt::sc_concatref>':'const sc_dt::sc_generic_base<sc_dt::sc_concatref>' lvalue <DerivedToBase (sc_generic_base)>
+  |   `-ImplicitCastExpr 0x3dfff80 <col:19, col:43> 'const sc_dt::sc_concatref':'const sc_dt::sc_concatref' lvalue <NoOp>
+  |     `-ParenExpr 0x3dff810 <col:19, col:43> 'sc_dt::sc_concatref':'sc_dt::sc_concatref' lvalue
+  |       `-CXXOperatorCallExpr 0x3dff7d8 <col:20, col:42> 'sc_dt::sc_concatref':'sc_dt::sc_concatref' lvalue ',' adl
+  |         |-ImplicitCastExpr 0x3dff7c0 <col:37> 'sc_dt::sc_concatref &(*)(sc_dt::sc_value_base &, sc_dt::sc_value_base &)' <FunctionToPointerDecay>
+  |         | `-DeclRefExpr 0x3dff7a0 <col:37> 'sc_dt::sc_concatref &(sc_dt::sc_value_base &, sc_dt::sc_value_base &)' lvalue Function 0x3b3fa00 'operator,' 'sc_dt::sc_concatref &(sc_dt::sc_value_base &, sc_dt::sc_value_base &)'
+  |         |-ImplicitCastExpr 0x3dff758 <col:20, col:36> 'sc_dt::sc_value_base':'sc_dt::sc_value_base' lvalue <DerivedToBase (sc_value_base)>
+  |         | `-CXXOperatorCallExpr 0x3dfe0e8 <col:20, col:36> 'sc_dt::sc_concatref':'sc_dt::sc_concatref' lvalue ',' adl
+  |         |   |-ImplicitCastExpr 0x3dfe0d0 <col:31> 'sc_dt::sc_concatref &(*)(sc_dt::sc_value_base &, sc_dt::sc_value_base &)' <FunctionToPointerDecay>
+  |         |   | `-DeclRefExpr 0x3dfe0b0 <col:31> 'sc_dt::sc_concatref &(sc_dt::sc_value_base &, sc_dt::sc_value_base &)' lvalue Function 0x3b3fa00 'operator,' 'sc_dt::sc_concatref &(sc_dt::sc_value_base &, sc_dt::sc_value_base &)'
+  |         |   |-ImplicitCastExpr 0x3dfe068 <col:20, col:30> 'sc_dt::sc_value_base':'sc_dt::sc_value_base' lvalue <DerivedToBase (sc_value_base)>
+  |         |   | `-CXXOperatorCallExpr 0x3dfc9f8 <col:20, col:30> 'sc_dt::sc_concatref':'sc_dt::sc_concatref' lvalue ',' adl
+  |         |   |   |-ImplicitCastExpr 0x3dfc9e0 <col:25> 'sc_dt::sc_concatref &(*)(sc_dt::sc_value_base &, sc_dt::sc_value_base &)' <FunctionToPointerDecay>
+  |         |   |   | `-DeclRefExpr 0x3dfc9c0 <col:25> 'sc_dt::sc_concatref &(sc_dt::sc_value_base &, sc_dt::sc_value_base &)' lvalue Function 0x3b3fa00 'operator,' 'sc_dt::sc_concatref &(sc_dt::sc_value_base &, sc_dt::sc_value_base &)'
+  |         |   |   |-ImplicitCastExpr 0x3dfc970 <col:20, col:24> 'sc_dt::sc_value_base':'sc_dt::sc_value_base' lvalue <DerivedToBase (sc_uint_base -> sc_value_base)>
+  |         |   |   | `-ArraySubscriptExpr 0x3df0090 <col:20, col:24> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  |         |   |   |   |-ImplicitCastExpr 0x3df0078 <col:20> 'sc_uint<32> *' <ArrayToPointerDecay>
+  |         |   |   |   | `-DeclRefExpr 0x3df0038 <col:20> 'sc_uint<32> [36]' lvalue Var 0x3da04b8 'X' 'sc_uint<32> [36]'
+  |         |   |   |   `-IntegerLiteral 0x3df0058 <col:22> 'int' 35
+  |         |   |   `-ImplicitCastExpr 0x3dfc998 <col:26, col:30> 'sc_dt::sc_value_base':'sc_dt::sc_value_base' lvalue <DerivedToBase (sc_uint_base -> sc_value_base)>
+  |         |   |     `-ArraySubscriptExpr 0x3df0108 <col:26, col:30> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  |         |   |       |-ImplicitCastExpr 0x3df00f0 <col:26> 'sc_uint<32> *' <ArrayToPointerDecay>
+  |         |   |       | `-DeclRefExpr 0x3df00b0 <col:26> 'sc_uint<32> [36]' lvalue Var 0x3da04b8 'X' 'sc_uint<32> [36]'
+  |         |   |       `-IntegerLiteral 0x3df00d0 <col:28> 'int' 34
+  |         |   `-ImplicitCastExpr 0x3dfe088 <col:32, col:36> 'sc_dt::sc_value_base':'sc_dt::sc_value_base' lvalue <DerivedToBase (sc_uint_base -> sc_value_base)>
+  |         |     `-ArraySubscriptExpr 0x3dfca88 <col:32, col:36> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  |         |       |-ImplicitCastExpr 0x3dfca70 <col:32> 'sc_uint<32> *' <ArrayToPointerDecay>
+  |         |       | `-DeclRefExpr 0x3dfca30 <col:32> 'sc_uint<32> [36]' lvalue Var 0x3da04b8 'X' 'sc_uint<32> [36]'
+  |         |       `-IntegerLiteral 0x3dfca50 <col:34> 'int' 33
+  |         `-ImplicitCastExpr 0x3dff778 <col:38, col:42> 'sc_dt::sc_value_base':'sc_dt::sc_value_base' lvalue <DerivedToBase (sc_uint_base -> sc_value_base)>
+  |           `-ArraySubscriptExpr 0x3dfe178 <col:38, col:42> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  |             |-ImplicitCastExpr 0x3dfe160 <col:38> 'sc_uint<32> *' <ArrayToPointerDecay>
+  |             | `-DeclRefExpr 0x3dfe120 <col:38> 'sc_uint<32> [36]' lvalue Var 0x3da04b8 'X' 'sc_uint<32> [36]'
+  |             `-IntegerLiteral 0x3dfe140 <col:40> 'int' 32
+  |-CXXMemberCallExpr 0x3e00160 <line:98:5, col:31> 'void'
+  | |-MemberExpr 0x3e00110 <col:5, col:14> '<bound member function type>' .write 0x3d8ea28
+  | | `-ImplicitCastExpr 0x3e001b8 <col:5> 'sc_core::sc_inout<sc_dt::sc_biguint<128>>' lvalue <UncheckedDerivedToBase (sc_inout)>
+  | |   `-MemberExpr 0x3e000e0 <col:5> 'sc_out<sc_biguint<128>>':'sc_core::sc_out<sc_dt::sc_biguint<128>>' lvalue ->data_out 0x3d92608
+  | |     `-CXXThisExpr 0x3e000d0 <col:5> 'SM4 *' implicit this
+  | `-ImplicitCastExpr 0x3e001d8 <col:20> 'const sc_core::sc_inout<sc_dt::sc_biguint<128>>::data_type':'const sc_dt::sc_biguint<128>' lvalue <NoOp>
+  |   `-DeclRefExpr 0x3e00140 <col:20> 'sc_biguint<128>':'sc_dt::sc_biguint<128>' lvalue Var 0x3dd97c0 'data_finish' 'sc_biguint<128>':'sc_dt::sc_biguint<128>'
+  |-ExprWithCleanups 0x3e0a908 <line:100:5, col:238> 'std::basic_ostream<char>::__ostream_type':'std::basic_ostream<char>' lvalue
+  | `-CXXOperatorCallExpr 0x3e0a8d0 <col:5, col:238> 'std::basic_ostream<char>::__ostream_type':'std::basic_ostream<char>' lvalue '<<'
+  |   |-ImplicitCastExpr 0x3e0a8b8 <col:235> 'std::basic_ostream<char>::__ostream_type &(*)(std::basic_ostream<char>::__ostream_type &(*)(std::basic_ostream<char>::__ostream_type &))' <FunctionToPointerDecay>
+  |   | `-DeclRefExpr 0x3e0a898 <col:235> 'std::basic_ostream<char>::__ostream_type &(std::basic_ostream<char>::__ostream_type &(*)(std::basic_ostream<char>::__ostream_type &))' lvalue CXXMethod 0x28f0518 'operator<<' 'std::basic_ostream<char>::__ostream_type &(std::basic_ostream<char>::__ostream_type &(*)(std::basic_ostream<char>::__ostream_type &))'
+  |   |-CXXOperatorCallExpr 0x3e09d70 <col:5, col:233> 'std::basic_ostream<char>::__ostream_type':'std::basic_ostream<char>' lvalue '<<'
+  |   | |-ImplicitCastExpr 0x3e09d58 <col:197> 'std::basic_ostream<char>::__ostream_type &(*)(int)' <FunctionToPointerDecay>
+  |   | | `-DeclRefExpr 0x3e09d38 <col:197> 'std::basic_ostream<char>::__ostream_type &(int)' lvalue CXXMethod 0x28f14a8 'operator<<' 'std::basic_ostream<char>::__ostream_type &(int)'
+  |   | |-CXXOperatorCallExpr 0x3e08ae0 <col:5, col:195> 'std::basic_ostream<char>::__ostream_type':'std::basic_ostream<char>' lvalue '<<'
+  |   | | |-ImplicitCastExpr 0x3e08ac8 <col:158> 'std::basic_ostream<char>::__ostream_type &(*)(int)' <FunctionToPointerDecay>
+  |   | | | `-DeclRefExpr 0x3e08aa8 <col:158> 'std::basic_ostream<char>::__ostream_type &(int)' lvalue CXXMethod 0x28f14a8 'operator<<' 'std::basic_ostream<char>::__ostream_type &(int)'
+  |   | | |-CXXOperatorCallExpr 0x3e07850 <col:5, col:156> 'std::basic_ostream<char>::__ostream_type':'std::basic_ostream<char>' lvalue '<<'
+  |   | | | |-ImplicitCastExpr 0x3e07838 <col:119> 'std::basic_ostream<char>::__ostream_type &(*)(int)' <FunctionToPointerDecay>
+  |   | | | | `-DeclRefExpr 0x3e07818 <col:119> 'std::basic_ostream<char>::__ostream_type &(int)' lvalue CXXMethod 0x28f14a8 'operator<<' 'std::basic_ostream<char>::__ostream_type &(int)'
+  |   | | | |-CXXOperatorCallExpr 0x3e065c0 <col:5, col:117> 'std::basic_ostream<char>::__ostream_type':'std::basic_ostream<char>' lvalue '<<'
+  |   | | | | |-ImplicitCastExpr 0x3e065a8 <col:79> 'std::basic_ostream<char>::__ostream_type &(*)(int)' <FunctionToPointerDecay>
+  |   | | | | | `-DeclRefExpr 0x3e06588 <col:79> 'std::basic_ostream<char>::__ostream_type &(int)' lvalue CXXMethod 0x28f14a8 'operator<<' 'std::basic_ostream<char>::__ostream_type &(int)'
+  |   | | | | |-CXXOperatorCallExpr 0x3e05338 <col:5, col:61> 'basic_ostream<char>':'std::basic_ostream<char>' lvalue '<<' adl
+  |   | | | | | |-ImplicitCastExpr 0x3e05320 <col:58> 'basic_ostream<char> &(*)(basic_ostream<char> &, const char *)' <FunctionToPointerDecay>
+  |   | | | | | | `-DeclRefExpr 0x3e05300 <col:58> 'basic_ostream<char> &(basic_ostream<char> &, const char *)' lvalue Function 0x28f87c8 'operator<<' 'basic_ostream<char> &(basic_ostream<char> &, const char *)'
+  |   | | | | | |-CXXOperatorCallExpr 0x3e03758 <col:5, col:53> 'basic_ostream<char>':'std::basic_ostream<char>' lvalue '<<' adl
+  |   | | | | | | |-ImplicitCastExpr 0x3e03740 <col:50> 'basic_ostream<char> &(*)(basic_ostream<char> &, const char *)' <FunctionToPointerDecay>
+  |   | | | | | | | `-DeclRefExpr 0x3e03720 <col:50> 'basic_ostream<char> &(basic_ostream<char> &, const char *)' lvalue Function 0x28f87c8 'operator<<' 'basic_ostream<char> &(basic_ostream<char> &, const char *)'
+  |   | | | | | | |-CXXOperatorCallExpr 0x3e029d0 <col:5, col:48> '::std::ostream':'std::basic_ostream<char>' lvalue '<<'
+  |   | | | | | | | |-ImplicitCastExpr 0x3e029b8 <col:31> '::std::ostream &(*)(::std::ostream &, const sc_core::sc_time &)' <FunctionToPointerDecay>
+  |   | | | | | | | | `-DeclRefExpr 0x3e02998 <col:31> '::std::ostream &(::std::ostream &, const sc_core::sc_time &)' lvalue Function 0x309c778 'operator<<' '::std::ostream &(::std::ostream &, const sc_core::sc_time &)'
+  |   | | | | | | | |-CXXOperatorCallExpr 0x3e01c88 <col:5, col:20> 'basic_ostream<char>':'std::basic_ostream<char>' lvalue '<<' adl
+  |   | | | | | | | | |-ImplicitCastExpr 0x3e01c70 <col:17> 'basic_ostream<char> &(*)(basic_ostream<char> &, const char *)' <FunctionToPointerDecay>
+  |   | | | | | | | | | `-DeclRefExpr 0x3e01c50 <col:17> 'basic_ostream<char> &(basic_ostream<char> &, const char *)' lvalue Function 0x28f87c8 'operator<<' 'basic_ostream<char> &(basic_ostream<char> &, const char *)'
+  |   | | | | | | | | |-CXXOperatorCallExpr 0x3e00ef8 <col:5, col:13> 'std::basic_ostream<char>::__ostream_type':'std::basic_ostream<char>' lvalue '<<'
+  |   | | | | | | | | | |-ImplicitCastExpr 0x3e00ee0 <col:10> 'std::basic_ostream<char>::__ostream_type &(*)(std::ios_base &(*)(std::ios_base &))' <FunctionToPointerDecay>
+  |   | | | | | | | | | | `-DeclRefExpr 0x3e00ec0 <col:10> 'std::basic_ostream<char>::__ostream_type &(std::ios_base &(*)(std::ios_base &))' lvalue CXXMethod 0x28f0a88 'operator<<' 'std::basic_ostream<char>::__ostream_type &(std::ios_base &(*)(std::ios_base &))'
+  |   | | | | | | | | | |-DeclRefExpr 0x3e001f0 <col:5> 'std::ostream':'std::basic_ostream<char>' lvalue Var 0x2a4d718 'cout' 'std::ostream':'std::basic_ostream<char>' (UsingShadow 0x2e1c5d8 'cout')
+  |   | | | | | | | | | `-ImplicitCastExpr 0x3e00ea8 <col:13> 'std::ios_base &(*)(std::ios_base &)' <FunctionToPointerDecay>
+  |   | | | | | | | | |   `-DeclRefExpr 0x3e00218 <col:13> 'std::ios_base &(std::ios_base &)' lvalue Function 0x2784908 'hex' 'std::ios_base &(std::ios_base &)' (UsingShadow 0x2e1c948 'hex')
+  |   | | | | | | | | `-ImplicitCastExpr 0x3e01c38 <col:20> 'const char *' <ArrayToPointerDecay>
+  |   | | | | | | | |   `-StringLiteral 0x3e00f30 <col:20> 'const char [9]' lvalue "AT time "
+  |   | | | | | | | `-CallExpr 0x3e01d40 <col:34, col:48> 'const sc_core::sc_time' lvalue
+  |   | | | | | | |   `-ImplicitCastExpr 0x3e01d28 <col:34> 'const sc_core::sc_time &(*)()' <FunctionToPointerDecay>
+  |   | | | | | | |     `-DeclRefExpr 0x3e01d08 <col:34> 'const sc_core::sc_time &()' lvalue Function 0x313de08 'sc_time_stamp' 'const sc_core::sc_time &()'
+  |   | | | | | | `-ImplicitCastExpr 0x3e03708 <col:53> 'const char *' <ArrayToPointerDecay>
+  |   | | | | | |   `-StringLiteral 0x3e02a08 <col:53> 'const char [3]' lvalue "::"
+  |   | | | | | `-ImplicitCastExpr 0x3e052e8 <col:61> 'const char *' <ArrayToPointerDecay>
+  |   | | | | |   `-StringLiteral 0x3e03790 <col:61> 'const char [16]' lvalue "data_enc_in: 0x"
+  |   | | | | `-CStyleCastExpr 0x3e05860 <col:82, col:117> 'int' <NoOp>
+  |   | | | |   `-ImplicitCastExpr 0x3e05848 <col:87, col:117> 'int' <IntegralCast> part_of_explicit_cast
+  |   | | | |     `-ImplicitCastExpr 0x3e05830 <col:87, col:117> 'sc_dt::uint_type':'unsigned long long' <UserDefinedConversion> part_of_explicit_cast
+  |   | | | |       `-CXXMemberCallExpr 0x3e05810 <col:87, col:117> 'sc_dt::uint_type':'unsigned long long'
+  |   | | | |         `-MemberExpr 0x3e057e0 <col:87, col:117> '<bound member function type>' .operator unsigned long long 0x3704660
+  |   | | | |           `-ImplicitCastExpr 0x3e057c0 <col:87, col:117> 'const sc_dt::sc_uint_base' lvalue <UncheckedDerivedToBase (sc_uint_base)>
+  |   | | | |             `-MaterializeTemporaryExpr 0x3e057a8 <col:87, col:117> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  |   | | | |               `-CStyleCastExpr 0x3e05768 <col:87, col:117> 'sc_uint<32>':'sc_dt::sc_uint<32>' <ConstructorConversion>
+  |   | | | |                 `-CXXBindTemporaryExpr 0x3e05748 <col:87, col:117> 'sc_uint<32>':'sc_dt::sc_uint<32>' (CXXTemporary 0x3e05748)
+  |   | | | |                   `-CXXConstructExpr 0x3e05710 <col:87, col:117> 'sc_uint<32>':'sc_dt::sc_uint<32>' 'void (const sc_dt::sc_unsigned &)'
+  |   | | | |                     `-MaterializeTemporaryExpr 0x3e056f8 <col:100, col:117> 'const sc_dt::sc_unsigned' lvalue
+  |   | | | |                       `-ImplicitCastExpr 0x3e056e0 <col:100, col:117> 'const sc_dt::sc_unsigned' <NoOp>
+  |   | | | |                         `-CXXBindTemporaryExpr 0x3e056c0 <col:100, col:117> 'sc_dt::sc_unsigned' (CXXTemporary 0x3e056c0)
+  |   | | | |                           `-ImplicitCastExpr 0x3e056a0 <col:100, col:117> 'sc_dt::sc_unsigned' <UserDefinedConversion>
+  |   | | | |                             `-CXXMemberCallExpr 0x3e05680 <col:100, col:117> 'sc_dt::sc_unsigned'
+  |   | | | |                               `-MemberExpr 0x3e05650 <col:100, col:117> '<bound member function type>' .operator sc_unsigned 0x35ccea8
+  |   | | | |                                 `-ImplicitCastExpr 0x3e05630 <col:100, col:117> 'const sc_dt::sc_unsigned_subref_r' lvalue <UncheckedDerivedToBase (sc_unsigned_subref_r)>
+  |   | | | |                                   `-CXXMemberCallExpr 0x3e05500 <col:100, col:117> 'sc_dt::sc_unsigned_subref' lvalue
+  |   | | | |                                     |-MemberExpr 0x3e054d0 <col:100, col:105> '<bound member function type>' .range 0x35d9848
+  |   | | | |                                     | `-ImplicitCastExpr 0x3e05530 <col:100> 'sc_dt::sc_unsigned' lvalue <UncheckedDerivedToBase (sc_unsigned)>
+  |   | | | |                                     |   `-DeclRefExpr 0x3e05410 <col:100> 'sc_biguint<128>':'sc_dt::sc_biguint<128>' lvalue Var 0x3dd9650 'data' 'sc_biguint<128>':'sc_dt::sc_biguint<128>'
+  |   | | | |                                     |-IntegerLiteral 0x3e05490 <col:111> 'int' 127
+  |   | | | |                                     `-IntegerLiteral 0x3e054b0 <col:115> 'int' 96
+  |   | | | `-CStyleCastExpr 0x3e06af0 <col:122, col:156> 'int' <NoOp>
+  |   | | |   `-ImplicitCastExpr 0x3e06ad8 <col:127, col:156> 'int' <IntegralCast> part_of_explicit_cast
+  |   | | |     `-ImplicitCastExpr 0x3e06ac0 <col:127, col:156> 'sc_dt::uint_type':'unsigned long long' <UserDefinedConversion> part_of_explicit_cast
+  |   | | |       `-CXXMemberCallExpr 0x3e06aa0 <col:127, col:156> 'sc_dt::uint_type':'unsigned long long'
+  |   | | |         `-MemberExpr 0x3e06a70 <col:127, col:156> '<bound member function type>' .operator unsigned long long 0x3704660
+  |   | | |           `-ImplicitCastExpr 0x3e06a50 <col:127, col:156> 'const sc_dt::sc_uint_base' lvalue <UncheckedDerivedToBase (sc_uint_base)>
+  |   | | |             `-MaterializeTemporaryExpr 0x3e06a38 <col:127, col:156> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  |   | | |               `-CStyleCastExpr 0x3e069f8 <col:127, col:156> 'sc_uint<32>':'sc_dt::sc_uint<32>' <ConstructorConversion>
+  |   | | |                 `-CXXBindTemporaryExpr 0x3e069d8 <col:127, col:156> 'sc_uint<32>':'sc_dt::sc_uint<32>' (CXXTemporary 0x3e069d8)
+  |   | | |                   `-CXXConstructExpr 0x3e069a0 <col:127, col:156> 'sc_uint<32>':'sc_dt::sc_uint<32>' 'void (const sc_dt::sc_unsigned &)'
+  |   | | |                     `-MaterializeTemporaryExpr 0x3e06988 <col:140, col:156> 'const sc_dt::sc_unsigned' lvalue
+  |   | | |                       `-ImplicitCastExpr 0x3e06970 <col:140, col:156> 'const sc_dt::sc_unsigned' <NoOp>
+  |   | | |                         `-CXXBindTemporaryExpr 0x3e06950 <col:140, col:156> 'sc_dt::sc_unsigned' (CXXTemporary 0x3e06950)
+  |   | | |                           `-ImplicitCastExpr 0x3e06930 <col:140, col:156> 'sc_dt::sc_unsigned' <UserDefinedConversion>
+  |   | | |                             `-CXXMemberCallExpr 0x3e06910 <col:140, col:156> 'sc_dt::sc_unsigned'
+  |   | | |                               `-MemberExpr 0x3e068e0 <col:140, col:156> '<bound member function type>' .operator sc_unsigned 0x35ccea8
+  |   | | |                                 `-ImplicitCastExpr 0x3e068c0 <col:140, col:156> 'const sc_dt::sc_unsigned_subref_r' lvalue <UncheckedDerivedToBase (sc_unsigned_subref_r)>
+  |   | | |                                   `-CXXMemberCallExpr 0x3e06790 <col:140, col:156> 'sc_dt::sc_unsigned_subref' lvalue
+  |   | | |                                     |-MemberExpr 0x3e06760 <col:140, col:145> '<bound member function type>' .range 0x35d9848
+  |   | | |                                     | `-ImplicitCastExpr 0x3e067c0 <col:140> 'sc_dt::sc_unsigned' lvalue <UncheckedDerivedToBase (sc_unsigned)>
+  |   | | |                                     |   `-DeclRefExpr 0x3e066a0 <col:140> 'sc_biguint<128>':'sc_dt::sc_biguint<128>' lvalue Var 0x3dd9650 'data' 'sc_biguint<128>':'sc_dt::sc_biguint<128>'
+  |   | | |                                     |-IntegerLiteral 0x3e06720 <col:151> 'int' 95
+  |   | | |                                     `-IntegerLiteral 0x3e06740 <col:154> 'int' 64
+  |   | | `-CStyleCastExpr 0x3e07d80 <col:161, col:195> 'int' <NoOp>
+  |   | |   `-ImplicitCastExpr 0x3e07d68 <col:166, col:195> 'int' <IntegralCast> part_of_explicit_cast
+  |   | |     `-ImplicitCastExpr 0x3e07d50 <col:166, col:195> 'sc_dt::uint_type':'unsigned long long' <UserDefinedConversion> part_of_explicit_cast
+  |   | |       `-CXXMemberCallExpr 0x3e07d30 <col:166, col:195> 'sc_dt::uint_type':'unsigned long long'
+  |   | |         `-MemberExpr 0x3e07d00 <col:166, col:195> '<bound member function type>' .operator unsigned long long 0x3704660
+  |   | |           `-ImplicitCastExpr 0x3e07ce0 <col:166, col:195> 'const sc_dt::sc_uint_base' lvalue <UncheckedDerivedToBase (sc_uint_base)>
+  |   | |             `-MaterializeTemporaryExpr 0x3e07cc8 <col:166, col:195> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  |   | |               `-CStyleCastExpr 0x3e07c88 <col:166, col:195> 'sc_uint<32>':'sc_dt::sc_uint<32>' <ConstructorConversion>
+  |   | |                 `-CXXBindTemporaryExpr 0x3e07c68 <col:166, col:195> 'sc_uint<32>':'sc_dt::sc_uint<32>' (CXXTemporary 0x3e07c68)
+  |   | |                   `-CXXConstructExpr 0x3e07c30 <col:166, col:195> 'sc_uint<32>':'sc_dt::sc_uint<32>' 'void (const sc_dt::sc_unsigned &)'
+  |   | |                     `-MaterializeTemporaryExpr 0x3e07c18 <col:179, col:195> 'const sc_dt::sc_unsigned' lvalue
+  |   | |                       `-ImplicitCastExpr 0x3e07c00 <col:179, col:195> 'const sc_dt::sc_unsigned' <NoOp>
+  |   | |                         `-CXXBindTemporaryExpr 0x3e07be0 <col:179, col:195> 'sc_dt::sc_unsigned' (CXXTemporary 0x3e07be0)
+  |   | |                           `-ImplicitCastExpr 0x3e07bc0 <col:179, col:195> 'sc_dt::sc_unsigned' <UserDefinedConversion>
+  |   | |                             `-CXXMemberCallExpr 0x3e07ba0 <col:179, col:195> 'sc_dt::sc_unsigned'
+  |   | |                               `-MemberExpr 0x3e07b70 <col:179, col:195> '<bound member function type>' .operator sc_unsigned 0x35ccea8
+  |   | |                                 `-ImplicitCastExpr 0x3e07b50 <col:179, col:195> 'const sc_dt::sc_unsigned_subref_r' lvalue <UncheckedDerivedToBase (sc_unsigned_subref_r)>
+  |   | |                                   `-CXXMemberCallExpr 0x3e07a20 <col:179, col:195> 'sc_dt::sc_unsigned_subref' lvalue
+  |   | |                                     |-MemberExpr 0x3e079f0 <col:179, col:184> '<bound member function type>' .range 0x35d9848
+  |   | |                                     | `-ImplicitCastExpr 0x3e07a50 <col:179> 'sc_dt::sc_unsigned' lvalue <UncheckedDerivedToBase (sc_unsigned)>
+  |   | |                                     |   `-DeclRefExpr 0x3e07930 <col:179> 'sc_biguint<128>':'sc_dt::sc_biguint<128>' lvalue Var 0x3dd9650 'data' 'sc_biguint<128>':'sc_dt::sc_biguint<128>'
+  |   | |                                     |-IntegerLiteral 0x3e079b0 <col:190> 'int' 63
+  |   | |                                     `-IntegerLiteral 0x3e079d0 <col:193> 'int' 32
+  |   | `-CStyleCastExpr 0x3e09010 <col:200, col:233> 'int' <NoOp>
+  |   |   `-ImplicitCastExpr 0x3e08ff8 <col:205, col:233> 'int' <IntegralCast> part_of_explicit_cast
+  |   |     `-ImplicitCastExpr 0x3e08fe0 <col:205, col:233> 'sc_dt::uint_type':'unsigned long long' <UserDefinedConversion> part_of_explicit_cast
+  |   |       `-CXXMemberCallExpr 0x3e08fc0 <col:205, col:233> 'sc_dt::uint_type':'unsigned long long'
+  |   |         `-MemberExpr 0x3e08f90 <col:205, col:233> '<bound member function type>' .operator unsigned long long 0x3704660
+  |   |           `-ImplicitCastExpr 0x3e08f70 <col:205, col:233> 'const sc_dt::sc_uint_base' lvalue <UncheckedDerivedToBase (sc_uint_base)>
+  |   |             `-MaterializeTemporaryExpr 0x3e08f58 <col:205, col:233> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  |   |               `-CStyleCastExpr 0x3e08f18 <col:205, col:233> 'sc_uint<32>':'sc_dt::sc_uint<32>' <ConstructorConversion>
+  |   |                 `-CXXBindTemporaryExpr 0x3e08ef8 <col:205, col:233> 'sc_uint<32>':'sc_dt::sc_uint<32>' (CXXTemporary 0x3e08ef8)
+  |   |                   `-CXXConstructExpr 0x3e08ec0 <col:205, col:233> 'sc_uint<32>':'sc_dt::sc_uint<32>' 'void (const sc_dt::sc_unsigned &)'
+  |   |                     `-MaterializeTemporaryExpr 0x3e08ea8 <col:218, col:233> 'const sc_dt::sc_unsigned' lvalue
+  |   |                       `-ImplicitCastExpr 0x3e08e90 <col:218, col:233> 'const sc_dt::sc_unsigned' <NoOp>
+  |   |                         `-CXXBindTemporaryExpr 0x3e08e70 <col:218, col:233> 'sc_dt::sc_unsigned' (CXXTemporary 0x3e08e70)
+  |   |                           `-ImplicitCastExpr 0x3e08e50 <col:218, col:233> 'sc_dt::sc_unsigned' <UserDefinedConversion>
+  |   |                             `-CXXMemberCallExpr 0x3e08e30 <col:218, col:233> 'sc_dt::sc_unsigned'
+  |   |                               `-MemberExpr 0x3e08e00 <col:218, col:233> '<bound member function type>' .operator sc_unsigned 0x35ccea8
+  |   |                                 `-ImplicitCastExpr 0x3e08de0 <col:218, col:233> 'const sc_dt::sc_unsigned_subref_r' lvalue <UncheckedDerivedToBase (sc_unsigned_subref_r)>
+  |   |                                   `-CXXMemberCallExpr 0x3e08cb0 <col:218, col:233> 'sc_dt::sc_unsigned_subref' lvalue
+  |   |                                     |-MemberExpr 0x3e08c80 <col:218, col:223> '<bound member function type>' .range 0x35d9848
+  |   |                                     | `-ImplicitCastExpr 0x3e08ce0 <col:218> 'sc_dt::sc_unsigned' lvalue <UncheckedDerivedToBase (sc_unsigned)>
+  |   |                                     |   `-DeclRefExpr 0x3e08bc0 <col:218> 'sc_biguint<128>':'sc_dt::sc_biguint<128>' lvalue Var 0x3dd9650 'data' 'sc_biguint<128>':'sc_dt::sc_biguint<128>'
+  |   |                                     |-IntegerLiteral 0x3e08c40 <col:229> 'int' 31
+  |   |                                     `-IntegerLiteral 0x3e08c60 <col:232> 'int' 0
+  |   `-ImplicitCastExpr 0x3e0a880 <col:238> 'basic_ostream<char> &(*)(basic_ostream<char> &)' <FunctionToPointerDecay>
+  |     `-DeclRefExpr 0x3e0a858 <col:238> 'basic_ostream<char> &(basic_ostream<char> &)' lvalue Function 0x28f4b08 'endl' 'basic_ostream<char> &(basic_ostream<char> &)' (UsingShadow 0x2e1c738 'endl')
+  |-ExprWithCleanups 0x3e15de8 <line:101:5, col:278> 'std::basic_ostream<char>::__ostream_type':'std::basic_ostream<char>' lvalue
+  | `-CXXOperatorCallExpr 0x3e15db0 <col:5, col:278> 'std::basic_ostream<char>::__ostream_type':'std::basic_ostream<char>' lvalue '<<'
+  |   |-ImplicitCastExpr 0x3e15d98 <col:275> 'std::basic_ostream<char>::__ostream_type &(*)(std::basic_ostream<char>::__ostream_type &(*)(std::basic_ostream<char>::__ostream_type &))' <FunctionToPointerDecay>
+  |   | `-DeclRefExpr 0x3e15d78 <col:275> 'std::basic_ostream<char>::__ostream_type &(std::basic_ostream<char>::__ostream_type &(*)(std::basic_ostream<char>::__ostream_type &))' lvalue CXXMethod 0x28f0518 'operator<<' 'std::basic_ostream<char>::__ostream_type &(std::basic_ostream<char>::__ostream_type &(*)(std::basic_ostream<char>::__ostream_type &))'
+  |   |-CXXOperatorCallExpr 0x3e15250 <col:5, col:270> 'basic_ostream<char>':'std::basic_ostream<char>' lvalue '<<' adl
+  |   | |-ImplicitCastExpr 0x3e15238 <col:267> 'basic_ostream<char> &(*)(basic_ostream<char> &, char)' <FunctionToPointerDecay>
+  |   | | `-DeclRefExpr 0x3e15218 <col:267> 'basic_ostream<char> &(basic_ostream<char> &, char)' lvalue Function 0x28f64e8 'operator<<' 'basic_ostream<char> &(basic_ostream<char> &, char)'
+  |   | |-CXXOperatorCallExpr 0x3e144b0 <col:5, col:265> 'std::basic_ostream<char>::__ostream_type':'std::basic_ostream<char>' lvalue '<<'
+  |   | | |-ImplicitCastExpr 0x3e14498 <col:222> 'std::basic_ostream<char>::__ostream_type &(*)(int)' <FunctionToPointerDecay>
+  |   | | | `-DeclRefExpr 0x3e14478 <col:222> 'std::basic_ostream<char>::__ostream_type &(int)' lvalue CXXMethod 0x28f14a8 'operator<<' 'std::basic_ostream<char>::__ostream_type &(int)'
+  |   | | |-CXXOperatorCallExpr 0x3e13220 <col:5, col:220> 'std::basic_ostream<char>::__ostream_type':'std::basic_ostream<char>' lvalue '<<'
+  |   | | | |-ImplicitCastExpr 0x3e13208 <col:176> 'std::basic_ostream<char>::__ostream_type &(*)(int)' <FunctionToPointerDecay>
+  |   | | | | `-DeclRefExpr 0x3e131e8 <col:176> 'std::basic_ostream<char>::__ostream_type &(int)' lvalue CXXMethod 0x28f14a8 'operator<<' 'std::basic_ostream<char>::__ostream_type &(int)'
+  |   | | | |-CXXOperatorCallExpr 0x3e11f90 <col:5, col:174> 'std::basic_ostream<char>::__ostream_type':'std::basic_ostream<char>' lvalue '<<'
+  |   | | | | |-ImplicitCastExpr 0x3e11f78 <col:130> 'std::basic_ostream<char>::__ostream_type &(*)(int)' <FunctionToPointerDecay>
+  |   | | | | | `-DeclRefExpr 0x3e11f58 <col:130> 'std::basic_ostream<char>::__ostream_type &(int)' lvalue CXXMethod 0x28f14a8 'operator<<' 'std::basic_ostream<char>::__ostream_type &(int)'
+  |   | | | | |-CXXOperatorCallExpr 0x3e10d00 <col:5, col:128> 'std::basic_ostream<char>::__ostream_type':'std::basic_ostream<char>' lvalue '<<'
+  |   | | | | | |-ImplicitCastExpr 0x3e10ce8 <col:83> 'std::basic_ostream<char>::__ostream_type &(*)(int)' <FunctionToPointerDecay>
+  |   | | | | | | `-DeclRefExpr 0x3e10cc8 <col:83> 'std::basic_ostream<char>::__ostream_type &(int)' lvalue CXXMethod 0x28f14a8 'operator<<' 'std::basic_ostream<char>::__ostream_type &(int)'
+  |   | | | | | |-CXXOperatorCallExpr 0x3e0fa78 <col:5, col:61> 'basic_ostream<char>':'std::basic_ostream<char>' lvalue '<<' adl
+  |   | | | | | | |-ImplicitCastExpr 0x3e0fa60 <col:58> 'basic_ostream<char> &(*)(basic_ostream<char> &, const char *)' <FunctionToPointerDecay>
+  |   | | | | | | | `-DeclRefExpr 0x3e0fa40 <col:58> 'basic_ostream<char> &(basic_ostream<char> &, const char *)' lvalue Function 0x28f87c8 'operator<<' 'basic_ostream<char> &(basic_ostream<char> &, const char *)'
+  |   | | | | | | |-CXXOperatorCallExpr 0x3e0de88 <col:5, col:53> 'basic_ostream<char>':'std::basic_ostream<char>' lvalue '<<' adl
+  |   | | | | | | | |-ImplicitCastExpr 0x3e0de70 <col:50> 'basic_ostream<char> &(*)(basic_ostream<char> &, const char *)' <FunctionToPointerDecay>
+  |   | | | | | | | | `-DeclRefExpr 0x3e0de50 <col:50> 'basic_ostream<char> &(basic_ostream<char> &, const char *)' lvalue Function 0x28f87c8 'operator<<' 'basic_ostream<char> &(basic_ostream<char> &, const char *)'
+  |   | | | | | | | |-CXXOperatorCallExpr 0x3e0d100 <col:5, col:48> '::std::ostream':'std::basic_ostream<char>' lvalue '<<'
+  |   | | | | | | | | |-ImplicitCastExpr 0x3e0d0e8 <col:31> '::std::ostream &(*)(::std::ostream &, const sc_core::sc_time &)' <FunctionToPointerDecay>
+  |   | | | | | | | | | `-DeclRefExpr 0x3e0d0c8 <col:31> '::std::ostream &(::std::ostream &, const sc_core::sc_time &)' lvalue Function 0x309c778 'operator<<' '::std::ostream &(::std::ostream &, const sc_core::sc_time &)'
+  |   | | | | | | | | |-CXXOperatorCallExpr 0x3e0c3b8 <col:5, col:20> 'basic_ostream<char>':'std::basic_ostream<char>' lvalue '<<' adl
+  |   | | | | | | | | | |-ImplicitCastExpr 0x3e0c3a0 <col:17> 'basic_ostream<char> &(*)(basic_ostream<char> &, const char *)' <FunctionToPointerDecay>
+  |   | | | | | | | | | | `-DeclRefExpr 0x3e0c380 <col:17> 'basic_ostream<char> &(basic_ostream<char> &, const char *)' lvalue Function 0x28f87c8 'operator<<' 'basic_ostream<char> &(basic_ostream<char> &, const char *)'
+  |   | | | | | | | | | |-CXXOperatorCallExpr 0x3e0b628 <col:5, col:13> 'std::basic_ostream<char>::__ostream_type':'std::basic_ostream<char>' lvalue '<<'
+  |   | | | | | | | | | | |-ImplicitCastExpr 0x3e0b610 <col:10> 'std::basic_ostream<char>::__ostream_type &(*)(std::ios_base &(*)(std::ios_base &))' <FunctionToPointerDecay>
+  |   | | | | | | | | | | | `-DeclRefExpr 0x3e0b5f0 <col:10> 'std::basic_ostream<char>::__ostream_type &(std::ios_base &(*)(std::ios_base &))' lvalue CXXMethod 0x28f0a88 'operator<<' 'std::basic_ostream<char>::__ostream_type &(std::ios_base &(*)(std::ios_base &))'
+  |   | | | | | | | | | | |-DeclRefExpr 0x3e0a920 <col:5> 'std::ostream':'std::basic_ostream<char>' lvalue Var 0x2a4d718 'cout' 'std::ostream':'std::basic_ostream<char>' (UsingShadow 0x2e1c5d8 'cout')
+  |   | | | | | | | | | | `-ImplicitCastExpr 0x3e0b5d8 <col:13> 'std::ios_base &(*)(std::ios_base &)' <FunctionToPointerDecay>
+  |   | | | | | | | | | |   `-DeclRefExpr 0x3e0a948 <col:13> 'std::ios_base &(std::ios_base &)' lvalue Function 0x2784908 'hex' 'std::ios_base &(std::ios_base &)' (UsingShadow 0x2e1c948 'hex')
+  |   | | | | | | | | | `-ImplicitCastExpr 0x3e0c368 <col:20> 'const char *' <ArrayToPointerDecay>
+  |   | | | | | | | | |   `-StringLiteral 0x3e0b660 <col:20> 'const char [9]' lvalue "AT time "
+  |   | | | | | | | | `-CallExpr 0x3e0c470 <col:34, col:48> 'const sc_core::sc_time' lvalue
+  |   | | | | | | | |   `-ImplicitCastExpr 0x3e0c458 <col:34> 'const sc_core::sc_time &(*)()' <FunctionToPointerDecay>
+  |   | | | | | | | |     `-DeclRefExpr 0x3e0c438 <col:34> 'const sc_core::sc_time &()' lvalue Function 0x313de08 'sc_time_stamp' 'const sc_core::sc_time &()'
+  |   | | | | | | | `-ImplicitCastExpr 0x3e0de38 <col:53> 'const char *' <ArrayToPointerDecay>
+  |   | | | | | | |   `-StringLiteral 0x3e0d138 <col:53> 'const char [3]' lvalue "::"
+  |   | | | | | | `-ImplicitCastExpr 0x3e0fa28 <col:61> 'const char *' <ArrayToPointerDecay>
+  |   | | | | | |   `-StringLiteral 0x3e0dec0 <col:61> 'const char [20]' lvalue "data_enc_finish: 0x"
+  |   | | | | | `-CStyleCastExpr 0x3e0ffa0 <col:86, col:128> 'int' <NoOp>
+  |   | | | | |   `-ImplicitCastExpr 0x3e0ff88 <col:91, col:128> 'int' <IntegralCast> part_of_explicit_cast
+  |   | | | | |     `-ImplicitCastExpr 0x3e0ff70 <col:91, col:128> 'sc_dt::uint_type':'unsigned long long' <UserDefinedConversion> part_of_explicit_cast
+  |   | | | | |       `-CXXMemberCallExpr 0x3e0ff50 <col:91, col:128> 'sc_dt::uint_type':'unsigned long long'
+  |   | | | | |         `-MemberExpr 0x3e0ff20 <col:91, col:128> '<bound member function type>' .operator unsigned long long 0x3704660
+  |   | | | | |           `-ImplicitCastExpr 0x3e0ff00 <col:91, col:128> 'const sc_dt::sc_uint_base' lvalue <UncheckedDerivedToBase (sc_uint_base)>
+  |   | | | | |             `-MaterializeTemporaryExpr 0x3e0fee8 <col:91, col:128> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  |   | | | | |               `-CStyleCastExpr 0x3e0fea8 <col:91, col:128> 'sc_uint<32>':'sc_dt::sc_uint<32>' <ConstructorConversion>
+  |   | | | | |                 `-CXXBindTemporaryExpr 0x3e0fe88 <col:91, col:128> 'sc_uint<32>':'sc_dt::sc_uint<32>' (CXXTemporary 0x3e0fe88)
+  |   | | | | |                   `-CXXConstructExpr 0x3e0fe50 <col:91, col:128> 'sc_uint<32>':'sc_dt::sc_uint<32>' 'void (const sc_dt::sc_unsigned &)'
+  |   | | | | |                     `-MaterializeTemporaryExpr 0x3e0fe38 <col:104, col:128> 'const sc_dt::sc_unsigned' lvalue
+  |   | | | | |                       `-ImplicitCastExpr 0x3e0fe20 <col:104, col:128> 'const sc_dt::sc_unsigned' <NoOp>
+  |   | | | | |                         `-CXXBindTemporaryExpr 0x3e0fe00 <col:104, col:128> 'sc_dt::sc_unsigned' (CXXTemporary 0x3e0fe00)
+  |   | | | | |                           `-ImplicitCastExpr 0x3e0fde0 <col:104, col:128> 'sc_dt::sc_unsigned' <UserDefinedConversion>
+  |   | | | | |                             `-CXXMemberCallExpr 0x3e0fdc0 <col:104, col:128> 'sc_dt::sc_unsigned'
+  |   | | | | |                               `-MemberExpr 0x3e0fd90 <col:104, col:128> '<bound member function type>' .operator sc_unsigned 0x35ccea8
+  |   | | | | |                                 `-ImplicitCastExpr 0x3e0fd70 <col:104, col:128> 'const sc_dt::sc_unsigned_subref_r' lvalue <UncheckedDerivedToBase (sc_unsigned_subref_r)>
+  |   | | | | |                                   `-CXXMemberCallExpr 0x3e0fc40 <col:104, col:128> 'sc_dt::sc_unsigned_subref' lvalue
+  |   | | | | |                                     |-MemberExpr 0x3e0fc10 <col:104, col:116> '<bound member function type>' .range 0x35d9848
+  |   | | | | |                                     | `-ImplicitCastExpr 0x3e0fc70 <col:104> 'sc_dt::sc_unsigned' lvalue <UncheckedDerivedToBase (sc_unsigned)>
+  |   | | | | |                                     |   `-DeclRefExpr 0x3e0fb50 <col:104> 'sc_biguint<128>':'sc_dt::sc_biguint<128>' lvalue Var 0x3dd97c0 'data_finish' 'sc_biguint<128>':'sc_dt::sc_biguint<128>'
+  |   | | | | |                                     |-IntegerLiteral 0x3e0fbd0 <col:122> 'int' 127
+  |   | | | | |                                     `-IntegerLiteral 0x3e0fbf0 <col:126> 'int' 96
+  |   | | | | `-CStyleCastExpr 0x3e11230 <col:133, col:174> 'int' <NoOp>
+  |   | | | |   `-ImplicitCastExpr 0x3e11218 <col:138, col:174> 'int' <IntegralCast> part_of_explicit_cast
+  |   | | | |     `-ImplicitCastExpr 0x3e11200 <col:138, col:174> 'sc_dt::uint_type':'unsigned long long' <UserDefinedConversion> part_of_explicit_cast
+  |   | | | |       `-CXXMemberCallExpr 0x3e111e0 <col:138, col:174> 'sc_dt::uint_type':'unsigned long long'
+  |   | | | |         `-MemberExpr 0x3e111b0 <col:138, col:174> '<bound member function type>' .operator unsigned long long 0x3704660
+  |   | | | |           `-ImplicitCastExpr 0x3e11190 <col:138, col:174> 'const sc_dt::sc_uint_base' lvalue <UncheckedDerivedToBase (sc_uint_base)>
+  |   | | | |             `-MaterializeTemporaryExpr 0x3e11178 <col:138, col:174> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  |   | | | |               `-CStyleCastExpr 0x3e11138 <col:138, col:174> 'sc_uint<32>':'sc_dt::sc_uint<32>' <ConstructorConversion>
+  |   | | | |                 `-CXXBindTemporaryExpr 0x3e11118 <col:138, col:174> 'sc_uint<32>':'sc_dt::sc_uint<32>' (CXXTemporary 0x3e11118)
+  |   | | | |                   `-CXXConstructExpr 0x3e110e0 <col:138, col:174> 'sc_uint<32>':'sc_dt::sc_uint<32>' 'void (const sc_dt::sc_unsigned &)'
+  |   | | | |                     `-MaterializeTemporaryExpr 0x3e110c8 <col:151, col:174> 'const sc_dt::sc_unsigned' lvalue
+  |   | | | |                       `-ImplicitCastExpr 0x3e110b0 <col:151, col:174> 'const sc_dt::sc_unsigned' <NoOp>
+  |   | | | |                         `-CXXBindTemporaryExpr 0x3e11090 <col:151, col:174> 'sc_dt::sc_unsigned' (CXXTemporary 0x3e11090)
+  |   | | | |                           `-ImplicitCastExpr 0x3e11070 <col:151, col:174> 'sc_dt::sc_unsigned' <UserDefinedConversion>
+  |   | | | |                             `-CXXMemberCallExpr 0x3e11050 <col:151, col:174> 'sc_dt::sc_unsigned'
+  |   | | | |                               `-MemberExpr 0x3e11020 <col:151, col:174> '<bound member function type>' .operator sc_unsigned 0x35ccea8
+  |   | | | |                                 `-ImplicitCastExpr 0x3e11000 <col:151, col:174> 'const sc_dt::sc_unsigned_subref_r' lvalue <UncheckedDerivedToBase (sc_unsigned_subref_r)>
+  |   | | | |                                   `-CXXMemberCallExpr 0x3e10ed0 <col:151, col:174> 'sc_dt::sc_unsigned_subref' lvalue
+  |   | | | |                                     |-MemberExpr 0x3e10ea0 <col:151, col:163> '<bound member function type>' .range 0x35d9848
+  |   | | | |                                     | `-ImplicitCastExpr 0x3e10f00 <col:151> 'sc_dt::sc_unsigned' lvalue <UncheckedDerivedToBase (sc_unsigned)>
+  |   | | | |                                     |   `-DeclRefExpr 0x3e10de0 <col:151> 'sc_biguint<128>':'sc_dt::sc_biguint<128>' lvalue Var 0x3dd97c0 'data_finish' 'sc_biguint<128>':'sc_dt::sc_biguint<128>'
+  |   | | | |                                     |-IntegerLiteral 0x3e10e60 <col:169> 'int' 95
+  |   | | | |                                     `-IntegerLiteral 0x3e10e80 <col:172> 'int' 64
+  |   | | | `-CStyleCastExpr 0x3e124c0 <col:179, col:220> 'int' <NoOp>
+  |   | | |   `-ImplicitCastExpr 0x3e124a8 <col:184, col:220> 'int' <IntegralCast> part_of_explicit_cast
+  |   | | |     `-ImplicitCastExpr 0x3e12490 <col:184, col:220> 'sc_dt::uint_type':'unsigned long long' <UserDefinedConversion> part_of_explicit_cast
+  |   | | |       `-CXXMemberCallExpr 0x3e12470 <col:184, col:220> 'sc_dt::uint_type':'unsigned long long'
+  |   | | |         `-MemberExpr 0x3e12440 <col:184, col:220> '<bound member function type>' .operator unsigned long long 0x3704660
+  |   | | |           `-ImplicitCastExpr 0x3e12420 <col:184, col:220> 'const sc_dt::sc_uint_base' lvalue <UncheckedDerivedToBase (sc_uint_base)>
+  |   | | |             `-MaterializeTemporaryExpr 0x3e12408 <col:184, col:220> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  |   | | |               `-CStyleCastExpr 0x3e123c8 <col:184, col:220> 'sc_uint<32>':'sc_dt::sc_uint<32>' <ConstructorConversion>
+  |   | | |                 `-CXXBindTemporaryExpr 0x3e123a8 <col:184, col:220> 'sc_uint<32>':'sc_dt::sc_uint<32>' (CXXTemporary 0x3e123a8)
+  |   | | |                   `-CXXConstructExpr 0x3e12370 <col:184, col:220> 'sc_uint<32>':'sc_dt::sc_uint<32>' 'void (const sc_dt::sc_unsigned &)'
+  |   | | |                     `-MaterializeTemporaryExpr 0x3e12358 <col:197, col:220> 'const sc_dt::sc_unsigned' lvalue
+  |   | | |                       `-ImplicitCastExpr 0x3e12340 <col:197, col:220> 'const sc_dt::sc_unsigned' <NoOp>
+  |   | | |                         `-CXXBindTemporaryExpr 0x3e12320 <col:197, col:220> 'sc_dt::sc_unsigned' (CXXTemporary 0x3e12320)
+  |   | | |                           `-ImplicitCastExpr 0x3e12300 <col:197, col:220> 'sc_dt::sc_unsigned' <UserDefinedConversion>
+  |   | | |                             `-CXXMemberCallExpr 0x3e122e0 <col:197, col:220> 'sc_dt::sc_unsigned'
+  |   | | |                               `-MemberExpr 0x3e122b0 <col:197, col:220> '<bound member function type>' .operator sc_unsigned 0x35ccea8
+  |   | | |                                 `-ImplicitCastExpr 0x3e12290 <col:197, col:220> 'const sc_dt::sc_unsigned_subref_r' lvalue <UncheckedDerivedToBase (sc_unsigned_subref_r)>
+  |   | | |                                   `-CXXMemberCallExpr 0x3e12160 <col:197, col:220> 'sc_dt::sc_unsigned_subref' lvalue
+  |   | | |                                     |-MemberExpr 0x3e12130 <col:197, col:209> '<bound member function type>' .range 0x35d9848
+  |   | | |                                     | `-ImplicitCastExpr 0x3e12190 <col:197> 'sc_dt::sc_unsigned' lvalue <UncheckedDerivedToBase (sc_unsigned)>
+  |   | | |                                     |   `-DeclRefExpr 0x3e12070 <col:197> 'sc_biguint<128>':'sc_dt::sc_biguint<128>' lvalue Var 0x3dd97c0 'data_finish' 'sc_biguint<128>':'sc_dt::sc_biguint<128>'
+  |   | | |                                     |-IntegerLiteral 0x3e120f0 <col:215> 'int' 63
+  |   | | |                                     `-IntegerLiteral 0x3e12110 <col:218> 'int' 32
+  |   | | `-CStyleCastExpr 0x3e13750 <col:225, col:265> 'int' <NoOp>
+  |   | |   `-ImplicitCastExpr 0x3e13738 <col:230, col:265> 'int' <IntegralCast> part_of_explicit_cast
+  |   | |     `-ImplicitCastExpr 0x3e13720 <col:230, col:265> 'sc_dt::uint_type':'unsigned long long' <UserDefinedConversion> part_of_explicit_cast
+  |   | |       `-CXXMemberCallExpr 0x3e13700 <col:230, col:265> 'sc_dt::uint_type':'unsigned long long'
+  |   | |         `-MemberExpr 0x3e136d0 <col:230, col:265> '<bound member function type>' .operator unsigned long long 0x3704660
+  |   | |           `-ImplicitCastExpr 0x3e136b0 <col:230, col:265> 'const sc_dt::sc_uint_base' lvalue <UncheckedDerivedToBase (sc_uint_base)>
+  |   | |             `-MaterializeTemporaryExpr 0x3e13698 <col:230, col:265> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  |   | |               `-CStyleCastExpr 0x3e13658 <col:230, col:265> 'sc_uint<32>':'sc_dt::sc_uint<32>' <ConstructorConversion>
+  |   | |                 `-CXXBindTemporaryExpr 0x3e13638 <col:230, col:265> 'sc_uint<32>':'sc_dt::sc_uint<32>' (CXXTemporary 0x3e13638)
+  |   | |                   `-CXXConstructExpr 0x3e13600 <col:230, col:265> 'sc_uint<32>':'sc_dt::sc_uint<32>' 'void (const sc_dt::sc_unsigned &)'
+  |   | |                     `-MaterializeTemporaryExpr 0x3e135e8 <col:243, col:265> 'const sc_dt::sc_unsigned' lvalue
+  |   | |                       `-ImplicitCastExpr 0x3e135d0 <col:243, col:265> 'const sc_dt::sc_unsigned' <NoOp>
+  |   | |                         `-CXXBindTemporaryExpr 0x3e135b0 <col:243, col:265> 'sc_dt::sc_unsigned' (CXXTemporary 0x3e135b0)
+  |   | |                           `-ImplicitCastExpr 0x3e13590 <col:243, col:265> 'sc_dt::sc_unsigned' <UserDefinedConversion>
+  |   | |                             `-CXXMemberCallExpr 0x3e13570 <col:243, col:265> 'sc_dt::sc_unsigned'
+  |   | |                               `-MemberExpr 0x3e13540 <col:243, col:265> '<bound member function type>' .operator sc_unsigned 0x35ccea8
+  |   | |                                 `-ImplicitCastExpr 0x3e13520 <col:243, col:265> 'const sc_dt::sc_unsigned_subref_r' lvalue <UncheckedDerivedToBase (sc_unsigned_subref_r)>
+  |   | |                                   `-CXXMemberCallExpr 0x3e133f0 <col:243, col:265> 'sc_dt::sc_unsigned_subref' lvalue
+  |   | |                                     |-MemberExpr 0x3e133c0 <col:243, col:255> '<bound member function type>' .range 0x35d9848
+  |   | |                                     | `-ImplicitCastExpr 0x3e13420 <col:243> 'sc_dt::sc_unsigned' lvalue <UncheckedDerivedToBase (sc_unsigned)>
+  |   | |                                     |   `-DeclRefExpr 0x3e13300 <col:243> 'sc_biguint<128>':'sc_dt::sc_biguint<128>' lvalue Var 0x3dd97c0 'data_finish' 'sc_biguint<128>':'sc_dt::sc_biguint<128>'
+  |   | |                                     |-IntegerLiteral 0x3e13380 <col:261> 'int' 31
+  |   | |                                     `-IntegerLiteral 0x3e133a0 <col:264> 'int' 0
+  |   | `-CharacterLiteral 0x3e144e8 <col:270> 'char' 10
+  |   `-ImplicitCastExpr 0x3e15d60 <col:278> 'basic_ostream<char> &(*)(basic_ostream<char> &)' <FunctionToPointerDecay>
+  |     `-DeclRefExpr 0x3e15d38 <col:278> 'basic_ostream<char> &(basic_ostream<char> &)' lvalue Function 0x28f4b08 'endl' 'basic_ostream<char> &(basic_ostream<char> &)' (UsingShadow 0x2e1c738 'endl')
+  |-CXXOperatorCallExpr 0x3e15f20 <line:103:5, col:12> 'sc_biguint<128>':'sc_dt::sc_biguint<128>' lvalue '='
+  | |-ImplicitCastExpr 0x3e15f08 <col:10> 'sc_biguint<128> &(*)(const sc_biguint<128> &)' <FunctionToPointerDecay>
+  | | `-DeclRefExpr 0x3e15ee8 <col:10> 'sc_biguint<128> &(const sc_biguint<128> &)' lvalue CXXMethod 0x3d96130 'operator=' 'sc_biguint<128> &(const sc_biguint<128> &)'
+  | |-DeclRefExpr 0x3e15e00 <col:5> 'sc_biguint<128>':'sc_dt::sc_biguint<128>' lvalue Var 0x3dd9650 'data' 'sc_biguint<128>':'sc_dt::sc_biguint<128>'
+  | `-ImplicitCastExpr 0x3e15ed0 <col:12> 'const sc_biguint<128>':'const sc_dt::sc_biguint<128>' lvalue <NoOp>
+  |   `-DeclRefExpr 0x3e15e20 <col:12> 'sc_biguint<128>':'sc_dt::sc_biguint<128>' lvalue Var 0x3dd97c0 'data_finish' 'sc_biguint<128>':'sc_dt::sc_biguint<128>'
+  |-ExprWithCleanups 0x3e16320 <line:104:5, col:29> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  | `-CXXOperatorCallExpr 0x3e162e8 <col:5, col:29> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue '='
+  |   |-ImplicitCastExpr 0x3e162d0 <col:10> 'sc_uint<32> &(*)(const sc_dt::sc_unsigned &)' <FunctionToPointerDecay>
+  |   | `-DeclRefExpr 0x3e162b0 <col:10> 'sc_uint<32> &(const sc_dt::sc_unsigned &)' lvalue CXXMethod 0x3d9c770 'operator=' 'sc_uint<32> &(const sc_dt::sc_unsigned &)'
+  |   |-ArraySubscriptExpr 0x3e15fb0 <col:5, col:8> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  |   | |-ImplicitCastExpr 0x3e15f98 <col:5> 'sc_uint<32> *' <ArrayToPointerDecay>
+  |   | | `-DeclRefExpr 0x3e15f58 <col:5> 'sc_uint<32> [36]' lvalue Var 0x3da04b8 'X' 'sc_uint<32> [36]'
+  |   | `-IntegerLiteral 0x3e15f78 <col:7> 'int' 0
+  |   `-MaterializeTemporaryExpr 0x3e16298 <col:12, col:29> 'const sc_dt::sc_unsigned' lvalue
+  |     `-ImplicitCastExpr 0x3e16280 <col:12, col:29> 'const sc_dt::sc_unsigned' <NoOp>
+  |       `-CXXBindTemporaryExpr 0x3e16260 <col:12, col:29> 'sc_dt::sc_unsigned' (CXXTemporary 0x3e16260)
+  |         `-ImplicitCastExpr 0x3e16240 <col:12, col:29> 'sc_dt::sc_unsigned' <UserDefinedConversion>
+  |           `-CXXMemberCallExpr 0x3e16220 <col:12, col:29> 'sc_dt::sc_unsigned'
+  |             `-MemberExpr 0x3e161f0 <col:12, col:29> '<bound member function type>' .operator sc_unsigned 0x35ccea8
+  |               `-ImplicitCastExpr 0x3e161d0 <col:12, col:29> 'const sc_dt::sc_unsigned_subref_r' lvalue <UncheckedDerivedToBase (sc_unsigned_subref_r)>
+  |                 `-CXXMemberCallExpr 0x3e160c0 <col:12, col:29> 'sc_dt::sc_unsigned_subref' lvalue
+  |                   |-MemberExpr 0x3e16090 <col:12, col:17> '<bound member function type>' .range 0x35d9848
+  |                   | `-ImplicitCastExpr 0x3e160f0 <col:12> 'sc_dt::sc_unsigned' lvalue <UncheckedDerivedToBase (sc_unsigned)>
+  |                   |   `-DeclRefExpr 0x3e15fd0 <col:12> 'sc_biguint<128>':'sc_dt::sc_biguint<128>' lvalue Var 0x3dd9650 'data' 'sc_biguint<128>':'sc_dt::sc_biguint<128>'
+  |                   |-IntegerLiteral 0x3e16050 <col:23> 'int' 127
+  |                   `-IntegerLiteral 0x3e16070 <col:27> 'int' 96
+  |-ExprWithCleanups 0x3e16700 <line:105:5, col:29> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  | `-CXXOperatorCallExpr 0x3e166c8 <col:5, col:29> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue '='
+  |   |-ImplicitCastExpr 0x3e166b0 <col:10> 'sc_uint<32> &(*)(const sc_dt::sc_unsigned &)' <FunctionToPointerDecay>
+  |   | `-DeclRefExpr 0x3e16690 <col:10> 'sc_uint<32> &(const sc_dt::sc_unsigned &)' lvalue CXXMethod 0x3d9c770 'operator=' 'sc_uint<32> &(const sc_dt::sc_unsigned &)'
+  |   |-ArraySubscriptExpr 0x3e16390 <col:5, col:8> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  |   | |-ImplicitCastExpr 0x3e16378 <col:5> 'sc_uint<32> *' <ArrayToPointerDecay>
+  |   | | `-DeclRefExpr 0x3e16338 <col:5> 'sc_uint<32> [36]' lvalue Var 0x3da04b8 'X' 'sc_uint<32> [36]'
+  |   | `-IntegerLiteral 0x3e16358 <col:7> 'int' 1
+  |   `-MaterializeTemporaryExpr 0x3e16678 <col:12, col:29> 'const sc_dt::sc_unsigned' lvalue
+  |     `-ImplicitCastExpr 0x3e16660 <col:12, col:29> 'const sc_dt::sc_unsigned' <NoOp>
+  |       `-CXXBindTemporaryExpr 0x3e16640 <col:12, col:29> 'sc_dt::sc_unsigned' (CXXTemporary 0x3e16640)
+  |         `-ImplicitCastExpr 0x3e16620 <col:12, col:29> 'sc_dt::sc_unsigned' <UserDefinedConversion>
+  |           `-CXXMemberCallExpr 0x3e16600 <col:12, col:29> 'sc_dt::sc_unsigned'
+  |             `-MemberExpr 0x3e165d0 <col:12, col:29> '<bound member function type>' .operator sc_unsigned 0x35ccea8
+  |               `-ImplicitCastExpr 0x3e165b0 <col:12, col:29> 'const sc_dt::sc_unsigned_subref_r' lvalue <UncheckedDerivedToBase (sc_unsigned_subref_r)>
+  |                 `-CXXMemberCallExpr 0x3e164a0 <col:12, col:29> 'sc_dt::sc_unsigned_subref' lvalue
+  |                   |-MemberExpr 0x3e16470 <col:12, col:17> '<bound member function type>' .range 0x35d9848
+  |                   | `-ImplicitCastExpr 0x3e164d0 <col:12> 'sc_dt::sc_unsigned' lvalue <UncheckedDerivedToBase (sc_unsigned)>
+  |                   |   `-DeclRefExpr 0x3e163b0 <col:12> 'sc_biguint<128>':'sc_dt::sc_biguint<128>' lvalue Var 0x3dd9650 'data' 'sc_biguint<128>':'sc_dt::sc_biguint<128>'
+  |                   |-IntegerLiteral 0x3e16430 <col:24> 'int' 95
+  |                   `-IntegerLiteral 0x3e16450 <col:27> 'int' 64
+  |-ExprWithCleanups 0x3e16ae0 <line:106:5, col:29> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  | `-CXXOperatorCallExpr 0x3e16aa8 <col:5, col:29> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue '='
+  |   |-ImplicitCastExpr 0x3e16a90 <col:10> 'sc_uint<32> &(*)(const sc_dt::sc_unsigned &)' <FunctionToPointerDecay>
+  |   | `-DeclRefExpr 0x3e16a70 <col:10> 'sc_uint<32> &(const sc_dt::sc_unsigned &)' lvalue CXXMethod 0x3d9c770 'operator=' 'sc_uint<32> &(const sc_dt::sc_unsigned &)'
+  |   |-ArraySubscriptExpr 0x3e16770 <col:5, col:8> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  |   | |-ImplicitCastExpr 0x3e16758 <col:5> 'sc_uint<32> *' <ArrayToPointerDecay>
+  |   | | `-DeclRefExpr 0x3e16718 <col:5> 'sc_uint<32> [36]' lvalue Var 0x3da04b8 'X' 'sc_uint<32> [36]'
+  |   | `-IntegerLiteral 0x3e16738 <col:7> 'int' 2
+  |   `-MaterializeTemporaryExpr 0x3e16a58 <col:12, col:29> 'const sc_dt::sc_unsigned' lvalue
+  |     `-ImplicitCastExpr 0x3e16a40 <col:12, col:29> 'const sc_dt::sc_unsigned' <NoOp>
+  |       `-CXXBindTemporaryExpr 0x3e16a20 <col:12, col:29> 'sc_dt::sc_unsigned' (CXXTemporary 0x3e16a20)
+  |         `-ImplicitCastExpr 0x3e16a00 <col:12, col:29> 'sc_dt::sc_unsigned' <UserDefinedConversion>
+  |           `-CXXMemberCallExpr 0x3e169e0 <col:12, col:29> 'sc_dt::sc_unsigned'
+  |             `-MemberExpr 0x3e169b0 <col:12, col:29> '<bound member function type>' .operator sc_unsigned 0x35ccea8
+  |               `-ImplicitCastExpr 0x3e16990 <col:12, col:29> 'const sc_dt::sc_unsigned_subref_r' lvalue <UncheckedDerivedToBase (sc_unsigned_subref_r)>
+  |                 `-CXXMemberCallExpr 0x3e16880 <col:12, col:29> 'sc_dt::sc_unsigned_subref' lvalue
+  |                   |-MemberExpr 0x3e16850 <col:12, col:17> '<bound member function type>' .range 0x35d9848
+  |                   | `-ImplicitCastExpr 0x3e168b0 <col:12> 'sc_dt::sc_unsigned' lvalue <UncheckedDerivedToBase (sc_unsigned)>
+  |                   |   `-DeclRefExpr 0x3e16790 <col:12> 'sc_biguint<128>':'sc_dt::sc_biguint<128>' lvalue Var 0x3dd9650 'data' 'sc_biguint<128>':'sc_dt::sc_biguint<128>'
+  |                   |-IntegerLiteral 0x3e16810 <col:24> 'int' 63
+  |                   `-IntegerLiteral 0x3e16830 <col:27> 'int' 32
+  |-ExprWithCleanups 0x3e16ec0 <line:107:5, col:29> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  | `-CXXOperatorCallExpr 0x3e16e88 <col:5, col:29> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue '='
+  |   |-ImplicitCastExpr 0x3e16e70 <col:10> 'sc_uint<32> &(*)(const sc_dt::sc_unsigned &)' <FunctionToPointerDecay>
+  |   | `-DeclRefExpr 0x3e16e50 <col:10> 'sc_uint<32> &(const sc_dt::sc_unsigned &)' lvalue CXXMethod 0x3d9c770 'operator=' 'sc_uint<32> &(const sc_dt::sc_unsigned &)'
+  |   |-ArraySubscriptExpr 0x3e16b50 <col:5, col:8> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  |   | |-ImplicitCastExpr 0x3e16b38 <col:5> 'sc_uint<32> *' <ArrayToPointerDecay>
+  |   | | `-DeclRefExpr 0x3e16af8 <col:5> 'sc_uint<32> [36]' lvalue Var 0x3da04b8 'X' 'sc_uint<32> [36]'
+  |   | `-IntegerLiteral 0x3e16b18 <col:7> 'int' 3
+  |   `-MaterializeTemporaryExpr 0x3e16e38 <col:12, col:29> 'const sc_dt::sc_unsigned' lvalue
+  |     `-ImplicitCastExpr 0x3e16e20 <col:12, col:29> 'const sc_dt::sc_unsigned' <NoOp>
+  |       `-CXXBindTemporaryExpr 0x3e16e00 <col:12, col:29> 'sc_dt::sc_unsigned' (CXXTemporary 0x3e16e00)
+  |         `-ImplicitCastExpr 0x3e16de0 <col:12, col:29> 'sc_dt::sc_unsigned' <UserDefinedConversion>
+  |           `-CXXMemberCallExpr 0x3e16dc0 <col:12, col:29> 'sc_dt::sc_unsigned'
+  |             `-MemberExpr 0x3e16d90 <col:12, col:29> '<bound member function type>' .operator sc_unsigned 0x35ccea8
+  |               `-ImplicitCastExpr 0x3e16d70 <col:12, col:29> 'const sc_dt::sc_unsigned_subref_r' lvalue <UncheckedDerivedToBase (sc_unsigned_subref_r)>
+  |                 `-CXXMemberCallExpr 0x3e16c60 <col:12, col:29> 'sc_dt::sc_unsigned_subref' lvalue
+  |                   |-MemberExpr 0x3e16c30 <col:12, col:17> '<bound member function type>' .range 0x35d9848
+  |                   | `-ImplicitCastExpr 0x3e16c90 <col:12> 'sc_dt::sc_unsigned' lvalue <UncheckedDerivedToBase (sc_unsigned)>
+  |                   |   `-DeclRefExpr 0x3e16b70 <col:12> 'sc_biguint<128>':'sc_dt::sc_biguint<128>' lvalue Var 0x3dd9650 'data' 'sc_biguint<128>':'sc_dt::sc_biguint<128>'
+  |                   |-IntegerLiteral 0x3e16bf0 <col:24> 'int' 31
+  |                   `-IntegerLiteral 0x3e16c10 <col:28> 'int' 0
+  |-ForStmt 0x3e187a0 <line:108:5, line:109:74>
+  | |-DeclStmt 0x3e16f78 <line:108:9, col:18>
+  | | `-VarDecl 0x3e16ef0 <col:9, col:17> col:13 used i 'int' cinit
+  | |   `-IntegerLiteral 0x3e16f58 <col:17> 'int' 0
+  | |-<<<NULL>>>
+  | |-BinaryOperator 0x3e16fe8 <col:20, col:24> 'bool' '<'
+  | | |-ImplicitCastExpr 0x3e16fd0 <col:20> 'int' <LValueToRValue>
+  | | | `-DeclRefExpr 0x3e16f90 <col:20> 'int' lvalue Var 0x3e16ef0 'i' 'int'
+  | | `-IntegerLiteral 0x3e16fb0 <col:24> 'int' 32
+  | |-UnaryOperator 0x3e17028 <col:28, col:29> 'int' postfix '++'
+  | | `-DeclRefExpr 0x3e17008 <col:28> 'int' lvalue Var 0x3e16ef0 'i' 'int'
+  | `-ExprWithCleanups 0x3e18788 <line:109:9, col:74> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  |   `-CXXOperatorCallExpr 0x3e18750 <col:9, col:74> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue '='
+  |     |-ImplicitCastExpr 0x3e18738 <col:16> 'sc_uint<32> &(*)(sc_dt::uint_type)' <FunctionToPointerDecay>
+  |     | `-DeclRefExpr 0x3e18718 <col:16> 'sc_uint<32> &(sc_dt::uint_type)' lvalue CXXMethod 0x3d9b510 'operator=' 'sc_uint<32> &(sc_dt::uint_type)'
+  |     |-ArraySubscriptExpr 0x3e170f0 <col:9, col:14> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  |     | |-ImplicitCastExpr 0x3e170d8 <col:9> 'sc_uint<32> *' <ArrayToPointerDecay>
+  |     | | `-DeclRefExpr 0x3e17040 <col:9> 'sc_uint<32> [36]' lvalue Var 0x3da04b8 'X' 'sc_uint<32> [36]'
+  |     | `-BinaryOperator 0x3e170b8 <col:11, col:13> 'int' '+'
+  |     |   |-ImplicitCastExpr 0x3e170a0 <col:11> 'int' <LValueToRValue>
+  |     |   | `-DeclRefExpr 0x3e17060 <col:11> 'int' lvalue Var 0x3e16ef0 'i' 'int'
+  |     |   `-IntegerLiteral 0x3e17080 <col:13> 'int' 4
+  |     `-BinaryOperator 0x3e18638 <col:18, col:74> 'unsigned long long' '^'
+  |       |-ImplicitCastExpr 0x3e18580 <col:18, col:21> 'sc_dt::uint_type':'unsigned long long' <UserDefinedConversion>
+  |       | `-CXXMemberCallExpr 0x3e18560 <col:18, col:21> 'sc_dt::uint_type':'unsigned long long'
+  |       |   `-MemberExpr 0x3e18530 <col:18, col:21> '<bound member function type>' .operator unsigned long long 0x3704660
+  |       |     `-ImplicitCastExpr 0x3e18510 <col:18, col:21> 'const sc_dt::sc_uint_base' lvalue <UncheckedDerivedToBase (sc_uint_base)>
+  |       |       `-ArraySubscriptExpr 0x3e17180 <col:18, col:21> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  |       |         |-ImplicitCastExpr 0x3e17150 <col:18> 'sc_uint<32> *' <ArrayToPointerDecay>
+  |       |         | `-DeclRefExpr 0x3e17110 <col:18> 'sc_uint<32> [36]' lvalue Var 0x3da04b8 'X' 'sc_uint<32> [36]'
+  |       |         `-ImplicitCastExpr 0x3e17168 <col:20> 'int' <LValueToRValue>
+  |       |           `-DeclRefExpr 0x3e17130 <col:20> 'int' lvalue Var 0x3e16ef0 'i' 'int'
+  |       `-ImplicitCastExpr 0x3e18620 <col:25, col:74> 'sc_dt::uint_type':'unsigned long long' <UserDefinedConversion>
+  |         `-CXXMemberCallExpr 0x3e18600 <col:25, col:74> 'sc_dt::uint_type':'unsigned long long'
+  |           `-MemberExpr 0x3e185d0 <col:25, col:74> '<bound member function type>' .operator unsigned long long 0x3704660
+  |             `-ImplicitCastExpr 0x3e185b0 <col:25, col:74> 'const sc_dt::sc_uint_base' lvalue <UncheckedDerivedToBase (sc_uint_base)>
+  |               `-MaterializeTemporaryExpr 0x3e18598 <col:25, col:74> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  |                 `-CXXBindTemporaryExpr 0x3e18220 <col:25, col:74> 'sc_uint<32>':'sc_dt::sc_uint<32>' (CXXTemporary 0x3e18220)
+  |                   `-CallExpr 0x3e18090 <col:25, col:74> 'sc_uint<32>':'sc_dt::sc_uint<32>'
+  |                     |-ImplicitCastExpr 0x3e18078 <col:25> 'sc_uint<32> (*)(sc_uint<32>, bool)' <FunctionToPointerDecay>
+  |                     | `-DeclRefExpr 0x3e18058 <col:25> 'sc_uint<32> (sc_uint<32>, bool)' lvalue Function 0x3dd0c28 'RoundF' 'sc_uint<32> (sc_uint<32>, bool)'
+  |                     |-CXXBindTemporaryExpr 0x3e181f8 <col:32, col:66> 'sc_uint<32>':'sc_dt::sc_uint<32>' (CXXTemporary 0x3e181f8)
+  |                     | `-CXXConstructExpr 0x3e181c0 <col:32, col:66> 'sc_uint<32>':'sc_dt::sc_uint<32>' 'void (const sc_uint<32> &)' elidable
+  |                     |   `-MaterializeTemporaryExpr 0x3e181a8 <col:32, col:66> 'const sc_uint<32>':'const sc_dt::sc_uint<32>' lvalue
+  |                     |     `-ImplicitCastExpr 0x3e18190 <col:32, col:66> 'const sc_uint<32>':'const sc_dt::sc_uint<32>' <NoOp>
+  |                     |       `-CXXBindTemporaryExpr 0x3e18140 <col:32, col:66> 'sc_uint<32>':'sc_dt::sc_uint<32>' (CXXTemporary 0x3e18140)
+  |                     |         `-ImplicitCastExpr 0x3e18120 <col:32, col:66> 'sc_uint<32>':'sc_dt::sc_uint<32>' <ConstructorConversion>
+  |                     |           `-CXXConstructExpr 0x3e180f0 <col:32, col:66> 'sc_uint<32>':'sc_dt::sc_uint<32>' 'void (sc_dt::uint_type)'
+  |                     |             `-BinaryOperator 0x3e17ff8 <col:32, col:66> 'unsigned long long' '^'
+  |                     |               |-BinaryOperator 0x3e17bb0 <col:32, col:55> 'unsigned long long' '^'
+  |                     |               | |-BinaryOperator 0x3e17768 <col:32, col:46> 'unsigned long long' '^'
+  |                     |               | | |-ImplicitCastExpr 0x3e176c8 <col:32, col:37> 'sc_dt::uint_type':'unsigned long long' <UserDefinedConversion>
+  |                     |               | | | `-CXXMemberCallExpr 0x3e176a8 <col:32, col:37> 'sc_dt::uint_type':'unsigned long long'
+  |                     |               | | |   `-MemberExpr 0x3e17678 <col:32, col:37> '<bound member function type>' .operator unsigned long long 0x3704660
+  |                     |               | | |     `-ImplicitCastExpr 0x3e17658 <col:32, col:37> 'const sc_dt::sc_uint_base' lvalue <UncheckedDerivedToBase (sc_uint_base)>
+  |                     |               | | |       `-ArraySubscriptExpr 0x3e17298 <col:32, col:37> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  |                     |               | | |         |-ImplicitCastExpr 0x3e17280 <col:32> 'sc_uint<32> *' <ArrayToPointerDecay>
+  |                     |               | | |         | `-DeclRefExpr 0x3e171e8 <col:32> 'sc_uint<32> [36]' lvalue Var 0x3da04b8 'X' 'sc_uint<32> [36]'
+  |                     |               | | |         `-BinaryOperator 0x3e17260 <col:34, col:36> 'int' '+'
+  |                     |               | | |           |-ImplicitCastExpr 0x3e17248 <col:34> 'int' <LValueToRValue>
+  |                     |               | | |           | `-DeclRefExpr 0x3e17208 <col:34> 'int' lvalue Var 0x3e16ef0 'i' 'int'
+  |                     |               | | |           `-IntegerLiteral 0x3e17228 <col:36> 'int' 1
+  |                     |               | | `-ImplicitCastExpr 0x3e17750 <col:41, col:46> 'sc_dt::uint_type':'unsigned long long' <UserDefinedConversion>
+  |                     |               | |   `-CXXMemberCallExpr 0x3e17730 <col:41, col:46> 'sc_dt::uint_type':'unsigned long long'
+  |                     |               | |     `-MemberExpr 0x3e17700 <col:41, col:46> '<bound member function type>' .operator unsigned long long 0x3704660
+  |                     |               | |       `-ImplicitCastExpr 0x3e176e0 <col:41, col:46> 'const sc_dt::sc_uint_base' lvalue <UncheckedDerivedToBase (sc_uint_base)>
+  |                     |               | |         `-ArraySubscriptExpr 0x3e17368 <col:41, col:46> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  |                     |               | |           |-ImplicitCastExpr 0x3e17350 <col:41> 'sc_uint<32> *' <ArrayToPointerDecay>
+  |                     |               | |           | `-DeclRefExpr 0x3e172b8 <col:41> 'sc_uint<32> [36]' lvalue Var 0x3da04b8 'X' 'sc_uint<32> [36]'
+  |                     |               | |           `-BinaryOperator 0x3e17330 <col:43, col:45> 'int' '+'
+  |                     |               | |             |-ImplicitCastExpr 0x3e17318 <col:43> 'int' <LValueToRValue>
+  |                     |               | |             | `-DeclRefExpr 0x3e172d8 <col:43> 'int' lvalue Var 0x3e16ef0 'i' 'int'
+  |                     |               | |             `-IntegerLiteral 0x3e172f8 <col:45> 'int' 2
+  |                     |               | `-ImplicitCastExpr 0x3e17b98 <col:50, col:55> 'sc_dt::uint_type':'unsigned long long' <UserDefinedConversion>
+  |                     |               |   `-CXXMemberCallExpr 0x3e17b78 <col:50, col:55> 'sc_dt::uint_type':'unsigned long long'
+  |                     |               |     `-MemberExpr 0x3e17b48 <col:50, col:55> '<bound member function type>' .operator unsigned long long 0x3704660
+  |                     |               |       `-ImplicitCastExpr 0x3e17b28 <col:50, col:55> 'const sc_dt::sc_uint_base' lvalue <UncheckedDerivedToBase (sc_uint_base)>
+  |                     |               |         `-ArraySubscriptExpr 0x3e17838 <col:50, col:55> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  |                     |               |           |-ImplicitCastExpr 0x3e17820 <col:50> 'sc_uint<32> *' <ArrayToPointerDecay>
+  |                     |               |           | `-DeclRefExpr 0x3e17788 <col:50> 'sc_uint<32> [36]' lvalue Var 0x3da04b8 'X' 'sc_uint<32> [36]'
+  |                     |               |           `-BinaryOperator 0x3e17800 <col:52, col:54> 'int' '+'
+  |                     |               |             |-ImplicitCastExpr 0x3e177e8 <col:52> 'int' <LValueToRValue>
+  |                     |               |             | `-DeclRefExpr 0x3e177a8 <col:52> 'int' lvalue Var 0x3e16ef0 'i' 'int'
+  |                     |               |             `-IntegerLiteral 0x3e177c8 <col:54> 'int' 3
+  |                     |               `-ImplicitCastExpr 0x3e17fe0 <col:59, col:66> 'sc_dt::uint_type':'unsigned long long' <UserDefinedConversion>
+  |                     |                 `-CXXMemberCallExpr 0x3e17fc0 <col:59, col:66> 'sc_dt::uint_type':'unsigned long long'
+  |                     |                   `-MemberExpr 0x3e17f90 <col:59, col:66> '<bound member function type>' .operator unsigned long long 0x3704660
+  |                     |                     `-ImplicitCastExpr 0x3e17f70 <col:59, col:66> 'const sc_dt::sc_uint_base' lvalue <UncheckedDerivedToBase (sc_uint_base)>
+  |                     |                       `-ArraySubscriptExpr 0x3e17c80 <col:59, col:66> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  |                     |                         |-ImplicitCastExpr 0x3e17c68 <col:59> 'sc_uint<32> *' <ArrayToPointerDecay>
+  |                     |                         | `-DeclRefExpr 0x3e17bd0 <col:59> 'sc_uint<32> [36]' lvalue Var 0x3d995a8 'rk' 'sc_uint<32> [36]'
+  |                     |                         `-BinaryOperator 0x3e17c48 <col:62, col:65> 'int' '-'
+  |                     |                           |-IntegerLiteral 0x3e17bf0 <col:62> 'int' 35
+  |                     |                           `-ImplicitCastExpr 0x3e17c30 <col:65> 'int' <LValueToRValue>
+  |                     |                             `-DeclRefExpr 0x3e17c10 <col:65> 'int' lvalue Var 0x3e16ef0 'i' 'int'
+  |                     `-CXXBoolLiteralExpr 0x3e18018 <col:69> 'bool' false
+  |-CXXOperatorCallExpr 0x3e1cec8 <line:110:5, col:43> 'sc_biguint<128>':'sc_dt::sc_biguint<128>' lvalue '='
+  | |-ImplicitCastExpr 0x3e1ceb0 <col:17> 'sc_biguint<128> &(*)(const sc_generic_base<sc_dt::sc_concatref> &)' <FunctionToPointerDecay>
+  | | `-DeclRefExpr 0x3e1ce90 <col:17> 'sc_biguint<128> &(const sc_generic_base<sc_dt::sc_concatref> &)' lvalue CXXMethod 0x3dffe20 'operator=' 'sc_biguint<128> &(const sc_generic_base<sc_dt::sc_concatref> &)'
+  | |-DeclRefExpr 0x3e187d8 <col:5> 'sc_biguint<128>':'sc_dt::sc_biguint<128>' lvalue Var 0x3dd97c0 'data_finish' 'sc_biguint<128>':'sc_dt::sc_biguint<128>'
+  | `-ImplicitCastExpr 0x3e1ce70 <col:19, col:43> 'const sc_generic_base<sc_dt::sc_concatref>':'const sc_dt::sc_generic_base<sc_dt::sc_concatref>' lvalue <DerivedToBase (sc_generic_base)>
+  |   `-ImplicitCastExpr 0x3e1ce58 <col:19, col:43> 'const sc_dt::sc_concatref':'const sc_dt::sc_concatref' lvalue <NoOp>
+  |     `-ParenExpr 0x3e1cd68 <col:19, col:43> 'sc_dt::sc_concatref':'sc_dt::sc_concatref' lvalue
+  |       `-CXXOperatorCallExpr 0x3e1cd30 <col:20, col:42> 'sc_dt::sc_concatref':'sc_dt::sc_concatref' lvalue ',' adl
+  |         |-ImplicitCastExpr 0x3e1cd18 <col:37> 'sc_dt::sc_concatref &(*)(sc_dt::sc_value_base &, sc_dt::sc_value_base &)' <FunctionToPointerDecay>
+  |         | `-DeclRefExpr 0x3e1ccf8 <col:37> 'sc_dt::sc_concatref &(sc_dt::sc_value_base &, sc_dt::sc_value_base &)' lvalue Function 0x3b3fa00 'operator,' 'sc_dt::sc_concatref &(sc_dt::sc_value_base &, sc_dt::sc_value_base &)'
+  |         |-ImplicitCastExpr 0x3e1ccb0 <col:20, col:36> 'sc_dt::sc_value_base':'sc_dt::sc_value_base' lvalue <DerivedToBase (sc_value_base)>
+  |         | `-CXXOperatorCallExpr 0x3e1b620 <col:20, col:36> 'sc_dt::sc_concatref':'sc_dt::sc_concatref' lvalue ',' adl
+  |         |   |-ImplicitCastExpr 0x3e1b608 <col:31> 'sc_dt::sc_concatref &(*)(sc_dt::sc_value_base &, sc_dt::sc_value_base &)' <FunctionToPointerDecay>
+  |         |   | `-DeclRefExpr 0x3e1b5e8 <col:31> 'sc_dt::sc_concatref &(sc_dt::sc_value_base &, sc_dt::sc_value_base &)' lvalue Function 0x3b3fa00 'operator,' 'sc_dt::sc_concatref &(sc_dt::sc_value_base &, sc_dt::sc_value_base &)'
+  |         |   |-ImplicitCastExpr 0x3e1b5a0 <col:20, col:30> 'sc_dt::sc_value_base':'sc_dt::sc_value_base' lvalue <DerivedToBase (sc_value_base)>
+  |         |   | `-CXXOperatorCallExpr 0x3e19f30 <col:20, col:30> 'sc_dt::sc_concatref':'sc_dt::sc_concatref' lvalue ',' adl
+  |         |   |   |-ImplicitCastExpr 0x3e19f18 <col:25> 'sc_dt::sc_concatref &(*)(sc_dt::sc_value_base &, sc_dt::sc_value_base &)' <FunctionToPointerDecay>
+  |         |   |   | `-DeclRefExpr 0x3e19ef8 <col:25> 'sc_dt::sc_concatref &(sc_dt::sc_value_base &, sc_dt::sc_value_base &)' lvalue Function 0x3b3fa00 'operator,' 'sc_dt::sc_concatref &(sc_dt::sc_value_base &, sc_dt::sc_value_base &)'
+  |         |   |   |-ImplicitCastExpr 0x3e19ea8 <col:20, col:24> 'sc_dt::sc_value_base':'sc_dt::sc_value_base' lvalue <DerivedToBase (sc_uint_base -> sc_value_base)>
+  |         |   |   | `-ArraySubscriptExpr 0x3e18850 <col:20, col:24> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  |         |   |   |   |-ImplicitCastExpr 0x3e18838 <col:20> 'sc_uint<32> *' <ArrayToPointerDecay>
+  |         |   |   |   | `-DeclRefExpr 0x3e187f8 <col:20> 'sc_uint<32> [36]' lvalue Var 0x3da04b8 'X' 'sc_uint<32> [36]'
+  |         |   |   |   `-IntegerLiteral 0x3e18818 <col:22> 'int' 35
+  |         |   |   `-ImplicitCastExpr 0x3e19ed0 <col:26, col:30> 'sc_dt::sc_value_base':'sc_dt::sc_value_base' lvalue <DerivedToBase (sc_uint_base -> sc_value_base)>
+  |         |   |     `-ArraySubscriptExpr 0x3e188c8 <col:26, col:30> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  |         |   |       |-ImplicitCastExpr 0x3e188b0 <col:26> 'sc_uint<32> *' <ArrayToPointerDecay>
+  |         |   |       | `-DeclRefExpr 0x3e18870 <col:26> 'sc_uint<32> [36]' lvalue Var 0x3da04b8 'X' 'sc_uint<32> [36]'
+  |         |   |       `-IntegerLiteral 0x3e18890 <col:28> 'int' 34
+  |         |   `-ImplicitCastExpr 0x3e1b5c0 <col:32, col:36> 'sc_dt::sc_value_base':'sc_dt::sc_value_base' lvalue <DerivedToBase (sc_uint_base -> sc_value_base)>
+  |         |     `-ArraySubscriptExpr 0x3e19fc0 <col:32, col:36> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  |         |       |-ImplicitCastExpr 0x3e19fa8 <col:32> 'sc_uint<32> *' <ArrayToPointerDecay>
+  |         |       | `-DeclRefExpr 0x3e19f68 <col:32> 'sc_uint<32> [36]' lvalue Var 0x3da04b8 'X' 'sc_uint<32> [36]'
+  |         |       `-IntegerLiteral 0x3e19f88 <col:34> 'int' 33
+  |         `-ImplicitCastExpr 0x3e1ccd0 <col:38, col:42> 'sc_dt::sc_value_base':'sc_dt::sc_value_base' lvalue <DerivedToBase (sc_uint_base -> sc_value_base)>
+  |           `-ArraySubscriptExpr 0x3e1b6b0 <col:38, col:42> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  |             |-ImplicitCastExpr 0x3e1b698 <col:38> 'sc_uint<32> *' <ArrayToPointerDecay>
+  |             | `-DeclRefExpr 0x3e1b658 <col:38> 'sc_uint<32> [36]' lvalue Var 0x3da04b8 'X' 'sc_uint<32> [36]'
+  |             `-IntegerLiteral 0x3e1b678 <col:40> 'int' 32
+  |-CXXMemberCallExpr 0x3e1cfd8 <line:111:5, col:31> 'void'
+  | |-MemberExpr 0x3e1cf88 <col:5, col:14> '<bound member function type>' .write 0x3d8ea28
+  | | `-ImplicitCastExpr 0x3e1d000 <col:5> 'sc_core::sc_inout<sc_dt::sc_biguint<128>>' lvalue <UncheckedDerivedToBase (sc_inout)>
+  | |   `-MemberExpr 0x3e1cf58 <col:5> 'sc_out<sc_biguint<128>>':'sc_core::sc_out<sc_dt::sc_biguint<128>>' lvalue ->data_out 0x3d92608
+  | |     `-CXXThisExpr 0x3e1cf48 <col:5> 'SM4 *' implicit this
+  | `-ImplicitCastExpr 0x3e1d020 <col:20> 'const sc_core::sc_inout<sc_dt::sc_biguint<128>>::data_type':'const sc_dt::sc_biguint<128>' lvalue <NoOp>
+  |   `-DeclRefExpr 0x3e1cfb8 <col:20> 'sc_biguint<128>':'sc_dt::sc_biguint<128>' lvalue Var 0x3dd97c0 'data_finish' 'sc_biguint<128>':'sc_dt::sc_biguint<128>'
+  |-ExprWithCleanups 0x3e26908 <line:113:5, col:238> 'std::basic_ostream<char>::__ostream_type':'std::basic_ostream<char>' lvalue
+  | `-CXXOperatorCallExpr 0x3e268d0 <col:5, col:238> 'std::basic_ostream<char>::__ostream_type':'std::basic_ostream<char>' lvalue '<<'
+  |   |-ImplicitCastExpr 0x3e268b8 <col:235> 'std::basic_ostream<char>::__ostream_type &(*)(std::basic_ostream<char>::__ostream_type &(*)(std::basic_ostream<char>::__ostream_type &))' <FunctionToPointerDecay>
+  |   | `-DeclRefExpr 0x3e26898 <col:235> 'std::basic_ostream<char>::__ostream_type &(std::basic_ostream<char>::__ostream_type &(*)(std::basic_ostream<char>::__ostream_type &))' lvalue CXXMethod 0x28f0518 'operator<<' 'std::basic_ostream<char>::__ostream_type &(std::basic_ostream<char>::__ostream_type &(*)(std::basic_ostream<char>::__ostream_type &))'
+  |   |-CXXOperatorCallExpr 0x3e25d70 <col:5, col:233> 'std::basic_ostream<char>::__ostream_type':'std::basic_ostream<char>' lvalue '<<'
+  |   | |-ImplicitCastExpr 0x3e25d58 <col:197> 'std::basic_ostream<char>::__ostream_type &(*)(int)' <FunctionToPointerDecay>
+  |   | | `-DeclRefExpr 0x3e25d38 <col:197> 'std::basic_ostream<char>::__ostream_type &(int)' lvalue CXXMethod 0x28f14a8 'operator<<' 'std::basic_ostream<char>::__ostream_type &(int)'
+  |   | |-CXXOperatorCallExpr 0x3e24ae0 <col:5, col:195> 'std::basic_ostream<char>::__ostream_type':'std::basic_ostream<char>' lvalue '<<'
+  |   | | |-ImplicitCastExpr 0x3e24ac8 <col:158> 'std::basic_ostream<char>::__ostream_type &(*)(int)' <FunctionToPointerDecay>
+  |   | | | `-DeclRefExpr 0x3e24aa8 <col:158> 'std::basic_ostream<char>::__ostream_type &(int)' lvalue CXXMethod 0x28f14a8 'operator<<' 'std::basic_ostream<char>::__ostream_type &(int)'
+  |   | | |-CXXOperatorCallExpr 0x3e23850 <col:5, col:156> 'std::basic_ostream<char>::__ostream_type':'std::basic_ostream<char>' lvalue '<<'
+  |   | | | |-ImplicitCastExpr 0x3e23838 <col:119> 'std::basic_ostream<char>::__ostream_type &(*)(int)' <FunctionToPointerDecay>
+  |   | | | | `-DeclRefExpr 0x3e23818 <col:119> 'std::basic_ostream<char>::__ostream_type &(int)' lvalue CXXMethod 0x28f14a8 'operator<<' 'std::basic_ostream<char>::__ostream_type &(int)'
+  |   | | | |-CXXOperatorCallExpr 0x3e225c0 <col:5, col:117> 'std::basic_ostream<char>::__ostream_type':'std::basic_ostream<char>' lvalue '<<'
+  |   | | | | |-ImplicitCastExpr 0x3e225a8 <col:79> 'std::basic_ostream<char>::__ostream_type &(*)(int)' <FunctionToPointerDecay>
+  |   | | | | | `-DeclRefExpr 0x3e22588 <col:79> 'std::basic_ostream<char>::__ostream_type &(int)' lvalue CXXMethod 0x28f14a8 'operator<<' 'std::basic_ostream<char>::__ostream_type &(int)'
+  |   | | | | |-CXXOperatorCallExpr 0x3e21338 <col:5, col:61> 'basic_ostream<char>':'std::basic_ostream<char>' lvalue '<<' adl
+  |   | | | | | |-ImplicitCastExpr 0x3e21320 <col:58> 'basic_ostream<char> &(*)(basic_ostream<char> &, const char *)' <FunctionToPointerDecay>
+  |   | | | | | | `-DeclRefExpr 0x3e21300 <col:58> 'basic_ostream<char> &(basic_ostream<char> &, const char *)' lvalue Function 0x28f87c8 'operator<<' 'basic_ostream<char> &(basic_ostream<char> &, const char *)'
+  |   | | | | | |-CXXOperatorCallExpr 0x3e205a8 <col:5, col:53> 'basic_ostream<char>':'std::basic_ostream<char>' lvalue '<<' adl
+  |   | | | | | | |-ImplicitCastExpr 0x3e20590 <col:50> 'basic_ostream<char> &(*)(basic_ostream<char> &, const char *)' <FunctionToPointerDecay>
+  |   | | | | | | | `-DeclRefExpr 0x3e20570 <col:50> 'basic_ostream<char> &(basic_ostream<char> &, const char *)' lvalue Function 0x28f87c8 'operator<<' 'basic_ostream<char> &(basic_ostream<char> &, const char *)'
+  |   | | | | | | |-CXXOperatorCallExpr 0x3e1f820 <col:5, col:48> '::std::ostream':'std::basic_ostream<char>' lvalue '<<'
+  |   | | | | | | | |-ImplicitCastExpr 0x3e1f808 <col:31> '::std::ostream &(*)(::std::ostream &, const sc_core::sc_time &)' <FunctionToPointerDecay>
+  |   | | | | | | | | `-DeclRefExpr 0x3e1f7e8 <col:31> '::std::ostream &(::std::ostream &, const sc_core::sc_time &)' lvalue Function 0x309c778 'operator<<' '::std::ostream &(::std::ostream &, const sc_core::sc_time &)'
+  |   | | | | | | | |-CXXOperatorCallExpr 0x3e1ead8 <col:5, col:20> 'basic_ostream<char>':'std::basic_ostream<char>' lvalue '<<' adl
+  |   | | | | | | | | |-ImplicitCastExpr 0x3e1eac0 <col:17> 'basic_ostream<char> &(*)(basic_ostream<char> &, const char *)' <FunctionToPointerDecay>
+  |   | | | | | | | | | `-DeclRefExpr 0x3e1eaa0 <col:17> 'basic_ostream<char> &(basic_ostream<char> &, const char *)' lvalue Function 0x28f87c8 'operator<<' 'basic_ostream<char> &(basic_ostream<char> &, const char *)'
+  |   | | | | | | | | |-CXXOperatorCallExpr 0x3e1dd48 <col:5, col:13> 'std::basic_ostream<char>::__ostream_type':'std::basic_ostream<char>' lvalue '<<'
+  |   | | | | | | | | | |-ImplicitCastExpr 0x3e1dd30 <col:10> 'std::basic_ostream<char>::__ostream_type &(*)(std::ios_base &(*)(std::ios_base &))' <FunctionToPointerDecay>
+  |   | | | | | | | | | | `-DeclRefExpr 0x3e1dd10 <col:10> 'std::basic_ostream<char>::__ostream_type &(std::ios_base &(*)(std::ios_base &))' lvalue CXXMethod 0x28f0a88 'operator<<' 'std::basic_ostream<char>::__ostream_type &(std::ios_base &(*)(std::ios_base &))'
+  |   | | | | | | | | | |-DeclRefExpr 0x3e1d038 <col:5> 'std::ostream':'std::basic_ostream<char>' lvalue Var 0x2a4d718 'cout' 'std::ostream':'std::basic_ostream<char>' (UsingShadow 0x2e1c5d8 'cout')
+  |   | | | | | | | | | `-ImplicitCastExpr 0x3e1dcf8 <col:13> 'std::ios_base &(*)(std::ios_base &)' <FunctionToPointerDecay>
+  |   | | | | | | | | |   `-DeclRefExpr 0x3e1d060 <col:13> 'std::ios_base &(std::ios_base &)' lvalue Function 0x2784908 'hex' 'std::ios_base &(std::ios_base &)' (UsingShadow 0x2e1c948 'hex')
+  |   | | | | | | | | `-ImplicitCastExpr 0x3e1ea88 <col:20> 'const char *' <ArrayToPointerDecay>
+  |   | | | | | | | |   `-StringLiteral 0x3e1dd80 <col:20> 'const char [9]' lvalue "AT time "
+  |   | | | | | | | `-CallExpr 0x3e1eb90 <col:34, col:48> 'const sc_core::sc_time' lvalue
+  |   | | | | | | |   `-ImplicitCastExpr 0x3e1eb78 <col:34> 'const sc_core::sc_time &(*)()' <FunctionToPointerDecay>
+  |   | | | | | | |     `-DeclRefExpr 0x3e1eb58 <col:34> 'const sc_core::sc_time &()' lvalue Function 0x313de08 'sc_time_stamp' 'const sc_core::sc_time &()'
+  |   | | | | | | `-ImplicitCastExpr 0x3e20558 <col:53> 'const char *' <ArrayToPointerDecay>
+  |   | | | | | |   `-StringLiteral 0x3e1f858 <col:53> 'const char [3]' lvalue "::"
+  |   | | | | | `-ImplicitCastExpr 0x3e212e8 <col:61> 'const char *' <ArrayToPointerDecay>
+  |   | | | | |   `-StringLiteral 0x3e205e0 <col:61> 'const char [16]' lvalue "data_dec_in: 0x"
+  |   | | | | `-CStyleCastExpr 0x3e21860 <col:82, col:117> 'int' <NoOp>
+  |   | | | |   `-ImplicitCastExpr 0x3e21848 <col:87, col:117> 'int' <IntegralCast> part_of_explicit_cast
+  |   | | | |     `-ImplicitCastExpr 0x3e21830 <col:87, col:117> 'sc_dt::uint_type':'unsigned long long' <UserDefinedConversion> part_of_explicit_cast
+  |   | | | |       `-CXXMemberCallExpr 0x3e21810 <col:87, col:117> 'sc_dt::uint_type':'unsigned long long'
+  |   | | | |         `-MemberExpr 0x3e217e0 <col:87, col:117> '<bound member function type>' .operator unsigned long long 0x3704660
+  |   | | | |           `-ImplicitCastExpr 0x3e217c0 <col:87, col:117> 'const sc_dt::sc_uint_base' lvalue <UncheckedDerivedToBase (sc_uint_base)>
+  |   | | | |             `-MaterializeTemporaryExpr 0x3e217a8 <col:87, col:117> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  |   | | | |               `-CStyleCastExpr 0x3e21768 <col:87, col:117> 'sc_uint<32>':'sc_dt::sc_uint<32>' <ConstructorConversion>
+  |   | | | |                 `-CXXBindTemporaryExpr 0x3e21748 <col:87, col:117> 'sc_uint<32>':'sc_dt::sc_uint<32>' (CXXTemporary 0x3e21748)
+  |   | | | |                   `-CXXConstructExpr 0x3e21710 <col:87, col:117> 'sc_uint<32>':'sc_dt::sc_uint<32>' 'void (const sc_dt::sc_unsigned &)'
+  |   | | | |                     `-MaterializeTemporaryExpr 0x3e216f8 <col:100, col:117> 'const sc_dt::sc_unsigned' lvalue
+  |   | | | |                       `-ImplicitCastExpr 0x3e216e0 <col:100, col:117> 'const sc_dt::sc_unsigned' <NoOp>
+  |   | | | |                         `-CXXBindTemporaryExpr 0x3e216c0 <col:100, col:117> 'sc_dt::sc_unsigned' (CXXTemporary 0x3e216c0)
+  |   | | | |                           `-ImplicitCastExpr 0x3e216a0 <col:100, col:117> 'sc_dt::sc_unsigned' <UserDefinedConversion>
+  |   | | | |                             `-CXXMemberCallExpr 0x3e21680 <col:100, col:117> 'sc_dt::sc_unsigned'
+  |   | | | |                               `-MemberExpr 0x3e21650 <col:100, col:117> '<bound member function type>' .operator sc_unsigned 0x35ccea8
+  |   | | | |                                 `-ImplicitCastExpr 0x3e21630 <col:100, col:117> 'const sc_dt::sc_unsigned_subref_r' lvalue <UncheckedDerivedToBase (sc_unsigned_subref_r)>
+  |   | | | |                                   `-CXXMemberCallExpr 0x3e21500 <col:100, col:117> 'sc_dt::sc_unsigned_subref' lvalue
+  |   | | | |                                     |-MemberExpr 0x3e214d0 <col:100, col:105> '<bound member function type>' .range 0x35d9848
+  |   | | | |                                     | `-ImplicitCastExpr 0x3e21530 <col:100> 'sc_dt::sc_unsigned' lvalue <UncheckedDerivedToBase (sc_unsigned)>
+  |   | | | |                                     |   `-DeclRefExpr 0x3e21410 <col:100> 'sc_biguint<128>':'sc_dt::sc_biguint<128>' lvalue Var 0x3dd9650 'data' 'sc_biguint<128>':'sc_dt::sc_biguint<128>'
+  |   | | | |                                     |-IntegerLiteral 0x3e21490 <col:111> 'int' 127
+  |   | | | |                                     `-IntegerLiteral 0x3e214b0 <col:115> 'int' 96
+  |   | | | `-CStyleCastExpr 0x3e22af0 <col:122, col:156> 'int' <NoOp>
+  |   | | |   `-ImplicitCastExpr 0x3e22ad8 <col:127, col:156> 'int' <IntegralCast> part_of_explicit_cast
+  |   | | |     `-ImplicitCastExpr 0x3e22ac0 <col:127, col:156> 'sc_dt::uint_type':'unsigned long long' <UserDefinedConversion> part_of_explicit_cast
+  |   | | |       `-CXXMemberCallExpr 0x3e22aa0 <col:127, col:156> 'sc_dt::uint_type':'unsigned long long'
+  |   | | |         `-MemberExpr 0x3e22a70 <col:127, col:156> '<bound member function type>' .operator unsigned long long 0x3704660
+  |   | | |           `-ImplicitCastExpr 0x3e22a50 <col:127, col:156> 'const sc_dt::sc_uint_base' lvalue <UncheckedDerivedToBase (sc_uint_base)>
+  |   | | |             `-MaterializeTemporaryExpr 0x3e22a38 <col:127, col:156> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  |   | | |               `-CStyleCastExpr 0x3e229f8 <col:127, col:156> 'sc_uint<32>':'sc_dt::sc_uint<32>' <ConstructorConversion>
+  |   | | |                 `-CXXBindTemporaryExpr 0x3e229d8 <col:127, col:156> 'sc_uint<32>':'sc_dt::sc_uint<32>' (CXXTemporary 0x3e229d8)
+  |   | | |                   `-CXXConstructExpr 0x3e229a0 <col:127, col:156> 'sc_uint<32>':'sc_dt::sc_uint<32>' 'void (const sc_dt::sc_unsigned &)'
+  |   | | |                     `-MaterializeTemporaryExpr 0x3e22988 <col:140, col:156> 'const sc_dt::sc_unsigned' lvalue
+  |   | | |                       `-ImplicitCastExpr 0x3e22970 <col:140, col:156> 'const sc_dt::sc_unsigned' <NoOp>
+  |   | | |                         `-CXXBindTemporaryExpr 0x3e22950 <col:140, col:156> 'sc_dt::sc_unsigned' (CXXTemporary 0x3e22950)
+  |   | | |                           `-ImplicitCastExpr 0x3e22930 <col:140, col:156> 'sc_dt::sc_unsigned' <UserDefinedConversion>
+  |   | | |                             `-CXXMemberCallExpr 0x3e22910 <col:140, col:156> 'sc_dt::sc_unsigned'
+  |   | | |                               `-MemberExpr 0x3e228e0 <col:140, col:156> '<bound member function type>' .operator sc_unsigned 0x35ccea8
+  |   | | |                                 `-ImplicitCastExpr 0x3e228c0 <col:140, col:156> 'const sc_dt::sc_unsigned_subref_r' lvalue <UncheckedDerivedToBase (sc_unsigned_subref_r)>
+  |   | | |                                   `-CXXMemberCallExpr 0x3e22790 <col:140, col:156> 'sc_dt::sc_unsigned_subref' lvalue
+  |   | | |                                     |-MemberExpr 0x3e22760 <col:140, col:145> '<bound member function type>' .range 0x35d9848
+  |   | | |                                     | `-ImplicitCastExpr 0x3e227c0 <col:140> 'sc_dt::sc_unsigned' lvalue <UncheckedDerivedToBase (sc_unsigned)>
+  |   | | |                                     |   `-DeclRefExpr 0x3e226a0 <col:140> 'sc_biguint<128>':'sc_dt::sc_biguint<128>' lvalue Var 0x3dd9650 'data' 'sc_biguint<128>':'sc_dt::sc_biguint<128>'
+  |   | | |                                     |-IntegerLiteral 0x3e22720 <col:151> 'int' 95
+  |   | | |                                     `-IntegerLiteral 0x3e22740 <col:154> 'int' 64
+  |   | | `-CStyleCastExpr 0x3e23d80 <col:161, col:195> 'int' <NoOp>
+  |   | |   `-ImplicitCastExpr 0x3e23d68 <col:166, col:195> 'int' <IntegralCast> part_of_explicit_cast
+  |   | |     `-ImplicitCastExpr 0x3e23d50 <col:166, col:195> 'sc_dt::uint_type':'unsigned long long' <UserDefinedConversion> part_of_explicit_cast
+  |   | |       `-CXXMemberCallExpr 0x3e23d30 <col:166, col:195> 'sc_dt::uint_type':'unsigned long long'
+  |   | |         `-MemberExpr 0x3e23d00 <col:166, col:195> '<bound member function type>' .operator unsigned long long 0x3704660
+  |   | |           `-ImplicitCastExpr 0x3e23ce0 <col:166, col:195> 'const sc_dt::sc_uint_base' lvalue <UncheckedDerivedToBase (sc_uint_base)>
+  |   | |             `-MaterializeTemporaryExpr 0x3e23cc8 <col:166, col:195> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  |   | |               `-CStyleCastExpr 0x3e23c88 <col:166, col:195> 'sc_uint<32>':'sc_dt::sc_uint<32>' <ConstructorConversion>
+  |   | |                 `-CXXBindTemporaryExpr 0x3e23c68 <col:166, col:195> 'sc_uint<32>':'sc_dt::sc_uint<32>' (CXXTemporary 0x3e23c68)
+  |   | |                   `-CXXConstructExpr 0x3e23c30 <col:166, col:195> 'sc_uint<32>':'sc_dt::sc_uint<32>' 'void (const sc_dt::sc_unsigned &)'
+  |   | |                     `-MaterializeTemporaryExpr 0x3e23c18 <col:179, col:195> 'const sc_dt::sc_unsigned' lvalue
+  |   | |                       `-ImplicitCastExpr 0x3e23c00 <col:179, col:195> 'const sc_dt::sc_unsigned' <NoOp>
+  |   | |                         `-CXXBindTemporaryExpr 0x3e23be0 <col:179, col:195> 'sc_dt::sc_unsigned' (CXXTemporary 0x3e23be0)
+  |   | |                           `-ImplicitCastExpr 0x3e23bc0 <col:179, col:195> 'sc_dt::sc_unsigned' <UserDefinedConversion>
+  |   | |                             `-CXXMemberCallExpr 0x3e23ba0 <col:179, col:195> 'sc_dt::sc_unsigned'
+  |   | |                               `-MemberExpr 0x3e23b70 <col:179, col:195> '<bound member function type>' .operator sc_unsigned 0x35ccea8
+  |   | |                                 `-ImplicitCastExpr 0x3e23b50 <col:179, col:195> 'const sc_dt::sc_unsigned_subref_r' lvalue <UncheckedDerivedToBase (sc_unsigned_subref_r)>
+  |   | |                                   `-CXXMemberCallExpr 0x3e23a20 <col:179, col:195> 'sc_dt::sc_unsigned_subref' lvalue
+  |   | |                                     |-MemberExpr 0x3e239f0 <col:179, col:184> '<bound member function type>' .range 0x35d9848
+  |   | |                                     | `-ImplicitCastExpr 0x3e23a50 <col:179> 'sc_dt::sc_unsigned' lvalue <UncheckedDerivedToBase (sc_unsigned)>
+  |   | |                                     |   `-DeclRefExpr 0x3e23930 <col:179> 'sc_biguint<128>':'sc_dt::sc_biguint<128>' lvalue Var 0x3dd9650 'data' 'sc_biguint<128>':'sc_dt::sc_biguint<128>'
+  |   | |                                     |-IntegerLiteral 0x3e239b0 <col:190> 'int' 63
+  |   | |                                     `-IntegerLiteral 0x3e239d0 <col:193> 'int' 32
+  |   | `-CStyleCastExpr 0x3e25010 <col:200, col:233> 'int' <NoOp>
+  |   |   `-ImplicitCastExpr 0x3e24ff8 <col:205, col:233> 'int' <IntegralCast> part_of_explicit_cast
+  |   |     `-ImplicitCastExpr 0x3e24fe0 <col:205, col:233> 'sc_dt::uint_type':'unsigned long long' <UserDefinedConversion> part_of_explicit_cast
+  |   |       `-CXXMemberCallExpr 0x3e24fc0 <col:205, col:233> 'sc_dt::uint_type':'unsigned long long'
+  |   |         `-MemberExpr 0x3e24f90 <col:205, col:233> '<bound member function type>' .operator unsigned long long 0x3704660
+  |   |           `-ImplicitCastExpr 0x3e24f70 <col:205, col:233> 'const sc_dt::sc_uint_base' lvalue <UncheckedDerivedToBase (sc_uint_base)>
+  |   |             `-MaterializeTemporaryExpr 0x3e24f58 <col:205, col:233> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  |   |               `-CStyleCastExpr 0x3e24f18 <col:205, col:233> 'sc_uint<32>':'sc_dt::sc_uint<32>' <ConstructorConversion>
+  |   |                 `-CXXBindTemporaryExpr 0x3e24ef8 <col:205, col:233> 'sc_uint<32>':'sc_dt::sc_uint<32>' (CXXTemporary 0x3e24ef8)
+  |   |                   `-CXXConstructExpr 0x3e24ec0 <col:205, col:233> 'sc_uint<32>':'sc_dt::sc_uint<32>' 'void (const sc_dt::sc_unsigned &)'
+  |   |                     `-MaterializeTemporaryExpr 0x3e24ea8 <col:218, col:233> 'const sc_dt::sc_unsigned' lvalue
+  |   |                       `-ImplicitCastExpr 0x3e24e90 <col:218, col:233> 'const sc_dt::sc_unsigned' <NoOp>
+  |   |                         `-CXXBindTemporaryExpr 0x3e24e70 <col:218, col:233> 'sc_dt::sc_unsigned' (CXXTemporary 0x3e24e70)
+  |   |                           `-ImplicitCastExpr 0x3e24e50 <col:218, col:233> 'sc_dt::sc_unsigned' <UserDefinedConversion>
+  |   |                             `-CXXMemberCallExpr 0x3e24e30 <col:218, col:233> 'sc_dt::sc_unsigned'
+  |   |                               `-MemberExpr 0x3e24e00 <col:218, col:233> '<bound member function type>' .operator sc_unsigned 0x35ccea8
+  |   |                                 `-ImplicitCastExpr 0x3e24de0 <col:218, col:233> 'const sc_dt::sc_unsigned_subref_r' lvalue <UncheckedDerivedToBase (sc_unsigned_subref_r)>
+  |   |                                   `-CXXMemberCallExpr 0x3e24cb0 <col:218, col:233> 'sc_dt::sc_unsigned_subref' lvalue
+  |   |                                     |-MemberExpr 0x3e24c80 <col:218, col:223> '<bound member function type>' .range 0x35d9848
+  |   |                                     | `-ImplicitCastExpr 0x3e24ce0 <col:218> 'sc_dt::sc_unsigned' lvalue <UncheckedDerivedToBase (sc_unsigned)>
+  |   |                                     |   `-DeclRefExpr 0x3e24bc0 <col:218> 'sc_biguint<128>':'sc_dt::sc_biguint<128>' lvalue Var 0x3dd9650 'data' 'sc_biguint<128>':'sc_dt::sc_biguint<128>'
+  |   |                                     |-IntegerLiteral 0x3e24c40 <col:229> 'int' 31
+  |   |                                     `-IntegerLiteral 0x3e24c60 <col:232> 'int' 0
+  |   `-ImplicitCastExpr 0x3e26880 <col:238> 'basic_ostream<char> &(*)(basic_ostream<char> &)' <FunctionToPointerDecay>
+  |     `-DeclRefExpr 0x3e26858 <col:238> 'basic_ostream<char> &(basic_ostream<char> &)' lvalue Function 0x28f4b08 'endl' 'basic_ostream<char> &(basic_ostream<char> &)' (UsingShadow 0x2e1c738 'endl')
+  |-ExprWithCleanups 0x3e30f98 <line:114:5, col:278> 'std::basic_ostream<char>::__ostream_type':'std::basic_ostream<char>' lvalue
+  | `-CXXOperatorCallExpr 0x3e30f60 <col:5, col:278> 'std::basic_ostream<char>::__ostream_type':'std::basic_ostream<char>' lvalue '<<'
+  |   |-ImplicitCastExpr 0x3e30f48 <col:275> 'std::basic_ostream<char>::__ostream_type &(*)(std::basic_ostream<char>::__ostream_type &(*)(std::basic_ostream<char>::__ostream_type &))' <FunctionToPointerDecay>
+  |   | `-DeclRefExpr 0x3e30f28 <col:275> 'std::basic_ostream<char>::__ostream_type &(std::basic_ostream<char>::__ostream_type &(*)(std::basic_ostream<char>::__ostream_type &))' lvalue CXXMethod 0x28f0518 'operator<<' 'std::basic_ostream<char>::__ostream_type &(std::basic_ostream<char>::__ostream_type &(*)(std::basic_ostream<char>::__ostream_type &))'
+  |   |-CXXOperatorCallExpr 0x3e30400 <col:5, col:270> 'basic_ostream<char>':'std::basic_ostream<char>' lvalue '<<' adl
+  |   | |-ImplicitCastExpr 0x3e303e8 <col:267> 'basic_ostream<char> &(*)(basic_ostream<char> &, char)' <FunctionToPointerDecay>
+  |   | | `-DeclRefExpr 0x3e303c8 <col:267> 'basic_ostream<char> &(basic_ostream<char> &, char)' lvalue Function 0x28f64e8 'operator<<' 'basic_ostream<char> &(basic_ostream<char> &, char)'
+  |   | |-CXXOperatorCallExpr 0x3e2f660 <col:5, col:265> 'std::basic_ostream<char>::__ostream_type':'std::basic_ostream<char>' lvalue '<<'
+  |   | | |-ImplicitCastExpr 0x3e2f648 <col:222> 'std::basic_ostream<char>::__ostream_type &(*)(int)' <FunctionToPointerDecay>
+  |   | | | `-DeclRefExpr 0x3e2f628 <col:222> 'std::basic_ostream<char>::__ostream_type &(int)' lvalue CXXMethod 0x28f14a8 'operator<<' 'std::basic_ostream<char>::__ostream_type &(int)'
+  |   | | |-CXXOperatorCallExpr 0x3e2e3d0 <col:5, col:220> 'std::basic_ostream<char>::__ostream_type':'std::basic_ostream<char>' lvalue '<<'
+  |   | | | |-ImplicitCastExpr 0x3e2e3b8 <col:176> 'std::basic_ostream<char>::__ostream_type &(*)(int)' <FunctionToPointerDecay>
+  |   | | | | `-DeclRefExpr 0x3e2e398 <col:176> 'std::basic_ostream<char>::__ostream_type &(int)' lvalue CXXMethod 0x28f14a8 'operator<<' 'std::basic_ostream<char>::__ostream_type &(int)'
+  |   | | | |-CXXOperatorCallExpr 0x3e2d140 <col:5, col:174> 'std::basic_ostream<char>::__ostream_type':'std::basic_ostream<char>' lvalue '<<'
+  |   | | | | |-ImplicitCastExpr 0x3e2d128 <col:130> 'std::basic_ostream<char>::__ostream_type &(*)(int)' <FunctionToPointerDecay>
+  |   | | | | | `-DeclRefExpr 0x3e2d108 <col:130> 'std::basic_ostream<char>::__ostream_type &(int)' lvalue CXXMethod 0x28f14a8 'operator<<' 'std::basic_ostream<char>::__ostream_type &(int)'
+  |   | | | | |-CXXOperatorCallExpr 0x3e2beb0 <col:5, col:128> 'std::basic_ostream<char>::__ostream_type':'std::basic_ostream<char>' lvalue '<<'
+  |   | | | | | |-ImplicitCastExpr 0x3e2be98 <col:83> 'std::basic_ostream<char>::__ostream_type &(*)(int)' <FunctionToPointerDecay>
+  |   | | | | | | `-DeclRefExpr 0x3e2be78 <col:83> 'std::basic_ostream<char>::__ostream_type &(int)' lvalue CXXMethod 0x28f14a8 'operator<<' 'std::basic_ostream<char>::__ostream_type &(int)'
+  |   | | | | | |-CXXOperatorCallExpr 0x3e2ac28 <col:5, col:61> 'basic_ostream<char>':'std::basic_ostream<char>' lvalue '<<' adl
+  |   | | | | | | |-ImplicitCastExpr 0x3e2ac10 <col:58> 'basic_ostream<char> &(*)(basic_ostream<char> &, const char *)' <FunctionToPointerDecay>
+  |   | | | | | | | `-DeclRefExpr 0x3e2abf0 <col:58> 'basic_ostream<char> &(basic_ostream<char> &, const char *)' lvalue Function 0x28f87c8 'operator<<' 'basic_ostream<char> &(basic_ostream<char> &, const char *)'
+  |   | | | | | | |-CXXOperatorCallExpr 0x3e29e88 <col:5, col:53> 'basic_ostream<char>':'std::basic_ostream<char>' lvalue '<<' adl
+  |   | | | | | | | |-ImplicitCastExpr 0x3e29e70 <col:50> 'basic_ostream<char> &(*)(basic_ostream<char> &, const char *)' <FunctionToPointerDecay>
+  |   | | | | | | | | `-DeclRefExpr 0x3e29e50 <col:50> 'basic_ostream<char> &(basic_ostream<char> &, const char *)' lvalue Function 0x28f87c8 'operator<<' 'basic_ostream<char> &(basic_ostream<char> &, const char *)'
+  |   | | | | | | | |-CXXOperatorCallExpr 0x3e29100 <col:5, col:48> '::std::ostream':'std::basic_ostream<char>' lvalue '<<'
+  |   | | | | | | | | |-ImplicitCastExpr 0x3e290e8 <col:31> '::std::ostream &(*)(::std::ostream &, const sc_core::sc_time &)' <FunctionToPointerDecay>
+  |   | | | | | | | | | `-DeclRefExpr 0x3e290c8 <col:31> '::std::ostream &(::std::ostream &, const sc_core::sc_time &)' lvalue Function 0x309c778 'operator<<' '::std::ostream &(::std::ostream &, const sc_core::sc_time &)'
+  |   | | | | | | | | |-CXXOperatorCallExpr 0x3e283b8 <col:5, col:20> 'basic_ostream<char>':'std::basic_ostream<char>' lvalue '<<' adl
+  |   | | | | | | | | | |-ImplicitCastExpr 0x3e283a0 <col:17> 'basic_ostream<char> &(*)(basic_ostream<char> &, const char *)' <FunctionToPointerDecay>
+  |   | | | | | | | | | | `-DeclRefExpr 0x3e28380 <col:17> 'basic_ostream<char> &(basic_ostream<char> &, const char *)' lvalue Function 0x28f87c8 'operator<<' 'basic_ostream<char> &(basic_ostream<char> &, const char *)'
+  |   | | | | | | | | | |-CXXOperatorCallExpr 0x3e27628 <col:5, col:13> 'std::basic_ostream<char>::__ostream_type':'std::basic_ostream<char>' lvalue '<<'
+  |   | | | | | | | | | | |-ImplicitCastExpr 0x3e27610 <col:10> 'std::basic_ostream<char>::__ostream_type &(*)(std::ios_base &(*)(std::ios_base &))' <FunctionToPointerDecay>
+  |   | | | | | | | | | | | `-DeclRefExpr 0x3e275f0 <col:10> 'std::basic_ostream<char>::__ostream_type &(std::ios_base &(*)(std::ios_base &))' lvalue CXXMethod 0x28f0a88 'operator<<' 'std::basic_ostream<char>::__ostream_type &(std::ios_base &(*)(std::ios_base &))'
+  |   | | | | | | | | | | |-DeclRefExpr 0x3e26920 <col:5> 'std::ostream':'std::basic_ostream<char>' lvalue Var 0x2a4d718 'cout' 'std::ostream':'std::basic_ostream<char>' (UsingShadow 0x2e1c5d8 'cout')
+  |   | | | | | | | | | | `-ImplicitCastExpr 0x3e275d8 <col:13> 'std::ios_base &(*)(std::ios_base &)' <FunctionToPointerDecay>
+  |   | | | | | | | | | |   `-DeclRefExpr 0x3e26948 <col:13> 'std::ios_base &(std::ios_base &)' lvalue Function 0x2784908 'hex' 'std::ios_base &(std::ios_base &)' (UsingShadow 0x2e1c948 'hex')
+  |   | | | | | | | | | `-ImplicitCastExpr 0x3e28368 <col:20> 'const char *' <ArrayToPointerDecay>
+  |   | | | | | | | | |   `-StringLiteral 0x3e27660 <col:20> 'const char [9]' lvalue "AT time "
+  |   | | | | | | | | `-CallExpr 0x3e28470 <col:34, col:48> 'const sc_core::sc_time' lvalue
+  |   | | | | | | | |   `-ImplicitCastExpr 0x3e28458 <col:34> 'const sc_core::sc_time &(*)()' <FunctionToPointerDecay>
+  |   | | | | | | | |     `-DeclRefExpr 0x3e28438 <col:34> 'const sc_core::sc_time &()' lvalue Function 0x313de08 'sc_time_stamp' 'const sc_core::sc_time &()'
+  |   | | | | | | | `-ImplicitCastExpr 0x3e29e38 <col:53> 'const char *' <ArrayToPointerDecay>
+  |   | | | | | | |   `-StringLiteral 0x3e29138 <col:53> 'const char [3]' lvalue "::"
+  |   | | | | | | `-ImplicitCastExpr 0x3e2abd8 <col:61> 'const char *' <ArrayToPointerDecay>
+  |   | | | | | |   `-StringLiteral 0x3e29ec0 <col:61> 'const char [20]' lvalue "data_dec_finish: 0x"
+  |   | | | | | `-CStyleCastExpr 0x3e2b150 <col:86, col:128> 'int' <NoOp>
+  |   | | | | |   `-ImplicitCastExpr 0x3e2b138 <col:91, col:128> 'int' <IntegralCast> part_of_explicit_cast
+  |   | | | | |     `-ImplicitCastExpr 0x3e2b120 <col:91, col:128> 'sc_dt::uint_type':'unsigned long long' <UserDefinedConversion> part_of_explicit_cast
+  |   | | | | |       `-CXXMemberCallExpr 0x3e2b100 <col:91, col:128> 'sc_dt::uint_type':'unsigned long long'
+  |   | | | | |         `-MemberExpr 0x3e2b0d0 <col:91, col:128> '<bound member function type>' .operator unsigned long long 0x3704660
+  |   | | | | |           `-ImplicitCastExpr 0x3e2b0b0 <col:91, col:128> 'const sc_dt::sc_uint_base' lvalue <UncheckedDerivedToBase (sc_uint_base)>
+  |   | | | | |             `-MaterializeTemporaryExpr 0x3e2b098 <col:91, col:128> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  |   | | | | |               `-CStyleCastExpr 0x3e2b058 <col:91, col:128> 'sc_uint<32>':'sc_dt::sc_uint<32>' <ConstructorConversion>
+  |   | | | | |                 `-CXXBindTemporaryExpr 0x3e2b038 <col:91, col:128> 'sc_uint<32>':'sc_dt::sc_uint<32>' (CXXTemporary 0x3e2b038)
+  |   | | | | |                   `-CXXConstructExpr 0x3e2b000 <col:91, col:128> 'sc_uint<32>':'sc_dt::sc_uint<32>' 'void (const sc_dt::sc_unsigned &)'
+  |   | | | | |                     `-MaterializeTemporaryExpr 0x3e2afe8 <col:104, col:128> 'const sc_dt::sc_unsigned' lvalue
+  |   | | | | |                       `-ImplicitCastExpr 0x3e2afd0 <col:104, col:128> 'const sc_dt::sc_unsigned' <NoOp>
+  |   | | | | |                         `-CXXBindTemporaryExpr 0x3e2afb0 <col:104, col:128> 'sc_dt::sc_unsigned' (CXXTemporary 0x3e2afb0)
+  |   | | | | |                           `-ImplicitCastExpr 0x3e2af90 <col:104, col:128> 'sc_dt::sc_unsigned' <UserDefinedConversion>
+  |   | | | | |                             `-CXXMemberCallExpr 0x3e2af70 <col:104, col:128> 'sc_dt::sc_unsigned'
+  |   | | | | |                               `-MemberExpr 0x3e2af40 <col:104, col:128> '<bound member function type>' .operator sc_unsigned 0x35ccea8
+  |   | | | | |                                 `-ImplicitCastExpr 0x3e2af20 <col:104, col:128> 'const sc_dt::sc_unsigned_subref_r' lvalue <UncheckedDerivedToBase (sc_unsigned_subref_r)>
+  |   | | | | |                                   `-CXXMemberCallExpr 0x3e2adf0 <col:104, col:128> 'sc_dt::sc_unsigned_subref' lvalue
+  |   | | | | |                                     |-MemberExpr 0x3e2adc0 <col:104, col:116> '<bound member function type>' .range 0x35d9848
+  |   | | | | |                                     | `-ImplicitCastExpr 0x3e2ae20 <col:104> 'sc_dt::sc_unsigned' lvalue <UncheckedDerivedToBase (sc_unsigned)>
+  |   | | | | |                                     |   `-DeclRefExpr 0x3e2ad00 <col:104> 'sc_biguint<128>':'sc_dt::sc_biguint<128>' lvalue Var 0x3dd97c0 'data_finish' 'sc_biguint<128>':'sc_dt::sc_biguint<128>'
+  |   | | | | |                                     |-IntegerLiteral 0x3e2ad80 <col:122> 'int' 127
+  |   | | | | |                                     `-IntegerLiteral 0x3e2ada0 <col:126> 'int' 96
+  |   | | | | `-CStyleCastExpr 0x3e2c3e0 <col:133, col:174> 'int' <NoOp>
+  |   | | | |   `-ImplicitCastExpr 0x3e2c3c8 <col:138, col:174> 'int' <IntegralCast> part_of_explicit_cast
+  |   | | | |     `-ImplicitCastExpr 0x3e2c3b0 <col:138, col:174> 'sc_dt::uint_type':'unsigned long long' <UserDefinedConversion> part_of_explicit_cast
+  |   | | | |       `-CXXMemberCallExpr 0x3e2c390 <col:138, col:174> 'sc_dt::uint_type':'unsigned long long'
+  |   | | | |         `-MemberExpr 0x3e2c360 <col:138, col:174> '<bound member function type>' .operator unsigned long long 0x3704660
+  |   | | | |           `-ImplicitCastExpr 0x3e2c340 <col:138, col:174> 'const sc_dt::sc_uint_base' lvalue <UncheckedDerivedToBase (sc_uint_base)>
+  |   | | | |             `-MaterializeTemporaryExpr 0x3e2c328 <col:138, col:174> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  |   | | | |               `-CStyleCastExpr 0x3e2c2e8 <col:138, col:174> 'sc_uint<32>':'sc_dt::sc_uint<32>' <ConstructorConversion>
+  |   | | | |                 `-CXXBindTemporaryExpr 0x3e2c2c8 <col:138, col:174> 'sc_uint<32>':'sc_dt::sc_uint<32>' (CXXTemporary 0x3e2c2c8)
+  |   | | | |                   `-CXXConstructExpr 0x3e2c290 <col:138, col:174> 'sc_uint<32>':'sc_dt::sc_uint<32>' 'void (const sc_dt::sc_unsigned &)'
+  |   | | | |                     `-MaterializeTemporaryExpr 0x3e2c278 <col:151, col:174> 'const sc_dt::sc_unsigned' lvalue
+  |   | | | |                       `-ImplicitCastExpr 0x3e2c260 <col:151, col:174> 'const sc_dt::sc_unsigned' <NoOp>
+  |   | | | |                         `-CXXBindTemporaryExpr 0x3e2c240 <col:151, col:174> 'sc_dt::sc_unsigned' (CXXTemporary 0x3e2c240)
+  |   | | | |                           `-ImplicitCastExpr 0x3e2c220 <col:151, col:174> 'sc_dt::sc_unsigned' <UserDefinedConversion>
+  |   | | | |                             `-CXXMemberCallExpr 0x3e2c200 <col:151, col:174> 'sc_dt::sc_unsigned'
+  |   | | | |                               `-MemberExpr 0x3e2c1d0 <col:151, col:174> '<bound member function type>' .operator sc_unsigned 0x35ccea8
+  |   | | | |                                 `-ImplicitCastExpr 0x3e2c1b0 <col:151, col:174> 'const sc_dt::sc_unsigned_subref_r' lvalue <UncheckedDerivedToBase (sc_unsigned_subref_r)>
+  |   | | | |                                   `-CXXMemberCallExpr 0x3e2c080 <col:151, col:174> 'sc_dt::sc_unsigned_subref' lvalue
+  |   | | | |                                     |-MemberExpr 0x3e2c050 <col:151, col:163> '<bound member function type>' .range 0x35d9848
+  |   | | | |                                     | `-ImplicitCastExpr 0x3e2c0b0 <col:151> 'sc_dt::sc_unsigned' lvalue <UncheckedDerivedToBase (sc_unsigned)>
+  |   | | | |                                     |   `-DeclRefExpr 0x3e2bf90 <col:151> 'sc_biguint<128>':'sc_dt::sc_biguint<128>' lvalue Var 0x3dd97c0 'data_finish' 'sc_biguint<128>':'sc_dt::sc_biguint<128>'
+  |   | | | |                                     |-IntegerLiteral 0x3e2c010 <col:169> 'int' 95
+  |   | | | |                                     `-IntegerLiteral 0x3e2c030 <col:172> 'int' 64
+  |   | | | `-CStyleCastExpr 0x3e2d670 <col:179, col:220> 'int' <NoOp>
+  |   | | |   `-ImplicitCastExpr 0x3e2d658 <col:184, col:220> 'int' <IntegralCast> part_of_explicit_cast
+  |   | | |     `-ImplicitCastExpr 0x3e2d640 <col:184, col:220> 'sc_dt::uint_type':'unsigned long long' <UserDefinedConversion> part_of_explicit_cast
+  |   | | |       `-CXXMemberCallExpr 0x3e2d620 <col:184, col:220> 'sc_dt::uint_type':'unsigned long long'
+  |   | | |         `-MemberExpr 0x3e2d5f0 <col:184, col:220> '<bound member function type>' .operator unsigned long long 0x3704660
+  |   | | |           `-ImplicitCastExpr 0x3e2d5d0 <col:184, col:220> 'const sc_dt::sc_uint_base' lvalue <UncheckedDerivedToBase (sc_uint_base)>
+  |   | | |             `-MaterializeTemporaryExpr 0x3e2d5b8 <col:184, col:220> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  |   | | |               `-CStyleCastExpr 0x3e2d578 <col:184, col:220> 'sc_uint<32>':'sc_dt::sc_uint<32>' <ConstructorConversion>
+  |   | | |                 `-CXXBindTemporaryExpr 0x3e2d558 <col:184, col:220> 'sc_uint<32>':'sc_dt::sc_uint<32>' (CXXTemporary 0x3e2d558)
+  |   | | |                   `-CXXConstructExpr 0x3e2d520 <col:184, col:220> 'sc_uint<32>':'sc_dt::sc_uint<32>' 'void (const sc_dt::sc_unsigned &)'
+  |   | | |                     `-MaterializeTemporaryExpr 0x3e2d508 <col:197, col:220> 'const sc_dt::sc_unsigned' lvalue
+  |   | | |                       `-ImplicitCastExpr 0x3e2d4f0 <col:197, col:220> 'const sc_dt::sc_unsigned' <NoOp>
+  |   | | |                         `-CXXBindTemporaryExpr 0x3e2d4d0 <col:197, col:220> 'sc_dt::sc_unsigned' (CXXTemporary 0x3e2d4d0)
+  |   | | |                           `-ImplicitCastExpr 0x3e2d4b0 <col:197, col:220> 'sc_dt::sc_unsigned' <UserDefinedConversion>
+  |   | | |                             `-CXXMemberCallExpr 0x3e2d490 <col:197, col:220> 'sc_dt::sc_unsigned'
+  |   | | |                               `-MemberExpr 0x3e2d460 <col:197, col:220> '<bound member function type>' .operator sc_unsigned 0x35ccea8
+  |   | | |                                 `-ImplicitCastExpr 0x3e2d440 <col:197, col:220> 'const sc_dt::sc_unsigned_subref_r' lvalue <UncheckedDerivedToBase (sc_unsigned_subref_r)>
+  |   | | |                                   `-CXXMemberCallExpr 0x3e2d310 <col:197, col:220> 'sc_dt::sc_unsigned_subref' lvalue
+  |   | | |                                     |-MemberExpr 0x3e2d2e0 <col:197, col:209> '<bound member function type>' .range 0x35d9848
+  |   | | |                                     | `-ImplicitCastExpr 0x3e2d340 <col:197> 'sc_dt::sc_unsigned' lvalue <UncheckedDerivedToBase (sc_unsigned)>
+  |   | | |                                     |   `-DeclRefExpr 0x3e2d220 <col:197> 'sc_biguint<128>':'sc_dt::sc_biguint<128>' lvalue Var 0x3dd97c0 'data_finish' 'sc_biguint<128>':'sc_dt::sc_biguint<128>'
+  |   | | |                                     |-IntegerLiteral 0x3e2d2a0 <col:215> 'int' 63
+  |   | | |                                     `-IntegerLiteral 0x3e2d2c0 <col:218> 'int' 32
+  |   | | `-CStyleCastExpr 0x3e2e900 <col:225, col:265> 'int' <NoOp>
+  |   | |   `-ImplicitCastExpr 0x3e2e8e8 <col:230, col:265> 'int' <IntegralCast> part_of_explicit_cast
+  |   | |     `-ImplicitCastExpr 0x3e2e8d0 <col:230, col:265> 'sc_dt::uint_type':'unsigned long long' <UserDefinedConversion> part_of_explicit_cast
+  |   | |       `-CXXMemberCallExpr 0x3e2e8b0 <col:230, col:265> 'sc_dt::uint_type':'unsigned long long'
+  |   | |         `-MemberExpr 0x3e2e880 <col:230, col:265> '<bound member function type>' .operator unsigned long long 0x3704660
+  |   | |           `-ImplicitCastExpr 0x3e2e860 <col:230, col:265> 'const sc_dt::sc_uint_base' lvalue <UncheckedDerivedToBase (sc_uint_base)>
+  |   | |             `-MaterializeTemporaryExpr 0x3e2e848 <col:230, col:265> 'sc_uint<32>':'sc_dt::sc_uint<32>' lvalue
+  |   | |               `-CStyleCastExpr 0x3e2e808 <col:230, col:265> 'sc_uint<32>':'sc_dt::sc_uint<32>' <ConstructorConversion>
+  |   | |                 `-CXXBindTemporaryExpr 0x3e2e7e8 <col:230, col:265> 'sc_uint<32>':'sc_dt::sc_uint<32>' (CXXTemporary 0x3e2e7e8)
+  |   | |                   `-CXXConstructExpr 0x3e2e7b0 <col:230, col:265> 'sc_uint<32>':'sc_dt::sc_uint<32>' 'void (const sc_dt::sc_unsigned &)'
+  |   | |                     `-MaterializeTemporaryExpr 0x3e2e798 <col:243, col:265> 'const sc_dt::sc_unsigned' lvalue
+  |   | |                       `-ImplicitCastExpr 0x3e2e780 <col:243, col:265> 'const sc_dt::sc_unsigned' <NoOp>
+  |   | |                         `-CXXBindTemporaryExpr 0x3e2e760 <col:243, col:265> 'sc_dt::sc_unsigned' (CXXTemporary 0x3e2e760)
+  |   | |                           `-ImplicitCastExpr 0x3e2e740 <col:243, col:265> 'sc_dt::sc_unsigned' <UserDefinedConversion>
+  |   | |                             `-CXXMemberCallExpr 0x3e2e720 <col:243, col:265> 'sc_dt::sc_unsigned'
+  |   | |                               `-MemberExpr 0x3e2e6f0 <col:243, col:265> '<bound member function type>' .operator sc_unsigned 0x35ccea8
+  |   | |                                 `-ImplicitCastExpr 0x3e2e6d0 <col:243, col:265> 'const sc_dt::sc_unsigned_subref_r' lvalue <UncheckedDerivedToBase (sc_unsigned_subref_r)>
+  |   | |                                   `-CXXMemberCallExpr 0x3e2e5a0 <col:243, col:265> 'sc_dt::sc_unsigned_subref' lvalue
+  |   | |                                     |-MemberExpr 0x3e2e570 <col:243, col:255> '<bound member function type>' .range 0x35d9848
+  |   | |                                     | `-ImplicitCastExpr 0x3e2e5d0 <col:243> 'sc_dt::sc_unsigned' lvalue <UncheckedDerivedToBase (sc_unsigned)>
+  |   | |                                     |   `-DeclRefExpr 0x3e2e4b0 <col:243> 'sc_biguint<128>':'sc_dt::sc_biguint<128>' lvalue Var 0x3dd97c0 'data_finish' 'sc_biguint<128>':'sc_dt::sc_biguint<128>'
+  |   | |                                     |-IntegerLiteral 0x3e2e530 <col:261> 'int' 31
+  |   | |                                     `-IntegerLiteral 0x3e2e550 <col:264> 'int' 0
+  |   | `-CharacterLiteral 0x3e2f698 <col:270> 'char' 10
+  |   `-ImplicitCastExpr 0x3e30f10 <col:278> 'basic_ostream<char> &(*)(basic_ostream<char> &)' <FunctionToPointerDecay>
+  |     `-DeclRefExpr 0x3e30ee8 <col:278> 'basic_ostream<char> &(basic_ostream<char> &)' lvalue Function 0x28f4b08 'endl' 'basic_ostream<char> &(basic_ostream<char> &)' (UsingShadow 0x2e1c738 'endl')
+  `-ReturnStmt 0x3e30fb0 <line:116:5>
+
