@@ -1,0 +1,3 @@
+	sc_in <sc_uint<8> > din;
+	sc_out <sc_uint<3> > dout;
+	sc_signal <sc_uint<3> > d_out;

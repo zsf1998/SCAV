@@ -1,0 +1,4 @@
+	sc_out <bool> sum;
+	sc_out <bool> carry_out;
+	sc_in <bool> a;
+	sc_in <bool> b;

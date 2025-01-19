@@ -1,0 +1,595 @@
+#include "CompressExtend.hpp"
+
+
+void CompressExtend::assign_Wj_0()
+{
+	Wj_0 = W0.read() ^ W7.read() ^ (W13.read().range(16,0) , W13.read().range(31,17));
+}
+
+
+void CompressExtend::assign_W16()
+{
+	W16 = Wj_0.read() ^ (Wj_0.read().range(16,0) , Wj_0.read().range(31,17)) ^ (Wj_0.read().range(8,0) , Wj_0.read().range(31,9)) ^ (W3.read().range(24,0) , W3.read().range(31,25)) ^ W10.read();
+}
+
+
+void CompressExtend::assign_SS1_0()
+{
+	SS1_0 = (A.read().range(19,0) , A.read().range(31,20)) + E.read() + Tj.read();
+}
+
+
+void CompressExtend::assign_SS1()
+{
+	SS1 = (SS1_0.read().range(24,0) , SS1_0.read().range(31,25));
+}
+
+
+void CompressExtend::assign_SS2()
+{
+	SS2 = SS1.read() ^ (A.read().range(19,0) , A.read().range(31,20));
+}
+
+
+void CompressExtend::assign_FF_0()
+{
+	FF_0 = A.read() ^ B.read() ^ C.read();
+}
+
+
+void CompressExtend::assign_FF_1()
+{
+	FF_1 = (A.read() & B.read()) | (A.read() & C.read()) | (B.read() & C.read());
+}
+
+
+void CompressExtend::assign_GG_0()
+{
+	GG_0 = E.read() ^ F.read() ^ G.read();
+}
+
+
+void CompressExtend::assign_GG_1()
+{
+	GG_1 = (E.read() & F.read()) | (~E.read() & G.read());
+}
+
+
+void CompressExtend::assign_FF()
+{
+	FF = (Round.read() < 21)? FF_0 :FF_1;
+}
+
+
+void CompressExtend::assign_GG()
+{
+	GG = (Round.read() < 21)? GG_0 :GG_1;
+}
+
+
+void CompressExtend::assign_TT1()
+{
+	TT1 = FF.read() + D.read() + SS2.read() + Wout63.read();
+}
+
+
+void CompressExtend::assign_TT2()
+{
+	TT2 = GG.read() + H.read() + SS1.read() + Wout67.read();
+}
+
+
+void CompressExtend::assign_next_Tj()
+{
+	next_Tj = (Tj.read().range(30,0) , Tj.read()[31]);
+}
+
+
+void CompressExtend::assign_next_C()
+{
+	next_C = (B.read().range(22,0) , B.read().range(31,23));
+}
+
+
+void CompressExtend::assign_next_E()
+{
+	next_E = TT2.read() ^ (TT2.read().range(22,0) , TT2.read().range(31,23)) ^ (TT2.read().range(14,0) , TT2.read().range(31,15));
+}
+
+    
+void CompressExtend::assign_next_G()
+{
+	next_G = (F.read().range(12,0) , F.read().range(31,13));
+}
+
+
+void CompressExtend::always_block1()
+{
+            if(!rst.read())
+            {
+                Wout67 = 0b0;
+                Wout63 = 0b0;
+                wout = 0b0;
+                A = 0x7380166f;
+                B = 0x4914b2b9;
+                C = 0x172442d7;
+                D = a8a0600;
+                E = 0xa96f30bc;
+                F = 0x163138aa;
+                G = 0xe38dee4d;
+                H = 0b0fb0e4e;
+                Tj = 0x79cc4519;
+                var_WOUT_0 = WOUT_0.read();
+                var_WOUT_0.range(255,224) = 0x7380166f;
+                var_WOUT_0.range(223,192) = 0x4914b2b9;
+                var_WOUT_0.range(191,160) = 0x172442d7;
+                var_WOUT_0.range(159,128) = a8a0600;
+                var_WOUT_0.range(127,96) = 0xa96f30bc;
+                var_WOUT_0.range(95,64) = 0x163138aa;
+                var_WOUT_0.range(63,32) = 0xe38dee4d;
+                var_WOUT_0.range(31,0) = 0b0fb0e4e;
+                WOUT_0 = var_WOUT_0;
+                W0 = 0b0;
+                W1 = 0b0;
+                W2 = 0b0;
+                W3 = 0b0;
+                W4 = 0b0;
+                W5 = 0b0;
+                W6 = 0b0;
+                W7 = 0b0;
+                W8 = 0b0;
+                W9 = 0b0;
+                W10 = 0b0;
+                W11 = 0b0;
+                W12 = 0b0;
+                W13 = 0b0;
+                W14 = 0b0;
+                W15 = 0b0;
+            }
+            else
+            {
+                if(ctrl.read() == 0b01 || ctrl.read() == 0b10)
+                {
+                switch(Round.read())
+                {
+                    case 0:
+                      {
+                          W0 = m_i.read();
+                          break;
+                      }
+                      case 1:
+                      {
+                          W1 = m_i.read();
+                          break;
+                      }
+                      case 2:
+                      {
+                          W2 = m_i.read();
+                          break;
+                      }
+                      case 3:
+                      {
+                          W3 = m_i.read();
+                          break;
+                      }
+                      case 4:
+                      {
+                          W4 = m_i.read();
+                          Wout67 = W0.read();
+                          Wout63 = W0.read() ^ m_i.read();
+                          Tj = 0x79cc4519;
+                          break;
+                      }
+                      case 5:
+                      {
+                          W5 = m_i.read();
+                          Wout67 = W1.read();
+                          Wout63 = W1.read() ^ m_i.read();
+                          Tj = next_Tj.read();
+                          A = TT1.read();
+                          B = A.read();
+                          C = next_C.read();
+                          D = C.read();
+                          E = next_E.read();
+                          F = E.read();
+                          G = next_G.read();
+                          H = G.read();
+                          break;
+                      }
+                      case 6:
+                      {
+                          W6 = m_i.read();
+                          Wout67 = W2.read();
+                          Wout63 = W2.read() ^ m_i.read();
+                          Tj = next_Tj.read();
+                          A = TT1.read();
+                          B = A.read();
+                          C = next_C.read();
+                          D = C.read();
+                          E = next_E.read();
+                          F = E.read();
+                          G = next_G.read();
+                          H = G.read();
+                          break;
+                      }
+                      case 7:
+                      {
+                          W7 = m_i.read();
+                          Wout67 = W3.read();
+                          Wout63 = W3.read() ^ m_i.read();
+                          Tj = next_Tj.read();
+                          A = TT1.read();
+                          B = A.read();
+                          C = next_C.read();
+                          D = C.read();
+                          E = next_E.read();
+                          F = E.read();
+                          G = next_G.read();
+                          H = G.read();
+                          break;
+                      }
+                      case 8:
+                      {
+                          W8 = m_i.read();
+                          Wout67 = W4.read();
+                          Wout63 = W4.read() ^ m_i.read();
+                          Tj = next_Tj.read();
+                          A = TT1.read();
+                          B = A.read();
+                          C = next_C.read();
+                          D = C.read();
+                          E = next_E.read();
+                          F = E.read();
+                          G = next_G.read();
+                          H = G.read();
+                          break;
+                      }
+                      case 9:
+                      {
+                          W9 = m_i.read();
+                          Wout67 = W5.read();
+                          Wout63 = W5.read() ^ m_i.read();
+                          Tj = next_Tj.read();
+                          A = TT1.read();
+                          B = A.read();
+                          C = next_C.read();
+                          D = C.read();
+                          E = next_E.read();
+                          F = E.read();
+                          G = next_G.read();
+                          H = G.read();
+                          break;
+                      }
+                      case 10:
+                      {
+                          W10 = m_i.read();
+                          Wout67 = W6.read();
+                          Wout63 = W6.read() ^ m_i.read();
+                          Tj = next_Tj.read();
+                          A = TT1.read();
+                          B = A.read();
+                          C = next_C.read();
+                          D = C.read();
+                          E = next_E.read();
+                          F = E.read();
+                          G = next_G.read();
+                          H = G.read();
+                          break;
+                      }
+                      case 11:
+                      {
+                          W11 = m_i.read();
+                          Wout67 = W7.read();
+                          Wout63 = W7.read() ^ m_i.read();
+                          Tj = next_Tj.read();
+                          A = TT1.read();
+                          B = A.read();
+                          C = next_C.read();
+                          D = C.read();
+                          E = next_E.read();
+                          F = E.read();
+                          G = next_G.read();
+                          H = G.read();
+                          break;
+                      }
+                      case 12:
+                      {
+                          W12 = m_i.read();
+                          Wout67 = W8.read();
+                          Wout63 = W8.read() ^ m_i.read();
+                          Tj = next_Tj.read();
+                          A = TT1.read();
+                          B = A.read();
+                          C = next_C.read();
+                          D = C.read();
+                          E = next_E.read();
+                          F = E.read();
+                          G = next_G.read();
+                          H = G.read();
+                          break;
+                      }
+                      case 13:
+                      {
+                          W13 = m_i.read();
+                          Wout67 = W9.read();
+                          Wout63 = W9.read() ^ m_i.read();
+                          Tj = next_Tj.read();
+                          A = TT1.read();
+                          B = A.read();
+                          C = next_C.read();
+                          D = C.read();
+                          E = next_E.read();
+                          F = E.read();
+                          G = next_G.read();
+                          H = G.read();
+                          break;
+                      }
+                      case 14:
+                      {
+                          W14 = m_i.read();
+                          Wout67 = W10.read();
+                          Wout63 = W10.read() ^ m_i.read();
+                          Tj = next_Tj.read();
+                          A = TT1.read();
+                          B = A.read();
+                          C = next_C.read();
+                          D = C.read();
+                          E = next_E.read();
+                          F = E.read();
+                          G = next_G.read();
+                          H = G.read();
+                          break;
+                      }
+                      case 15:
+                      {
+                          W15 = m_i.read();
+                          Wout67 = W11.read();
+                          Wout63 = W11.read() ^ m_i.read();
+                          Tj = next_Tj.read();
+                          A = TT1.read();
+                          B = A.read();
+                          C = next_C.read();
+                          D = C.read();
+                          E = next_E.read();
+                          F = E.read();
+                          G = next_G.read();
+                          H = G.read();
+                          break;
+                      }
+                      case 16:
+                      case 17:
+                      case 18:
+                      case 19:
+                      {
+                          Wout67 = W12.read();
+                          Wout63 = W12.read() ^ W16.read();
+                          Tj = next_Tj.read();
+                          A = TT1.read();
+                          B = A.read();
+                          C = next_C.read();
+                          D = C.read();
+                          E = next_E.read();
+                          F = E.read();
+                          G = next_G.read();
+                          H = G.read();
+                          W0 = W1.read();
+                          W1 = W2.read();
+                          W2 = W3.read();
+                          W3 = W4.read();
+                          W4 = W5.read();
+                          W5 = W6.read();
+                          W6 = W7.read();
+                          W7 = W8.read();
+                          W8 = W9.read();
+                          W9 = W10.read();
+                          W10 = W11.read();
+                          W11 = W12.read();
+                          W12 = W13.read();
+                          W13 = W14.read();
+                          W14 = W15.read();
+                          W15 = W16.read();
+                          break;
+                      }
+                      case 20:
+                      {
+                          Wout67 = W12.read();
+                          Wout63 = W12.read() ^ W16.read();
+                          Tj = 0x9d8a7a87;
+                          A = TT1.read();
+                          B = A.read();
+                          C = next_C.read();
+                          D = C.read();
+                          E = next_E.read();
+                          F = E.read();
+                          G = next_G.read();
+                          H = G.read();
+                          W0 = W1.read();
+                          W1 = W2.read();
+                          W2 = W3.read();
+                          W3 = W4.read();
+                          W4 = W5.read();
+                          W5 = W6.read();
+                          W6 = W7.read();
+                          W7 = W8.read();
+                          W8 = W9.read();
+                          W9 = W10.read();
+                          W10 = W11.read();
+                          W11 = W12.read();
+                          W12 = W13.read();
+                          W13 = W14.read();
+                          W14 = W15.read();
+                          W15 = W16.read();
+                          break;
+                      }
+                      case 21:
+                      case 22:
+                      case 23:
+                      case 24:
+                      case 25:
+                      case 26:
+                      case 27:
+                      case 28:
+                      case 29:
+                      case 30:
+                      case 31:
+                      case 32:
+                      case 33:
+                      case 34:
+                      case 35:
+                      case 36:
+                      case 37:
+                      case 38:
+                      case 39:
+                      case 40:
+                      case 41:
+                      case 42:
+                      case 43:
+                      case 44:
+                      case 45:
+                      case 46:
+                      case 47:
+                      case 48:
+                      case 49:
+                      case 50:
+                      case 51:
+                      case 52:
+                      case 53:
+                      case 54:
+                      case 55:
+                      case 56:
+                      case 57:
+                      case 58:
+                      case 59:
+                      case 60:
+                      case 61:
+                      case 62:
+                      case 63:
+                      case 64:
+                      case 65:
+                      case 66:
+                      case 67:
+                      {
+                          Wout67 = W12.read();
+                          Wout63 = W12.read() ^ W16.read();
+                          Tj = next_Tj.read();
+                          A = TT1.read();
+                          B = A.read();
+                          C = next_C.read();
+                          D = C.read();
+                          E = next_E.read();
+                          F = E.read();
+                          G = next_G.read();
+                          H = G.read();
+                          W0 = W1.read();
+                          W1 = W2.read();
+                          W2 = W3.read();
+                          W3 = W4.read();
+                          W4 = W5.read();
+                          W5 = W6.read();
+                          W6 = W7.read();
+                          W7 = W8.read();
+                          W8 = W9.read();
+                          W9 = W10.read();
+                          W10 = W11.read();
+                          W11 = W12.read();
+                          W12 = W13.read();
+                          W13 = W14.read();
+                          W14 = W15.read();
+                          W15 = W16.read();
+                          break;
+                      }
+                      case 68:
+                      {
+                          Wout67 = W12.read();
+                          Wout63 = W12.read() ^ W16.read();
+                          Tj = next_Tj.read();
+                          A = TT1.read();
+                          B = A.read();
+                          C = next_C.read();
+                          D = C.read();
+                          E = next_E.read();
+                          F = E.read();
+                          G = next_G.read();
+                          H = G.read();
+                          W0 = W1.read();
+                          W1 = W2.read();
+                          W2 = W3.read();
+                          W3 = W4.read();
+                          W4 = W5.read();
+                          W5 = W6.read();
+                          W6 = W7.read();
+                          W7 = W8.read();
+                          W8 = W9.read();
+                          W9 = W10.read();
+                          W10 = W11.read();
+                          W11 = W12.read();
+                          W12 = W13.read();
+                          W13 = W14.read();
+                          W14 = W15.read();
+                          W15 = W16.read();
+                          var_WOUT_0 = WOUT_0.read();
+                          var_WOUT_0.range(255,224) = TT1.read() ^ var_WOUT_0.range(255,224);
+                          var_WOUT_0.range(223,192) = A.read() ^ var_WOUT_0.range(223,192);
+                          var_WOUT_0.range(191,160) = next_C.read() ^ var_WOUT_0.range(191,160);
+                          var_WOUT_0.range(159,128) = C.read() ^ var_WOUT_0.range(159,128);
+                          var_WOUT_0.range(127,96) = next_E.read() ^ var_WOUT_0.range(127,96);
+                          var_WOUT_0.range(95,64) = E.read() ^ var_WOUT_0.range(95,64);
+                          var_WOUT_0.range(63,32) = next_G.read() ^ var_WOUT_0.range(63,32);
+                          var_WOUT_0.range(31,0) = G.read() ^var_WOUT_0.range(31,0);
+                          WOUT_0 = var_WOUT_0;
+                          break;
+                      }
+                      case 69:
+                      {
+                          A = WOUT_0.read().range(255,224).to_uint();
+                          B = WOUT_0.read().range(223,192).to_uint();
+                          C = WOUT_0.read().range(191,160).to_uint();
+                          D = WOUT_0.read().range(159,128).to_uint();
+                          E = WOUT_0.read().range(127,96).to_uint();
+                          F = WOUT_0.read().range(95,64).to_uint();
+                          G = WOUT_0.read().range(63,32).to_uint();
+                          H = WOUT_0.read().range(31,0).to_uint();
+                          var_wout = wout.read();
+                          var_wout.range(255,224) = WOUT_0.read().range(255,224);
+                          var_wout.range(223,192) = WOUT_0.read().range(223,192);
+                          var_wout.range(191,160) = WOUT_0.read().range(191,160);
+                          var_wout.range(159,128) = WOUT_0.read().range(159,128);
+                          var_wout.range(127,96) = WOUT_0.read().range(127,96);
+                          var_wout.range(95,64) = WOUT_0.read().range(95,64);
+                          var_wout.range(63,32) = WOUT_0.read().range(63,32);
+                          var_wout.range(31,0) = WOUT_0.read().range(31,0);
+                          wout = var_wout;
+                          break;
+                      }
+                    default:
+                        break;
+                }
+                else
+                {
+                    if(ctrl.read() == 0b11)
+                    {
+                        Wout67 = 0b0;
+                        Wout63 = 0b0;
+                        A = 0x7380166f;
+                        B = 0x4914b2b9;
+                        C = 0x172442d7;
+                        D = a8a0600;
+                        E = 0xa96f30bc;
+                        F = 0x163138aa;
+                        G = 0xe38dee4d;
+                        H = 0b0fb0e4e;
+                        Tj = 0x79cc4519;
+                        var_WOUT_0 = WOUT_0.read();
+                        var_WOUT_0.range(255,224) = 0x7380166f;
+                        var_WOUT_0.range(223,192) = 0x4914b2b9;
+                        var_WOUT_0.range(191,160) = 0x172442d7;
+                        var_WOUT_0.range(159,128) = a8a0600;
+                        var_WOUT_0.range(127,96) = 0xa96f30bc;
+                        var_WOUT_0.range(95,64) = 0x163138aa;
+                        var_WOUT_0.range(63,32) = 0xe38dee4d;
+                        var_WOUT_0.range(31,0) = 0b0fb0e4e;
+                        WOUT_0 = var_WOUT_0;
+                    }
+                }
+            }
+}

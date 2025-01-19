@@ -1,0 +1,6 @@
+	sc_in <bool> in;
+	sc_in <bool> clk;
+	sc_in <bool> rst;
+	sc_out <bool> out;
+	sc_signal <sc_uint<3> > current_state;
+	sc_signal <sc_uint<3> > next_state;

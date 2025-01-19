@@ -1,0 +1,8 @@
+	sc_in <bool> sys_clk;
+	sc_in <bool> sys_rst_n;
+	sc_in <bool> key1;
+	sc_in <bool> key2;
+	sc_out <sc_uint<8> > addr;
+	sc_signal <sc_uint<24> > cnt_200ms;
+	sc_signal <bool> key1_en;
+	sc_signal <bool> key2_en;

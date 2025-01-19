@@ -1,0 +1,12 @@
+	sc_in <bool> clk, rst;
+	sc_in <bool> finish;
+	sc_in <sc_uint<2> > ctrl;
+	sc_in <sc_uint<32> > m_i;
+	sc_in <sc_uint<7> > Round;
+	sc_out <sc_biguint<256> > wout;
+	sc_signal <sc_biguint<256> > WOUT_0;
+	sc_signal <sc_uint<32> > W0, W1, W2, W3, W4, W5, W6, W7, W8, W9, W10, W11, W12, W13, W14, W15, Wout67, Wout63, Tj;
+	sc_signal <sc_uint<32> > A, B, C, D, E, F, G, H;
+	sc_signal <sc_uint<32> > Wj_0_out, W16;
+	sc_signal <sc_uint<32> > SS1_0, SS2, TT1, TT2, FF, GG, next_Tj, next_C, next_E, next_G;
+	sc_signal <sc_uint<32> > TT1_0, TT1_1, TT2_0, TT2_1, FF_0, FF_1, GG_0, GG_1;

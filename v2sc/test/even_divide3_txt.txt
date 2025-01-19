@@ -1,0 +1,6 @@
+	sc_in <bool> clk;
+	sc_in <bool> rst;
+	sc_out <bool> clk3;
+	sc_signal <sc_uint<2> > cnt;
+	sc_signal <bool> clk1;
+	sc_signal <bool> clk2;

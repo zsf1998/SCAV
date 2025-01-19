@@ -1,0 +1,8 @@
+	sc_in <bool> clk;
+	sc_in <bool> rst_n;
+	sc_in <bool> data_a, valid_a;
+	sc_out <sc_uint<6> > data_b;
+	sc_out <bool> valid_b;
+	sc_out <bool> ready_a;
+	sc_signal <sc_uint<6> > data_b1;
+	sc_signal <sc_uint<4> > cnt;

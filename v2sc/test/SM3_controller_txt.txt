@@ -1,0 +1,6 @@
+	sc_in <bool> clk, rst, W, R;
+	sc_out <bool> finish;
+	sc_out <sc_uint<7> > count_out;
+	sc_out <sc_uint<2> > ctrl;
+	sc_signal <sc_uint<2> > next_state, current_state;
+	sc_signal <sc_uint<7> > count_plus;
